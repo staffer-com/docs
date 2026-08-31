@@ -1,0 +1,262 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Staffer",
+  "description": "Full documentation of Staffer, the AI-native hiring platform. Every feature, how-to-use and important details for both companies and candidates.",
+  "colors": {
+    "primary": "#1284DA",
+    "light": "#1284DA",
+    "dark": "#1284DA"
+  },
+  "favicon": {
+    "light": "/images/favicon-dark.svg",
+    "dark": "/images/favicon-light.svg"
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "assistant",
+      "claude",
+      "chatgpt",
+      "perplexity"
+    ]
+  },
+  "navigation": {
+    "directory": "card",
+    "tabs": [
+      {
+        "tab": "Introduction",
+        "groups": [
+          {
+            "group": "Start here",
+            "pages": [
+              "untitled-page-2"
+            ]
+          },
+          {
+            "group": "Pricing",
+            "icon": "credit-card",
+            "pages": [
+              "pricing/how-it-works",
+              "pricing/plans",
+              "pricing/what-you-pay",
+              "pricing/billing",
+              "pricing/faq"
+            ]
+          }
+        ],
+        "icon": "hand"
+      },
+      {
+        "tab": "For companies",
+        "icon": "building-2",
+        "pages": [
+          {
+            "group": "Getting started",
+            "icon": "rocket",
+            "pages": [
+              "companies/sign-in",
+              "companies/create-workspace",
+              "companies/workspace-details",
+              "companies/invite-team",
+              "companies/ai-copilot"
+            ]
+          },
+          {
+            "group": "Features",
+            "icon": "star",
+            "pages": [
+              "features/sourcing",
+              "features/ai-interviews",
+              "features/match-scoring",
+              "features/career-page-and-listings",
+              "features/ai-agent",
+              "features/process-builder",
+              "features/candidate-experience",
+              "features/compliance"
+            ]
+          },
+          {
+            "group": "Compliance",
+            "icon": "shield-check",
+            "pages": [
+              "companies/compliance-center",
+              "companies/eu-ai-act",
+              "companies/retention-and-erasure"
+            ]
+          },
+          {
+            "group": "Jobs",
+            "icon": "briefcase",
+            "pages": [
+              "companies/create-a-job",
+              "companies/brief-criteria",
+              "companies/editing-and-rescoring"
+            ]
+          },
+          {
+            "group": "Scouting",
+            "icon": "search",
+            "pages": [
+              "companies/running-a-search",
+              "companies/match-scores",
+              "companies/shortlist-and-push"
+            ]
+          },
+          {
+            "group": "Billing",
+            "icon": "credit-card",
+            "pages": [
+              "untitled-page",
+              "untitled-page-4",
+              "untitled-page-3",
+              "companies/usage-and-invoices"
+            ]
+          },
+          {
+            "group": "Candidates",
+            "icon": "users",
+            "pages": [
+              "companies/candidate-view",
+              "companies/recommended-actions",
+              "companies/candidate-state",
+              "companies/notes-and-messages"
+            ]
+          },
+          {
+            "group": "Process and interviews",
+            "icon": "workflow",
+            "pages": [
+              "companies/build-a-process",
+              "companies/reviewer-holds-and-gates",
+              "companies/ai-interviews",
+              "companies/human-interviews"
+            ]
+          },
+          {
+            "group": "Settings",
+            "icon": "settings",
+            "pages": [
+              "companies/your-account",
+              "companies/workspace-settings",
+              "companies/members-and-teams",
+              "companies/organization-settings"
+            ]
+          },
+          {
+            "group": "Listings and career page",
+            "icon": "megaphone",
+            "pages": [
+              "companies/publish-a-listing",
+              "companies/career-page",
+              "companies/anonymous-listings"
+            ]
+          },
+          {
+            "group": "Talent pool and analytics",
+            "icon": "layout-dashboard",
+            "pages": [
+              "companies/talent-pool",
+              "companies/analytics"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "For candidates",
+        "icon": "user-round",
+        "pages": [
+          {
+            "group": "Getting started",
+            "icon": "rocket",
+            "pages": [
+              "candidates/what-staffer-is",
+              "candidates/claiming-your-profile",
+              "candidates/signing-in",
+              "candidates/profile-and-resume"
+            ]
+          },
+          {
+            "group": "Applications",
+            "icon": "briefcase",
+            "pages": [
+              "candidates/applying-to-a-job",
+              "candidates/tracking-your-application",
+              "candidates/messages",
+              "candidates/withdrawing"
+            ]
+          },
+          {
+            "group": "Interviews and screening",
+            "icon": "clipboard-list",
+            "pages": [
+              "candidates/screening-steps",
+              "candidates/ai-interview"
+            ]
+          },
+          "candidates/searching-for-jobs",
+          "candidates/copilot",
+          "candidates/data-and-privacy"
+        ]
+      },
+      {
+        "tab": "Academy",
+        "icon": "graduation-cap"
+      }
+    ]
+  },
+  "logo": {
+    "light": "/images/mintlify-logo-black.png",
+    "dark": "/images/mintlify-logo-white.png",
+    "href": "https://staffer.com"
+  },
+  "navbar": {
+    "links": [
+      {
+        "href": "https://staffer.com",
+        "label": "Website"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Open Staffer",
+      "href": "https://link.staffer.com/4zVKkvW"
+    }
+  },
+  "footer": {
+    "socials": {
+      "linkedin": "https://linkedin.com/company/stafferai",
+      "x": "https://x.com/stafferai",
+      "youtube": "https://www.youtube.com/@Stafferai"
+    }
+  },
+  "background": {
+    "color": {
+      "light": "#F8F6F5",
+      "dark": "#0A0B0C"
+    }
+  },
+  "thumbnails": {
+    "fonts": {
+      "family": "Inter"
+    }
+  },
+  "appearance": {
+    "default": "light",
+    "strict": false
+  },
+  "integrations": {
+    "ga4": {
+      "measurementId": "G-LYP1HQLEMH"
+    },
+    "intercom": {
+      "appId": "exarxpfj"
+    }
+  }
+}

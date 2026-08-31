@@ -1,0 +1,25 @@
+---
+title: "Reviewer holds and score gates"
+description: "How a step decides to wait for a human or move on by itself."
+icon: "gauge"
+---
+
+A step can either wait for someone to look at it, or advance a candidate on its own, and you choose which per step.
+
+## Reviewer hold
+
+Assign a step to a reviewer and it holds there until someone marks it complete. With no assignee, it advances automatically once its work is done.
+
+## Soft score gate
+
+Set a score threshold on a step and a candidate's match score decides what happens next. At or above it, they advance automatically. Below it, they hold, and Staffer surfaces a reject recommendation for a person to act on. The score gate never rejects anyone by itself.
+
+## Hard gates
+
+Some steps can disqualify outright, opted in per step: a review step can auto-reject below a passing score, and a questionnaire can disqualify on a specific answer. Unlike the soft gate, these end the candidacy without waiting for a recruiter.
+
+<Warning>
+  Hard gates remove people from your pipeline without a human looking first. Turn them on deliberately, not as a default.
+</Warning>
+
+**Next:** [AI interviews](/companies/ai-interviews)
