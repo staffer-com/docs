@@ -212,8 +212,8 @@
     ]
   },
   "logo": {
-    "light": "/images/mintlify-logo-black.png",
-    "dark": "/images/mintlify-logo-white.png",
+    "light": "/logo/black.svg",
+    "dark": "/logo/white.svg",
     "href": "https://staffer.com"
   },
   "navbar": {
