@@ -10,13 +10,25 @@ An AI interview step runs in one of three modes: chat, voice, or video. Pick the
 
 Chat is a written back-and-forth. Voice is a live spoken conversation. Video adds a recorded feed on top of the conversation. All three run the same underlying interview logic, just through a different medium.
 
+## Voice and pacing
+
+Voice and video interviews use voice models that vary tone and inflection through the conversation. The agent leaves room between responses so the candidate has time to think, and it ignores thinking sounds and filler words instead of treating them as an answer.
+
+When you set up the step, you can:
+
+- Pick a voice. New steps start with updated default voices and tone, and Lauren, a US voice, is now available.
+- Set the general speaking speed with the speaking-speed slider.
+- Click **Try as candidate** to run the interview yourself. You don't need to save the step first.
+
+The preview uses the same header as the apply page, so you see what the candidate sees.
+
 ## What the candidate is told
 
 Before starting, the candidate sees a disclosure that the session is recorded, a transcript is kept, and an AI evaluation is produced for the recruiter, which the candidate does not see themselves. They have to acknowledge it before the interview can start.
 
 ## What you get afterward
 
-A transcript and an AI evaluation land on the candidate's process step once the interview finishes, and their match score updates to take it into account.
+A transcript and an AI evaluation land on the candidate's process step once the interview finishes, and their match score updates to take it into account. Audio tags are stripped from the transcript, so it reads as what was said.
 
 <Info>
   Interview recordings, transcripts, and evaluations are deleted automatically six months after the application closes.

@@ -96,6 +96,7 @@
             "icon": "briefcase",
             "pages": [
               "companies/create-a-job",
+              "companies/jobs-list",
               "companies/brief-criteria",
               "companies/editing-and-rescoring"
             ]
@@ -203,6 +204,13 @@
           "candidates/searching-for-jobs",
           "candidates/copilot",
           "candidates/data-and-privacy"
+        ]
+      },
+      {
+        "tab": "Changelog",
+        "icon": "sparkles",
+        "pages": [
+          "changelog"
         ]
       },
       {
