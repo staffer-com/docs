@@ -36,7 +36,8 @@
           {
             "group": "Start here",
             "pages": [
-              "untitled-page-2"
+              "untitled-page-2",
+              "changelog"
             ]
           },
           {
@@ -96,6 +97,7 @@
             "icon": "briefcase",
             "pages": [
               "companies/create-a-job",
+              "companies/jobs-list",
               "companies/brief-criteria",
               "companies/editing-and-rescoring"
             ]
