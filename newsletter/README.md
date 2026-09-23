@@ -14,6 +14,7 @@ This folder is in `.mintignore`, so none of it shows up on the docs site.
 ## Weekly flow
 
 1. Ship the feature docs first (the MDX pages in the repo root). Newsletter sections link to them.
+   Add a new `<Update>` block to the top of `changelog.mdx` with every item from the week, including small fixes. The newsletter covers the highlights, the changelog covers everything.
 2. Copy `issues/_example.ts` to `issues/2026-09-29.ts` and write the issue.
 3. Put images in `images/newsletter/` (hero 1200x675, screenshots 1200 wide, PNG or JPG, never SVG).
 4. Preview: `npm run dev`, open http://localhost:3030.

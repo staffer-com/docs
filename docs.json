@@ -36,8 +36,7 @@
           {
             "group": "Start here",
             "pages": [
-              "untitled-page-2",
-              "changelog"
+              "untitled-page-2"
             ]
           },
           {
@@ -205,6 +204,13 @@
           "candidates/searching-for-jobs",
           "candidates/copilot",
           "candidates/data-and-privacy"
+        ]
+      },
+      {
+        "tab": "Changelog",
+        "icon": "sparkles",
+        "pages": [
+          "changelog"
         ]
       },
       {
