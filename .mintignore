@@ -5,3 +5,7 @@
 # Draft content
 drafts/
 *.draft.mdx
+
+# Newsletter source (React Email templates, issues, scripts). Not docs pages.
+# Its images live in images/newsletter/ so Mintlify still hosts them for emails.
+newsletter/
