@@ -31,3 +31,10 @@
 
 {/* Define what should and shouldn't be documented */}
 {/* Example: Don't document internal admin features */}
+
+## Product update newsletter
+
+- Lives in `newsletter/` (excluded from Mintlify via `.mintignore`). See `newsletter/README.md`.
+- When a feature ships, update the docs page first, then add a section to the next issue in `newsletter/issues/` that links to it.
+- Follow `newsletter/COPYWRITING.md` for all newsletter copy.
+- Email images go in `images/newsletter/` so Mintlify hosts them.
