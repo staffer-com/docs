@@ -4,7 +4,11 @@ const issue: Issue = {
   subject: "AI interviews that leave room to think, job status, and more",
   preview: "The agent waits while candidates think, and ignores the ums.",
   title: "AI interviews that leave room to think, job status, and more",
-  hero: { src: "hero-default.jpg", alt: "Staffer product update" },
+  hero: {
+    // Uploaded in the Resend editor for this issue.
+    src: "https://resend-attachments.s3.amazonaws.com/GP8kvpNLQ9XONMuYgOF4t4/8d7deced-6a8d-43f6-8488-fee80ed57572",
+    alt: "Screenshot of the AI interview setup screen with options for video, language, voice, speaking speed, and maximum length.",
+  },
   intro:
     "Here's what shipped this week. The full list is in the [changelog](https://docs.staffer.com/changelog).",
   sections: [
@@ -39,7 +43,7 @@ const issue: Issue = {
       link: { label: "Learn more here.", href: "https://docs.staffer.com/companies/ai-copilot" },
     },
   ],
-  cta: { label: "Open Staffer", href: "https://app.staffer.com" },
+  cta: { label: "View Update", href: "https://docs.staffer.com/changelog" },
 };
 
 export default issue;

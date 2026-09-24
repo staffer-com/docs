@@ -167,7 +167,7 @@ const styles = {
   container: { maxWidth: "600px", margin: "0 auto", padding: "0 16px" },
   logoRow: { textAlign: "center" as const, padding: "8px 0 32px" },
   logo: { margin: "0 auto", display: "block" },
-  hero: { width: "100%", height: "auto", borderRadius: "8px", display: "block" },
+  hero: { width: "100%", height: "auto", borderRadius: "24px", display: "block" },
   title: {
     color: colors.heading,
     fontSize: "26px",
@@ -199,7 +199,7 @@ const styles = {
     color: "#ffffff",
     fontSize: "15px",
     fontWeight: 600,
-    borderRadius: "8px",
+    borderRadius: "9999px",
     padding: "12px 20px",
     textDecoration: "none",
   },

@@ -33,7 +33,7 @@ const issue: Issue = {
       link: { label: "Learn more here.", href: "https://docs.staffer.com/features/process-builder" },
     },
   ],
-  cta: { label: "Open Staffer", href: "https://app.staffer.com" },
+  cta: { label: "View Update", href: "https://docs.staffer.com/changelog" },
 };
 
 export default issue;
