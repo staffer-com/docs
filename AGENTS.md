@@ -34,6 +34,7 @@
 
 ## Product update newsletter
 
+- For the weekly flow (release notes to docs, changelog, newsletter and Resend draft), use the `/product-update` skill in `.claude/skills/product-update/SKILL.md`.
 - Lives in `newsletter/` (excluded from Mintlify via `.mintignore`). See `newsletter/README.md`.
 - When a feature ships, update the docs page and add it to the newest `<Update>` block in `changelog.mdx` (newest block on top, `label` is the date, `description` is the week number). Then add a section to the next issue in `newsletter/issues/` that links to it.
 - Follow `newsletter/COPYWRITING.md` for all newsletter copy.

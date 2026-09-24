@@ -13,6 +13,8 @@ This folder is in `.mintignore`, so none of it shows up on the docs site.
 
 ## Weekly flow
 
+In Claude Code, run `/product-update` and paste the release notes. It follows the steps below.
+
 1. Ship the feature docs first (the MDX pages in the repo root). Newsletter sections link to them.
    Add a new `<Update>` block to the top of `changelog.mdx` with every item from the week, including small fixes. The newsletter covers the highlights, the changelog covers everything.
 2. Copy `issues/_example.ts` to `issues/2026-09-29.ts` and write the issue.
