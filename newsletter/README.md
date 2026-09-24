@@ -31,6 +31,12 @@ This folder is in `.mintignore`, so none of it shows up on the docs site.
 - Only ship what's live. No roadmap, no invented numbers or quotes.
 - Body text supports `**bold**` and `[links](https://...)`.
 - Subject pattern: `<Headline feature>, <second feature>, and more`.
+- The button label must say where it goes. Default: **View Update**, linking to `https://docs.staffer.com/changelog`. Don't label a button "View Update" and point it at the app.
+- Hero: a real product screenshot beats the default banner. Put it in `images/newsletter/` before running `draft`, or upload it in the Resend editor.
+
+## Editing in Resend
+
+Once you edit a draft in the Resend editor, the API can no longer change its HTML. Make copy and layout fixes in the repo before running `draft`. After that, edit in Resend only, and copy any lasting changes back into the repo (`emails/product-update.tsx` for layout, the issue file for content).
 
 ## Config
 
