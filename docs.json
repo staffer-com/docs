@@ -295,6 +295,10 @@
   "navbar": {
     "links": [
       {
+        "label": "Status",
+        "href": "https://status.staffer.com"
+      },
+      {
         "href": "https://staffer.com",
         "label": "Website"
       }
