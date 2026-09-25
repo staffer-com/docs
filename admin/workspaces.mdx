@@ -1,0 +1,63 @@
+---
+title: "Workspaces"
+description: "The workspace list, creating and switching between workspaces, and what's shared across them."
+icon: "building-2"
+---
+
+A workspace holds one team's jobs, candidates, and branding. An organization can run several. **Settings** → **Organization** → **Workspaces** lists every one, and the sidebar's workspace switcher moves you between them. Only organization owners and admins can open the Workspaces settings page, though anyone can switch between workspaces they belong to.
+
+## The workspace list
+
+The header shows how many workspaces are active, and how many are deleted, if any exist (hidden by default, revealed with a filter toggle). Each row shows the workspace's name and slug, a **Current** badge if it's the one you're in, a **Deleted** badge if it's been soft-deleted, how many **People** and **Jobs** it has, and when it was **Created**.
+
+## Switching workspaces
+
+Click the workspace button at the bottom of the sidebar, then **Switch workspace**. It's a searchable list with a checkmark on the workspace you're in. Picking another one reloads the app into it, so nothing cached from your old workspace carries over.
+
+<Tip>
+  With focus outside any text field, pressing a number key 1 to 9 jumps straight to that workspace in the list.
+</Tip>
+
+## Creating a workspace
+
+Workspace switcher → **+ New workspace**. It runs you through the same setup as your first workspace: find your company, review the details, invite your team. See [Set up your workspace](/companies/set-up-your-workspace).
+
+Anyone signed in can do this. You become the new workspace's owner. The real limit is your plan: **Starter** caps an organization at 1 workspace, so **+ New workspace** is disabled there, with a prompt to upgrade. **Growth** and **Enterprise** are unlimited. See [Plans](/pricing/plans).
+
+## What's shared across workspaces, and what isn't
+
+| Shared organization-wide | Separate per workspace |
+|---|---|
+| Credits (one pool) | Jobs and candidates |
+| Organization settings (name, domain, auto-join, org members) | Branding (logo, cover photo, color) |
+| Compliance (policies, retention rules, DPA, data exports) | Workspace members and their roles |
+
+## Moving a job to another workspace
+
+Open the job, then its **More job actions** menu, then **Move to workspace**. This only appears if you're an admin or owner of both the current workspace and at least one other workspace in the same organization. It's a real move, not a copy: the job, its candidates, and its history leave the source workspace entirely.
+
+## Deleting a workspace
+
+Only the workspace's owner can delete it, from that workspace's own **General** settings, under **Danger zone** → **Delete this workspace**. It's a soft delete: jobs, listings, candidates, and members are hidden everywhere in the app, but the data is kept, not purged.
+
+You can't delete a workspace that auto-join currently points at as its default. Point auto-join elsewhere, or turn it off, in [Organization settings](/admin/organization) first.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can I belong to workspaces in more than one organization?">
+    Yes. The workspace switcher lists every workspace you're a member of, across every organization, plus any workspace in an organization where you're an org owner or admin. This is normal for an agency recruiter working inside a client's organization.
+  </Accordion>
+  <Accordion title="Who can move a job into a different workspace?">
+    Only someone who is an admin or owner of both the source and destination workspaces, with both workspaces in the same organization.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Organization settings" icon="building" href="/admin/organization">
+    Name, domain, auto-join, and organization members.
+  </Card>
+  <Card title="Plans" icon="layers" href="/pricing/plans">
+    The Starter one-workspace limit and how to upgrade.
+  </Card>
+</CardGroup>

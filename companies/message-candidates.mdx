@@ -1,0 +1,86 @@
+---
+title: "Message candidates"
+description: "Where you write to a candidate, what the composer can do, and what sending actually changes."
+icon: "message-square"
+---
+
+You write to a candidate from two places: their **Messages** tab, or the composer inside a recommended action on their **Process** tab, for example **Send intro outreach**. Both use the same composer and the same **Send** button. The agent can help you think through what to say in chat, but it can't send, or even draft, a message on its own: someone has to put the words in the composer and click **Send**.
+
+## No subject field
+
+There's no subject field anywhere in the composer. Whatever you send first in a thread sets the subject for the whole conversation, and every later message reuses it. The empty state says it plainly: "Your first message sets the subject for the thread."
+
+## The toolbar
+
+The toolbar has **Bold**, **Italic** and **Bullet list** for formatting, and **Insert link** to link the selected text, or add a new one.
+
+**Insert placeholder** inserts a detail about this candidate or job, already filled in, so you see exactly what they'll get:
+
+| Placeholder | Fills in |
+|---|---|
+| Candidate first name | The candidate's first name |
+| Candidate full name | Their full name |
+| Job title | The job's title |
+| Company | Your company's name |
+| Your name | Your name |
+| Signature | Your signature, see below |
+| Application link | A link to their application, see below |
+
+A detail Staffer doesn't have for this candidate is left out of the menu. In templates and message steps, the same menu inserts a placeholder that's filled in for each candidate when the message is sent.
+
+**Insert template** replaces the whole body with a saved message, either your workspace's own or one of Staffer's built-in ones. See [Message templates](/companies/message-templates).
+
+**AI assist** rewrites the draft that's already in the editor. Write something first, or start from a template, then choose **Personalize** for a one-click pass, or **Request change** to type an instruction, for example "shorter, warmer, mention their AI post". It costs credits, and the result still has to pass the same compliance check as anything else you send.
+
+## Who it goes to
+
+Click **Select channel** to pick where the message goes. It lists every email Staffer has on file for the candidate, each tagged with where it came from, with a **Primary** badge on the main one. If there's nothing on file yet, it reads "No saved emails yet." Add one with **+ Add email**.
+
+If the candidate can already be reached in their Staffer account, you'll also see **Send in-app**. The message then goes to their application in Staffer instead of their inbox.
+
+## Your signature
+
+Set it once, in **Settings** → **Account** → **Signature**. It replaces the closing line on every message you send, including templates. Leave it blank and Staffer signs off with "Best," and your name instead. Right now only workspace admins and owners can save a signature. See [Your account settings](/companies/your-account).
+
+## The application link
+
+Including the **Application link** placeholder does more than insert text. If the candidate doesn't have an application yet, for example they're still on the shortlist, adding this placeholder prepares their application in the background as soon as it's in the message, not only once you send. That's the same thing that happens when you [promote them](/companies/shortlist-and-push): Staffer saves a copy of their profile for this job and creates their private application link. **Send** reads "Preparing link…" and stays disabled until that finishes.
+
+If the link ends up missing from the visible message, or the candidate has no application to link to at all, Staffer shows a warning above the composer instead of sending a broken link.
+
+## Copy vs Send
+
+**Copy** puts the message on your clipboard as plain text, links included, so you can paste it somewhere else, for example a LinkedIn message. It doesn't touch Staffer's record of the candidate at all: nothing is logged. If you reach them this way, log it yourself afterward with **Mark as contacted**, from **Candidate actions**.
+
+**Send** emails the candidate from Staffer and logs the message on their thread. If they're still **In review**, sending moves them to **In progress**, even a plain message with no template. Every send, including an AI-assisted one, is checked against your organization's compliance policy first. A refusal shows as a toast, "Could not send:" followed by the reason, not a dialog. See [AI policies](/admin/ai-policies) for what can trigger one.
+
+Sending, and AI assist, are limited to members, admins and owners. Viewers and reviewers can't use either.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can I change the subject after the first message?">
+    No. The first message in a thread sets the subject for good. There's no subject field to edit it later.
+  </Accordion>
+  <Accordion title="Does Copy send anything to the candidate?">
+    No. It only puts the message on your clipboard. Nothing is logged in Staffer until you either send from the composer or mark them as contacted yourself.
+  </Accordion>
+  <Accordion title="Can I ask the agent to send a message for me?">
+    No. The agent can discuss what to say, but there's no tool that lets it send or draft a message on a candidate's thread. A person has to use the composer.
+  </Accordion>
+  <Accordion title="Why was my message refused?">
+    It didn't pass your organization's compliance check. The toast names the reason. See [AI policies](/admin/ai-policies).
+  </Accordion>
+  <Accordion title="Who can send a message?">
+    Members, admins and owners. Viewers and reviewers can't send, use AI assist, or mark someone as contacted.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Replies and the inbox" icon="inbox" href="/companies/replies-and-inbox">
+    Where a candidate's reply lands, and how Staffer drafts one for you.
+  </Card>
+  <Card title="Message templates" icon="file-text" href="/companies/message-templates">
+    Save a reusable message and set it as the default for a move.
+  </Card>
+</CardGroup>

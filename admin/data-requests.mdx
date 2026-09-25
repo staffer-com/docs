@@ -1,0 +1,75 @@
+---
+title: "Candidate data requests"
+description: "Erasure requests and data-access requests candidates file themselves: where they land, what's automatic, and what you need to review."
+icon: "file-search"
+---
+
+Candidates can ask Staffer to erase their data, or ask for a copy of it. The two work differently: erasure runs on its own once the grace window passes, and there's nothing for you to approve. A data-access request needs you to review it and choose what goes in the export.
+
+## Where they appear
+
+Both queues are reached from **Settings** → **Organization** → **Compliance** → **Retention**, and both are org-wide: they list requests against every workspace in the organization, not only the one you're in.
+
+- **Erasure requests**: right-to-erasure (GDPR Article 17) requests.
+- **Application data requests**: right-of-access (GDPR Article 15) requests for a copy of the candidate's own data.
+
+## How a candidate files one
+
+A candidate can ask one specific workspace to stop processing them, ask to erase everything Staffer holds about them, or request a copy of their data, from their own Staffer account. See [Your data and privacy](/candidates/data-and-privacy) for what that looks like on their side.
+
+## Erasure requests
+
+This queue is read-only for you. Only the candidate, or in narrow cases Staffer support, can withdraw a request. The deletion runs automatically once the [grace window](/admin/retention) passes, with nothing for you to approve or refuse. Two kinds of request land here: a candidate asking one workspace to stop processing them, and a candidate asking to be erased from Staffer entirely (shown here if they have an application in one of your workspaces). Rows show a status: requested, scheduled, processing, done, cancelled, or rejected.
+
+### What gets deleted
+
+The candidate's profile, uploaded files such as résumés and interview recordings, and their sign-in.
+
+### What's anonymized instead
+
+Each application survives as a stripped-down record of the hiring decision: states, which steps ran and when, and scores, with everything that names or quotes the candidate removed, such as messages, notes, transcripts, and free-text answers. This keeps your own record that a hiring process happened and roughly how it went, without keeping anything that identifies the person.
+
+## Application data requests
+
+This is the queue that needs your action. Open a pending request and you'll see the candidate's own reason, if they gave one, and a **Prepare export** dialog with six sections to include, all checked by default except résumé, which follows whatever's on file:
+
+- **Application details**: the record, its state history, and consent events
+- **Resume**: the file on record, if there is one
+- **Step results**: transcripts, answers and files from process steps
+- **Messages**: emails to and from the candidate
+- **AI evaluations**: match score history and the per-criterion breakdown
+- **Notes**: your team's notes on this candidate
+
+For notes specifically, you can include each one as-is, redact individual words in it, or exclude it entirely. Excluding a note requires a reason, which is recorded either way.
+
+Approve it and the export builds in the background. The candidate gets an email with a download link once it's ready, which expires after 7 days. You can also **Reject** the request instead, with a required reason: under GDPR Article 12(4) the reason travels with the refusal, so the candidate reads exactly what you write. The candidate is notified either way.
+
+## Notifications
+
+Turn on **Candidate filed a data request** on your personal Notifications page to get a bell and email alert when one of these comes in.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can I refuse an erasure request?">
+    No. Only the candidate, or Staffer support in narrow cases, can withdraw one. It runs automatically once the grace window passes.
+  </Accordion>
+  <Accordion title="Can I refuse a data-access request?">
+    Yes. Use **Reject** and give a reason. Under GDPR Article 12(4), the candidate sees that reason exactly as you wrote it.
+  </Accordion>
+  <Accordion title="A note mentions something I don't want to disclose. What are my options?">
+    Redact individual words in that note before you approve the export, or exclude the note entirely with a reason.
+  </Accordion>
+  <Accordion title="Do these requests only cover one workspace?">
+    The queues themselves list requests across every workspace in the organization, but each request is still scoped to what it asked for: one workspace's data, or everything Staffer holds, depending on what the candidate requested.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Retention rules" icon="trash-2" href="/admin/retention">
+    Where the Article 17 grace window is set, and what else can flag a candidacy for deletion.
+  </Card>
+  <Card title="Your data and privacy" icon="shield" href="/candidates/data-and-privacy">
+    What a candidate sees when they file either kind of request.
+  </Card>
+</CardGroup>

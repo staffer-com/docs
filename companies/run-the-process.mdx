@@ -1,0 +1,93 @@
+---
+title: "Move candidates through the process"
+description: "Work a candidate's Process tab: complete steps, read what they submitted, and see what a rejection or hire does to what's left."
+icon: "move-right"
+---
+
+You move a candidate through the process on their **Process** tab. It has three sections: **Next step**, **Previous steps** and **Upcoming steps**.
+
+<Note>
+For a rejected candidate, the **Process** tab is currently empty, even if they went through steps. Their history is still on the **Activity** tab. Shortlisted people have no **Process** tab until you promote them.
+</Note>
+
+## Next step, previous steps, upcoming steps
+
+- **Next step** shows the candidate's current step, ready to act on: **Approve** / **Reject** for a review, the composer for a message, and so on. The [next action](/companies/recommended-actions) card, marked **AI recommendation**, sits above it. When every step is done, it reads "No steps left in the pipeline."
+- **Previous steps** lists completed and skipped steps, oldest first. It starts with an **Application** card that shows their score when they joined the job. Each row shows who completed the step and when.
+- **Upcoming steps** lists the steps after the current one. You can't act on them until they're current.
+
+## Completing a review
+
+The form depends on the step's Method:
+
+- **Human approval**: an optional instructions box, a note field if Allow notes is on, then **Approve** / **Reject** buttons.
+- **Human score**: the same instructions and note fields, plus a plain number field labeled **Score** (1 to 100), then a single **Complete review** button, disabled until you enter a valid score.
+- **AI approval**: a box explains what happens: the step completes at or above the passing score and waits below it. **Approve** / **Reject** buttons appear only while it's waiting.
+
+## Completing a task
+
+When a Task step is the candidate's next step, the **Next step** card shows a **Complete** button, plus a notes field if **Allow notes** is on. You can also use **Mark complete** in the step's **Step actions** menu.
+
+## Reading questionnaire answers and files
+
+A completed **Questionnaire** step shows how many questions were answered. Expand it and click **Review** to open the full set of questions and answers under a **Responses** heading.
+
+A completed **File upload** step shows what the candidate sent. PDFs and images open in Staffer. Other files download.
+
+## The score on each previous step
+
+Any step that changed the candidate's match score shows the change next to it, green for up and red for down. Expand the step for a summary of what changed and a per-criterion breakdown. A criterion that got no new evidence from the step shows **Held to prior verdict** and keeps its old score. See [How match scores work](/companies/match-scores) for what the numbers mean, and [When scores change](/companies/editing-and-rescoring) for what triggers a rescore in the first place.
+
+## Step actions
+
+Every step has a **Step actions** (⋯) menu. What's on it depends on the step:
+
+| Item | Available on | What it does |
+|---|---|---|
+| **Mark complete** | Any completable pending step | Completes it by hand. |
+| **Skip** / **Skip step** | Pending steps | Marks it skipped, no data recorded. |
+| **Un-skip step** | A skipped step | Puts it back to pending. |
+| **Reschedule** / **Cancel meeting** | A scheduled interview | Reschedules or cancels the call. |
+| **Add step before** / **Add step after** | Pending or in-progress steps | Adds a one-off step, for this candidate only. |
+| **Edit step** / **Delete step** | One-off steps you've added | Change or remove it. |
+| **Copy interview link** | A pending AI interview | Copies the candidate's interview link. |
+| **Reset step** | Any step with a result | Wipes everything recorded (transcript, upload, answers) and returns it to pending. Can't be undone. |
+| **Copy step ID** | Every step | Copies its ID. |
+
+You can't reassign a step from here. Change a step's reviewers on the job's [Process tab](/companies/build-a-process). For a one-off step you added for this candidate, use **Edit step**.
+
+## Add a one-off step for this candidate
+
+In the **Step actions** menu on any pending step, choose **Add step before** or **Add step after**, then pick a kind. The step is added for this candidate only. The job's process doesn't change. You can also ask the agent, for example "give Alice a portfolio review". In **Ask permission** mode it shows a confirmation card first. In **Auto** mode it's added straight away.
+
+## What happens when the candidate is rejected, hired, gets an offer, or withdraws
+
+Moving a candidate to **Offer**, **Hired**, **Rejected** or **Withdrawn** marks every step they haven't finished as **Skipped**. This includes **Offer**, so finish any steps you still need before you move someone there.
+
+If you later move the candidate back, for example after a declined offer, those steps stay skipped. Turn each one back on with **Un-skip step** in its **Step actions** menu.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can I reassign a step to someone else?">
+    Not from the candidate. Change the step's reviewers on the job's **Process** tab. A one-off step you added for this candidate can be changed with **Edit step**.
+  </Accordion>
+  <Accordion title="What's the difference between Skip and Reset step?">
+    **Skip** marks a step as not happening and moves on. **Reset step** deletes what was recorded, such as a transcript, an upload or answers, so the step can be done again. You can't undo a reset.
+  </Accordion>
+  <Accordion title="If I reject someone and then bring them back, do their old steps reopen?">
+    No, they stay skipped. Turn each one back on from its **Step actions** menu.
+  </Accordion>
+  <Accordion title="How do I see what a candidate answered in a questionnaire?">
+    Expand the step in **Previous steps** and click **Review**.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Assignees, holds and automatic rejection" icon="shield-check" href="/companies/reviewer-holds-and-gates">
+    Who gets asked, and what can reject a candidate on its own.
+  </Card>
+  <Card title="Change a candidate's stage" icon="target" href="/companies/candidate-state">
+    Move a candidate to Rejected, Offer or Hired, and what that tells them.
+  </Card>
+</CardGroup>

@@ -1,17 +1,61 @@
 ---
-title: "Your jobs list"
-description: "Find a job by status, and keep track of which job you're working in."
+title: "Manage your jobs"
+description: "Search, filter, and sort the Jobs page, and every item in a job's More job actions menu."
 icon: "list"
 ---
 
-The jobs list shows every job in your workspace. A job appears here once the agent opens its first draft. See [Create a job](/companies/create-a-job).
+The **Jobs** page lists every job in your workspace. Every job also carries the same **More job actions** menu, whether you open it from a list row or from inside the job itself.
 
-## Job status
+## The Jobs page
 
-Every job is **Open** or **Closed**, and the status shows on the list. Filter by status to see only the jobs you're actively hiring for, or sort by it to group them.
+A chat panel sits on the left (the **Ask anything** page chat described in [Work with the agent](/companies/the-agent)). The job table takes the rest of the page.
 
-## The job header
+- **Search jobs…** matches job names only.
+- **Filter** adds conditions on **Status**, **Function**, **Engagement**, and **Location**. Values within one filter combine as "or", and different filters combine as "and".
+- **Display options** covers **Sort by** (16 options, including Updated, Name, Deadline, Function, Version, Created, and Candidates, each ascending or descending) and **Columns**. Name always shows. Function, Candidates, Deadline, Updated, Listing and Status show by default. Engagement, Location, Version and Created are available but off by default.
 
-When you open a job, a header at the top of the canvas shows which job you're in. It stays in view while you work on the brief, listing, process, and candidates.
+<Note>
+  The **Status** filter and the **Status** column aren't the same thing. The filter works on the listing: **Published**, **Draft**, **Closed** or **Not listed**. The column shows the position: **Open** or **Closed**, meaning whether the job still takes candidates. A job can be open with no listing at all. To group open and closed positions, sort by **Status** instead.
+</Note>
 
-**Next:** [The brief: hard fields and criteria](/companies/brief-criteria)
+**Candidates** shows a live count of everyone on the job. The table paginates at 50 rows by default. Your search text resets each visit, but filters, sort, and column choices are remembered, per browser, not per account: they won't follow you to a different computer or show up for a teammate.
+
+## The job header and its actions menu
+
+Inside a job, the header shows the job's name, its status and the same **More job actions** (**…**) menu as the list. Click the job's name to search for and jump to another job.
+
+| Item | What it does |
+|---|---|
+| **Members** | Adds people to a roster on the job. This is informational only: it doesn't grant or restrict access. Everyone in your workspace with the right role can already see and act on every job. |
+| **Team** | Assigns the job to one of your workspace's teams. If the job has a team, the agent also uses that team's knowledge when working on this job. |
+| **Notify me** | Toggles your own notifications for this job: a candidate replies, a new candidate lands on the job, an interview finishes, or any other process step completes. The job's creator is subscribed automatically. Everyone else opts in here. |
+| **Share…** | Creates a public, read-only link to one or more candidates on the job. See [Share candidates](/companies/share-candidates). |
+| **Duplicate job** | Makes an exact copy immediately, no confirmation: the brief, criteria, listing (as an unpublished draft), and process, but not candidates, notes, or the chat. The copy always opens **Open**, even from a closed job. See [Create a job](/companies/create-a-job) for how this differs from asking the agent to start a job from an existing one. |
+| **Move to workspace** | Moves the job into a different workspace in the same organization. Only appears if you're an admin or owner of both workspaces. It's a move, not a copy: the job leaves the workspace you moved it from. |
+| **Copy job ID** | Copies the job's internal ID. |
+| **Reset chat** | Wipes the job's shared chat for everyone, instantly, with no confirmation. See [Work with the agent](/companies/the-agent). |
+| **Close position** / **Reopen position** | Stops or resumes new candidates and applications. See [Close, reopen or delete a job](/companies/close-reopen-delete). |
+| **Delete job** | Hides the job everywhere in the app and unpublishes its listing. See [Close, reopen or delete a job](/companies/close-reopen-delete). |
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Why can't I filter for open jobs?">
+    The **Status** filter works on the listing (**Published**, **Draft**, **Closed**, **Not listed**), not on whether the position is open. Sort by **Status** to put open positions first, or look at the **Status** column. "Not listed" only means the job has no published listing: the position itself can still be open.
+  </Accordion>
+  <Accordion title="Does adding someone as a Member change what they can do on the job?">
+    No. Members is a roster, not a permission list. What someone can see and do is controlled by their workspace role, the same on every job.
+  </Accordion>
+  <Accordion title="I changed my columns and sort order. Why don't they show up on my other laptop?">
+    View preferences are saved to your browser, not your account. Set them again on any other device.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Create a job" icon="file-plus" href="/companies/create-a-job">
+    Start one from a description, or duplicate an existing job.
+  </Card>
+  <Card title="Close, reopen or delete a job" icon="archive" href="/companies/close-reopen-delete">
+    What each of those three actually does.
+  </Card>
+</CardGroup>

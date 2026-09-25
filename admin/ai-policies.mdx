@@ -1,0 +1,71 @@
+---
+title: "AI policies"
+description: "How Live policy enforcement, policy notes and documents, and the candidate privacy notice work, and what they don't cover."
+icon: "scale"
+---
+
+**Settings** → **Organization** → **Compliance** → **Policies** is where you tell Staffer's AI what your organization requires, and optionally have it refuse actions that conflict. Only organization owners and admins can change it.
+
+## Live policy enforcement
+
+The **Live policy enforcement** toggle runs a small, fast AI check before a specific set of AI actions, and can refuse one that conflicts with your policy. Each check uses a small amount of credits, usually well under a cent, on top of the normal cost of the action.
+
+It checks:
+- Agent actions: drafting or updating the brief, running a candidate search, editing job notes, setting up or changing the hiring process, adding a step to one candidate, and rewriting the listing.
+- One-shot AI actions: rewriting a message or drafting a reply, naming a search, generating template or career page text, preparing interview notes, closing a job, and the notes, stage changes and outreach you send from a candidate's page.
+
+Generating or translating a listing from the brief isn't checked. Rewriting a listing through the agent is.
+
+It doesn't check:
+- The conversation itself. You can ask the agent about your policies freely. Only the actions above can be refused.
+- Criteria you type directly into the brief editor yourself. Only what the agent writes is judged, not your own edits.
+
+When a check refuses an action, the agent shows an inline message explaining what conflicted and, where possible, what would let it through, with a link back to this page. A one-shot action (like closing a job) shows the same reason as an error instead of completing.
+
+If the check itself can't run in time, such as a timeout, the action goes ahead unchecked rather than blocking your work, and Staffer logs that it failed open.
+
+Turning enforcement off doesn't turn off awareness: your policy notes and uploaded-document summaries are still read by the AI on every request, whether or not enforcement is on. Enforcement only controls whether a conflicting action gets refused.
+
+## Policy notes
+
+A free-text field for guidance you want every AI feature to follow, such as "never filter candidates by age or protected attributes." It's appended to the AI's instructions on every request, and it's what the live enforcement check judges actions against when enforcement is on.
+
+## Policy documents
+
+**Upload policy** accepts PDF, TXT or MD files up to 25 MB. Staffer summarizes the document, and the summary, not the raw file, is what the AI sees and what enforcement checks against. If summarizing fails, the upload is rejected rather than left half-configured.
+
+## Candidate privacy policy
+
+A toggle for your own privacy notice toward candidates. Turn it on and it's shown alongside Staffer's own policy in the consent step candidates see when they apply, and the consent checkbox references both.
+
+Staffer ships a ready-made, editable notice covering who you are, what you collect, why, who you share it with, and candidate rights. It's a starting point, not legal advice: you remain the data controller responsible for what it says.
+
+## Staffer's built-in rules
+
+Staffer adds its own non-discrimination, GDPR and AI Act rules to every AI request, regardless of your settings. These take precedence over your organization's own policy if the two conflict. This is a product guardrail, not legal advice or a compliance guarantee.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Does enforcement check everything the agent does?">
+    No. It checks the agent actions and one-shot AI actions listed above. Chatting with the agent, and criteria you type into the brief yourself, are never checked.
+  </Accordion>
+  <Accordion title="Does turning off enforcement turn off the built-in non-discrimination and GDPR rules too?">
+    No. Those apply to every AI request regardless of your enforcement setting or whether you've written any policy at all.
+  </Accordion>
+  <Accordion title="What happens if the policy check errors or times out?">
+    The action goes ahead unchecked, and Staffer logs that the check failed open. Live policy enforcement is a best-effort check, not a hard guarantee.
+  </Accordion>
+  <Accordion title="Who can manage policies?">
+    Organization owners and admins. A workspace admin who isn't also an organization admin doesn't see this page.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="What the agent can do" icon="workflow" href="/companies/agent-actions">
+    Which agent actions ask for your approval, and how Auto mode changes that.
+  </Card>
+  <Card title="Compliance overview" icon="shield" href="/admin/compliance">
+    What else is in **Settings** → **Organization** → **Compliance**.
+  </Card>
+</CardGroup>

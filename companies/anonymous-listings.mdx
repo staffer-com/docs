@@ -1,21 +1,70 @@
 ---
-title: "Hide your company name"
-description: "How anonymous listings work, and why they're generated separately rather than just hidden."
+title: "Anonymous listings"
+description: "Publish a listing without naming your company, and what changes on the public page."
 icon: "eye-off"
 ---
 
-Sometimes you don't want a listing to name your company: a confidential search, a sensitive replacement hire.
+An anonymous listing hides your company's name, logo and colors from the public page. The location and map can still show. Use it for a confidential search: replacing someone who hasn't been told yet, or a search you don't want a competitor to notice.
 
-## What anonymous mode actually does
+## Turn it on
 
-Turning it on doesn't just hide your logo and name from the page chrome. Staffer generates a second version of the listing body itself, written without your company's identity in it, since the normal version is drafted from your company's own knowledge and would likely name you anyway.
+<Steps>
+  <Step title="Open the listing's more menu">
+    On the job's **Listing** tab, open the **…** menu.
+  </Step>
+  <Step title="Turn on Anonymous client">
+    Switch on **Anonymous client**. It saves straight away. Staffer writes a separate confidential version of the title, tagline and body from the brief, without your [company knowledge](/companies/company-knowledge). The first time, the tab shows "Writing a confidential version…" while it drafts, one language at a time.
+  </Step>
+  <Step title="Read the confidential copy">
+    Read the whole draft before you publish. Staffer only checks for your workspace name. It doesn't catch product names, customers, your website or anything you type yourself.
+  </Step>
+  <Step title="Check the map">
+    The map and location still show on an anonymous listing. If the address would give you away, turn off **Show map** and click **Save**.
+  </Step>
+</Steps>
 
-## What happens if it can't
+<Tip>
+Turn on **Anonymous client** before you first publish. If you switch it on after sharing the named link, the old link still leads to the listing.
+</Tip>
 
-If the anonymous body would still reveal who you are, Staffer refuses to publish it rather than show a version with your name in it by accident. Fix the source content and regenerate instead of trying to publish through it.
+## What changes on the public page
 
-<Note>
-  Both versions are kept. Turning anonymous mode off and back on doesn't regenerate or lose either one.
-</Note>
+- No cover photo, logo, company name or brand color. The page starts with the role.
+- The URL changes shape. A named listing is `jobs.staffer.com/companies/your-workspace/listing-name`. An anonymous one is `jobs.staffer.com/jobs/listing-id`, so the link Staffer gives you doesn't include your workspace name.
+- The apply form says "this employer" instead of your name, and the confirmation email doesn't name your company.
+- The listing is left out of name and company search on the public board. Candidates can only find it by matching the anonymous text itself.
+- It never appears on your own [career page](/companies/career-page), published or not, since that page is inherently tied to your company.
 
-**Next:** [Your career page](/companies/career-page)
+## How the anonymous text is checked
+
+Staffer removes your company's name from the brief before drafting, and tells the AI to describe you only by category ("a Nordic fintech scale-up"), never by name, brand, product or website. It then scans the draft for your workspace name and replaces any mention with "a confidential client" or "the company".
+
+That scan only looks for your workspace name, and only when Staffer writes the draft. It won't catch a product name, a customer or your website, or text you add later by hand or through the agent.
+
+## If the anonymous version doesn't exist yet
+
+Turning on **Anonymous client** writes the confidential copy automatically. Until it exists, you'll see a banner: "No confidential copy yet." The public page doesn't load until the copy exists. It never falls back to the named version.
+
+## Turning it off
+
+Switching **Anonymous client** off shows your named listing again. Nothing is deleted: Staffer keeps both versions, and switching back shows the confidential copy as you left it.
+
+<Warning>
+**Re-draft from brief** always writes the named version, including your company details. With **Anonymous client** on, the result can end up in your confidential copy too. After any re-draft, read the confidential copy again before it's public.
+</Warning>
+
+Generating, editing and publishing an anonymous listing use the same permissions and credits as any other listing. See [Create and publish a listing](/companies/publish-a-listing).
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="If the draft would give away my company's name, does Staffer refuse to publish it?">
+    No. It replaces your workspace name with "a confidential client" or "the company" and lets you publish. It doesn't catch other details that could identify you, so read the copy yourself.
+  </Accordion>
+  <Accordion title="Can candidates find my anonymous listing by searching my company name?">
+    No. Search on the public board only matches an anonymous listing's own anonymous text, never your real name.
+  </Accordion>
+  <Accordion title="Does turning anonymous mode off and back on lose my confidential draft?">
+    No. Both versions are kept. Switching only changes which one the tab shows and which one is public.
+  </Accordion>
+</AccordionGroup>

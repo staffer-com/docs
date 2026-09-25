@@ -1,21 +1,106 @@
 ---
-title: "Recommended actions"
-description: "What the recommended action on a candidate means, and where it comes from."
-icon: "compass"
+title: "Next actions"
+description: "One recommended next step per candidate, worked out from their stage, messages and process steps. Nothing sends or changes until you act on it."
+icon: "zap"
 ---
 
-Next to an active candidate, Staffer suggests one next step: send a reminder, review a finished interview, move them to the next stage.
+Staffer suggests one next action for each candidate. It works it out from their stage, their messages, their process steps and how they compare with others in the same job.
 
-## Where it comes from
+- It's worked out again every time you look, so it always matches what has happened.
+- Nothing sends or changes until you act on it. Acting on it needs the member role or higher. Reviewers and viewers can only complete steps they're named on.
+- You can't dismiss or snooze it. It changes when you act on it or when something happens with the candidate.
 
-The suggestion is worked out fresh each time you look, from the candidate's current state, what's done in their process, and how they compare to others in the same pipeline. Nothing is pre-written or queued up in advance. It reflects where things stand right now.
+## Where you see it
 
-## You decide
+- The **Process** tab's **Next step** card, marked with a purple **AI recommendation** badge, often with a composer or editor already open underneath it.
+- The **Next action** column, filter and group-by option on candidate lists. See [Candidate lists](/companies/candidates-list).
+- **Speed action**, for working through several at once (below).
 
-The suggestion is exactly that, a suggestion. Nothing happens on its own. Acting on it, sending the message, moving the stage, is always a click you make.
+## Every action
+
+### In review
+
+| Title | Appears when | Acting on it |
+|---|---|---|
+| **Acknowledge application** | They applied and you haven't responded | Opens a composer pre-filled with an acknowledgement message. Sending moves them to In progress. |
+| **Send intro outreach** | You sourced them and haven't reached out yet | Opens a composer pre-filled with an outreach message. |
+| **Send follow-up** | You've messaged, no reply for 5 or more days | Opens a composer pre-filled with a follow-up message. |
+| **Wait for reply** | You've messaged, no reply, under 5 days | Nothing to act on. |
+| **Advance to In progress** | They replied | Opens a stage-change control, no message. |
+
+### In progress
+
+| Title | Appears when | Acting on it |
+|---|---|---|
+| **Advance to Offer** | Every step is done and they're near the top compared with others in this job | Opens a composer pre-filled with the offer message. Sending moves them to Offer. |
+| **Reject** | Every step is done and they're near the bottom compared with others in this job | Opens a composer pre-filled with the rejection message. Sending moves them to Rejected. |
+| **Wait for the pipeline** | Every step is done, but they're in the middle | Nothing to act on. |
+| **Send status check** | Steps still open, no contact for 7 or more days | Opens a composer pre-filled with a follow-up message. |
+| **In progress** | Nothing else to flag | Nothing to act on. |
+
+### Offer, Hired, Rejected, Withdrawn
+
+| Title | Appears when | Acting on it |
+|---|---|---|
+| **Send the offer** | Moved to Offer, never messaged | Opens a composer pre-filled with the offer message. |
+| **Follow up on offer** | Offered, no contact for 3 or more days | Opens a composer pre-filled with a follow-up message. |
+| **Awaiting decision** | Offered, recently followed up | Nothing to act on. |
+| **Send welcome message** | Hired, never welcomed | Opens a composer pre-filled with a welcome message. |
+| **Hired** | Hired and welcomed | Nothing to act on. |
+| **Send rejection note** | Rejected, never notified | Opens a composer pre-filled with the rejection message. |
+| **No next step** | Rejected and notified, or withdrawn | Nothing to act on. |
+
+### Any active stage
+
+| Title | Appears when | Acting on it |
+|---|---|---|
+| **Reply to their message** | They messaged you and you haven't replied | Opens a composer pre-filled with an AI-drafted reply. |
+| **Reject** | A completed interview or questionnaire recommends rejecting, or a completed step scored below its threshold | Opens a composer pre-filled with the rejection message. |
+| **Advance to In progress** / **Advance to Offer** | A completed interview or questionnaire recommends advancing | Opens a composer (if advancing to Offer) or a stage-change control. |
+| The step's own title, or **Send message** | The next open step is a message step assigned to you | Opens a composer seeded with the step's own message. Sending also completes the step. |
+| The step's own title or kind | The next open step is any other kind, assigned to you | Opens that step's editor. |
+| **Waiting on `<name>`** | The next open step is assigned to someone else | Nothing to act on. Disabled. |
+
+## Urgency
+
+Every next action has a priority: low, medium, high or critical. It shows with the same bars and colors as on [candidate lists](/companies/candidates-list). The most time-sensitive situations, such as an unanswered message after 3 or more days, or an unsent offer, show as critical.
 
 <Note>
-  You'll see the same recommended action in two places: on the candidate's Process tab, and in the Candidates list when you're working through several people at once.
+The badge says **AI recommendation**, but fixed rules pick the action, based on the stage, what has happened and how the candidate compares with others in the job. AI only writes the draft reply for **Reply to their message**.
 </Note>
 
-**Next:** [Changing a candidate's state](/companies/candidate-state)
+## Speed action: work through several at once
+
+Click **Speed action** on a job's **Candidates** tab or the **Applications** page. The table turns into a list of cards, one per candidate, all selected. A card with a message shows the draft collapsed. Expand it to edit before sending. **Skip** hides a card until you leave the page. When you're ready, click **Apply N action(s)** at the bottom.
+
+Only these can be applied in bulk: **Reply to their message**, **Send intro outreach**, process **Send message** steps, **Acknowledge application**, **Send follow-up**, **Send offer**, **Send rejection note**, **Send welcome message**, and plain stage changes. Other actions, such as completing a step, need you to open the candidate.
+
+<Warning>
+**Apply N action(s)** fires immediately, with no confirmation. A card you never expanded still sends its seeded message exactly as written. Check anything you haven't opened before you click Apply.
+</Warning>
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can I dismiss or snooze a recommendation?">
+    No. **Skip** in Speed action hides a card until you leave the page. Otherwise, a next action only changes when you act on it or when something happens with the candidate.
+  </Accordion>
+  <Accordion title="Why did the recommendation change since I last looked?">
+    Staffer works it out again from the candidate's current stage, messages and steps every time you open it. A reply, a completed step or a few days without contact can all change it.
+  </Accordion>
+  <Accordion title="Does Staffer decide on its own to reject or advance someone?">
+    No. It only suggests. You send the message or change the stage. The one exception is a questionnaire step with **Automatically reject** turned on, which you set up yourself. See [Assignees, holds and automatic rejection](/companies/reviewer-holds-and-gates).
+  </Accordion>
+  <Accordion title="If I bulk-apply without expanding every card, what actually gets sent?">
+    The pre-filled draft, with that candidate's name and job filled in.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Change a candidate's stage" icon="workflow" href="/companies/candidate-state">
+    What each stage means and how moves are recorded.
+  </Card>
+  <Card title="Candidate lists" icon="list-checks" href="/companies/candidates-list">
+    The Next action column, filter and urgency indicator.
+  </Card>
+</CardGroup>

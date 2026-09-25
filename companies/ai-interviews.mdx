@@ -1,46 +1,95 @@
 ---
 title: "AI interviews"
-description: "The three ways a candidate can do an AI interview, and what they're told about it beforehand."
+description: "The candidate talks to an AI interviewer by chat, voice or video, at a time that suits them. How to set one up, and what happens after."
 icon: "bot"
 ---
 
-An AI interview step runs in one of three modes: chat, voice, or video. Pick the mode when you build the step.
+An AI interview step lets a candidate talk to an AI interviewer by chat, voice or video, whenever suits them. You get a transcript and an evaluation. For tips on writing the instructions, see [AI interview playbook](/academy/ai-interview-playbook).
 
-## The three modes
+## Set up the step
 
-Chat is a written back-and-forth. Voice is a live spoken conversation. Video adds a recorded feed on top of the conversation. All three run the same underlying interview logic, just through a different medium.
+Open the step from the job's **Process** tab. Its **Setup** tab has:
 
-## Voice and pacing
+| Field | What it does |
+|---|---|
+| Step name | Shown on the canvas and in the candidate's step history. Defaults to "AI interview". |
+| Instructions for the candidate | Shown before the interview starts. This is where you set expectations: length, topics, tone. |
+| Instructions for the AI | Only the AI reads this: persona, what to cover, how to follow up. The candidate never sees it. |
+| Method | **Chat** (default), **Voice** or **Video**. |
+| Language | **English (US)** or **Norwegian**. |
+| Voice | Voice and Video only. Nine stock voices, six English and three Norwegian, each with a one-line description. Defaults to Lauren. Press play next to the picker to preview one before choosing it. |
+| Speaking speed | Voice and Video only. From 0.7× to 1.2×. Defaults to 1.00×, normal pace. |
+| Max length (minutes) | From 5 to 60. Defaults to 15. |
+| Interviewer tone | **Warm** (curious, encouraging, default), **Neutral** (professional, structured) or **Rigorous** (probing follow-ups). |
+| Reviewers | Optional. Who you expect to look at the results. The step completes when the candidate finishes, whether or not anyone is named. |
 
-Voice and video interviews use voice models that vary tone and inflection through the conversation. The agent leaves room between responses so the candidate has time to think, and it ignores thinking sounds and filler words instead of treating them as an answer.
+Max length doesn't cut the candidate off mid-answer. A couple of minutes before the limit, the AI starts wrapping up. At the limit, it asks one last question and closes. The candidate then sees a short rating screen.
 
-## Step settings
+The **Rules** tab has **Applies to** and a notice that the candidate is emailed when the step becomes their turn. An AI interview is always visible to the candidate.
 
-Open the job's **Process** tab and click an AI interview step to open its settings. The **Setup** tab has:
+## Try as candidate
 
-- **Mode.** Chat, voice, or video.
-- **Language.** The language the interview runs in.
-- **Voice.** Pick the interviewer's voice, and press play next to it to hear a sample. New steps start with updated default voices and tone. Lauren, a US voice, is now available.
-- **Speaking speed.** A slider from slower to faster. The default is 0.85x, a little below normal.
-- **Max length (minutes).** A hard cap. When it's reached, the AI wraps up the interview and hands off to the rating screen.
-- **Interviewer tone.** Sets how the AI runs the conversation.
+Click **Try as candidate** in the **Preview as a candidate** box to take the interview yourself with your current settings, including unsaved changes. Nothing is kept when you close it.
 
-Click **Try as candidate** to run the interview yourself. You don't need to save the step first.
+<Note>
+**Try as candidate** uses credits, the same as a real interview. So does the play button that previews a voice.
+</Note>
 
-Voice and speaking speed only affect voice and video interviews.
+## What the candidate sees before starting
 
-The preview uses the same header as the apply page, so you see what the candidate sees.
+Before they start, the candidate must check a box confirming they understand the session is recorded, assessed by AI and affects their match score. A **Details** popover explains more:
 
-## What the candidate is told
+- Chat saves what they type. Voice also records audio. Video records audio and picture.
+- An AI reads the transcript and writes an assessment for your team, with a suggested next step. The candidate doesn't see it.
+- The recording, transcript and assessment are deleted six months after the application closes.
 
-Before starting, the candidate sees a disclosure that the session is recorded, a transcript is kept, and an AI evaluation is produced for the recruiter, which the candidate does not see themselves. They have to acknowledge it before the interview can start.
+For Voice and Video, they also check their microphone and camera, and can choose to hold a key to talk instead of leaving the mic on.
+
+If their connection drops, their answers are already saved. A **Send again** button appears for the message that failed. Reloading the page takes them back into the same interview.
+
+Once it's complete, the candidate can't retake it on their own. To let them try again, use **Reset step** in the [Step actions menu](/companies/run-the-process). It deletes the previous attempt.
 
 ## What you get afterward
 
-A transcript and an AI evaluation land on the candidate's process step once the interview finishes, and their match score updates to take it into account. Audio tags are stripped from the transcript, so it reads as what was said.
+When the candidate finishes, their step on the **Process** tab shows:
 
-<Info>
-  Interview recordings, transcripts, and evaluations are deleted automatically six months after the application closes.
-</Info>
+- The transcript.
+- An evaluation: a short summary, strengths, concerns and a suggested next step of **Advance**, **Uncertain** or **Reject**.
+- A recording, for Voice and Video.
+- The candidate's rating of the experience, if they left one.
 
-**Next:** [Human interviews](/companies/human-interviews)
+Staffer then rescores the candidate. The rescore reads what the candidate said. The AI's evaluation doesn't count toward the score. See [How match scores work](/companies/match-scores).
+
+If a candidate leaves without answering anything, the step still completes, with no transcript and no evaluation.
+
+## Retention and cost
+
+The recording, transcript and evaluation are deleted six months after the application closes, not six months after the interview. The record that the candidate confirmed the notice is kept.
+
+AI interviews use your organization's credits, and so do voice previews and **Try as candidate**. See [Credits, top-ups and spend caps](/admin/credits).
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Does the candidate see their own evaluation?">
+    No. Only your team sees the summary and suggested next step.
+  </Accordion>
+  <Accordion title="Can a candidate retake an AI interview?">
+    Not on their own. Use **Reset step** to let them try again. It deletes the previous attempt.
+  </Accordion>
+  <Accordion title="Does Try as candidate cost anything?">
+    Yes. It uses credits, the same as a real interview, even though nothing is saved.
+  </Accordion>
+  <Accordion title="Does the AI's own verdict affect the match score?">
+    No. Only what the candidate said counts as evidence. The AI's summary and suggested next step are left out of scoring on purpose.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Interviews and scheduling" icon="video" href="/companies/human-interviews">
+    Book a live call over Google Meet instead.
+  </Card>
+  <Card title="Step types" icon="list-checks" href="/companies/process-steps">
+    Every other step kind and its fields.
+  </Card>
+</CardGroup>

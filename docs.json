@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Staffer",
-  "description": "Full documentation of Staffer, the AI-native hiring platform. Every feature, how-to-use and important details for both companies and candidates.",
+  "description": "Help docs for Staffer, the AI hiring assistant. How every feature works, step-by-step guides and answers for companies and candidates.",
   "colors": {
     "primary": "#1284DA",
     "light": "#1284DA",
@@ -31,64 +31,43 @@
     "directory": "card",
     "tabs": [
       {
-        "tab": "Introduction",
+        "tab": "Get started",
+        "icon": "rocket",
         "groups": [
           {
-            "group": "Start here",
+            "group": "Welcome",
             "pages": [
-              "untitled-page-2"
-            ]
-          },
-          {
-            "group": "Pricing",
-            "icon": "credit-card",
-            "pages": [
-              "pricing/how-it-works",
-              "pricing/plans",
-              "pricing/what-you-pay",
-              "pricing/billing",
-              "pricing/faq"
+              "index",
+              "get-started/how-staffer-works",
+              "get-started/quickstart",
+              "get-started/key-concepts",
+              "get-started/roles-and-permissions",
+              "get-started/faq"
             ]
           }
-        ],
-        "icon": "hand"
+        ]
       },
       {
         "tab": "For companies",
         "icon": "building-2",
-        "pages": [
+        "groups": [
           {
-            "group": "Getting started",
+            "group": "Set up",
             "icon": "rocket",
             "pages": [
               "companies/sign-in",
-              "companies/create-workspace",
-              "companies/workspace-details",
+              "companies/set-up-your-workspace",
+              "companies/join-your-team",
               "companies/invite-team",
-              "companies/ai-copilot"
+              "companies/navigate-staffer"
             ]
           },
           {
-            "group": "Features",
-            "icon": "star",
+            "group": "The agent",
+            "icon": "sparkles",
             "pages": [
-              "features/sourcing",
-              "features/ai-interviews",
-              "features/match-scoring",
-              "features/career-page-and-listings",
-              "features/ai-agent",
-              "features/process-builder",
-              "features/candidate-experience",
-              "features/compliance"
-            ]
-          },
-          {
-            "group": "Compliance",
-            "icon": "shield-check",
-            "pages": [
-              "companies/compliance-center",
-              "companies/eu-ai-act",
-              "companies/retention-and-erasure"
+              "companies/the-agent",
+              "companies/agent-actions"
             ]
           },
           {
@@ -96,38 +75,38 @@
             "icon": "briefcase",
             "pages": [
               "companies/create-a-job",
-              "companies/jobs-list",
               "companies/brief-criteria",
-              "companies/editing-and-rescoring"
+              "companies/jobs-list",
+              "companies/close-reopen-delete"
             ]
           },
           {
-            "group": "Scouting",
+            "group": "Find candidates",
             "icon": "search",
             "pages": [
               "companies/running-a-search",
-              "companies/match-scores",
-              "companies/shortlist-and-push"
+              "companies/add-candidates",
+              "companies/shortlist-and-push",
+              "companies/contact-details"
             ]
           },
           {
-            "group": "Billing",
-            "icon": "credit-card",
-            "pages": [
-              "untitled-page",
-              "untitled-page-4",
-              "untitled-page-3",
-              "companies/usage-and-invoices"
-            ]
-          },
-          {
-            "group": "Candidates",
+            "group": "Work with candidates",
             "icon": "users",
             "pages": [
+              "companies/candidates-list",
               "companies/candidate-view",
               "companies/recommended-actions",
               "companies/candidate-state",
-              "companies/notes-and-messages"
+              "companies/notes"
+            ]
+          },
+          {
+            "group": "Match scores",
+            "icon": "target",
+            "pages": [
+              "companies/match-scores",
+              "companies/editing-and-rescoring"
             ]
           },
           {
@@ -135,9 +114,48 @@
             "icon": "workflow",
             "pages": [
               "companies/build-a-process",
+              "companies/process-steps",
               "companies/reviewer-holds-and-gates",
+              "companies/run-the-process",
               "companies/ai-interviews",
-              "companies/human-interviews"
+              "companies/human-interviews",
+              "companies/calendar"
+            ]
+          },
+          {
+            "group": "Messages",
+            "icon": "message-square",
+            "pages": [
+              "companies/message-candidates",
+              "companies/replies-and-inbox",
+              "companies/message-templates"
+            ]
+          },
+          {
+            "group": "Hiring managers",
+            "icon": "share-2",
+            "pages": [
+              "companies/share-candidates"
+            ]
+          },
+          {
+            "group": "Listings and career page",
+            "icon": "megaphone",
+            "pages": [
+              "companies/publish-a-listing",
+              "companies/anonymous-listings",
+              "companies/career-page",
+              "companies/branding",
+              "companies/inbound-applications"
+            ]
+          },
+          {
+            "group": "Insights",
+            "icon": "chart-spline",
+            "pages": [
+              "companies/talent-pool",
+              "companies/analytics",
+              "companies/notifications"
             ]
           },
           {
@@ -147,24 +165,47 @@
               "companies/your-account",
               "companies/workspace-settings",
               "companies/members-and-teams",
-              "companies/organization-settings"
+              "companies/teams",
+              "companies/company-knowledge"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Admin",
+        "icon": "shield-check",
+        "groups": [
+          {
+            "group": "Plans and billing",
+            "icon": "credit-card",
+            "pages": [
+              "pricing/how-it-works",
+              "pricing/plans",
+              "pricing/what-you-pay",
+              "admin/credits",
+              "pricing/billing",
+              "pricing/faq"
             ]
           },
           {
-            "group": "Listings and career page",
-            "icon": "megaphone",
+            "group": "Organization",
+            "icon": "building",
             "pages": [
-              "companies/publish-a-listing",
-              "companies/career-page",
-              "companies/anonymous-listings"
+              "admin/organization",
+              "admin/workspaces"
             ]
           },
           {
-            "group": "Talent pool and analytics",
-            "icon": "layout-dashboard",
+            "group": "Compliance and privacy",
+            "icon": "shield",
             "pages": [
-              "companies/talent-pool",
-              "companies/analytics"
+              "admin/compliance",
+              "admin/ai-policies",
+              "admin/retention",
+              "admin/data-requests",
+              "admin/dpa-and-export",
+              "admin/security",
+              "admin/eu-ai-act"
             ]
           }
         ]
@@ -172,14 +213,14 @@
       {
         "tab": "For candidates",
         "icon": "user-round",
-        "pages": [
+        "groups": [
           {
             "group": "Getting started",
             "icon": "rocket",
             "pages": [
               "candidates/what-staffer-is",
-              "candidates/claiming-your-profile",
               "candidates/signing-in",
+              "candidates/claiming-your-profile",
               "candidates/profile-and-resume"
             ]
           },
@@ -188,22 +229,56 @@
             "icon": "briefcase",
             "pages": [
               "candidates/applying-to-a-job",
+              "candidates/recruiter-contact",
               "candidates/tracking-your-application",
               "candidates/messages",
               "candidates/withdrawing"
             ]
           },
           {
-            "group": "Interviews and screening",
+            "group": "Steps and interviews",
             "icon": "clipboard-list",
             "pages": [
               "candidates/screening-steps",
-              "candidates/ai-interview"
+              "candidates/ai-interview",
+              "candidates/book-an-interview"
             ]
           },
-          "candidates/searching-for-jobs",
-          "candidates/copilot",
-          "candidates/data-and-privacy"
+          {
+            "group": "Jobs and your copilot",
+            "icon": "search",
+            "pages": [
+              "candidates/searching-for-jobs",
+              "candidates/copilot"
+            ]
+          },
+          {
+            "group": "Your data",
+            "icon": "shield",
+            "pages": [
+              "candidates/data-and-privacy",
+              "candidates/faq"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Academy",
+        "icon": "graduation-cap",
+        "groups": [
+          {
+            "group": "Guides",
+            "icon": "book-open",
+            "pages": [
+              "academy/write-criteria-that-score-well",
+              "academy/steer-a-search",
+              "academy/design-a-process",
+              "academy/ai-interview-playbook",
+              "academy/daily-pipeline-routine",
+              "academy/hiring-manager-feedback",
+              "academy/close-a-role"
+            ]
+          }
         ]
       },
       {
@@ -212,10 +287,6 @@
         "pages": [
           "changelog"
         ]
-      },
-      {
-        "tab": "Academy",
-        "icon": "graduation-cap"
       }
     ]
   },
@@ -266,5 +337,91 @@
     "intercom": {
       "appId": "exarxpfj"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/untitled-page",
+      "destination": "/pricing/how-it-works"
+    },
+    {
+      "source": "/untitled-page-2",
+      "destination": "/"
+    },
+    {
+      "source": "/untitled-page-3",
+      "destination": "/admin/credits"
+    },
+    {
+      "source": "/untitled-page-4",
+      "destination": "/pricing/plans"
+    },
+    {
+      "source": "/features/sourcing",
+      "destination": "/companies/running-a-search"
+    },
+    {
+      "source": "/features/ai-interviews",
+      "destination": "/companies/ai-interviews"
+    },
+    {
+      "source": "/features/match-scoring",
+      "destination": "/companies/match-scores"
+    },
+    {
+      "source": "/features/career-page-and-listings",
+      "destination": "/companies/publish-a-listing"
+    },
+    {
+      "source": "/features/ai-agent",
+      "destination": "/companies/the-agent"
+    },
+    {
+      "source": "/features/process-builder",
+      "destination": "/companies/build-a-process"
+    },
+    {
+      "source": "/features/candidate-experience",
+      "destination": "/candidates/what-staffer-is"
+    },
+    {
+      "source": "/features/compliance",
+      "destination": "/admin/compliance"
+    },
+    {
+      "source": "/companies/ai-copilot",
+      "destination": "/companies/the-agent"
+    },
+    {
+      "source": "/companies/create-workspace",
+      "destination": "/companies/set-up-your-workspace"
+    },
+    {
+      "source": "/companies/workspace-details",
+      "destination": "/companies/set-up-your-workspace"
+    },
+    {
+      "source": "/companies/notes-and-messages",
+      "destination": "/companies/notes"
+    },
+    {
+      "source": "/companies/compliance-center",
+      "destination": "/admin/compliance"
+    },
+    {
+      "source": "/companies/eu-ai-act",
+      "destination": "/admin/eu-ai-act"
+    },
+    {
+      "source": "/companies/retention-and-erasure",
+      "destination": "/admin/retention"
+    },
+    {
+      "source": "/companies/organization-settings",
+      "destination": "/admin/organization"
+    },
+    {
+      "source": "/companies/usage-and-invoices",
+      "destination": "/admin/credits"
+    }
+  ]
 }

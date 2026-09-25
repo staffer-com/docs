@@ -1,31 +1,85 @@
 ---
 title: "Create a job"
-description: "Start a new job by describing it to the agent, or start from an existing job and change what's different."
+description: "Describe the role to the agent and it drafts the brief. Or start from a job you already have."
 icon: "file-plus"
 ---
 
-Every job on Staffer starts as a conversation, not a form. Click **New job** and describe the role to the agent in the chat panel.
+A job holds everything for one hire: the brief, the public listing, the hiring process, your searches and your candidates. You create one by describing the role to the agent in plain language. There's no form to fill in first.
 
-## Describe the role
+## Create a job from a description
 
-Tell the agent what you're hiring for: title, team, location, seniority, and anything else you know. You don't need to cover everything in one message.
+<Steps>
+  <Step title="Start a new job">
+    Click **New job** in the sidebar. The home page works too: the box that says **Describe the role you're hiring for…** starts a new job.
+  </Step>
+  <Step title="Describe the role">
+    Write what you'd tell a recruiter: the title, where the person works, full-time or not, and the few things that separate a strong candidate from an average one. One message is often enough. The agent asks a follow-up question if something important is missing.
+  </Step>
+  <Step title="Check the draft">
+    The agent drafts the brief and the job opens on its **Brief** tab. It tells you what it assumed (for example that the job has no deadline) and asks about the gaps, such as a salary range.
+  </Step>
+  <Step title="Refine it">
+    Reply in the chat ("make the TypeScript criterion required", "set the salary to NOK 850,000 to 1,100,000") or edit the brief directly. Changes save on their own. The top right of the brief shows **Saving**, then **Saved**.
+  </Step>
+</Steps>
 
-After a few exchanges, usually one to three, the agent has enough to sketch a first draft. It opens the brief on the canvas with its best guess at every field it can infer, using sensible defaults for the rest.
+When the brief looks right, ask the agent to search for candidates, or move on to the other tabs. See [Write the brief](/companies/brief-criteria) for what each field does.
 
-<Note>
-  Nothing is saved to your [jobs list](/companies/jobs-list) until the agent opens that first draft. An empty chat with no job description yet creates nothing.
-</Note>
+## What gets created
 
-## Refine it in chat
+The job exists as soon as the agent drafts the first version of the brief. It appears in your [jobs list](/companies/jobs-list) with the status **Open**, even if you never click anything else.
 
-Keep talking to the agent to adjust the draft: change the title, add a criterion, tighten the location. Each instruction updates the brief on the canvas right away, so you can see the effect of what you just said.
+Creating a job doesn't publish anything or contact anyone. The listing stays unpublished until you publish it, and no candidate hears from you until you send a message yourself.
 
-You can also edit the brief directly. See [The brief: hard fields and criteria](/companies/brief-criteria).
+Drafting the brief never asks for your approval, even when the chat is set to **Ask permission**. Chatting with the agent uses credits.
 
-## Start from an existing job
+## Start from a job you already have
 
-If a new role is close to one you already have, tell the agent something like "start from the Senior Backend Engineer job, but make it junior and remote." It reads the source job's fields and criteria, applies your change, and opens a new draft instead of starting blank.
+There are two ways, and they don't do the same thing.
 
-For an exact copy with no changes, ask to duplicate the job instead. Duplicating also carries over the listing and the process steps, not just the brief.
+**Duplicate job** makes an exact copy. Open the job, click the **…** menu at the top right, then click **Duplicate job**. The copy opens right away, named after the original with "(Copy)" at the end.
 
-**Next:** [The brief: hard fields and criteria](/companies/brief-criteria)
+| Copied | Not copied |
+|---|---|
+| Every brief field and all criteria | Candidates and applications |
+| The listing, as an unpublished draft | Notes |
+| The process steps | Searches and the job chat |
+| The team the job belongs to | Step assignees and job members |
+
+The copy is always **Open**, even if you duplicated a closed job.
+
+Ask the agent when you want a variation. In a new job's chat, write something like "start from the Senior Backend Engineer job, but make it junior and remote". The agent reads that job's brief, drafts a new one with your change, and copies the listing and the process across. If more than one job matches the name, it asks which one you mean.
+
+## What to do in the editor instead of the chat
+
+A few changes only work in the brief editor:
+
+- Clearing the location, the languages or all the criteria. The agent can change them but won't empty them.
+- Turning on **Hide on public listing** for the salary.
+- Choosing hourly or monthly pay for a freelance job.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="I only sent one message. Is the job saved?">
+    Yes. The job is saved the moment the agent drafts the first version of the brief. It's in your jobs list now.
+  </Accordion>
+  <Accordion title="How do I get rid of a job I created by mistake?">
+    Open it, click the **…** menu and click **Delete job**. Members can delete a job as long as nobody has applied to it and no candidate has moved past **In review**. After that, only admins and owners can. See [Close, reopen or delete a job](/companies/close-reopen-delete).
+  </Accordion>
+  <Accordion title="Why did the agent add a criterion I didn't mention?">
+    It drafts from your description and from what it knows about your company (see [Company knowledge](/companies/company-knowledge)). If your company knowledge mentions a tool your team uses, the agent may add it as a preferred criterion. It says so in its reply. Delete anything that doesn't belong.
+  </Accordion>
+  <Accordion title="Does creating a job contact anyone?">
+    No. Creating a job, drafting the brief and running searches never contact candidates.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Write the brief" icon="list-checks" href="/companies/brief-criteria">
+    Every field, and how required and preferred criteria work.
+  </Card>
+  <Card title="Search for candidates" icon="search" href="/companies/running-a-search">
+    Let the agent find people who match the brief.
+  </Card>
+</CardGroup>

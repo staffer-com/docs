@@ -1,0 +1,80 @@
+---
+title: "Retention rules"
+description: "The rules that flag candidacies with no lawful basis to keep, how auto-execute differs from review, and what deletion actually does."
+icon: "trash-2"
+---
+
+**Settings** → **Organization** → **Compliance** → **Retention** flags candidacies that no longer have a lawful basis to keep, and can delete them. Every match lands in a review queue first, unless you turn on auto-execute for that rule. Only organization owners and admins can change it. The flagging itself runs once a day across every workspace in the organization.
+
+## The four rules
+
+Each rule has its own **Enabled** toggle and a period in days (1 to 3,650). All four ship off by default: nothing is flagged until you turn at least one on.
+
+| Rule | Flags | Default period |
+|---|---|---|
+| **Inactive candidacies** | Candidacies with no messages, notes, stage changes or ratings for the chosen period. | 180 days |
+| **Rejected applications** | Applications closed as rejected, once the closure is older than the chosen period. | 365 days |
+| **No active purpose** | Terminal candidacies (rejected or withdrawn) with no wider consent, old enough that keeping them has no lawful basis. | 365 days |
+| **Missing or expired consent** | Candidacies whose consent was never captured, after a grace window, or has expired. | 30 days |
+
+## Enabled vs auto-execute
+
+**Enabled** turns a rule on: matching candidacies get flagged and land in the review queue. A separate **auto-execute** toggle, off by default, skips the review step: once the review window passes, a flagged candidacy proceeds straight to deletion with nobody clicking anything. If a candidacy matches several rules and any one of them has auto-execute on, the whole flag proceeds automatically.
+
+## The review queue
+
+Flagged candidacies wait here before anything happens, whether or not auto-execute is on. For each one you can:
+
+- **Send consent email**: manually resend the retention notice, if the automatic one didn't go out.
+- **Cancel deletion…**: extends retention (365 days by default, 1 to 3,650) so tomorrow's check doesn't re-flag it. Requires a reason, which goes on the audit trail.
+- **Delete now…**: runs the deletion immediately instead of waiting. This can't be undone.
+
+## Exclusions
+
+Two toggles, both on by default, protecting the candidate rather than requiring you to opt in:
+
+- **Never flag hired or offer-stage candidates**: employment records have their own retention duty.
+- **Never flag candidates in the talent pool**: adding someone to the talent pool is treated as a deliberate decision to keep the record.
+
+## Windows
+
+- **Review window** (hours, default 72, up to 720): how long a flag waits before an auto-executing rule proceeds. Rules without auto-execute ignore this. Nothing fires on its own for them.
+- **Email candidates when flagged** (on by default): sends the candidate a heads-up with a link to renew consent, on the same window as the review. Not legally required, but a courtesy.
+
+## The GDPR Art. 17 grace window
+
+Separate from the four rules above, and always active: when a candidate lodges a right-to-erasure request, Staffer holds it for this many days before running the deletion. Default 30 days, and you can only shorten it, never extend it beyond 30. See [Candidate data requests](/admin/data-requests) for what happens to a request while it waits, and afterward.
+
+## What deletion does
+
+Deleting a candidacy, whether by auto-execute or by clicking **Delete now…**, runs Staffer's erasure cascade: the application is removed, and if it was the person's only remaining application anywhere in your organization, their whole profile is anonymized rather than deleted outright, so the historical record survives without identifying them. See [Candidate data requests](/admin/data-requests) for exactly what's deleted and what's kept.
+
+## Interview media: a fixed six-month rule
+
+Interview recordings, transcripts and their AI evaluation are deleted six months after the application closes, for both AI and human interviews. This runs regardless of the rules above and isn't configurable from this page. See [AI interviews](/companies/ai-interviews) and [Interviews and scheduling](/companies/human-interviews).
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="If I turn on a rule, does it delete anything right away?">
+    No. The next daily check flags matching candidacies into the review queue. Nothing deletes until the review window passes on an auto-execute rule, or someone clicks **Delete now…**.
+  </Accordion>
+  <Accordion title="Can I get a flagged candidacy back?">
+    Yes, before it's deleted. **Cancel deletion…** in the review queue extends its retention. Once the deletion has actually run, it's final.
+  </Accordion>
+  <Accordion title="Does this affect interview recordings and transcripts?">
+    No. Those follow the fixed six-month rule above, independent of whatever retention rules you set here.
+  </Accordion>
+  <Accordion title="Who can turn these rules on?">
+    Organization owners and admins. The rules apply to every workspace in the organization, not only one.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Candidate data requests" icon="file-search" href="/admin/data-requests">
+    Erasure and data-access requests candidates file themselves.
+  </Card>
+  <Card title="Compliance overview" icon="shield" href="/admin/compliance">
+    What else is in **Settings** → **Organization** → **Compliance**.
+  </Card>
+</CardGroup>

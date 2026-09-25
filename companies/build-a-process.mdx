@@ -1,21 +1,89 @@
 ---
-title: "Build a process"
-description: "The building blocks of a job's screening process: step kinds, tracks, and ordering."
-icon: "list-todo"
+title: "Build a hiring process"
+description: "Design the sequence of steps a candidate moves through, on the canvas or in chat."
+icon: "workflow"
 ---
 
-Every job has its own process: an ordered list of steps a candidate works through after being pushed from a shortlist.
+A job's **Process** tab holds the sequence of steps a candidate moves through: reviews, interviews, questionnaires, tasks and more. A new job starts with no steps. You build the process on the canvas, or ask the agent to. For advice on what to include, see [Design a process](/academy/design-a-process).
 
-## Step kinds
+## The canvas
 
-A step can be a review, an interview (human or AI), a message, a file upload, a questionnaire, or a general task. Pick the kind that matches what actually needs to happen at that point.
+The process runs top to bottom from **Start** to **End**, with your steps in between. By default every candidate follows the same line. When a step applies only to some candidates, the canvas splits into two lanes, **Applied** and **Sourced**. Steps for all candidates stay in the shared line.
 
-## Tracks
+An empty process shows one button for each of the seven kinds: **Add Review**, **Add Interview**, **Add AI interview**, **Add File upload**, **Add Questionnaire**, **Add Task** and **Add Message**.
 
-Not every candidate should walk the same path. Mark a step **applied**, **sourced**, or **all** to control who it applies to, so someone who applied directly and someone you sourced yourself can go through different flows on the same job.
+## Add, arrange and save steps
 
-## Reordering and locking
+<Steps>
+  <Step title="Open the add-step menu">
+    Hover over a step, or over the Start or End pill, to reveal **Add step above** and **Add step below**. Click one to see all seven kinds.
+  </Step>
+  <Step title="Pick a kind and configure it">
+    Each kind opens its own editor with a **Setup** tab (what the step does) and a **Rules** tab (who it applies to, and what the candidate is told). See [Step types](/companies/process-steps) for every field.
+  </Step>
+  <Step title="Reorder if you need to">
+    A grip handle appears on the left of a step when you hover over it. Drag it to reorder, or drag a step straight into the **Applied** or **Sourced** lane.
+  </Step>
+  <Step title="Save">
+    The process doesn't save on its own, unlike the brief. When you change anything, **Discard** and **Save** appear in the toolbar. Click **Save** to keep your changes. **Discard** puts the canvas back to what you last saved.
+  </Step>
+</Steps>
 
-Drag steps to reorder them. Once a step has any real candidate activity on it, it locks: you can't delete it or change its kind, since that would erase history. To retire a locked step without losing that history, archive it instead. Archived steps stop applying to new candidates but leave existing progress untouched.
+## Applies to: split the process by where candidates come from
 
-**Next:** [Reviewer holds and score gates](/companies/reviewer-holds-and-gates)
+Every step's Rules tab has an **Applies to** dropdown with three options: **All candidates** (the default), **Applied only** and **Sourced only**. A step set to **Applied only** or **Sourced only** applies only to that group. Use it to keep a step for sourced candidates but skip it for people who applied, or the other way round.
+
+## Viewing as
+
+The **Viewing as Recruiter** dropdown, top right of the canvas, shows the process as someone else would see it. It only changes the view.
+
+| View | Shows |
+|---|---|
+| **Recruiter** | Every step, editable. |
+| **Applicant** | Only steps visible to candidates on the Applied track. |
+| **Sourced candidate** | Only steps visible to candidates on the Sourced track. |
+| A named teammate | Only the steps that person is assigned to. |
+
+## What candidates see
+
+Candidates see the process in their application, so they know what's ahead. Interview, AI interview, File upload and Questionnaire steps are always visible to them, because they have something to do. Review, Task and Message steps are hidden unless you turn on **Visible to candidate** on the step's **Rules** tab. A visible step doesn't email them. See [Step types](/companies/process-steps) for exactly when each kind emails a candidate.
+
+## Editing a process that already has candidates
+
+Once any candidate has started, completed or skipped a step, the step locks. A padlock icon appears, and you can't delete it or change its kind. You can choose **Archive step** instead. It stops the step applying to candidates who haven't reached it, and keeps everyone's history on it.
+
+You can delete a step nobody has reached yet. **Delete permanently** removes the step and its settings, including any message text, when you save.
+
+## Build or change it from chat
+
+You can describe the process to the agent instead of using the canvas. It reads the current process and proposes changes. In **Ask permission** mode, the default, it shows a confirmation card before adding, changing or removing anything. In **Auto** mode it applies straight away.
+
+## Step order and the candidate's "current step"
+
+When a candidate joins the job, Staffer sets up every step that applies to them. Their current step is the first one they haven't finished. When it's completed or skipped, the next one becomes current. So candidates move through steps in the order on the canvas, and reordering changes what's next for anyone who hasn't reached that point.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Does a new job start with any steps already set up?">
+    No. Every job starts with an empty process. You build it, or ask the agent to.
+  </Accordion>
+  <Accordion title="Can I still edit a locked step's settings, like who's assigned?">
+    Yes. Locking only stops you deleting the step or changing its kind. Its name, instructions, reviewers and rules all stay editable.
+  </Accordion>
+  <Accordion title="Do candidates on the Applied and Sourced lanes see different processes?">
+    Only for steps set to **Applied only** or **Sourced only**. Steps set to **All candidates** apply to everyone.
+  </Accordion>
+  <Accordion title="What happens to a step I delete before anyone's reached it?">
+    It's gone when you save. You can't get it back.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Step types" icon="list-checks" href="/companies/process-steps">
+    Every field on every step kind, and when each one emails the candidate.
+  </Card>
+  <Card title="Assignees, holds and automatic rejection" icon="shield-check" href="/companies/reviewer-holds-and-gates">
+    Who gets asked, and what can reject a candidate on its own.
+  </Card>
+</CardGroup>

@@ -1,0 +1,63 @@
+---
+title: "Data location and security"
+description: "Where Staffer stores and processes your data, how it's encrypted, who can access it, and Staffer's SOC 2 status."
+icon: "lock"
+---
+
+Staffer stores and processes data in the EU by default, and documents its security controls and sub-processors in **Settings** → **Organization** → **Compliance**.
+
+## Where your data lives
+
+The databases, the search index, file storage and the application servers all run in the EU, in Frankfurt and the Netherlands. AI inference runs through an EU endpoint, and embeddings run on Staffer's own model, also in the EU. The one exception is background job orchestration, the queue behind jobs like building your data export or the daily retention check, which runs from a US-based service. The content delivery network that serves static assets is global, like any CDN.
+
+## No training, zero retention
+
+Staffer doesn't train any model on your data. The AI provider Staffer uses is contracted under zero-retention terms, so it can't keep or train on what's sent to it either. The model that powers search runs on Staffer's own copy, so no other search provider sees your data.
+
+## Encryption
+
+In transit: TLS 1.2 or higher, everywhere. At rest: the underlying storage is encrypted by each provider, and Staffer adds its own encryption on top of that for OAuth tokens and for your AI policy notes and the summaries of uploaded policy documents. Uploaded files, such as résumés and policy documents, are stored privately and only opened through short-lived signed links.
+
+## Access control and the audit log
+
+What someone can see or change inside Staffer depends on their workspace and organization role. See [Roles and permissions](/get-started/roles-and-permissions).
+
+Every mutation, decision, sign-in and AI action is written to an append-only audit log: the application's own database access can't alter or delete an entry once it's written. Staffer keeps it for the lifetime of your workspace and can export it to you on request.
+
+## Sub-processors
+
+Every third party that processes data on your organization's behalf, where, and for what, is listed on the **Sub-processors** page in **Settings** → **Organization** → **Compliance**. Staffer commits to notifying you in-app at least 30 days before adding or replacing one. See [DPA and data export](/admin/dpa-and-export) for the same commitment as it appears on the DPA.
+
+## SOC 2 status
+
+Staffer hasn't started a formal SOC 2 audit. A Type 1 audit is planned post-launch. In the meantime, the **SOC 2** page lists which controls are already in place, such as access control, encryption and backups, and which are still informal, such as incident response. For your own security review, or to ask about audit timelines, email compliance@staffer.com.
+
+## Report an issue or request the security posture
+
+Email compliance@staffer.com to report a security issue, or to request Staffer's full security posture for a review or procurement process.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Is Staffer SOC 2 compliant?">
+    No. Staffer hasn't started a formal audit yet. A Type 1 audit is planned, and the SOC 2 page lists which controls are already in place.
+  </Accordion>
+  <Accordion title="Does the AI train on my organization's data?">
+    No. Staffer doesn't train on your data, and the AI provider is contracted under zero-retention terms.
+  </Accordion>
+  <Accordion title="Where exactly is my data processed?">
+    The EU by default: database, search index, file storage, application servers, AI inference and embeddings. Background job orchestration is the one part that runs from the US.
+  </Accordion>
+  <Accordion title="How do I see the full list of sub-processors?">
+    The Sub-processors page under **Settings** → **Organization** → **Compliance** lists every one, with where data is processed and what it's used for.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="DPA and data export" icon="file-signature" href="/admin/dpa-and-export">
+    Request the countersigned DPA, which covers these same commitments contractually.
+  </Card>
+  <Card title="Compliance overview" icon="shield" href="/admin/compliance">
+    What else is in **Settings** → **Organization** → **Compliance**.
+  </Card>
+</CardGroup>

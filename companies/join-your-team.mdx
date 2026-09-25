@@ -1,0 +1,65 @@
+---
+title: "Join your company on Staffer"
+description: "Accept an invite, what each failure screen means, and what happens when your company joins you automatically."
+icon: "users"
+---
+
+There are two ways to end up in your company's workspace instead of setting up a new one: someone invites you by email, or your company has auto-join turned on for your email domain and you land there the moment you sign up.
+
+## Accept an invite
+
+<Steps>
+  <Step title="Open the invite email">
+    Click **Accept invite** in the email you received.
+  </Step>
+  <Step title="Sign in if asked">
+    If you're not already signed in, sign in with the email address the invite was sent to. See [Sign in and create an account](/companies/sign-in). If you end up on the home page instead of the invite, open the link from the email again.
+  </Step>
+  <Step title="Accept">
+    Review the workspace name and the role you've been given, then click **Accept invitation**.
+  </Step>
+</Steps>
+
+You land straight in the workspace home. There's no separate confirmation screen after accepting.
+
+## If the invite link doesn't work
+
+| What happened | What you see |
+|---|---|
+| The link is invalid, or the inviter revoked it | "Invitation not found": "This link is invalid or has been revoked. Ask the inviter to send a new one." |
+| It's already been accepted | "Already accepted": "This invitation has already been used. If that wasn't you, contact the workspace admin." |
+| It's past its expiry date | "Invitation expired": "Ask the inviter to resend it from Settings › Members." |
+| You're signed in as someone other than the invited address | "Wrong account", naming both addresses, with a **Sign out + retry** button. |
+
+Invites expire 14 days after they're sent, or after a resend. Ask a workspace owner or admin to send you a new one. See [Invite your team](/companies/invite-team).
+
+## Signing up when your company's already on Staffer
+
+If you sign up with a work email instead of using an invite link, what happens depends on how your company's admin has set things up:
+
+- Auto-join with a default workspace: you skip setup entirely, including the "Find your company" screen, and land straight in that workspace with the role your admin picked. If they didn't set a role, you land as a viewer, with read-only access.
+- Auto-join without a default workspace: you're not automatically placed anywhere. You go through the normal setup screens (see [Set up your workspace](/companies/set-up-your-workspace)) and end up owning a new workspace inside your company's organization. You won't be an admin or owner of the organization itself this way, only of the workspace you just created. Organization ownership goes to the first person from your company who ever signed up.
+- No auto-join: signing up is refused. You'll see a message naming your domain: "already has a Staffer organisation. Ask an admin there to invite you." Ask a workspace owner or admin to invite you instead.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="How do I know if my company has auto-join turned on?">
+    You won't, until you try to sign up. If it's on with a default workspace, you're placed there immediately. If it's off, or on without a default workspace, you'll see one of the outcomes above.
+  </Accordion>
+  <Accordion title="I was auto-joined into the wrong workspace, or with the wrong role. What now?">
+    Ask an admin in that workspace to change your role, or to invite you into a different one. Auto-join uses the defaults your organization's admin set. You don't choose them when you sign up.
+  </Accordion>
+  <Accordion title="Do I need to wait for an invite if I'm the first person from my company?">
+    No. The first person to sign up with your company's work email creates the organization and workspace from scratch. See [Set up your workspace](/companies/set-up-your-workspace).
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Invite your team" icon="user-plus" href="/companies/invite-team">
+    Send invites, choose roles, and resend or revoke one.
+  </Card>
+  <Card title="Find your way around" icon="compass" href="/companies/navigate-staffer">
+    The sidebar, search, and the workspace menu.
+  </Card>
+</CardGroup>

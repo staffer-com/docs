@@ -1,0 +1,144 @@
+---
+title: "Step types"
+description: "Every process step kind, its Setup and Rules fields, and when it emails a candidate."
+icon: "list-checks"
+---
+
+A process step is one of seven kinds: Review, Interview, AI interview, File upload, Questionnaire, Task or Message. This page covers Review, Questionnaire, File upload, Task and Message field by field. [AI interviews](/companies/ai-interviews) and [Interviews and scheduling](/companies/human-interviews) get their own pages.
+
+Every kind has an **Applies to** dropdown on its **Rules** tab: **All candidates**, **Applied only** or **Sourced only**. See [Build a hiring process](/companies/build-a-process). The **Rules** tab also shows one of four notices that tell you whether the candidate gets an email:
+
+| Notice | Applies to | Meaning |
+|---|---|---|
+| **Emailed when you schedule it** | Interview | The candidate gets an email with the time, joining details and agenda the moment you schedule it, plus a calendar invite. |
+| **Emailed when this step opens** | AI interview, File upload, Questionnaire | The candidate has something to submit, so they're emailed as soon as the step becomes their turn. |
+| **Shows in their portal, no email** | Review, Task, Message, when marked visible | They can see the stage in their portal once it opens, but nothing is emailed. |
+| **Not shown to the candidate** | Review, Task, Message, by default | Internal to your workspace. The candidate isn't told this stage exists. |
+
+Interview, AI interview, File upload and Questionnaire steps can't be hidden, because the candidate has something to do. Review, Task and Message default to hidden, with a **Visible to candidate** toggle on their Rules tab.
+
+## Review
+
+**Setup**
+
+| Field | What it does |
+|---|---|
+| Step name | Shown on the canvas and in the candidate's step history. |
+| Method | **Human approval** (default), **Human score** or **AI approval**. |
+| Reviewers | Human approval and Human score only. Empty means any teammate can complete it. |
+| Instructions for reviewer | Human approval and Human score only. Optional guidance shown above the decision buttons. |
+| Passing score | Human score: optional. Leave it blank and the score is advisory only. Nothing gates on it. AI approval: required. Save is blocked until you set one. |
+| Rejection disqualifies | Human approval and Human score only. Off by default. See [Assignees, holds and automatic rejection](/companies/reviewer-holds-and-gates). |
+| Allow notes | Human approval and Human score only. On by default. Adds a free-text note field to the review form. |
+
+AI approval has no Reviewers field, because no person completes it.
+
+**Rules**
+
+Applies to, and **Visible to candidate** (off by default). Hidden, the notice reads **Not shown to the candidate**. Marked visible, it reads **Shows in their portal, no email**.
+
+## Questionnaire
+
+**Setup**
+
+| Field | What it does |
+|---|---|
+| Questions | Add as many as you need. Each is Short text, Long text, Multiple choice or Number. |
+| Multiple choice options | Lettered rows, add or remove options, and an **Allow multiple** switch. |
+| Qualifying | Multiple choice and Number questions only. Multiple choice: mark one or more options as the **Correct answer(s)**. Number: set a min, a max, or both. |
+| Reviewers | Who's expected to look at the answers. |
+
+Short text and Long text questions can't be marked qualifying.
+
+**Rules**
+
+Applies to, plus a qualifying-answer block: an info box showing how many qualifying questions are active, and an **Automatically reject** toggle (off by default). See [Assignees, holds and automatic rejection](/companies/reviewer-holds-and-gates) for what turning it on does. Notice: **Emailed when this step opens**.
+
+After a candidate submits, Staffer evaluates the answers. The step shows a **Recommendation** badge (**Advance**, **Hold** or **Reject**) with a short write-up. Expanded, the same result reads **Recommended next step** with **Advance**, **Uncertain** or **Reject**. Staffer also rescores the candidate.
+
+## File upload
+
+**Setup**
+
+| Field | What it does |
+|---|---|
+| Instructions for the candidate | What you're asking them to send. |
+| Maximum files | From 1 to 10. |
+| Reviewers | Who's expected to look at what's submitted. |
+
+**Rules**
+
+Applies to. Always visible to the candidate, no toggle. Notice: **Emailed when this step opens**.
+
+Each file can be up to 25 MB. Allowed types: PDF, common image formats, plain text and CSV, Office and OpenDocument documents, and zip. SVG, HTML and executable files aren't allowed. Staffer checks the file extension. PDFs and images open in Staffer. Other files download.
+
+## Message
+
+A Message step doesn't send anything by itself. It marks the point in the process where a message goes. When it's the candidate's current step, their **Process** tab shows the message ready to send. Click **Send** and the step is completed.
+
+**Setup**
+
+| Field | What it does |
+|---|---|
+| Template | **Custom message**, or a workspace template. Picking a template fills the body. Typing your own leaves it as-is. |
+| Message | The body, with a rich-text toolbar and placeholder tokens. |
+| AI personalization | Optional. Tells the AI how to tailor the message to each candidate, for example "mention one thing from their background that fits this role". Click **Preview personalized** to see an example. |
+
+**Rules**
+
+Applies to, and **Visible to candidate** (off by default, since the candidate gets the message anyway). Notice: **Not shown to the candidate** by default, or **Shows in their portal, no email** once visible.
+
+This kind shows as **Message** in the process builder, but as **Outreach** in the candidate's own step history.
+
+## Task
+
+**Setup**
+
+| Field | What it does |
+|---|---|
+| Instructions | What needs doing. Supports basic markdown. |
+| Reviewers | Optional. With none, any teammate can complete it. |
+| Allow notes | Off by default (unlike Review, where it's on). Adds a team-only note field to the completion form. What you write lands on the Notes tab and counts towards the match score. |
+
+**Rules**
+
+Applies to, and **Visible to candidate** (off by default). Notice: **Not shown to the candidate** by default, or **Shows in their portal, no email** once visible. A Task step never has a gate: it can only be completed or skipped, never used to auto-reject anyone.
+
+## AI interview and Interview
+
+Two more kinds, each detailed on its own page:
+
+<CardGroup cols={2}>
+  <Card title="AI interviews" icon="bot" href="/companies/ai-interviews">
+    The candidate talks to an AI interviewer by chat, voice or video, on their own time.
+  </Card>
+  <Card title="Interviews and scheduling" icon="video" href="/companies/human-interviews">
+    A live call over Google Meet, scheduled by you or picked by the candidate.
+  </Card>
+</CardGroup>
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Does a Message step ever send itself?">
+    No. Someone on your team sends it from the candidate's **Process** tab, or with [Speed action](/companies/recommended-actions).
+  </Accordion>
+  <Accordion title="Can I hide a Questionnaire, File upload, AI interview or Interview step from the candidate?">
+    No. Those four kinds are always visible, because there's always something for the candidate to do.
+  </Accordion>
+  <Accordion title="What happens after a candidate submits a Questionnaire?">
+    Staffer evaluates the answers, shows a **Recommendation** badge on the step and rescores the candidate.
+  </Accordion>
+  <Accordion title="Do Review and Task notes count toward the match score?">
+    Yes. A note on a step's completion form also appears on the **Notes** tab and counts as evidence at the next rescore, like any other note.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Build a hiring process" icon="workflow" href="/companies/build-a-process">
+    Add, arrange and save steps on the canvas.
+  </Card>
+  <Card title="Move candidates through the process" icon="move-right" href="/companies/run-the-process">
+    Complete a review, read answers, and act from a candidate's Process tab.
+  </Card>
+</CardGroup>

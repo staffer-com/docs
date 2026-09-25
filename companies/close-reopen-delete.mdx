@@ -1,0 +1,95 @@
+---
+title: "Close, reopen or delete a job"
+description: "What Close position, Reopen position, and Delete job actually do, and who's allowed to do each."
+icon: "archive"
+---
+
+Closing, reopening, and deleting are three separate actions in the **More job actions** menu, with different consequences and different rules for who can do them.
+
+## Close a position
+
+<Steps>
+  <Step title="Open the menu">
+    Click the **…** (**More job actions**) menu on the job.
+  </Step>
+  <Step title="Click Close position">
+    A dialog explains what happens: the public listing stops taking applications, no new candidates can be added, and you can reopen it later.
+  </Step>
+  <Step title="Confirm">
+    Click **Close position**. There's no typing required to confirm a plain close.
+  </Step>
+</Steps>
+
+If the job has candidates still active (any stage other than Rejected, Hired, or Withdrawn), the dialog shows how many and offers two checkboxes: **Reject the N remaining candidate(s)**, and, once that's checked, **Send them a rejection message**. Checking the second opens an editable message, pre-filled from your workspace's default rejection template, with placeholders you can leave in or replace:
+
+| Placeholder | Becomes |
+|---|---|
+| `{candidateFirstName}` | The candidate's first name |
+| `{jobTitle}` | The job's title |
+| `{workspaceName}` | Your workspace's name |
+| `{signature}` | Your signature |
+
+Leaving both boxes unchecked closes the job and leaves every candidate exactly where they are.
+
+## What happens when you close
+
+- The public listing immediately stops accepting applications, but doesn't disappear. It stays visible for a grace period, 30 days by default, set in **Settings** → **Workspace** → **Preferences** → **Closed listing grace period**. After that window, it drops off the public board entirely.
+- Any attempt to add a new candidate, sourced or applied, is refused: "This position is closed and takes no new candidates."
+- The brief becomes read-only until you reopen the job. See [Write the brief](/companies/brief-criteria).
+- Only if you ticked the reject box: every candidate still In review, In progress, or with an Offer moves to Rejected. Shortlisted candidates aren't touched.
+- Only if you also ticked **Send them a rejection message**: that message is actually sent. Checking reject alone changes their stage without emailing anyone.
+
+<Warning>
+  Rejecting and emailing on close can't be undone from this dialog. Reopening the job afterwards doesn't un-reject anyone.
+</Warning>
+
+## Reopen a position
+
+Click **Reopen position**. There's no confirmation: one click reopens it. The listing goes back to an unpublished draft (its title, body, and link are untouched, but it's off the public board until you publish it again). Candidates who were rejected when you closed it stay rejected. Move them back to a stage by hand if you need to.
+
+## Delete a job
+
+Deleting hides the job everywhere in the app and unpublishes its listing. The data isn't erased: it stays in Staffer's database.
+
+Who can delete depends on your role and the job's history:
+
+| Situation | Tooltip on a disabled Delete job item |
+|---|---|
+| A candidate applied directly to the job | "A candidate has applied to this job. Only workspace admins and owners can delete it now — close the position instead." |
+| A sourced candidate moved past In review | "Some candidates are past In review on this job. Only workspace admins and owners can delete it now — close the position instead." |
+| You're not an admin or owner, and neither of the above applies | "Only workspace admins and owners can delete a job. Ask one of them to remove it, or close the position instead." |
+
+Admins and owners can always delete a job. Members can delete a job only while nobody has applied to it and no sourced candidate has moved past **In review**.
+
+If the job still has any active candidates (not Rejected, Hired, or Withdrawn) when you open the dialog, you have to type the job's exact name before **Delete job** enables, and a banner warns that those candidates lose access too. With no active candidates, one click deletes it.
+
+## Hiring someone doesn't close the job
+
+Marking a candidate as Hired has no effect on the job's own status. If you don't want more candidates once the role is filled, close the position yourself.
+
+## Can the agent do this for me?
+
+The agent can close or reopen a position if you ask it to, and it always asks for your approval first. It only ever does the plain, reversible close: it can't check the reject-and-email boxes on your behalf, and it can't delete a job at all, under any Mode. See [What the agent can do](/companies/agent-actions).
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="I reopened a job. Why are the candidates I rejected on close still rejected?">
+    Reopening only affects the job and its listing. Candidates rejected by the close dialog stay rejected until you move them to a different stage yourself.
+  </Accordion>
+  <Accordion title="Can members delete a job?">
+    Only while the job has no direct applicant and no sourced candidate past **In review**. After that, it takes an admin or owner.
+  </Accordion>
+  <Accordion title="Our closed listing is still showing on the careers page. Is that a bug?">
+    No. Closed listings stay visible, with applications turned off, for a grace period after closing: 30 days unless your workspace changed it. They disappear once that window passes. Note that your own career page only shows published listings, so a closed job drops off it straight away.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Manage your jobs" icon="list" href="/companies/jobs-list">
+    The rest of the More job actions menu.
+  </Card>
+  <Card title="What the agent can do" icon="workflow" href="/companies/agent-actions">
+    Which actions it can take on its own, and which need your approval.
+  </Card>
+</CardGroup>

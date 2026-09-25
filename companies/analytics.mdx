@@ -1,23 +1,61 @@
 ---
 title: "Analytics"
-description: "The hiring metrics Staffer tracks across your workspace: funnel, timing, and sourcing."
+description: "Every chart and number on the Analytics page, and exactly what each one measures."
 icon: "chart-spline"
 ---
 
-Analytics rolls up activity across every job in your workspace into one view.
+**Analytics** shows how your whole workspace is hiring: how fast, where candidates drop off and where they come from.
 
-## Top-line metrics
+- Every number covers the whole workspace, for all time. You can't filter by date or job.
+- Everyone in the workspace can see it, including viewers.
 
-Average time to hire, average candidates per open position, average time before a candidate's next action happens, and total hires.
+## The four numbers at the top
+
+| Card | What it measures |
+|---|---|
+| **Avg time to hire** | Time from a candidate joining a job to being moved to **Hired**. |
+| **Avg candidates per position** | Mean across every job in the workspace, including roles with zero applicants. |
+| **Avg time on next action** | Time from a process step starting to it being completed. |
+| **Hires** | Candidates currently at **Hired**. |
+
+Things to know:
+
+- **Hires** counts who's hired right now, not everyone ever hired. If a hired candidate later moves to a different stage, they drop out of the count.
+- **Avg candidates per position** includes closed jobs, and jobs with no candidates count as zero, which pulls the average down.
+- The three time numbers show a dash until there's enough data.
 
 ## Pipeline flow
 
-A funnel view of how candidates move through your stages, and where they tend to drop off.
+A flow chart of how candidates move between stages, including drop-offs to **Rejected** and **Withdrawn**. It only draws stages someone has moved into, so a workspace with no hires yet has no **Offer** or **Hired**. Moves back to an earlier stage aren't drawn. A footnote below the chart counts them.
+
+The chart calls the **In progress** stage "In process", and so do the time-at-stage tiles below. It's the same stage.
+
+## Where candidates come from
+
+**Source attribution** splits candidates into **Applied** (they applied to a listing), **Sourced** (found in a search) and **Manually added**, with a count and a percentage for each.
+
+## Candidates by function
+
+Candidates grouped by the job's **Function**. Jobs with no function set show under **Unspecified**.
 
 ## Time at each stage
 
-How long candidates typically sit at each stage before moving on, useful for spotting where a process is running slow.
+The average time candidates spend in **In review**, **In process** (In progress) and **Offer** before moving on. A tile shows **No data** until someone has left that stage.
 
-## Sourcing and function
+## Jobs active per day
 
-Where your candidates come from, and how they break down by function area.
+How many jobs your workspace had on each of the last 30 days. Closed and unpublished jobs count too. Only deleted jobs don't.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can I filter analytics by date range or by job?">
+    No. Everything covers the whole workspace, for all time. For one job, use its **Candidates** tab.
+  </Accordion>
+  <Accordion title="Why does Pipeline flow say In process instead of In progress?">
+    It's the same stage. Only the Analytics page uses the label "In process".
+  </Accordion>
+  <Accordion title="Why is Avg candidates per position lower than I expected?">
+    It averages across every job in the workspace, including closed jobs and jobs with no candidates.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,76 @@
+---
+title: "Work with the agent"
+description: "Where each chat lives, what the agent can see, voice input, Reset chat, and why some conversations aren't saved."
+icon: "bot"
+---
+
+Staffer doesn't have one global assistant. It has several chats, each scoped to what you're looking at, and each with different rules for what's saved.
+
+## Where you can chat with it
+
+- A job's chat, on the left of every job. This is one shared transcript per job: every workspace member who opens that job sees the same conversation, with each message tagged by who sent it. It's still there next time anyone opens the job.
+- The **Ask anything** chat on the **Jobs**, **Talent pool** and **Applications** pages. This one only lasts for your current visit: reload the page and it's gone. It can filter the list you're looking at, open a specific item, and, on the Jobs page, create a bare job for you to build out.
+- The home page. Before a job exists, typing here is how you start one. See [Create a job](/companies/create-a-job).
+
+## Voice input
+
+Click the microphone (**Record voice message**) to dictate instead of typing. This uses your browser's own speech recognition, not Staffer's, so it only shows up in browsers that support it. Holding **⌘D** (**Ctrl+D** on Windows) in any chat composer works as push-to-talk: release the keys and the transcript goes into the message box, ready to send.
+
+## Hide or show the chat
+
+Click the chat icon at the top of a job to toggle **Hide chat** and **Show chat**. Hiding it just gives the tabs more room. It doesn't stop or lose anything.
+
+## Reset chat
+
+The "More chat actions" menu (…) above the chat has one item: **Reset chat**.
+
+<Warning>
+  On a job that already exists, this deletes the shared chat instantly, for the whole team, with no confirmation and no undo. On the home page, before a job exists, it starts a new draft instead. Your old draft's chat isn't deleted, just left behind.
+</Warning>
+
+## Message length and stopping a reply
+
+A message can be up to 8,000 characters. A counter appears once you're close to the limit, and going over it disables **Send** rather than cutting your text short. While the agent is replying, the send button becomes **Stop**. Stopping ends the reply in your chat. A search that's already running keeps going in the background, and its results still land on the **Scouting** tab when it finishes.
+
+## What it uses to answer
+
+Every reply is grounded in your company knowledge, the job's brief and notes, your own **Communication tone** and **Notes for the agent** (set in **Settings** → **Account** → **Preferences**), and, if the job belongs to a team, that team's knowledge too.
+
+## What it can't see
+
+The agent can't see your email, Slack or calendar. It only knows what's in Staffer, so a decision made in a call or a DM is invisible to it until someone writes it down, for example in the job's notes.
+
+## "Tell me more" on a candidate
+
+The shared job chat doesn't automatically know which candidate you're looking at. Click **Tell me more** on a candidate's profile panel to send a message naming that candidate, which is what lets the agent read their full record and answer questions about them specifically.
+
+## Whose messages get saved
+
+Chats by members, admins and owners are saved to the job. Viewers and reviewers can chat and get answers, but their messages aren't saved: a notice says so the first time, and reloading the page clears them.
+
+## Credits
+
+Every message you send the agent uses credits, in every chat, including **Ask anything** and the home page.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Is a job's chat private to me?">
+    No. It's one conversation per job, visible to everyone in the workspace who can open that job, not a personal thread.
+  </Accordion>
+  <Accordion title="Can I get a reset chat back?">
+    Not for an existing job. Resetting it deletes the transcript immediately for everyone, with no undo. On the home page, before a job exists, resetting starts a new draft rather than deleting the old one.
+  </Accordion>
+  <Accordion title="Does 'Ask anything' remember what I asked yesterday?">
+    No. It only lasts for your current visit to that page. Reloading, or coming back later, starts it empty.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="What the agent can do" icon="workflow" href="/companies/agent-actions">
+    Which actions it takes immediately, which ask first, and what it can't do at all.
+  </Card>
+  <Card title="Search for candidates" icon="search" href="/companies/running-a-search">
+    Turn the brief into a search the agent runs for you.
+  </Card>
+</CardGroup>

@@ -1,25 +1,56 @@
 ---
 title: "How pricing works"
-description: "Staffer is priced entirely on usage. No seats, no per-user fees, no success fee."
+description: "Prepaid credits, one shared pool per organization, debited per AI action as it happens."
 icon: "credit-card"
 ---
 
-Staffer is priced entirely on usage. You pay for the work the platform actually performs on your hiring, and nothing else. There are no seats, no licence fees, no per-user charges, and no fee tied to a candidate signing.
+Staffer runs on prepaid credits, not seats. Your organization buys credits (or starts with $100 free), and each AI action debits the pool the moment it runs.
 
-You buy credits, and the platform draws down against them as it works. Committing to usage earns you extra credits on top, so the same budget buys more hiring, not a cheaper rate.
+## One pool for the whole organization
 
-## What usage covers
+Credits sit in a single pool per organization, not per workspace. Every workspace your organization has draws from the same pool. An organization admin can set a monthly spend cap on an individual workspace to stop one team from using up the shared pool, but there's no separate credit balance per workspace. See [Credits, top-ups and spend caps](/admin/credits).
 
-Every unit of work the platform runs for you:
+## What uses credits
 
-- AI sourcing across the candidate database
-- Match scoring with per-criterion rationale
-- Enrichment and contact data
-- Agent work and actions
-- AI interviews
+Credits pay for AI and vendor work, grouped here by what you'd recognize in the app:
 
-<Note>
-  Unlimited seats, on every plan including Free. Your whole team, at no extra cost.
-</Note>
+| Group | What's included |
+|---|---|
+| The agent and chat | Chatting with the agent on a job, and the **Ask anything** page chat on Jobs, Talent pool, and Applications |
+| Searches and scoring | Running a candidate search, and scoring or rescoring candidates against a brief |
+| Listings and drafting | Generating or translating a job listing, drafting or rewriting a message, naming a search, drafting a message template or career page copy |
+| AI interviews and interview notetaking | The AI interviewer's conversation and voice, and recording and transcribing a human interview |
+| Contact lookups | **Request contact info** on a candidate's profile |
+| Research | Researching a company for workspace knowledge, and the web research the agent runs while it searches |
+| Policy checks | The compliance check that runs before certain AI actions, when **Live policy enforcement** is on |
 
-**Next:** [Plans](/pricing/plans)
+Every one of these is metered by the work it actually takes. A short search costs less than a long one, and a five-minute AI interview costs less than a twenty-minute one. See [What uses credits](/pricing/what-you-pay) for how each is charged.
+
+Credits are checked before an action starts, not while it runs. A search or generation already in progress finishes even if it drains your organization's credits to zero along the way. The next action after that is what gets refused.
+
+## What's free
+
+Candidate-facing chat doesn't touch your credits at all. A candidate chatting on the apply page, in the candidate portal, or through a share link is paid by Staffer, not your organization, and it keeps working even if your organization is out of credits. AI interviews are different: they use your credits.
+
+Ordinary product use costs nothing: viewing jobs and candidates, editing a brief by hand, building a process, adding a note, sending a message you wrote yourself. Only the AI work around those actions (drafting, rewriting, scoring) uses credits.
+
+## No seats
+
+Every plan includes as many members as you invite. Adding a teammate to a workspace doesn't add to your bill: only the AI work they run does.
+
+## The $100 to start
+
+Signing up grants an organization $100 in credits, once, applied when its first workspace is created. Extra workspaces don't get their own grant. See [Plans](/pricing/plans).
+
+## See your balance
+
+The sidebar shows a **Credits** chip: your organization's available credits, or, if the workspace you're in has a monthly cap, this month's spend against that cap. Anyone in the workspace can see the chip. Only organization owners and admins can click through it to the full **Usage & credits** page. See [Credits, top-ups and spend caps](/admin/credits).
+
+<CardGroup cols={2}>
+  <Card title="Plans" icon="layers" href="/pricing/plans">
+    Starter, Growth, and Enterprise, and how the top-up bonus works.
+  </Card>
+  <Card title="What uses credits" icon="list-checks" href="/pricing/what-you-pay">
+    Which actions are metered, the one fixed price, and how to see where credits went.
+  </Card>
+</CardGroup>

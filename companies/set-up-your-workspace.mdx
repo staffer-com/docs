@@ -1,0 +1,69 @@
+---
+title: "Set up your workspace"
+description: "What happens the first time you sign in for your company: finding your company, reviewing the workspace, research, and inviting your team."
+icon: "rocket"
+---
+
+The first time you sign in for a new company, Staffer walks you through four screens before you land in the app: find your company, review your workspace, wait for research (optional), and invite your team. You'll see the same flow again if you create an additional workspace later from the workspace switcher's **+ New workspace**.
+
+## The setup screens
+
+<Steps>
+  <Step title="Find your company">
+    Type your company's website (for example notion.com) and click **Lookup company**. Staffer checks it against its own company data and shows a preview card (logo, industry, headquarters, employee count) if it finds a match. Click **Use this** to continue with it, or click **Setup manually** to skip the lookup and fill everything in yourself on the next screen. This is a one-time search, not suggestions as you type, and a miss doesn't block you either way.
+  </Step>
+  <Step title="Review your workspace">
+    Edit the fields Staffer pre-filled, or start from blank if you set up manually: name, industry, website, employee count, headquarters, and a description. Add a logo, a cover photo, and a brand color. This is what candidates will see on your public listings later. Click **Continue** to save and move on.
+
+    The name can be up to 80 characters and the description up to 2,000. Images must be PNG, JPEG or WebP, up to 8 MB. Use a logo of at least 400×400 pixels and a cover of about 1600×500.
+  </Step>
+  <Step title="Wait for research">
+    Staffer reads public pages on your company's website and shows facts as it finds them. This usually takes 30 to 60 seconds. Click **Skip and continue** at any point, or wait for **Continue** once it finishes. After 90 seconds you get a **Continue anyway** button instead. Research keeps running in the background either way.
+  </Step>
+  <Step title="Invite your team">
+    Add teammates by email, as **Member** or **Admin**, or click **Skip for now** and do it later. See [Invite your team](/companies/invite-team) for what each role means and what happens after you send an invite.
+  </Step>
+</Steps>
+
+## What gets created
+
+You become the owner of the new workspace. If you're also the first person from your company to sign up to Staffer, Staffer creates an organization for your company and makes you its owner too.
+
+Your organization also gets $100 in signup credit. It's granted once, the first time any workspace is created under that organization, and it's shared across every workspace in it, not reissued per workspace.
+
+## What Staffer researches, and where it goes
+
+The research step pulls public information about your company: its homepage, news mentions, and pages like careers or about. It doesn't ask you anything. While it runs, you can skip it or wait.
+
+The facts it finds land in **Settings** → **Workspace** → **Knowledge**, grouped by category, with a written summary. The agent uses the facts research is confident about straight away. Less certain ones wait under **Pending review** until an admin approves them. You can rerun research from the same page later if your company's public information changes. See [Company knowledge](/companies/company-knowledge).
+
+## If you signed up with a personal email
+
+Staffer only sets up workspaces for work email addresses. If your account's email is a personal provider (Gmail, Outlook.com, and similar), setup stops on a screen asking you to sign in with a work address instead, with a button labeled **Sign out + delete account**.
+
+<Warning>
+  This really deletes your account and signs you out. It's scoped so it won't delete a workspace you share with other people, but it removes your user record and any workspace where you're the only member. There's no confirmation step: one click and it's done.
+</Warning>
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can I skip setup entirely?">
+    You can skip company lookup (**Setup manually**) and skip research (**Skip and continue**), but not the review-workspace screen. The invite screen has its own **Skip for now**. If your company's email domain already has a Staffer organization with auto-join turned on, you skip all of this and land straight in that workspace.
+  </Accordion>
+  <Accordion title="I skipped research. Did I lose it?">
+    No. It keeps running in the background and lands in **Settings** → **Workspace** → **Knowledge** whenever it finishes, whether you waited for it or not.
+  </Accordion>
+  <Accordion title="My company already has a Staffer workspace. Why am I seeing this instead of joining it?">
+    It depends on whether an admin at your company turned on auto-join for your email domain, and how it's configured. See [Join your company on Staffer](/companies/join-your-team) for the different cases, including what to do if nobody's set it up yet.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Invite your team" icon="user-plus" href="/companies/invite-team">
+    Roles, what invitees get, and how to resend or revoke.
+  </Card>
+  <Card title="Find your way around" icon="compass" href="/companies/navigate-staffer">
+    The sidebar, search, and the workspace menu.
+  </Card>
+</CardGroup>

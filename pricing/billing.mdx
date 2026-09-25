@@ -1,17 +1,57 @@
 ---
-title: "Billing"
-description: "How you pay: card by default, invoicing on Enterprise, priced in USD."
+title: "Payment and invoices"
+description: "Your organization's plan, payment method, billing details, and invoices."
 icon: "receipt"
 ---
 
-Payments run through **Stripe**, by card. Free top-ups and Growth are charged to the card on file.
+**Settings** → **Organization** → **Billing** holds your organization's plan, payment method, billing details, and invoices. Only organization owners and admins can open it.
 
-## Enterprise invoicing
+## Current plan
 
-Enterprise agreements can be invoiced on standard payment terms instead of card.
+Shows your plan's name, price, and highlights, plus a badge: **Current plan**, or **Ending** with a date if you've cancelled and coverage is running out its period. Click **Manage plan** to upgrade, downgrade, or contact sales for Enterprise. See [Plans](/pricing/plans).
+
+## Payment method
+
+Until you add one, this reads "No card on file." Click **Add payment method** and Staffer takes you to Stripe's hosted checkout to save a card. You need a card on file before you can add credits. See [Credits, top-ups and spend caps](/admin/credits).
+
+Once a card is saved, this section shows its brand, last 4 digits, and expiry, with **Replace card** and **Remove card** actions. Removing a card doesn't touch your existing credits: it only detaches the payment method from Stripe.
+
+## Bank transfer
+
+On **Enterprise**, Staffer invoices your organization directly and collects by bank transfer instead of a card, with no card fees.
+
+## Billing details
+
+Legal company name, country, address, and a tax ID (Staffer supports EU VAT, UK VAT, US EIN, and over a dozen other country-specific tax ID types). Stripe Tax uses your country and tax ID to compute VAT automatically on every invoice. This section stays disabled until you've added a card, since these details attach to the same Stripe customer record as your card.
+
+## Billing manager email
+
+One address on file. It's shown to your team when a workspace runs out of credits, as the place to ask for a top-up, and it separately receives billing notifications like low-balance alerts. Only organization owners and admins can change it.
+
+## Invoices
+
+**Recent invoices**, on the Billing page itself, shows your last 3. **All invoices** lists up to 50, each with its date, number, amount, status, a PDF, and either **View** (once paid) or **Pay** (while open) linking to Stripe's hosted invoice page.
 
 ## Currency
 
-Pricing is set in USD. If your card is issued in another currency, Stripe converts at payment, so you can pay from a EUR or NOK account with no extra setup.
+Your credits, spend caps, and top-ups are always priced in USD. An individual Stripe invoice can show a different currency if that's how it was billed, but the credit pool itself is USD only.
 
-**Next:** [Pricing FAQ](/pricing/faq)
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Why is Billing details greyed out?">
+    It needs a card on file first, because it saves onto the same Stripe customer record as your payment method. Add a card, and the fields open up.
+  </Accordion>
+  <Accordion title="Does removing my card affect my credits?">
+    No. Removing a card only detaches it from Stripe. Your credits and past invoices are untouched, and you can add a new card any time.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Plans" icon="layers" href="/pricing/plans">
+    Starter, Growth, and Enterprise, and how the bonus works.
+  </Card>
+  <Card title="Billing FAQ" icon="circle-help" href="/pricing/faq">
+    Refunds, invoices, per-seat fees, and more.
+  </Card>
+</CardGroup>

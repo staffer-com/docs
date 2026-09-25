@@ -1,0 +1,40 @@
+---
+title: "Compliance overview"
+description: "Where your organization's policies, retention rules and legal documents live, who can see them, and who's responsible for what."
+icon: "shield"
+---
+
+Compliance settings live at **Settings** → **Organization** → **Compliance**. Everything here applies to every workspace in the organization: there's no per-workspace version of a policy or a retention rule.
+
+Only organization owners and admins can see this page. A workspace admin who isn't also an organization admin doesn't see it at all: they're redirected back to their own settings.
+
+## What's here
+
+| Section | What it does | Docs |
+|---|---|---|
+| **Policies** | Turn on live policy enforcement, write policy notes for the agent, upload policy documents, and edit the notice candidates see when they apply. | [AI policies](/admin/ai-policies) |
+| **Retention** | Set rules that flag candidacies with no lawful basis to keep, and review erasure and data-access requests candidates have filed. | [Retention rules](/admin/retention), [Candidate data requests](/admin/data-requests) |
+| **Legal & data export** | Request the countersigned Data Processing Addendum and export every operational record Staffer holds for your organization. | [DPA and data export](/admin/dpa-and-export) |
+| **Sub-processors**, **SOC 2** | See every third party that touches candidate data, and Staffer's security controls and audit status. | [Data location and security](/admin/security) |
+| **Data Processing Addendum** | A plain-English summary of the binding DPA. | [DPA and data export](/admin/dpa-and-export) |
+| **EU AI Act compliance** | How Staffer and your organization split responsibility under the EU AI Act. | [EU AI Act](/admin/eu-ai-act) |
+
+## Who's responsible for what
+
+Staffer draws a line between the data-protection relationship and the AI-system relationship. You hold both roles on your side:
+
+| | Data protection (GDPR) | EU AI Act |
+|---|---|---|
+| You | Data controller | Deployer |
+| Staffer | Processor | Provider |
+
+As controller, you decide why and how candidate data is processed, and Staffer processes it on your behalf. As deployer, you're the one putting Staffer's AI system to use on real candidates, with your own obligations under the Act. See [EU AI Act](/admin/eu-ai-act) for what that means in practice.
+
+<CardGroup cols={2}>
+  <Card title="Roles and permissions" icon="users" href="/get-started/roles-and-permissions">
+    What organization and workspace roles can do.
+  </Card>
+  <Card title="Workspace settings" icon="settings" href="/companies/workspace-settings">
+    The difference between organization-wide and workspace-level settings.
+  </Card>
+</CardGroup>

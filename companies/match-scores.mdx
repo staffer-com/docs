@@ -1,21 +1,96 @@
 ---
-title: "Reading match scores"
-description: "What a candidate's match score means, and where the per-criterion breakdown and narrative come from."
+title: "How match scores work"
+description: "What the two numbers mean, how each criterion is scored, and what the score reads and ignores."
 icon: "target"
 ---
 
-Every candidate you search or shortlist gets scored against that specific job, not a general profile score.
+A match score shows how well a candidate fits one job's brief, on a scale from 0 to 100. Every score comes as a pair: the **current score**, based on the evidence Staffer has, and the **potential score**, what the candidate could score if the details their profile doesn't mention turn out in their favor.
 
-## The score
+Scores are per job. The same person can score 80 for one job and 35 for another, because each job has different criteria.
 
-Each of the job's criteria is compared against the candidate's profile and scored individually, then combined into one overall match score. Required criteria count for more than preferred ones. See [The brief: hard fields and criteria](/companies/brief-criteria) for how that weighting works.
+## How a score is built
 
-## The narrative
+Staffer scores each criterion in the brief on its own, then combines them.
 
-Alongside the number, Staffer writes a short narrative explaining the match: where the candidate is strong, where they fall short. Treat it as commentary from the agent, not as part of the score itself. It's there to help you read the number faster, not to justify it.
+1. Staffer compares the criterion with everything it knows about the candidate.
+2. An AI model reviews that evidence and sets the criterion's score and potential score. It writes a one-sentence reason, cites up to three sources, and says how confident it is.
+3. The overall score is a weighted average of the criteria. Required criteria count double compared with preferred ones.
 
-## When scores change
+If the model doesn't answer every criterion, Staffer throws the attempt away and the candidate keeps the score they had. A criterion is never quietly scored as zero because an answer went missing.
 
-A score reflects the criteria at the moment it was calculated. See [Editing and rescoring](/companies/editing-and-rescoring) for when it updates on its own and when you need to trigger it yourself.
+## Read the Match tab
 
-**Next:** [Shortlist and push to candidates](/companies/shortlist-and-push)
+Open a candidate and click the **Match** tab.
+
+- **Overall match** shows the overall pair. Expand it for a short summary of the fit.
+- **Required criteria match** and **Preferred criteria match** list one row per criterion, with its status and its pair of scores.
+
+Expand a criterion to see the reason, the confidence (**High confidence**, **Medium confidence** or **Low confidence**) and the **Sources** the reason is based on: the profile, a message, a process step or a note. If a later rescore didn't find new evidence for that criterion, you'll see "Unchanged by the latest evidence — this criterion keeps its previous score."
+
+Each criterion gets one of four statuses:
+
+| Status | When |
+|---|---|
+| **Match** | The score is 70 or higher. |
+| **Partial match** | The score is between 40 and 69. |
+| **No match** | The score is below 40. |
+| **Missing evidence** | Confidence is low and the potential score is at least 25 points above the current one. The profile doesn't say, but the candidate might well have it. |
+
+Scores use the same three colors everywhere: green for 70 and up, teal for 40 to 69, and blue below 40. The scale deliberately avoids red and amber, so a low score reads as "weak fit for this brief", not as a warning about the person.
+
+## Current score and potential score
+
+The potential score is never lower than the current score. It's higher when the evidence is silent on something the candidate plausibly has, given their seniority and roles. When the evidence is clear, the two numbers are the same.
+
+Hover over the two circles to see which is which: **Current score** and **Potential score** (or **Potential not scored yet**).
+
+Potential matters in two places you might not expect:
+
+- Search results on the **Scouting** tab are ordered by potential score.
+- The **Match** filter on candidate lists sorts people into **Good fit (70+)**, **Maybe (40–69)**, **Weak (under 40)** and **Unscored** using the potential score when there is one. A candidate showing a current score of 55 can appear under **Good fit (70+)**.
+
+## What the score reads
+
+- The candidate's profile.
+- Their six most recent messages with you.
+- Completed and skipped process steps, including the candidate's own answers, such as questionnaire responses and interview transcripts.
+- Notes from your team. See [Notes](/companies/notes).
+
+## What the score ignores
+
+- The candidate's name.
+- The evaluation an AI interview produces, and any score a reviewer gives in a review step. The score reads what the candidate said, not someone's verdict on it.
+- Notes left by people outside your workspace on a [share link](/companies/share-candidates).
+
+## Where scores appear
+
+- **Scouting** results. Hover over a score to see the per-criterion breakdown.
+- The **Match** column and filter on a job's **Candidates** tab and on the **Applications** page.
+- The candidate header and the **Match score** section of the profile panel.
+- The **Match** tab.
+- Share links, if you include the match score when you create the link.
+
+The talent pool doesn't show scores, because a profile in the pool isn't tied to a job.
+
+## What a score doesn't do
+
+A score is evidence for your decision, not the decision. Staffer doesn't reject, advance or contact anyone because of a score on its own.
+
+A score also doesn't update when you edit the brief. It changes when there's new evidence about the candidate, or when you rescore them. See [When scores change](/companies/editing-and-rescoring).
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Why is a criterion marked Missing evidence?">
+    The profile doesn't mention it, but the candidate's background makes it plausible. Find out and write it down: ask them in a message or a questionnaire, or add a note after a call. The next rescore reads that evidence.
+  </Accordion>
+  <Accordion title="Why is a candidate with a score of 55 listed under Good fit?">
+    The **Match** filter groups by potential score first. The candidate's potential score is 70 or higher.
+  </Accordion>
+  <Accordion title="Does everyone in my workspace see the same score?">
+    Yes. The score belongs to the candidate's application for that job, not to the person looking at it.
+  </Accordion>
+  <Accordion title="Can I change a score by hand?">
+    No. You can add evidence (a note, a message, a completed step) and rescore, but you can't type a number in.
+  </Accordion>
+</AccordionGroup>

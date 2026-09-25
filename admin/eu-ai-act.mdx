@@ -1,0 +1,65 @@
+---
+title: "EU AI Act"
+description: "How Staffer and your organization split responsibility under the EU AI Act, what's built to support it, and what isn't yet."
+icon: "gavel"
+---
+
+Staffer's platform is a high-risk AI system under the EU AI Act (Regulation (EU) 2024/1689), Annex III §4: employment, workers' management and access to self-employment. Staffer is the AI system's provider. Your organization is the deployer, with its own obligations under Article 26.
+
+## What's built to support your obligations
+
+- Per-criterion scores with evidence: every match score is broken into individual criteria, each with a reason, a confidence level, and the sources it's based on, not only a number. See [How match scores work](/companies/match-scores).
+- Human oversight by default: moving a candidate to a new stage, rejecting them or hiring them is a person's action. When the agent proposes one of these, it shows an approval card in **Ask permission** mode, and approving it becomes part of the audit record. Three settings narrow this, all off by default:
+  - **Auto** mode in chat skips the approval card, so there's no approval record for what the agent does while it's on.
+  - A questionnaire step with **Automatically reject** rejects a candidate who fails a qualifying question.
+  - A review step with **Rejection disqualifies** moves a candidate to **Rejected** as soon as the reviewer rejects them or scores them below the passing score.
+- Disclosures to candidates at the moments that matter: an AI interview requires an explicit, versioned acknowledgement before it can start, covering what's recorded, that an AI assesses it, that it affects the match score, and when it's deleted. See [AI interviews](/companies/ai-interviews).
+- Logged state changes and scoring history: every stage change lands on the candidate's activity history, and every match score is stored with its reasoning and evidence, not overwritten silently.
+- A retention limit on interview media: recordings, transcripts and their AI evaluation are deleted six months after the application closes, regardless of your retention settings. See [Retention rules](/admin/retention).
+
+## What isn't built yet
+
+- A candidate review-request flow. By default the AI doesn't advance, reject or hire anyone on its own, but there's no dedicated feature for a candidate to formally request human review of one specific decision (GDPR Article 22).
+- Replaying an old evaluation. The scoring trail records what was computed at the time, not enough to re-run it under today's model.
+- Drift or bias-monitoring dashboards for you to view yourself.
+- A candidate-facing "how was I evaluated" page. Today, if a candidate asks, a person answers.
+
+## Your duties as deployer
+
+From Staffer's own EU AI Act page, under Article 26, you're responsible for:
+
+- Assigning human oversight. The workspace admin role is the default assignment.
+- Informing workers' representatives before you put Staffer to use, where that applies.
+- Informing candidates that AI is used to evaluate them. Staffer shows a disclosure in the candidate portal and at the AI interview step. You can add a stronger disclosure of your own in [policy notes](/admin/ai-policies).
+- Monitoring for problems and reporting incidents to compliance@staffer.com.
+- Keeping your own records. Staffer keeps its audit log for the lifetime of your workspace and can export it to you on request.
+
+## Timeline
+
+The EU AI Act's rules for high-risk systems apply 24 months after the regulation entered into force. Staffer has built its architecture ahead of that date.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can a candidate ask for a human to review a specific decision?">
+    Not through a dedicated feature today. A person already makes every real decision by default, since the AI doesn't advance, reject or hire anyone on its own, but there's no formal review-request mechanism for a candidate to invoke.
+  </Accordion>
+  <Accordion title="Does Auto mode change any of this?">
+    Yes, for approvals specifically. Auto mode skips the approval click for agent actions, so there's no approval record for whatever it does while it's on. It doesn't change the disclosures candidates see or the fixed interview-media retention.
+  </Accordion>
+  <Accordion title="Does Staffer's scoring ever decide by itself?">
+    No. A score never changes a candidate's stage. Stages change automatically only if you set up a questionnaire with **Automatically reject**, or a review step with **Rejection disqualifies**. See [Assignees, holds and automatic rejection](/companies/reviewer-holds-and-gates).
+  </Accordion>
+  <Accordion title="Who do I contact about an incident?">
+    compliance@staffer.com, the same address for security and audit questions.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="AI policies" icon="scale" href="/admin/ai-policies">
+    The non-discrimination and GDPR rules baked into every AI request.
+  </Card>
+  <Card title="How match scores work" icon="target" href="/companies/match-scores">
+    What a per-criterion score looks like and what it's based on.
+  </Card>
+</CardGroup>

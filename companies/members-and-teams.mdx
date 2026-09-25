@@ -1,15 +1,71 @@
 ---
-title: "Members and teams"
-description: "Who has access to your workspace, and how teams split it into smaller groups."
+title: "Members and roles"
+description: "Who's in your workspace, how to invite or remove someone, and what each role can do."
 icon: "users"
 ---
 
-## Members
+**Settings** → **Workspace** → **Members** lists everyone with access to your workspace, their role, and any invitations still waiting to be accepted. Everyone in the workspace can see this list. Only admins and owners can invite someone, change a role, or remove someone.
 
-See everyone in the workspace, their role, and any invitations still pending. Admins can change a member's role or remove them.
+## The members list
 
-## Teams
+Search by name or email, or use **Filter** to narrow by role. Each row shows the person's name (yours is tagged **You**), their role, and when they joined. Admins and owners get a **⋯** menu on each row to change a role or remove someone. It doesn't appear on your own row or the workspace owner's row.
 
-Split a workspace into smaller groups, useful when different teams hire independently but still share one workspace. A team can have its own knowledge and its own members, layered on top of the workspace's.
+## Invite a teammate
 
-**Next:** [Organization](/companies/organization-settings)
+Click **Invite teammate**. See [Invite your team](/companies/invite-team) for the invite form, the roles it offers, and what the invited person sees.
+
+## Changing a role
+
+From a row's **⋯** menu, pick **Admin**, **Member**, **Reviewer**, or **Viewer**. You can't change the workspace owner's role from here, or your own. If someone holds the **owner** role in your organization, their role can't be changed from this screen either, no matter what role they hold in this particular workspace.
+
+## Removing someone
+
+**Remove from workspace** takes away their access immediately. The same owner and organization-owner protections apply: neither can be removed from this screen.
+
+## Pending invitations
+
+Each pending invite shows the email, when it was sent, and whether it's expired. **Resend** sends a new email and gives the invite another 14 days from now. The **×** button cancels the invite.
+
+<Note>
+There's no self-service way to transfer workspace ownership. The owner's row never shows a way to change or remove it from this screen.
+</Note>
+
+## What each role can do
+
+| Role | Can do |
+|---|---|
+| Owner | Everything an Admin can, plus delete the workspace and change its public URL slug. |
+| Admin | Everything a Member can, plus edit workspace settings, manage members and invitations, delete any job and move jobs to another workspace. |
+| Member | Create and edit jobs, search for, shortlist and promote candidates, message candidates, publish listings and close jobs. |
+| Reviewer, Viewer | Read-only, except they can complete a process step they're named on and revoke share links. |
+
+Reviewer and Viewer have the same access today. Naming someone on a step is what lets them complete it, not the Reviewer role.
+
+See [Roles and permissions](/get-started/roles-and-permissions) for the full breakdown of what each role can do.
+
+## Organization roles are separate
+
+Owner, admin, and member at the organization level control billing, compliance, and settings that span workspaces, not what someone can do inside this one. See [Organization settings](/admin/organization).
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can I invite someone directly as an owner?">
+    No. The invite form offers Admin, Member, Reviewer or Viewer. The owner is the person who created the workspace.
+  </Accordion>
+  <Accordion title="I'm an admin. Why can't I remove this person?">
+    You can't remove the workspace owner, or anyone who's an owner of your organization, regardless of their role in this workspace.
+  </Accordion>
+  <Accordion title="What's the difference between a Reviewer and a Viewer?">
+    Nothing, in terms of access. Both are read-only unless personally named on a process step.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Invite your team" icon="user-plus" href="/companies/invite-team">
+    The invite form, roles offered, and what the invited person sees.
+  </Card>
+  <Card title="Roles and permissions" icon="shield-check" href="/get-started/roles-and-permissions">
+    The full table of what every role can and can't do.
+  </Card>
+</CardGroup>

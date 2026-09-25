@@ -1,23 +1,125 @@
 ---
-title: "Run a search"
-description: "Scout the corpus for candidates that match your job's criteria, in multiple rounds from the same canvas."
+title: "Search for candidates"
+description: "Describe who you want to the agent in the job's chat. It runs a multi-round search and scores every result against your brief."
 icon: "search"
 ---
 
-Open the **Scouting** tab on a job and describe who you're looking for, or let the agent search directly from the criteria already in the brief.
+There's no search form. You describe who you want in the job's chat, and the agent searches Staffer's candidate database for you. Results stream into the **Scouting** tab as it works.
 
-## How search works
+## Start a search
 
-Staffer searches its own candidate database using both the meaning of your criteria and keyword matches, then ranks results against the specific job. A candidate who's an excellent fit for one job and a poor fit for another gets two different scores, because the ranking is scoped to that job's criteria each time.
+<Steps>
+  <Step title="Open the job's chat">
+    Write who you're looking for, the way you'd brief a recruiter: "senior backend engineers in Norway with Kotlin experience." If the brief already looks right, you can say "ready to scout" and the agent builds a search from the brief's criteria itself.
+  </Step>
+  <Step title="Let it run">
+    The chat shows a "Searching · `<query>`" line while it works, and the **Send** button turns into a **Stop** button. On the **Scouting** tab, a new group appears titled with the search's query, with a live **Searching · Ns** timer that ticks up as results come in.
+  </Step>
+  <Step title="Read the summary">
+    When it finishes, the agent posts a short summary: who scored well, who stands out on a specific criterion, and any gaps in the pool. It usually suggests a next step: drill into the top profiles, run a tighter search, or tell it who to shortlist.
+  </Step>
+</Steps>
 
-## Running rounds
+The agent doesn't ask permission before running a search, even if your chat mode is set to **Ask permission**. Shortlisting and promoting the people it finds do ask first, unless you've switched to **Auto**.
 
-Search happens in rounds, streamed into the canvas as they run. Ask for a different angle, for instance "look for people from smaller startups too" or "widen this to include contractors," and the agent runs another round without losing the first.
+## What the agent does
 
-## Working the results from chat
+- Turns your message (or the brief's criteria) into several different search queries, covering different angles on the same brief.
+- Runs up to 4 rounds. Between rounds, it looks at what it's found so far and proposes new queries to fill gaps, without you having to ask.
+- Reranks and narrows each round's results before scoring them.
+- Double-checks the strongest matches against the brief.
+- Scores every result against your brief's criteria. See [How match scores work](/companies/match-scores).
 
-You don't have to click through results one by one. Tell the agent what to do with them directly: "add the top 5," "remove anyone outside CET," "shortlist everyone above an 80." The canvas updates to match.
+It stops early if it reaches your workspace's result limit, if two rounds in a row find nothing new, or if it runs out of time.
 
-Results carry a status badge so you always know where a candidate already stands: shortlisted, already in your candidates list, or attached to a different job.
+## How long it takes
 
-**Next:** [Reading match scores](/companies/match-scores)
+Expect a few minutes, not seconds. One search that returned 47 results took about 4 minutes. There's no fixed time: it depends on how many rounds run and how many candidates get scored.
+
+## Reading the results
+
+Each search gets its own collapsible group on the **Scouting** tab, titled with its query. A **Shortlist** group always sits above them, even when it's empty.
+
+Each result row shows:
+
+- A checkbox to select the row, for acting on several rows at once.
+- A bookmark icon, **Add to shortlist**. It fills in blue once you've shortlisted that person.
+- The candidate's name and current title at company (or "Unknown role" if neither is on file).
+- Two score circles: the filled one is the current match score, the outlined one is the potential score. Rows are ordered by potential score, highest first.
+- A **Candidate actions** (…) menu: **View candidate**, **Copy ID**, **Save to talent pool**, **Add to shortlist**.
+
+Click anywhere else on a row to open a profile panel with a **+ Shortlist** button, the candidate's match score, and their seniority, function, experience, location and languages. It's profile only: there's no Process, Match, Messages, Notes or Activity tab yet, because nothing exists to show until you promote them. See [The candidate view](/companies/candidate-view).
+
+Select one or more rows to shortlist, remove, or promote them together. See [Shortlist and promote candidates](/companies/shortlist-and-push).
+
+### Search actions and shortlist actions
+
+Each search group's **…** menu:
+
+| Action | What it does |
+|---|---|
+| **Re-score** | Re-runs scoring for that round's results against the current brief. Doesn't search again. |
+| **Download as CSV** | Exports that round's results. |
+| **Delete search** | Removes the group from the tab. |
+
+The **Shortlist** group's **…** menu has one action, **Download as CSV**, which exports everyone on the shortlist.
+
+## Refine the search
+
+Send a follow-up message in the same chat: "also look in Sweden", "skip anyone without a design background". Each request becomes its own group on the **Scouting** tab. Earlier groups stay, so nothing you've already reviewed disappears. For what to say, see [Steer a search](/academy/steer-a-search).
+
+## Where candidates come from
+
+Staffer searches its own candidate database, not only people who've applied to you. It currently covers Europe and North America. It never has candidate emails or phone numbers by design. See [Get contact details](/companies/contact-details).
+
+## What isn't filtered reliably
+
+- Function or department. Asking for "engineers only" doesn't reliably exclude other functions. Describe the role in words instead.
+- Seniority mostly works, but isn't applied consistently across the whole search. Put seniority in the criteria if it matters to the score.
+
+## Settings that affect search
+
+In **Settings** → **Workspace** → **Preferences**, under Sourcing:
+
+- **Maximum sourcing results** (25, 50, 75 or 100) sets how many people one search returns. Higher numbers take longer.
+- **Default countries** is saved but currently has no effect on search results. Don't rely on it to narrow searches to specific countries: put the countries in your message instead.
+
+## Credits and running searches
+
+Running a search uses credits: every query, rerank and score the agent runs is billed individually, not as a flat price per search. Your balance is checked before the chat turn starts, not while the search runs, so a search that's already going always finishes, even if the balance runs out partway through.
+
+<Warning>
+You can't cancel a running search. Clicking **Stop** stops the reply in your chat, not the search itself: it keeps running on the server and its results still land in Scouting. **Delete search** removes the group afterward but doesn't stop work already in progress.
+</Warning>
+
+If a search runs out of time, you get whatever results it had already scored. There's no error message. The tab stops adding new rounds.
+
+## Who can search
+
+Viewers and reviewers can open jobs and read chat, but the agent won't search, shortlist, or promote candidates on their behalf. You need the member role or above.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can I filter a search by department or seniority?">
+    Seniority filtering mostly works. Department and function filtering doesn't do anything right now, even though you can ask for it. Describe the role in your message instead and let the scoring sort out fit.
+  </Accordion>
+  <Accordion title="Does a search cost a fixed number of credits?">
+    No. Cost scales with how many rounds ran and how many candidates got scored. There's no flat "credits per search" price.
+  </Accordion>
+  <Accordion title="Can I stop a search once it's running?">
+    No. **Stop** ends the agent's reply in your chat, but the search carries on and its results still arrive on the **Scouting** tab. Delete the search afterwards if you don't want it.
+  </Accordion>
+  <Accordion title="Why does a result show 'Unknown role'?">
+    The candidate's profile has no current title or company on file. It's still scored against your brief like any other result.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Shortlist and promote candidates" icon="bookmark" href="/companies/shortlist-and-push">
+    Move search results into your pipeline.
+  </Card>
+  <Card title="How match scores work" icon="target" href="/companies/match-scores">
+    What the two numbers on every result mean.
+  </Card>
+</CardGroup>

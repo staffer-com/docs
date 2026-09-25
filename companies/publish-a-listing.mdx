@@ -1,5 +1,97 @@
 ---
-title: "Publish a listing"
-description: "Generate a public job listing from the brief, translate it, and publish it to your career page."
+title: "Create and publish a listing"
+description: "Generate a candidate-facing listing from the brief, edit it, and publish it to the public job board."
 icon: "megaphone"
 ---
+
+A listing is the candidate-facing page for a job: what shows up on your career page and the public job board. You don't write it from scratch. Staffer generates it from the brief, and you edit from there.
+
+## Generate the listing
+
+<Steps>
+  <Step title="Open the Listing tab">
+    On a job, click the **Listing** tab. A new job shows **No listing yet** with a **Generate from brief** button. It's greyed out, with the tooltip "Add a brief first", until the job has a brief.
+  </Step>
+  <Step title="Generate from brief">
+    Click **Generate from brief**. Staffer drafts a title, tagline, and body from the [brief](/companies/brief-criteria): function, engagement, work mode, location, salary (unless you hid it), and your required and preferred criteria, plus, for a named listing, what it knows about your company from [company knowledge](/companies/company-knowledge). Staffer writes one draft per listing language, so more languages take longer. Drafting uses credits. If your organization has [live policy enforcement](/admin/ai-policies) on, the policy check can refuse a draft. Admins and owners can override the refusal with a written reason.
+  </Step>
+  <Step title="Review the draft">
+    The listing opens as a preview of the public page: cover photo and logo from [Branding](/companies/branding), the title, the tagline, a details box (engagement, work mode, location, and the deadline or "No deadline — apply anytime"), the body, and the **Apply** button.
+  </Step>
+  <Step title="Publish it">
+    Click **Publish**. You only need a title. The job appears on the public job board right away.
+  </Step>
+</Steps>
+
+## Edit the listing
+
+Click directly on the title, tagline, or body to edit them. The body is a block editor, so you write it in sections rather than one long paragraph.
+
+Unlike the brief, listing edits don't save as you type. Editing marks the listing unsaved and shows **Save** (and **Discard**) in the toolbar, and nothing is kept until you click **Save**: it changes to **Saving**, then **Saved**. If you reload the tab before saving, the edit is still there when the page comes back. It's held in your browser, not on Staffer's side, until you save it.
+
+You can also ask the agent to make a specific change from the job's chat ("make the tagline shorter", "add a line about our benefits"). In **Ask permission** mode it asks first ("I'd like to rewrite the listing."). In **Auto** mode it rewrites it right away. For a full regenerate from the current brief, use **Re-draft from brief** instead.
+
+You can change the **Apply** button's text in the primary language only. **Re-draft from brief** and **Sync translations** reset it.
+
+<Note>
+  If you edit the brief after generating the listing, the Listing tab shows a banner: "Brief has changed since this listing was drafted." Nothing updates on its own. Click **Re-draft from brief** to catch it up, or leave the listing as it is.
+</Note>
+
+## Re-draft from brief
+
+Open the **…** menu and click **Re-draft from brief** (it reads **Generate from brief** until the listing has content). It rewrites the named listing's title, tagline, body and **Apply** button text for every language, from the current brief. It leaves the publish status, the **Anonymous client** switch, the link and the map setting as they were. If the listing is anonymous, check the confidential copy after a re-draft. See [Anonymous listings](/companies/anonymous-listings).
+
+You can't re-draft, edit, or publish a listing while its job is closed. See [Close, reopen or delete a job](/companies/close-reopen-delete).
+
+## Add a language and translate
+
+The listing picks up its languages from the job's Brief tab, not from here. Add a language under the brief's Languages field and it shows up in the Listing tab's language picker. The first language in that list is the primary language, marked with a star.
+
+To work in another language, click the language button above the listing (it shows the current language's flag and name) and pick one under **Edit listing in**. Each language keeps its own draft. To translate the primary language's saved copy into every other language, open the **…** menu and click **Sync translations from** followed by your primary language. This overwrites the other languages, and it only runs once the primary language has a saved body.
+
+Your company name and logo aren't translated. They're the same in every language, pulled from the workspace rather than the listing text.
+
+## Publish and unpublish
+
+**Publish** puts the listing on the public job board and, unless it's anonymous, your [career page](/companies/career-page). **Unpublish** takes it off the board and turns it back into a draft you can keep editing. Both take effect immediately.
+
+Once published, the **…** menu shows **View listing** (opens the public page) and **Copy listing link**. The URL is `jobs.staffer.com/companies/your-workspace/listing-name`, or `jobs.staffer.com/jobs/listing-id` for an anonymous listing. After you close the job, both menu items disappear, even though the listing stays visible for the grace period.
+
+The same menu has two switches that change the public page:
+
+- **Anonymous client** hides your company. It saves as soon as you switch it. See [Anonymous listings](/companies/anonymous-listings).
+- **Show map** shows the job's location on a map. Click **Save** afterwards to apply it. Your own preview always shows the map.
+
+<Warning>
+  Unpublish is not the same as closing the job. Unpublish pulls the listing off the board straight away and leaves it fully editable. Closing the job (the job's **…** menu, **Close position**) keeps the listing visible with applications turned off for the **Closed listing grace period** set in **Settings** → **Workspace** → **Preferences** (30 days by default, or 0 to remove it immediately), and only then does it drop off. This also happens to a listing you unpublished earlier: closing the job puts it back on the board, with applications closed, until the grace period ends. See [Close, reopen or delete a job](/companies/close-reopen-delete).
+</Warning>
+
+## Who can do this
+
+Members, admins and owners can generate, edit and publish a listing. Viewers and reviewers can look at it but can't change it. Generating, re-drafting and syncing translations use credits, for each language. Saving your own edits, publishing and unpublishing don't.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Does Staffer post my listing to LinkedIn or Indeed?">
+    No. Publishing lists the job on `jobs.staffer.com` only. Staffer doesn't post listings to other job boards.
+  </Accordion>
+  <Accordion title="I changed the title after publishing. Did the link change?">
+    Yes. The public URL includes a slug made from the title, and it changes whenever the title changes, even after publishing. If you've already shared or indexed the old link, it stops working. Copy the link again after a title change.
+  </Accordion>
+  <Accordion title="Can I hide the salary but still see it myself?">
+    Yes, from the brief rather than the listing. Turn on **Hide on public listing** next to the salary field in the [brief](/companies/brief-criteria). You still see the number. The listing omits it.
+  </Accordion>
+  <Accordion title="What's the difference between Publish and the job being Open?">
+    Mostly separate. A job can be **Open** with no listing published, if you're only sourcing candidates, or **Closed** with the listing still visible for the grace period. **Publish** and **Unpublish** control the listing. **Close position** controls the job, and it also shows a closed listing on the board for the grace period, even one you'd unpublished.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Anonymous listings" icon="eye-off" href="/companies/anonymous-listings">
+    Run a confidential search without naming your company.
+  </Card>
+  <Card title="Your career page" icon="building" href="/companies/career-page">
+    Where published listings live together with your mission and offices.
+  </Card>
+</CardGroup>

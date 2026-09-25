@@ -1,46 +1,57 @@
 ---
-title: "What you pay"
-description: "What a hire costs on Staffer next to an in-house hire or an agency, and what drives the number."
-icon: "calculator"
+title: "What uses credits"
+description: "Which actions are metered, the one fixed price, and how to see where your credits went."
+icon: "list-checks"
 ---
 
-|  | Per hire |
-| --- | --- |
-| Fully loaded in-house hire | \$4,700 |
-| Agency on a hard role | \$5-30,000\+ |
-| **Staffer** | ~**\$1,285** |
+Almost everything that costs credits is metered: you pay for the AI and vendor work an action takes, not a flat fee per click. **Request contact info** is the one fixed price.
 
-Three to four times cheaper than a fully loaded in-house hire. Up to twenty-five times cheaper than an agency placement on a hard role.
+## What's metered vs. fixed
 
-## What drives that number
+| Action | How it's charged |
+|---|---|
+| Chatting with the agent (job chat and page chat) | Metered |
+| Running a candidate search | Metered |
+| Scoring or rescoring a candidate | Metered |
+| Generating or translating a job listing | Metered |
+| Drafting or rewriting a message | Metered |
+| Naming a search, drafting a message template, drafting career page copy | Metered |
+| The AI interviewer's conversation and voice | Metered |
+| Recording and transcribing a human interview | Metered |
+| Preparing interview questions | Metered |
+| Researching a company for workspace knowledge | Metered |
+| **Request contact info** | Fixed: $1.50 per lookup that actually queries the provider |
+| The compliance policy check, when **Live policy enforcement** is on | Metered, usually well under a cent each time it runs |
 
-| Work | Unit | Price |
-| --- | --- | --- |
-| AI sourcing | search round | ~\$12 |
-| Match scoring | applicant scored | ~\$1 |
-| AI interview | interview completed | ~\$8 |
-| Enrichment | email \+ phone reveal | ~\$1.50 |
-| Next-action prep | action prepared | ~\$0.40 |
-| Agent actions | action run | ~\$0.20 |
+**Request contact info** only charges when it actually looks something up. If there's no LinkedIn URL on file for that candidate, nothing happens and nothing is charged. Clicking it again re-runs the lookup and charges again: there's no discount or guard against asking twice for the same person.
 
-## A few scenarios
+Metered actions vary because the underlying work varies. A ten-minute AI interview costs more than a five-minute one. Scoring 200 candidates costs more than scoring 20. A search that runs several rounds because the first pass didn't find enough strong matches costs more than one that stops early.
 
-<AccordionGroup>
-  <Accordion title="One scouting position: $435">
-    30 search rounds and 50 contacts revealed.
-  </Accordion>
+## What doesn't cost you anything
 
-  <Accordion title="200 applicants, no AI interview: $520">
-    A full process with only applicants scored and next steps prepped.
-  </Accordion>
+Candidate-facing chat is paid by Staffer, not your organization: chat on the apply page, in the candidate portal, and on share links never touches your credits, and it keeps working even when your organization is out of credits. AI interviews aren't free: they use your credits, and they keep running even at zero balance.
 
-  <Accordion title="500 applicants with AI interview: $2,100">
-    A high-volume role: 500 applicants scored and 100 AI interviews, with next steps prepped.
-  </Accordion>
+Everyday use of the product is free too: viewing jobs and candidates, editing a brief, building a process, adding a note, sending a message you wrote yourself. Only the AI work behind an action (drafting it, scoring it, generating it) is metered.
 
-  <Accordion title="A full hire, end to end: $1,285">
-    All six kinds of work: 30 search rounds, 200 applicants scored, 30 AI interviews, 50 contact enrichments, 1,000 next steps prepped, and 50 agent actions.
-  </Accordion>
-</AccordionGroup>
+## Where credits went
 
-**Next:** [Billing](/pricing/billing)
+**Settings** → **Organization** → **Usage & credits** has a spend chart with three series, and two of them are easy to mix up:
+
+- **AI Agent**: chat, search, scoring, and everything else the agent drafts or generates.
+- **Interviews**: the notetaker bot that records and transcribes a scheduled human interview.
+- **AI Interviews**: the AI-led interview feature itself, its conversation and its voice.
+
+Below the chart, **Usage history** lists every individual top-up, credit, and reconciliation from the last 30 days, plus your usage grouped by day, workspace, and type of action. See [Credits, top-ups and spend caps](/admin/credits).
+
+## Why you won't see a price before you click
+
+The price depends on what the action takes to run: how long a search goes, how many candidates get scored, how long an interview conversation runs. Staffer charges for what happened, not an estimate made in advance.
+
+<CardGroup cols={2}>
+  <Card title="How pricing works" icon="credit-card" href="/pricing/how-it-works">
+    Prepaid credits, one pool per organization, and what's free.
+  </Card>
+  <Card title="Credits, top-ups and spend caps" icon="wallet" href="/admin/credits">
+    Add credits, cap a workspace's spend, and see what happens at zero.
+  </Card>
+</CardGroup>

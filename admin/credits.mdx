@@ -1,0 +1,75 @@
+---
+title: "Credits, top-ups and spend caps"
+description: "Add credits, cap what a workspace can spend, and see what happens when your organization runs out."
+icon: "wallet"
+---
+
+**Settings** → **Organization** → **Usage & credits** is where your organization manages its shared credit pool: available credits, adding more, capping what an individual workspace can spend, and a 30-day history of every charge and top-up. Only organization owners and admins can open it.
+
+<Note>
+  To add credits you need a card on file first. Add one from **Settings** → **Organization** → **Billing**. See [Payment and invoices](/pricing/billing).
+</Note>
+
+## Available credits
+
+The number at the top of the page is your organization's available credits, shared by every workspace. It's the same number the sidebar's **Credits** chip shows, when the workspace you're in has no monthly cap of its own.
+
+## Add credits
+
+<Steps>
+  <Step title="Click Add credits">
+    If your organization has no card on file yet, the button is disabled with a hint to add one first.
+  </Step>
+  <Step title="Pick an amount">
+    Choose a preset amount ($10, $25, $50, $100, or $250), or select **Other** to enter a custom whole-dollar amount between $5 and $1,000.
+  </Step>
+  <Step title="Check the bonus preview">
+    If your plan carries a bonus, a line shows the total you'll receive: base amount plus bonus, at your plan's percentage. See [Plans](/pricing/plans).
+  </Step>
+  <Step title="Confirm and charge">
+    Check the box confirming credits are prepaid and non-refundable, then click **Charge**. It charges the card on file immediately, with no redirect to a separate checkout page.
+  </Step>
+</Steps>
+
+## Workspace monthly caps
+
+Every workspace draws freely from the shared pool unless you cap it. A cap throttles one workspace's spend without touching any other workspace's access to the pool. This is available on every plan, including Starter, not only Growth and Enterprise.
+
+The **Workspaces** table lists each workspace with its spend so far this month and its **Monthly cap** ("No cap" or a dollar figure). Click **Edit cap** to set or clear one. Only organization owners and admins can change a cap, even for a workspace they don't otherwise manage.
+
+When a workspace hits its cap, that workspace's AI features refuse, with the banner "This workspace reached its monthly spend limit of $X. Raise the limit on the Usage & Credits page or wait until the 1st of next month." A workspace member who isn't an organization admin sees a version pointing them to ask an admin, instead of a direct link. Other workspaces in the organization are unaffected. The cap resets on the 1st of the month.
+
+## Running out
+
+Two different things can pause AI features: your whole organization runs out of credits, or one workspace hits its own cap (above).
+
+At zero organization credits, every workspace's AI features pause, with the banner "Your organization is out of credits. AI features are paused until it is topped up." If your organization has a **Billing manager email** on file, the banner points there. Organization owners and admins also get an **Add credits** link right in the banner.
+
+What pauses is AI features on your side: agent chat, page chat, search, scoring, rescoring, listing generation, message drafting and rewriting, interview prep, and everything else on the [What uses credits](/pricing/what-you-pay) list.
+
+Candidates aren't blocked. Chat on the apply page, in the candidate portal and on share links keeps running, and it's free for your organization. Candidates can also keep going through their steps. AI interviews still run at zero balance, but they aren't free: they keep charging your credits, so your balance can go below zero.
+
+An action already running when your credits hit zero finishes: credits are checked before an action starts, not partway through. The next action after that is what gets refused.
+
+## The low-balance notification
+
+The first time an action is refused for running out, Staffer sends a "Balance running low" notification. It goes to every organization owner and admin, plus anyone who has **Balance running low** checked on their own Notifications page. It's sent at most once every 24 hours per organization, so it won't repeat every time another action gets refused the same day.
+
+## Refunds
+
+Only credit you actually paid for can be refunded, never bonus credit. There's no self-serve refund button anywhere in the app: a refund only happens when Staffer issues one from its side.
+
+## Usage history
+
+Below **Add credits**, **Usage history** covers the last 30 days across your whole organization. Usage (chat, search, scoring, and the rest) is grouped by day, workspace, and type of action, so you see a daily total instead of one row per AI call. Top-ups, signup credit, refunds, and other adjustments each show individually with their own timestamp.
+
+Entry types you'll see: **Signup credit**, **Top-up**, **Usage**, **Credit**, **Refund**, **Adjustment**, and **Reconciliation**.
+
+<CardGroup cols={2}>
+  <Card title="Plans" icon="layers" href="/pricing/plans">
+    Starter, Growth, and Enterprise, and how the bonus works.
+  </Card>
+  <Card title="Payment and invoices" icon="receipt" href="/pricing/billing">
+    Add a card, billing details, and where your invoices are.
+  </Card>
+</CardGroup>

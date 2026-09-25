@@ -1,31 +1,47 @@
 ---
-icon: "message-circle-question-mark"
-title: "Pricing FAQ"
-description: "Common questions about how usage, commitments, and billing work."
+title: "Billing FAQ"
+description: "Real questions about credits, top-ups, caps, and invoices."
+icon: "circle-help"
 ---
 
 <AccordionGroup>
-  <Accordion title="Is this a subscription?">
-    Yes, on Growth and Enterprise. Your commitment is a credit top-up, not a licence fee. Every dollar becomes usage you own, plus a bonus on top, and unused credits roll forward.
+  <Accordion title="Do credits expire?">
+    No. Paid and bonus credits both carry over indefinitely. A slow quarter doesn't cost you anything you've already bought.
   </Accordion>
 
-  <Accordion title="Is this a success fee?">
-    No. You pay for the hiring work you run, not a percentage when a candidate signs. A $$100,000 hire costs about $$1,285 here, against $$15,000 to $$30,000 in agency fees.
+  <Accordion title="What happens if we run out of credits in the middle of a search?">
+    Nothing gets cut off mid-run. Credits are checked before an action starts, not while it's running, so a search or generation already underway finishes even if it drains your organization's credits to zero. The next action after that is refused until you top up.
   </Accordion>
 
-  <Accordion title="What if we need more than we committed?">
-    Top up any time, one to one. The bonus applies to your committed amount, so extra top-ups are straight credits. If you're topping up often, a higher commitment is the cheaper route.
-  </Accordion>
-
-  <Accordion title="Does cost rise as our team grows?">
-    No. Seats and headcount don't affect price. Only the work you run does.
-  </Accordion>
-
-  <Accordion title="What if hiring slows for a quarter?">
-    Nothing is lost. Unused credits roll forward and are there when hiring picks back up.
+  <Accordion title="Does the bonus apply to top-ups, or only to our monthly commitment?">
+    Both, the same way. A one-off top-up and your monthly subscription invoice each get your plan's bonus percentage. See [Plans](/pricing/plans).
   </Accordion>
 
   <Accordion title="Can we pay by invoice?">
-    On Enterprise agreements, yes. Free and Growth are card-based through Stripe.
+    On Enterprise, yes, by bank transfer. Starter and Growth pay by card through Stripe.
+  </Accordion>
+
+  <Accordion title="Is there a per-seat fee?">
+    No. Staffer doesn't charge per member on any plan. Inviting more teammates to a workspace doesn't add to your bill: only the AI work they run does.
+  </Accordion>
+
+  <Accordion title="Why was my chat refused?">
+    Two different things produce two different messages. If your organization is out of credits entirely, the agent shows "It needs a top-up before the agent can keep chatting." If this workspace has its own monthly spend cap and hit it, you'll see a message about the workspace's limit instead, even though the organization overall still has credits. See [Credits, top-ups and spend caps](/admin/credits).
+  </Accordion>
+
+  <Accordion title="Who gets billing emails?">
+    Every organization owner and admin, plus your Billing manager email if one is set, plus anyone who has "Balance running low" checked on their own Notifications page.
+  </Accordion>
+
+  <Accordion title="Can we get a refund?">
+    Only for credit you actually paid for, never bonus credit, and only Staffer can issue one. There's no self-serve refund button in the app.
+  </Accordion>
+
+  <Accordion title="Can we cap what one team spends?">
+    Yes. Set a monthly cap on any workspace from Usage & credits. It's available on every plan, including Starter, not only Growth and Enterprise.
+  </Accordion>
+
+  <Accordion title="Do candidates cost us anything when they use chat?">
+    No. Chat on the apply page, in the candidate portal, and on share links is paid by Staffer, not your organization. It keeps working even if your organization is out of credits. AI interviews are different: they use your credits, and they still run when your balance is at zero, so it can go below zero.
   </Accordion>
 </AccordionGroup>
