@@ -8,10 +8,7 @@
     "light": "#1284DA",
     "dark": "#1284DA"
   },
-  "favicon": {
-    "light": "/logo/favicon-black.svg",
-    "dark": "/logo/favicon-white.svg"
-  },
+  "favicon": "/logo/favicon.png",
   "icons": {
     "library": "lucide"
   },
@@ -297,6 +294,10 @@
   },
   "navbar": {
     "links": [
+      {
+        "label": "Status",
+        "href": "https://status.staffer.com"
+      },
       {
         "href": "https://staffer.com",
         "label": "Website"
