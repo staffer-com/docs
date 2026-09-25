@@ -1,34 +1,74 @@
 ---
-title: "The brief: hard fields and criteria"
-description: "What goes in a job's hard fields versus its criteria, and how required and preferred criteria affect matching."
+title: "Write the brief"
+description: "Every Details field, how Required and Preferred criteria are weighted, and how autosave and Notes work."
 icon: "list-checks"
 ---
 
-A job's brief has two kinds of fields, and they're used differently.
+A job's **Brief** tab has four parts: **Details** (structured fields), **Role** (free text), **Required** and **Preferred** criteria (what Staffer actually scores candidates against), and **Notes** (private context for the agent).
 
-## Hard fields
+## Details
 
-Hard fields are structured facts about the role: function area, engagement type (full-time, contract, freelance, and so on), location and remote policy, languages required, salary range, start date, and deadline.
+| Field | What you set |
+|---|---|
+| **Function** | One of Engineering, Design, Product, Data, Security, Marketing, Sales, Operations, Other. |
+| **Engagement** | Full-time, Part-time, Contract, Freelance, Project, or Internship. Defaults to Full-time, and changes what the Salary field asks for. |
+| **Work mode** | On-site, Hybrid, Remote, or Unspecified. |
+| **Location** | One place. The field only ever holds a single location. |
+| **Languages** | Any number, each with a star to mark one **primary**. The primary language is the one your listing is written in first. |
+| **Salary** | A range, or for a project engagement, one fixed amount, plus a currency: EUR, GBP, USD, CAD, CHF, SEK, NOK, DKK, PLN, CZK, HUF, RON, BGN, ISK or MXN. Freelance jobs also ask whether the rate is hourly or monthly. A **Hide on public listing** toggle keeps the number visible to your team while hiding it from candidates. |
+| **Timezone overlap** | Minimum hours of overlap you need, shown as "≥ Nh". |
+| **Relocation** | Unspecified, Yes, No, or Considered. |
+| **Start target** | Free text, not a date picker, for example "Q3", "ASAP", or "2026-09". |
+| **Vacancy** | **Always on** (no deadline) or **Fixed deadline**. This is the only thing Vacancy controls: there's no separate field for how many people you're hiring. |
+| **Deadline** | Only appears when Vacancy is Fixed deadline. A date picker. You can't pick a day before today. |
 
-These drive filtering and show up directly on your public listing. Salary can be hidden from the public listing while still showing internally, useful when your team should see it but applicants shouldn't.
+## Role
 
-## Criteria
+A free-text field for the role, team, and what success looks like. This is prose, separate from your criteria, and it's what a reader sees before the bullet points.
 
-Criteria are the qualities you're actually evaluating candidates against, written as plain sentences rather than keyword tags. "Has shipped a production Kubernetes deployment" reads and scores better than "Kubernetes."
+## Required and Preferred criteria
 
-Each criterion is marked **required** or **preferred**:
+Each criterion is one plain sentence, sorted into **Required** or **Preferred**. Required criteria count double compared with preferred ones when Staffer works out a candidate's [match score](/companies/match-scores). For how to phrase them so they score well, see [Write criteria that score well](/academy/write-criteria-that-score-well).
 
-- **Required** criteria carry full weight in a candidate's match score.
-- **Preferred** criteria carry half weight.
+Type a criterion into the row at the bottom of either section and press Enter to add it. The row clears so you can add another. Each criterion can be up to 400 characters, and a brief holds 30 across both sections combined. Once you hit that, the add row disappears until you remove one.
 
-There's no separate seniority field. If seniority matters, write it as a criterion, for instance "at least 5 years leading a backend team."
+There's no drag-to-reorder, and no way to switch a criterion from Preferred to Required (or back) in place. To move one, delete it and retype it in the other section. The retyped criterion counts as a new one, so candidates' earlier scores for the old wording don't carry over to it.
 
-## Private notes
+## Notes
 
-The brief also has a notes section for anything the agent should know that shouldn't appear anywhere candidate-facing: internal constraints, hiring-manager preferences, budget context. Notes never appear on the public listing and never factor into match scores.
+A free-text field for anything you want the agent to keep in mind that shouldn't appear anywhere candidate-facing: internal constraints, hiring-manager preferences, budget context. It holds up to 4,000 characters, and only appears once the job has been saved at least once.
 
-<Info>
-  Only you and your team see these notes. They exist purely as context for the agent, not as part of the job itself.
-</Info>
+Anyone in your workspace who opens the job can read Notes. They're never shown to candidates, never on the public listing, and never included in a share link. The agent does read them, including when it decides how to search for candidates, but Notes are never used to score a candidate and never copied into the brief, criteria, or listing.
 
-**Next:** [Editing and rescoring](/companies/editing-and-rescoring)
+## Saving
+
+Edits to Details, Role, or criteria save on their own, about a second after you stop typing. The top right of the tab shows **Save** while something's unsaved, **Saving** while it's in flight, and **Saved** once it lands.
+
+<Note>
+  If the job is closed, the whole brief is read-only: the toolbar shows "Position closed — brief is locked. Reopen to edit." instead of **Save**. Reopen the position to edit it again. See [Close, reopen or delete a job](/companies/close-reopen-delete).
+</Note>
+
+If someone else's edit lands while you're still typing, your next autosave fails with "This brief changed somewhere else while you were editing." Reload the job to pick up their version. Your unsaved change isn't merged in, so make it again after reloading.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can I reorder my criteria?">
+    No. New ones always go to the end of their section. If the order matters to you, write them in the order you want from the start.
+  </Accordion>
+  <Accordion title="I meant to mark a criterion Required, not Preferred. How do I fix it?">
+    Delete it from Preferred and retype it under Required. There's no in-place switch, and the retyped version is a new criterion with no history of its own.
+  </Accordion>
+  <Accordion title="Do Notes affect a candidate's match score?">
+    No. Notes steer how the agent talks about the role and how it searches. Only the brief's criteria feed into scoring.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Create a job" icon="file-plus" href="/companies/create-a-job">
+    Start a brief from a description instead of a blank form.
+  </Card>
+  <Card title="How match scores work" icon="target" href="/companies/match-scores">
+    How Required and Preferred criteria turn into a score.
+  </Card>
+</CardGroup>

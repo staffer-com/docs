@@ -1,0 +1,77 @@
+---
+title: "Roles and permissions"
+description: "What owners, admins, members, reviewers and viewers can do, in a workspace and in the organization."
+icon: "key-round"
+---
+
+Everyone in Staffer has two roles: one in the workspace, which covers hiring work, and one in the organization, which covers billing, compliance and company-wide settings. What you can do is the combination of both.
+
+The two are independent. An organization admin who is only a viewer in a workspace can manage billing but can't create a job. A recruiter who is a member of a client's workspace can do all the hiring work there without any role in the client's organization.
+
+## Workspace roles
+
+| Role | In short |
+|---|---|
+| Owner | Everything an admin can do, plus changing the workspace's public URL and deleting the workspace. The person who creates a workspace is its owner. |
+| Admin | Runs the workspace: settings, branding, the career page, message templates, teams and members. |
+| Member | Does the hiring work: jobs, searches, candidates, messages, processes and listings. |
+| Reviewer | Read-only access to the whole workspace. Can complete process steps they're named on. |
+| Viewer | Read-only access to the whole workspace. Can complete process steps they're named on. |
+
+Reviewer and viewer currently have exactly the same access. Anyone named on a process step, as a reviewer or an attendee, can complete that step whatever their role.
+
+### What each workspace role can do
+
+| Action | Owner | Admin | Member | Reviewer, Viewer |
+|---|---|---|---|---|
+| See jobs, candidates, messages and analytics | Yes | Yes | Yes | Yes |
+| Chat with the agent | Yes | Yes | Yes | Read-only answers, chat isn't saved |
+| Create and edit jobs, briefs and processes | Yes | Yes | Yes | No |
+| Search, shortlist and promote candidates | Yes | Yes | Yes | No |
+| Change stages, message candidates, add notes, rescore | Yes | Yes | Yes | No |
+| Request contact info | Yes | Yes | Yes | No |
+| Publish listings | Yes | Yes | Yes | No |
+| Create share links | Yes | Yes | Yes | No |
+| Revoke share links | Yes | Yes | Yes | Yes |
+| Complete a step you're named on | Yes | Yes | Yes | Yes |
+| Delete a job | Yes | Yes | Only while nobody has applied and no candidate is past **In review** | No |
+| Change workspace settings, branding, career page, templates and teams | Yes | Yes | No | No |
+| Invite and remove members, change their roles | Yes | Yes | No | No |
+| Move a job to another workspace (needs admin or owner in both) | Yes | Yes | No | No |
+| Change the workspace's public URL, delete the workspace | Yes | No | No | No |
+
+Change someone's workspace role in **Settings** → **Workspace** → **Members**. See [Members and roles](/companies/members-and-teams).
+
+## Organization roles
+
+| Role | In short |
+|---|---|
+| Owner | The person who created the organization. Everything an admin can do, plus demoting admins. There's one owner per organization. |
+| Admin | Manages organization settings, billing, credits, compliance and organization members. |
+| Member | Belongs to the organization. This role gives no access to organization settings on its own. |
+
+Organization pages (**Settings** → **Organization**, including **Billing**, **Usage & credits**, **Plans** and **Compliance**) are only available to organization owners and admins, whatever their workspace role.
+
+Organization members are often people who joined automatically because their email domain matches the company's. That's why the member role grants nothing at the organization level.
+
+Change someone's organization role in **Settings** → **Organization** → **Members**. See [Organization settings](/admin/organization).
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="I'm the owner of my workspace but I can't see Billing. Why?">
+    Billing belongs to the organization, not the workspace. If you created your workspace inside an organization that already existed, you're a member of that organization, not an admin. Ask an organization admin to promote you, or to handle billing.
+  </Accordion>
+  <Accordion title="Can I restrict a job to certain people?">
+    No. Everyone in a workspace can see every job in it. A job's **Members** list and its team don't limit access. To keep hiring separate, use separate workspaces.
+  </Accordion>
+  <Accordion title="Can a hiring manager review candidates without a Staffer account?">
+    Yes. Send them a [share link](/companies/share-candidates). They can read the candidates you picked and leave notes, without signing in.
+  </Accordion>
+  <Accordion title="Can I create custom roles?">
+    No. The five workspace roles and three organization roles are fixed.
+  </Accordion>
+  <Accordion title="Can I transfer ownership of a workspace?">
+    Not from the app. You can't change your own role, and you can't invite someone as an owner. If a workspace needs a new owner, ask us through **Support** in the sidebar.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,59 @@
+---
+title: "Company knowledge"
+description: "What the agent knows about your company: a researched summary plus facts you can add or correct."
+icon: "brain"
+---
+
+**Settings** → **Workspace** → **Knowledge** holds what the agent knows about your company: a summary and a list of facts. Staffer first collects them from your company's website when you set up the workspace. Everyone in the workspace can read this page. Only admins and owners can rerun research or add and edit facts.
+
+## Summary and Rerun research
+
+The summary is a short paragraph about your company. **Rerun research** writes it again: Staffer reads pages on your company's website, not the wider internet, and pulls out facts. A rerun replaces the summary and updates facts that aren't locked. It uses credits, usually around half a dollar.
+
+<Note>
+The page shows a "next refresh" date after research runs. Nothing happens on that date. Research only runs again when an admin clicks **Rerun research**.
+</Note>
+
+## Facts, grouped by category
+
+Facts sit under six categories: Company, Product, Tech stack, Hiring, Culture, and Market. Each fact is either:
+
+- **Auto**: written by research. It can be overwritten the next time research runs, unless you accept it.
+- **Manual**: typed by hand, or an Auto fact you've accepted or edited. A rerun never overwrites a Manual fact.
+
+A fact research is unsure about starts in a **Pending review** group at the top of the page and isn't used by the agent until you accept it.
+
+## Accept, add, edit, and remove
+
+**Accept** on an Auto fact locks it (and, if it was pending, approves it for the agent to use). If a later research run finds a different value for a fact you've already locked, it doesn't overwrite it: it shows up as a suggested update next to the fact, which you can accept or dismiss.
+
+**Add fact** creates a new Manual fact: pick a category, then write a key and a value. Editing an Auto fact's value locks it the same way Accept does. Deleting a fact removes it outright.
+
+Research-derived facts carry a **Source** link back to the page they came from. Facts you've written by hand don't have one.
+
+## What the agent uses this for
+
+The agent reads your company's summary and up to 20 of its most confident facts in every job chat: when it drafts a brief, writes a listing or answers questions. It may also cite facts when it explains search results. Company knowledge never affects a candidate's [match score](/companies/match-scores).
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Does the summary update itself over time?">
+    No. The summary only changes when an admin clicks **Rerun research**, even though the page shows a "next refresh" date.
+  </Accordion>
+  <Accordion title="If I hand-edit a fact, will a rerun overwrite it?">
+    No. Editing or accepting a fact locks it. A rerun that finds something different offers it as a suggested update instead of overwriting your edit.
+  </Accordion>
+  <Accordion title="Does company knowledge affect match scores?">
+    No. Scores are based on the candidate's own profile, messages, process steps, and your team's notes, not on what the agent knows about your company.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Teams" icon="layers" href="/companies/teams">
+    Team-specific knowledge that layers on top of this.
+  </Card>
+  <Card title="Create a job" icon="file-plus" href="/companies/create-a-job">
+    Where the agent puts this knowledge to work.
+  </Card>
+</CardGroup>

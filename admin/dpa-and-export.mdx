@@ -1,0 +1,58 @@
+---
+title: "DPA and data export"
+description: "Request the countersigned Data Processing Addendum, and export every operational record Staffer holds for your organization."
+icon: "file-signature"
+---
+
+**Settings** → **Organization** → **Compliance** → **Legal & data export** is where you request the Data Processing Addendum and pull a full export of your organization's data. Only organization owners and admins can use it.
+
+## Request the DPA
+
+Clicking **Request DPA** records your request for Staffer's team to action. It doesn't send you anything immediately: someone at Staffer needs to see the request and follow up. The page states you'll get the countersigned copy by email within 3 business days.
+
+The card's status tracks where things stand:
+
+| Status | What it means |
+|---|---|
+| Not requested | No request on file yet. |
+| Requested | Staffer has your request and is preparing the DPA. |
+| Sent | The DPA has been sent to you. Countersign it to complete the process. |
+| Signed | Signed and on file. |
+
+## The DPA summary page
+
+**Settings** → **Organization** → **Compliance** → **Data Processing Addendum** has a plain-English summary of the binding legal document. Your organization is the controller, Staffer the processor. Staffer commits to notifying you in-app at least 30 days before adding or replacing a sub-processor. The summary also covers data location, security measures, and what happens to your data if you cancel, but the countersigned document itself controls if the two ever disagree. Contact legal@staffer.com for negotiation questions, and compliance@staffer.com for operational or security questions.
+
+## Export your organization's data
+
+**Request export** starts a GDPR Article 20 export: a ZIP of every operational record Staffer holds for your organization. It builds in the background rather than downloading immediately, and you'll get an email at the address of whoever requested it, not a fixed address, when it's ready. The download link expires after 7 days.
+
+You can only have one export in progress at a time. Request another while one's still building and Staffer asks you to wait for it to finish. The request row updates from Queued to Building… to ready, showing the file size and expiry once it's done.
+
+Turn on **Compliance export ready** on your personal Notifications page to get a bell and email alert when it's done, instead of checking back. There's also a **DPA signed** notification for when Staffer marks your DPA as countersigned.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Does Request DPA send me anything right away?">
+    No. It records the request. Someone at Staffer follows up. The page states you'll get the countersigned copy within 3 business days.
+  </Accordion>
+  <Accordion title="Who can request the DPA or the export?">
+    Organization owners and admins.
+  </Accordion>
+  <Accordion title="Can I run two exports at once?">
+    No. Only one export can be in progress at a time, across the whole organization.
+  </Accordion>
+  <Accordion title="Where does the export land?">
+    It's emailed to whoever clicked **Request export**, as a link that expires after 7 days, not stored anywhere else.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Data location and security" icon="lock" href="/admin/security">
+    Where your data is stored and processed, and the sub-processor list.
+  </Card>
+  <Card title="Compliance overview" icon="shield" href="/admin/compliance">
+    What else is in **Settings** → **Organization** → **Compliance**.
+  </Card>
+</CardGroup>

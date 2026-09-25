@@ -1,25 +1,79 @@
 ---
-title: "Shortlist and push to candidates"
-description: "Build a shortlist from search, then push it to start the hiring process for real."
-icon: "user-check"
+title: "Shortlist and promote candidates"
+description: "Save candidates to a job's shortlist without committing to them, then promote the ones you want into your pipeline."
+icon: "bookmark"
 ---
 
-A shortlist is a holding area. Adding someone to it doesn't notify them, start a process, or commit you to anything.
+Shortlisting saves a candidate to one job without putting them in your process. Promoting moves them in. Both need the member role or higher in the workspace.
 
-## Building a shortlist
+## Shortlist a candidate
 
-Add candidates from search results, one at a time or in a batch through chat. Anyone shortlisted for a job shows up in that job's **Candidates** tab, still at the shortlist stage.
+- Click the bookmark icon on a row in the **Scouting** tab, or choose **Shortlist** from its **Candidate actions** (…) menu.
+- Open a search result and click **+ Shortlist** on its profile panel.
+- Select several rows with the checkboxes, then click **Shortlist** in the bar that appears.
+- Ask the agent in the job's chat: "shortlist the top 5." In **Ask permission** mode, it confirms first.
 
-## Pushing to candidates
+## Where shortlisted candidates live
 
-When you're ready to actually reach out, push the shortlist. This is the moment a candidate becomes a real, active application:
+In the **Shortlist** group at the top of the job's **Scouting** tab, and in your workspace's [Talent pool](/companies/talent-pool). They don't appear on the **Candidates** tab, and they don't count as candidates, until you promote them.
 
-- Their profile is captured as a snapshot, so later updates to their corpus profile don't change what you already reviewed.
-- Staffer sets up their screening process from the job's process steps.
-- Their state moves from shortlist to in review.
+## Remove someone from the shortlist
+
+Click the filled bookmark again, or choose **Remove from shortlist** from the row menu. There's no confirmation. You can shortlist them again at any time. Removing someone doesn't block them.
+
+## Promote candidates into your pipeline
+
+- **Promote**, on the **Shortlist** group's header, promotes the whole shortlist at once. There's no partial option from this button. It's disabled with a tooltip, **Shortlist someone first** or **Position is closed**, when there's nobody to promote or the job's closed.
+- **Promote to candidate**, from a row's **Candidate actions** menu or from the bar that appears once you select rows, promotes one or more specific people.
+- In chat, ask the agent to promote people. In **Ask permission** mode it confirms first: for the whole shortlist, "I'd like to promote everyone on the shortlist into the Candidates pipeline. Heads-up: this freezes an application snapshot for each — irreversible for the candidate." For a subset, "I'd like to promote N candidate(s) into the Candidates pipeline."
+
+## What happens when you promote someone
 
 <Warning>
-  Pushing is what starts the process. There's no confirmation step after this, so don't push candidates you're not ready to move forward with yet.
+Promoting never emails the candidate. It's silent. The candidate's **Process** tab immediately recommends **Send intro outreach** as the next step, but nothing goes out until you or a teammate actually sends it.
 </Warning>
 
-**Next:** [The candidate view](/companies/candidate-view)
+For each candidate promoted:
+
+1. Staffer saves a copy of their profile as it is now, for this application. Later changes to their live profile don't change what you reviewed.
+2. A private application link is created for them.
+3. The job's process steps are set up for their candidacy.
+4. They move to **In review**.
+
+## If a promotion fails
+
+If Staffer can't promote someone, for example because they're blocked in your workspace, they stay on the shortlist. The message shows a count, not names: "N candidate(s) could not be promoted and stayed in the shortlist". Check the **Shortlist** group to see who's left. A blocked candidate shows a **Blocked** label.
+
+## Closed jobs
+
+A closed job refuses new candidates entirely: "This position is closed and takes no new candidates." Reopen it first. See [Close, reopen or delete a job](/companies/close-reopen-delete).
+
+## No confirmation dialog
+
+**Promote** and **Promote to candidate** act as soon as you click. There's no confirmation dialog. Only the agent asks first, and only in **Ask permission** mode.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Is a shortlisted candidate the same as a candidate?">
+    No. The shortlist is a holding area on one job's **Scouting** tab. People become candidates, and show up on the **Candidates** tab, once you promote them.
+  </Accordion>
+  <Accordion title="Does promoting send the candidate anything?">
+    No. Promoting saves a copy of their profile, creates their application link and sets up their process steps, but sends nothing. You send the first message yourself, from the next action or the **Messages** tab.
+  </Accordion>
+  <Accordion title="Can I promote someone straight from a search, skipping the shortlist?">
+    Yes. You don't have to shortlist first. Use **Promote to candidate** in a row's **Candidate actions** menu or the selection bar, or ask the agent.
+  </Accordion>
+  <Accordion title="What happens if I promote the whole shortlist and one person fails?">
+    Everyone else moves to **Candidates**. Anyone who couldn't be promoted stays on the shortlist and is counted in the message.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Next actions" icon="list-checks" href="/companies/recommended-actions">
+    What Staffer recommends once a candidate is in.
+  </Card>
+  <Card title="Get contact details" icon="mail" href="/companies/contact-details">
+    Find an email before you send that first message.
+  </Card>
+</CardGroup>

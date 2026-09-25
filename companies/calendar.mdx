@@ -1,0 +1,71 @@
+---
+title: "Calendar and availability"
+description: "Connect a calendar, set your available hours, and read the workspace Calendar page."
+icon: "calendar"
+---
+
+Your calendar connection and available hours decide what times Staffer can offer for an interview, both when you schedule one yourself and when a candidate picks their own slot.
+
+## Calendar settings
+
+Go to **Settings** → **Account** → **Calendar**.
+
+**Google Calendar** shows **Connected**, with who you're connected as and a **Disconnect** button, or a **Connect** button if you haven't. Its description: "Creates events on your Google Calendar with a Google Meet link." Connecting is optional. See [Interviews and scheduling](/companies/human-interviews) for what happens without it.
+
+**Microsoft Outlook** can't be connected. To use an Outlook calendar, add it as a calendar link.
+
+**Share a calendar link** adds a read-only feed instead: paste an **iCal URL**, add an optional **Label** and click **Add feed**. Staffer checks each feed about every 15 minutes. Click **Sync now** on a feed to check it straight away. Use this for a calendar Staffer can't connect to, such as Outlook.
+
+**Available hours** sets one row per weekday, each either **Not available** or one or more start and end times, with **Add hours** for a second range on the same day.
+
+<Note>
+  If every day is set to **Not available**, the default, Staffer treats you as available at any hour, except when your calendar shows you're busy. Once you add hours to any day, Staffer only offers times inside the hours you've set.
+</Note>
+
+**Timezone** sets the time zone for your available hours. It starts as your browser's time zone, and daylight saving is handled for you.
+
+You can use Google Calendar and iCal feeds together. Conflict checks, the candidate slot picker and your **Calendar** page use all of them.
+
+## The Calendar page
+
+In the sidebar, **Calendar** shows your schedule as a week or month grid.
+
+- **Today** jumps back to the current date, and the **‹ ›** arrows step through the range shown in the header.
+- **Week** and **Month** switch views.
+- **Filter** narrows what's shown by member (only you, by default), by event type (**Internal (interviews)** or **External (calendar)**) and by job.
+
+What you'll see:
+
+- **Interview**: a Staffer-scheduled interview step.
+- **External event**: a busy block from your Google Calendar or an iCal feed.
+- **Outside hours**: stripes over time outside your available hours. If you haven't set any hours, there are no stripes.
+
+Click an **Interview** event to see the job and candidate, the time, the location for in-person interviews, a **Join** button, the attendees and the agenda. **Add to calendar** adds a personal copy to your Google Calendar. **View step** opens the candidate's **Process** tab.
+
+The accepted and pending labels on attendees don't come from Google. The organizer always shows accepted and everyone else shows pending. You can't open external events.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Do I have to connect Google Calendar to schedule interviews?">
+    No. Without one, Staffer schedules from a shared account and still adds you as an attendee.
+  </Accordion>
+  <Accordion title="What happens if I never set Available hours?">
+    Staffer treats you as available at any time, except when a connected calendar or iCal feed shows you're busy.
+  </Accordion>
+  <Accordion title="Can I use more than one calendar source at once?">
+    Yes. Staffer checks your Google Calendar and all your iCal feeds together.
+  </Accordion>
+  <Accordion title="Why does an attendee still show as pending on an interview I know they accepted?">
+    The label doesn't come from Google. The organizer always shows accepted and everyone else shows pending, whatever they did.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Interviews and scheduling" icon="video" href="/companies/human-interviews">
+    Set up an Interview step and see how the slot picker uses your hours.
+  </Card>
+  <Card title="Your account" icon="user" href="/companies/your-account">
+    The rest of your personal settings: profile, preferences, notifications and signature.
+  </Card>
+</CardGroup>

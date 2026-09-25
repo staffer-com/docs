@@ -1,19 +1,97 @@
 ---
-title: "Human interviews"
-description: "How a human interview step schedules a Google Meet call and gets you a transcript afterward."
-icon: "calendar"
+title: "Interviews and scheduling"
+description: "Set up an Interview step, book a Google Meet call for a candidate, and see the transcript afterward."
+icon: "video"
 ---
 
-A human interview step schedules a real call instead of an AI-run one.
+An Interview step schedules a live call over Google Meet, either at a time you pick or one the candidate books themselves.
 
-## Scheduling
+## Step settings
 
-Staffer creates a Google Meet through your connected calendar and sends the invite. Connect your calendar from Settings before your first human interview step.
+Open the step from the job's **Process** tab. Its **Setup** tab has:
 
-## Getting a transcript
+| Field | What it does |
+|---|---|
+| Step name | Shown on the canvas and in the candidate's step history. |
+| Attendees | The people who join the call. Their calendars are what gets checked for conflicts. |
+| Provider | Read-only: **Google Meet**. There's no other option. |
+| Duration (minutes) | From 5 to 240, in steps of 5. Defaults to 30. |
+| Let the candidate pick a time | Off by default. When on, reveals a minimum notice, a maximum lead time, and optional specific date-and-time slots that replace the recurring windows for this step entirely. See the slot picker below. |
+| On location | Off by default. When on, adds a location field. Left blank, it falls back to the job's first listed location. |
+| Agenda | Free text, shown to the candidate. |
+| Record & transcribe | On by default. Turn it off and no notetaker ever joins for that step. |
 
-Staffer joins the call with a recording bot and produces a transcript automatically afterward. No one needs to take notes manually or upload a recording by hand.
+There's no visibility toggle: an Interview step always shows to the candidate, and the notice reads **Emailed when you schedule it**.
+
+## Scheduling it for a candidate
+
+You schedule from the candidate's **Process** tab. The job's **Process** tab only sets the defaults. When you schedule, the same fields appear, filled in from the step, and you can change them for this candidate:
+
+- Duration, agenda, attendees or location.
+- The date and time, unless **Let the candidate pick a time** is on.
+- **Also send a message**, to send a message along with the invite.
+
+Before booking, Staffer checks the chosen time against your calendar and every attendee's. If it's busy, you'll see the nearest free slot and a one-click option to use it instead.
+
+## What gets sent
+
+When you schedule, Staffer creates a Google Calendar event with a Google Meet link. Google sends its invite to every attendee and to the candidate, if Staffer has their email. Staffer also emails the candidate the time, how to join and the agenda.
+
+You don't need to connect your own Google Calendar. Without it, Staffer schedules from a shared account and adds you as an attendee, so the invite still lands on your calendar. With it, you're the organizer. See [Calendar and availability](/companies/calendar).
+
+## Rescheduling and cancelling
+
+Use **Reschedule** or **Cancel meeting** in the step's **Step actions** menu. Both delete the calendar event and stop the notetaker from joining.
+
+- **Cancel meeting** tells attendees the meeting is cancelled.
+- **Reschedule** doesn't send a cancellation. The candidate gets a message from Staffer saying the interview is moving.
+
+Either way, the step goes back to waiting, and the duration, agenda, attendees and location are kept.
+
+## The slot picker
+
+With **Let the candidate pick a time** on, the candidate picks from open slots instead of getting a fixed time. A slot only shows if every attendee is free. The picker only looks 14 days ahead. A longer **Maximum lead time** has no effect, but a shorter one narrows the window. If nothing is free, the candidate sees a notice that the hiring team will follow up.
+
+## During the call
+
+If **Record & transcribe** is on, a notetaker named **Staffer Notetaker** joins the call about 2 minutes before it starts. Unlike an AI interview, the candidate doesn't confirm a notice first. They only see a **Recorded** badge on their interview details and the notetaker in the call.
+
+<Tip>
+Say in the agenda that the call is recorded, so the candidate knows before they join.
+</Tip>
 
 ## After the call
 
-The transcript feeds into the same evaluation and rescoring path as an AI interview: an assessment lands on the step, and the candidate's match score updates.
+A transcript and recording land on the step, along with an evaluation in the same shape as an AI interview's: a summary, strengths, concerns and a suggested next step of **Advance**, **Uncertain** or **Reject**. Staffer then rescores the candidate from what was said in the call. The evaluation itself doesn't count toward the score.
+
+If **Record & transcribe** was on but nothing was captured, for example because the call didn't happen or nobody let the notetaker in, the step shows "No recording captured".
+
+## Retention
+
+The transcript, recording and evaluation are deleted six months after the application closes, not six months after the interview. Scheduling details (time, duration, location, agenda, attendees) are kept.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Do I need to connect my Google Calendar before scheduling interviews?">
+    No. Without one, Staffer schedules from a shared account and adds you as an attendee, so the invite still reaches your calendar. Connect one, or add an iCal feed, so Staffer can check when you're busy.
+  </Accordion>
+  <Accordion title="Does turning off Record & transcribe stop the notetaker from joining?">
+    Yes. You get the scheduled call, but no recording, transcript or evaluation.
+  </Accordion>
+  <Accordion title="How does the candidate know the call might be recorded?">
+    From the **Recorded** badge on their interview details and the notetaker in the call. There's no notice to confirm, as there is for an AI interview. Mention it in the agenda.
+  </Accordion>
+  <Accordion title="How far ahead can a candidate book a slot?">
+    At most 14 days, regardless of what the step's maximum lead time is set to.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Calendar and availability" icon="calendar" href="/companies/calendar">
+    Connect a calendar, set your available hours, and see the workspace Calendar page.
+  </Card>
+  <Card title="AI interviews" icon="bot" href="/companies/ai-interviews">
+    Let a candidate interview with an AI instead, on their own time.
+  </Card>
+</CardGroup>

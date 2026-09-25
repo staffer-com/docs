@@ -1,19 +1,50 @@
 ---
 title: "Your career page"
-description: "Your public jobs page: branding, office locations, and what shows up there."
+description: "Set your mission, culture video, and offices, and see what candidates see on your public career page."
 icon: "building"
 ---
 
-Every workspace has a public career page listing its open, published roles.
+Your career page is the public page that lists your company's published jobs, at `jobs.staffer.com/companies/your-slug`. Set it up from **Settings** → **Workspace** → **Career page**.
 
-## Branding
+## Career page settings
 
-Set your logo, cover image, and primary color from Settings. These apply across your career page and your published listings together, not just one or the other.
+| Field | What it does |
+|---|---|
+| **Mission statement** | One or two sentences shown at the top of the page, up to 2,000 characters. Click **Draft with AI** for a starting point generated from your workspace details and [company knowledge](/companies/company-knowledge): it costs credits. Leave it blank and the page falls back to your workspace's general Description instead (**Settings** → **Workspace** → **General**). |
+| **Culture video URL** | A YouTube or Vimeo link, embedded as a player on the page. Staffer only checks that you've entered something starting with `http://` or `https://`, so a link from anywhere else saves without an error, then doesn't show up on the page. |
+| **Office locations** | Click **Add location** to add an address, up to 20. Each one has its own **Remote-friendly** checkbox, which adds a "Remote-friendly" tag to that office on the page. |
+| **Preview career page** | Opens the live public page in a new tab, exactly as candidates see it. |
 
-## Offices
+Click **Save changes** and the public page updates immediately. Workspace admins and owners can edit this page. Members can see it but can't save.
 
-Add your office locations so candidates can see where you're based before they apply.
+## The public page
 
-## What shows up
+From top to bottom:
 
-Only published listings appear. Draft and closed listings stay off the page entirely, whether or not they're anonymous.
+- A **Share** button, at the top, that copies the page's link.
+- Your cover photo and logo, from [Branding](/companies/branding).
+- Your company name and how many open roles you have.
+- Your mission statement, or your Description if you didn't set one.
+- Your culture video, if you added one.
+- **Open roles**: every published listing, as cards.
+- **Where we work**: a map of your offices, once you've added at least one.
+
+Only **published** listings show up here. A draft, a closed job's listing, and an anonymous listing all stay off this page, even though a closed listing can still be found elsewhere (the public job board, search, or its own direct link) until its grace period runs out. See [Close, reopen or delete a job](/companies/close-reopen-delete).
+
+<Warning>
+  This page's URL is built from your workspace slug (**Settings** → **Workspace** → **General**). Changing the slug breaks this page's link and every listing link you've already shared or that's indexed anywhere, with no redirect to the new one. Only the workspace owner can change it. See [Workspace settings](/companies/workspace-settings).
+</Warning>
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="I set a culture video URL but it's not showing up.">
+    It only embeds for a YouTube or Vimeo link. Anything else, such as a Loom link or a raw video file, saves without an error but renders nothing on the page.
+  </Accordion>
+  <Accordion title="Why is a job I closed still showing on the general job board but not on my career page?">
+    Your career page only shows published listings. A closed job's listing can stay visible elsewhere, with applications turned off, for your workspace's grace period. See [Close, reopen or delete a job](/companies/close-reopen-delete).
+  </Accordion>
+  <Accordion title="Can I set Remote-friendly once for the whole company?">
+    No. It's a checkbox on each office location, not a single workspace-wide setting.
+  </Accordion>
+</AccordionGroup>

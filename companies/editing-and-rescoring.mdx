@@ -1,25 +1,98 @@
 ---
-title: "Editing and rescoring"
-description: "How editing a job's brief works, and when candidate match scores actually update."
-icon: "refresh-cw"
+title: "When scores change"
+description: "The events that update a candidate's match score automatically, how to rescore someone by hand, and why editing the brief doesn't touch anyone's score."
+icon: "rotate-ccw"
 ---
 
-The brief tab is a live editor. Change a hard field or a criterion there, or through chat, and the change saves right away. There's no separate save step and no draft state to publish.
+A candidate's match score doesn't move on its own schedule. It changes only when specific evidence comes in, or when someone rescores the candidate directly.
 
-## What editing does not do
+## What updates a score automatically
 
-Changing criteria does not retroactively rescore candidates already in your pipeline. A candidate scored against last week's criteria keeps that score until something specifically triggers a new one.
+Five things trigger a rescore on their own, in the background:
 
-## What triggers a new score
+- The candidate is added to the job, either by applying or by being added manually.
+- They reply to a message from you.
+- A process step is completed or skipped.
+- An interview transcript arrives.
+- Their résumé is re-read.
 
-A candidate's match score updates automatically when they:
+You won't see a loading state for any of these. The next time you open the candidate, the score reflects whatever new evidence came in.
 
-- Apply directly to the job
-- Complete a screening step
-- Finish an interview
+## Editing the brief doesn't rescore anyone
 
-You can also trigger a fresh score for one candidate yourself, from their **Match** tab in the candidate view.
+Changing a hard field, or adding, editing or deleting a criterion, never rescores a single candidate, no matter how big the change. A candidate keeps the score they already have until one of the events above happens, or you rescore them yourself.
 
-<Tip>
-  If you've changed criteria significantly and want your existing shortlist reranked against them, rescore the candidates you care about individually from their Match tab.
-</Tip>
+If you rewrite the brief after you've already found and scored people, for example after deciding a criterion should be required instead of preferred, rescore the candidates you care about afterward. Otherwise their scores still reflect the old brief.
+
+## Rescore one candidate by hand
+
+Open the candidate, click the **…** menu at the top right (**Candidate actions**), then click **Rescore**. There's no confirmation: it runs straight away. A message shows the new score out of 100, or says there was nothing new to score.
+
+Members, admins and owners can do this. Viewers and reviewers can't.
+
+## Rescore a whole search
+
+To rescore everyone from a search round at once, open the **Scouting** tab, find the round, open its **Search actions** menu, then click **Re-score**.
+
+## Why a rescore sometimes leaves a criterion unchanged
+
+When one of the automatic triggers above fires, Staffer scores every criterion again, but a criterion only changes if the new evidence (a reply, a completed step, a transcript) is actually about that criterion. If it isn't, the criterion keeps its score, its reason and its confidence exactly as they were, and its row on the [Match tab](/companies/match-scores) says "Unchanged by the latest evidence — this criterion keeps its previous score."
+
+This is deliberate. It stops one strong signal, like a good interview, from dragging every criterion's score up at once.
+
+Clicking **Rescore** by hand works differently: it takes a fresh look at the whole brief, so nothing is held back. That's why a manual rescore can move a criterion that an automatic one left untouched.
+
+## When a rescore can't run
+
+A rescore sometimes can't produce a new score. The candidate always keeps the score they had. Nothing is ever scored as zero because an attempt failed.
+
+- If you clicked **Rescore**, the message tells you. "Nothing new to score for …" means there was nothing to go on.
+- If an automatic rescore couldn't run, the candidate's **Activity** tab shows a **Score not updated** entry with the reason.
+
+| Reason shown | What to do |
+|---|---|
+| "Could not score this candidate — this job has no brief criteria to score against." | Add criteria to the brief. |
+| "Could not score this candidate — their profile isn't indexed yet. Try again shortly." | Wait. It clears on its own. |
+| "Could not score this candidate — we no longer hold a profile for them to score." | Nothing. The profile is gone. |
+| "Could not score this candidate — nothing in their profile matched the brief." | Check the criteria fit the role. |
+| "The scorer only covered part of the brief, so the score was left unchanged. Criteria that read very similarly can cause this — try rewording them." | Reword or merge criteria that say nearly the same thing. |
+| "The scorer's answer couldn't be read, so the score was left unchanged. This needs a look from us rather than another attempt." | Contact us through **Support**. |
+| "The scorer turned the request down, so the score was left unchanged. This needs a look from us rather than another attempt." | Contact us through **Support**. |
+| "Could not score this candidate — this candidacy no longer exists." | Nothing. The application was removed. |
+
+## Costs
+
+Rescoring uses credits. There's no cost shown before you click, and no confirmation dialog either way. If your workspace has run out of credits, Rescore fails with the same generic error as any other failed attempt, not a message telling you credits are the problem.
+
+## Score changes on the Process tab
+
+Each completed step under **Previous steps** on a candidate's **Process** tab shows the score at that point, and how much it changed from the step before. Expand a step to see the change broken down criterion by criterion. A criterion that didn't move shows a **Held to prior verdict** badge: the same idea as "Unchanged by the latest evidence" on the Match tab, shown here per step instead of per criterion.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="I edited the brief. Why didn't anyone's score change?">
+    Editing the brief never rescores anyone automatically, however big the change. Rescore the candidates you care about by hand afterward.
+  </Accordion>
+  <Accordion title="Why did Rescore leave some criteria exactly where they were?">
+    An automatic rescore only moves a criterion when the new evidence is actually about it. A manual **Rescore** click takes a fresh look at everything instead, so it can move criteria an automatic rescore left alone.
+  </Accordion>
+  <Accordion title="Who can rescore a candidate?">
+    Members, admins and owners. Viewers and reviewers can't.
+  </Accordion>
+  <Accordion title="Does rescoring cost anything?">
+    Yes. It uses credits, with no price shown before you click.
+  </Accordion>
+  <Accordion title="Can I rescore everyone from a search at once?">
+    Yes. Open the **Scouting** tab, then the round's **Search actions** menu, then **Re-score**.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="How match scores work" icon="target" href="/companies/match-scores">
+    What the two numbers mean and how each criterion is scored.
+  </Card>
+  <Card title="Notes" icon="notebook" href="/companies/notes">
+    Notes count as evidence the next time a candidate is rescored.
+  </Card>
+</CardGroup>

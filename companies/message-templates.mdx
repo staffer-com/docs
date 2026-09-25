@@ -1,0 +1,63 @@
+---
+title: "Message templates"
+description: "Reusable outreach, rejection, offer and hired messages your workspace saves once and reuses."
+icon: "file-text"
+---
+
+A message template is a saved message your workspace reuses, so nobody writes the same intro or rejection from scratch. Templates live in **Settings** → **Workspace** → **Message templates**. The ones you create appear under **Workspace** in the composer's **Insert template** menu, next to Staffer's built-in ones.
+
+## Set a default for a type of message
+
+Each template can be the default for one type of message: **Outreach**, **Acknowledge application**, **Follow-up**, **Rejection**, **Offer**, **Hired**, **Interview**, **File upload**, **Questionnaire** or **Task**. When Staffer suggests that action for a candidate on their **Process** tab, the composer starts from your default instead of Staffer's built-in wording.
+
+Outreach, Rejection, Offer and Hired are the ones most teams set first.
+
+## Create or edit a template
+
+Click **Add template**. With nothing saved yet, the page reads "No workspace templates yet" / "Author your own outreach, rejection, offer, or hired copy. Tag one as the workspace default and the composer pre-fills it whenever the recommendation engine surfaces that move."
+
+Give it a name (up to 80 characters) and write the body (up to 20,000 characters, the same limit as a live message), using the same **Bold**, **Italic**, **Bullet list** and **Insert link** tools as the message composer, plus **Draft with AI**: describe what you want and it writes a draft for you, using credits. **Preview** renders the body against sample data so you can see how it reads filled in. Pick a move from **Set as default for** if you want the composer to pre-fill this template automatically, or leave it as **None**.
+
+If you tag a template as the default for a move that's meant to carry a link to the role (Outreach, for one) but leave out the application link placeholder, Staffer warns you that messages seeded from it won't actually link the candidate anywhere.
+
+Deleting a template asks you to confirm first, and can't be undone.
+
+## Placeholders
+
+The same placeholders as a live message work here too, see [Message candidates](/companies/message-candidates), but a template stores them as literal tokens, for example `{candidateFirstName}` or `{applicationLink}`, since the same template gets reused for a different candidate every time. Staffer fills them in only once someone actually sends a message built from the template.
+
+## Who can do what
+
+Creating, editing and deleting a workspace template needs admin or owner access. Anyone who can send a message (members and above) can use one through **Insert template** in the composer.
+
+Members see the same **Add template** and edit buttons, but saving doesn't work for them, and no error appears. If a template won't save, ask an admin.
+
+## The default rejection template when you close a job
+
+When you close a job and choose to reject the candidates still in the pipeline, the message that goes out to them starts from your workspace's default **Rejection** template. You can still edit it in the close dialog before it sends. It doesn't have to go out exactly as saved. See [Close, reopen or delete a job](/companies/close-reopen-delete).
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can any team member create a template?">
+    No. Creating, editing and deleting a workspace template needs admin or owner access. Anyone who can send a message can still use an existing one.
+  </Accordion>
+  <Accordion title="What happens if I set two templates as the default for the same move?">
+    Only one can hold a given default at a time. Tagging a new one clears the default off whichever template held it before.
+  </Accordion>
+  <Accordion title="Do Staffer's own built-in templates show up here?">
+    No. This page only lists your workspace's own templates. Staffer's built-in ones aren't editable and don't appear in this list, only in the composer's **Insert template** menu.
+  </Accordion>
+  <Accordion title="Does Draft with AI cost anything?">
+    Yes, generating a draft uses credits, the same as AI assist in the message composer.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Message candidates" icon="message-square" href="/companies/message-candidates">
+    The composer, its placeholders, and what sending does.
+  </Card>
+  <Card title="Close, reopen or delete a job" icon="briefcase" href="/companies/close-reopen-delete">
+    What happens to the pipeline, and the rejection message, when you close a job.
+  </Card>
+</CardGroup>

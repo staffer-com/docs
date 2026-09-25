@@ -1,0 +1,62 @@
+---
+title: "Design a process"
+description: "Build one process that treats applicants and sourced candidates differently, and decide where people stay in charge."
+icon: "workflow"
+---
+
+People who apply to your listing and people you sourced arrive in different places. An applicant chose you and hasn't heard from you yet. A sourced candidate may not know your company exists. A good process gives them different first steps, then brings them together.
+
+For the mechanics, see [Build a hiring process](/companies/build-a-process) and [Step types](/companies/process-steps).
+
+## Start with two lanes
+
+Every step has an **Applies to** setting on its **Rules** tab: **All candidates**, **Applied only** or **Sourced only**. As soon as one step is set to **Applied only** or **Sourced only**, the **Process** tab splits into two lanes, **Applied** and **Sourced**, which merge again at the first step that applies to everyone.
+
+A typical shape:
+
+| Applied lane | Sourced lane | Shared |
+|---|---|---|
+| Questionnaire (the basics: right to work, location, notice period) | Review by the hiring manager | Interview with the team, then the final interview |
+| Review (AI approval with a passing score) | | |
+
+## Screen applicants without reading every CV first
+
+Applicants often arrive in volume. Two step types do the first sort for you:
+
+- A **Questionnaire** with a qualifying question. Mark a multiple-choice or number question as qualifying and set the correct answer, for example "Do you have the right to work in Norway?". By default a wrong answer only recommends rejection, and the candidate moves on. Turn on **Automatically reject** on the **Rules** tab only if you're sure, and write the rejection note the candidate will get.
+- A **Review** with the method **AI approval** and a **Passing score**. Candidates at or above the passing score move on by themselves. Candidates below it wait for someone on your team to look. The AI never rejects anyone on its own.
+
+Questionnaires, file uploads and AI interviews email the candidate as soon as it's their turn, so applicants hear from you quickly.
+
+## Give sourced candidates a person first
+
+A sourced candidate needs a message from a person before anything else. Staffer suggests **Send intro outreach** as the next action for every newly promoted candidate, so you don't need a step for it.
+
+After they reply, a **Review** step with the method **Human approval** and the hiring manager as reviewer is a good checkpoint before you ask them to do anything. Add them as a reviewer on the step and they're notified when it's their turn. A hiring manager with the **Reviewer** or **Viewer** role can complete a step they're named on, so they don't need full access.
+
+## Decide where people stay in charge
+
+Automatic rejection saves time and costs goodwill when it's wrong. Use it only where the rule is objective.
+
+- **Rejection disqualifies** on a human review is off by default. When it's off, a reject completes the step and suggests rejecting, and you still make the call. Turn it on only when every reject should end the application straight away.
+- A questionnaire's **Automatically reject** is also off by default.
+- Apart from these two settings, nothing in the process rejects anyone. Moving someone to **Offer**, **Hired** or **Rejected** is otherwise always done by a person.
+
+## Choose what candidates see
+
+Candidates see the process in their application. Questionnaires, file uploads, AI interviews and interviews are always visible, because the candidate takes part in them. Reviews, tasks and message steps are hidden unless you turn on **Visible to candidate** on their **Rules** tab.
+
+Check the result before you save: use the **Viewing as** menu at the top right of the **Process** tab and pick **Applicant** or **Sourced candidate**. You see exactly the steps that person would see.
+
+## Test before candidates arrive
+
+- Click **Save** after changes. The process doesn't save on its own.
+- For an AI interview, open the step and click **Try as candidate** to run it yourself. It uses credits, and nothing is saved.
+- Once a candidate has started a step, you can't delete it or change its type. **Archive step** stops it applying to new candidates and keeps everyone's history.
+
+## A process for a sales role
+
+- Applied lane: **Questionnaire** (right to work, expected salary, notice period, with one qualifying question on right to work), then an **AI interview** by voice, 15 minutes, on how they run a discovery call.
+- Sourced lane: **Review** by the sales lead (**Human approval**).
+- Shared: **Interview** with the sales lead, with **Let the candidate pick a time** on, then a final **Interview** with the CEO.
+- Final **Task** for your team: "Check references", hidden from candidates.

@@ -1,25 +1,89 @@
 ---
-title: "Reviewer holds and score gates"
-description: "How a step decides to wait for a human or move on by itself."
-icon: "gauge"
+title: "Assignees, holds and automatic rejection"
+description: "Who gets asked to act on a step, and the three ways a process can reject someone on its own."
+icon: "shield-check"
 ---
 
-A step can either wait for someone to look at it, or advance a candidate on its own, and you choose which per step.
+Almost every step waits for a person to act. Naming reviewers decides who can act. A process only rejects someone on its own through the three settings below, and all three are off unless you turn them on.
 
-## Reviewer hold
+## Who gets asked
 
-Assign a step to a reviewer and it holds there until someone marks it complete. With no assignee, it advances automatically once its work is done.
+Every step has a **Reviewers** picker, except a Review step set to **AI approval**. Interview steps also have **Attendees**, the people on the call.
 
-## Soft score gate
+- Leave it empty and any member, admin or owner in the workspace can complete the step.
+- Name specific people and only they can complete it.
+- A reviewer or viewer can only complete a step they're named on. It's the only change they can make in a workspace.
 
-Set a score threshold on a step and a candidate's match score decides what happens next. At or above it, they advance automatically. Below it, they hold, and Staffer surfaces a reject recommendation for a person to act on. The score gate never rejects anyone by itself.
+On the candidate's Process tab, a step's badge tells you which of these applies:
 
-## Hard gates
+| Badge | Meaning |
+|---|---|
+| **Your turn** | You're named as an assignee. |
+| **Any teammate** | No assignees are set. |
+| **Awaiting teammate** | Assigned to someone else. |
+| **Awaiting candidate** | Waiting on the candidate to act, or to pick an interview time. |
 
-Some steps can disqualify outright, opted in per step: a review step can auto-reject below a passing score, and a questionnaire can disqualify on a specific answer. Unlike the soft gate, these end the candidacy without waiting for a recruiter.
+## Being unassigned doesn't make a step complete itself
+
+Leaving **Reviewers** empty only changes who can act. A Review (Human approval or Human score) or Task step always waits for someone to click **Approve**, **Reject** or **Mark complete**. Interview, AI interview, File upload, Questionnaire and Message steps also wait for something to happen: the candidate submits, the interview takes place or you send the message.
+
+The one exception is a Review step whose **Method** is **AI approval**. It has no **Reviewers** field:
+
+- With the candidate's current match score at or above the step's **Passing score**, it completes and advances on its own.
+- Below the **Passing score**, it waits, and **Approve** / **Reject** buttons appear for a person to decide. If a later rescore lifts the score to the **Passing score**, it completes. AI approval never rejects anyone.
+
+You can't save an AI approval step without a **Passing score**.
+
+## The three automatic-rejection gates
+
+All three are off by default. With one turned on, a candidate can be rejected without anyone confirming it.
+
+| Gate | Where | Off (default) | On |
+|---|---|---|---|
+| **Rejection disqualifies** | Review (Human approval) | A reviewer's reject only completes the step and suggests rejecting. | A reviewer's reject moves the candidate to Rejected automatically. |
+| **Rejection disqualifies** | Review (Human score) | A reviewer's score below the **Passing score** only completes the step and suggests rejecting. | A reviewer's score below the **Passing score** moves the candidate to Rejected automatically. |
+| **Automatically reject** | Questionnaire (a Qualifying question) | A failed qualifying answer flags a recommended rejection, and the candidate keeps moving. | A failed qualifying answer moves the candidate to Rejected and sends the rejection note you wrote for it. |
+
+**Automatically reject** only works on questions you've marked **Qualifying**, with a correct answer or range. Only Multiple choice and Number questions can be qualifying.
+
+When any of the three rejects a candidate, their other open steps are skipped, the same as when you reject someone by hand.
 
 <Warning>
-  Hard gates remove people from your pipeline without a human looking first. Turn them on deliberately, not as a default.
+  These settings reject candidates without anyone checking first. Only turn one on when a wrong answer really rules someone out.
 </Warning>
 
-**Next:** [AI interviews](/companies/ai-interviews)
+## What the candidate is told
+
+- **Rejection disqualifies** sends nothing. Like any other move to **Rejected**, the candidate hears nothing until you send a rejection note.
+- **Automatically reject** on a questionnaire sends the rejection note you wrote when you turned it on. If Staffer has no email address for the candidate, it doesn't reject them. The next action suggests rejecting them instead, so you can do it by hand.
+
+## What's not automatic
+
+- A match score never rejects anyone. Apart from AI approval, no setting advances a candidate because of their score.
+- The process only emails a candidate for the steps listed on [Step types](/companies/process-steps) and for the questionnaire rejection note. You send everything else, such as intros, follow-ups and offers.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="If I don't name a reviewer, does the step complete itself?">
+    No. It means any member, admin or owner can complete it. Someone still has to act, except on a Review step set to **AI approval**.
+  </Accordion>
+  <Accordion title="Does a low match score ever reject someone automatically?">
+    No. A match score never rejects anyone, even on an **AI approval** step. Candidates are only rejected automatically by **Rejection disqualifies**, after a reviewer rejects or scores them low, or by **Automatically reject** on a questionnaire.
+  </Accordion>
+  <Accordion title="Can a Review step complete itself with no human at all?">
+    Only if its **Method** is **AI approval** and the candidate's match score is at or above the **Passing score**. Below it, the step waits for a person.
+  </Accordion>
+  <Accordion title="Does the candidate find out why they were rejected?">
+    A questionnaire's **Automatically reject** sends the note you wrote for it. **Rejection disqualifies** on a Review step sends nothing until you send a rejection note yourself.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Step types" icon="list-checks" href="/companies/process-steps">
+    Every field on every step kind.
+  </Card>
+  <Card title="Move candidates through the process" icon="move-right" href="/companies/run-the-process">
+    Complete a review, skip a step, and see what happens on rejection or hire.
+  </Card>
+</CardGroup>

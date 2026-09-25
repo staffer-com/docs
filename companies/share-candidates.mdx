@@ -1,0 +1,104 @@
+---
+title: "Share candidates with a hiring manager"
+description: "Send a read-only view of specific candidates to someone outside your workspace, without giving them a Staffer account."
+icon: "share-2"
+---
+
+Sharing sends a no-login, read-only link to one or more candidates on a job. Open the job's **…** menu, then click **Share…**. The dialog describes exactly what it does: "Make a public, read-only view of one or more candidates from [job name]. Activity threads and inbound messages are never included."
+
+Two tabs sit at the top: **Create share** and **Active shares**.
+
+## Create a share
+
+| Field | What it does |
+|---|---|
+| **Title** | For your own records only. Never shown to the recipient. |
+| **Candidates** | Every candidate on the job, except anyone still on the shortlist. They need to be promoted to a candidate first. Everyone eligible is selected by default. |
+| **Select all** | Selects or clears every eligible candidate at once. |
+| **Include: Profile** | Shows their profile: bio, experience, education, skills. On by default. |
+| **Include: Match score** | Shows their match score and the per-criterion breakdown. On by default. |
+| **Include: Your notes** | Shows your team's notes on each candidate. Off by default. |
+| **Link expires** | 7, 30 or 90 days. 30 by default. |
+| **Anonymize names** | See the warning below. |
+| **Allow recipients to add notes** | Lets recipients leave their own notes on a candidate. Off by default. |
+
+<Warning>
+**Anonymize names** only hides the candidate's name and photo, replacing them with a label like "Candidate A." Current title, current employer and location still show, in both the candidate table and their profile pane. A recipient can often still work out who someone is from those alone.
+</Warning>
+
+Click **Create share**. With no candidates selected, it stops you with a toast: "No candidates to share." Otherwise Staffer shows you the link, split into two tabs:
+
+- **Link**: the URL itself, with a **Copy** button. Copying is the only step most recipients need: anyone with the link can open it for as long as it's valid.
+- **Email**: send it directly. Add up to 20 recipient addresses and an optional **Personal note**, then click **Send email**. A toast confirms how many recipients it reached.
+
+The email asks each recipient not to forward the link, but it's the same link for everyone: every recipient of one email, and anyone you give the copied link to, gets the same URL. Revoking it stops it working for all of them at once.
+
+## Active shares
+
+Every share you've created and haven't revoked is listed here, with its title (or "Untitled share"), how many candidates it covers, and when it expires.
+
+- **Extend** adds 30 days to the expiry, counted from today, not from whenever it was due to expire.
+- **Copy** puts the link back on your clipboard.
+- **Revoke** asks you to confirm: "Revoke this share? The link will stop working immediately." It can't be undone. The share and any notes left on it stay on record. Only the link itself stops working.
+
+## Who can create or revoke a share
+
+Creating a share and emailing it out needs the member, admin or owner role. Viewers and reviewers can't.
+
+Revoking is open to everyone, on purpose, including viewers and reviewers: anyone who notices a link is a problem should be able to kill it, even if they couldn't have created one themselves.
+
+## What a recipient sees
+
+No account, and no Staffer login. The link itself is the only credential. They land on a page with a candidate table down the middle, a chat assistant on the left that can answer questions about the shared candidates and nothing else in your workspace, and a detail pane on the right with up to three tabs: **Profile**, **Match** and **Notes**, each one only present if you included it.
+
+What they never see, under any combination of settings: your messages with the candidate, any reply the candidate has sent you, the activity timeline, or any contact detail like an email or phone number. None of that is ever loaded onto this page, regardless of your settings, so there's nothing to accidentally expose.
+
+## What crosses into the Match tab
+
+If you include the match score, a recipient sees the same breakdown you do, current and potential, per criterion, with one difference: the "Sources" citations only ever come from the candidate's profile. A citation drawn from a message, a process step or a note never shows.
+
+The written reasons are narrower, but not completely: a reason built from a team note is left out entirely, but a reason built from something the candidate said in a reply or a questionnaire answer can still appear in the text, even with **Your notes** turned off. Scores and the criteria list themselves always show, regardless of any setting.
+
+## Notes a recipient leaves
+
+With **Allow recipients to add notes** on, anyone with the link can leave a note without signing in. Staffer recognizes them by a cookie in their browser instead of an account, which is also how it lets them delete their own notes afterward. Clear cookies or switch browsers and they lose that ability. The note form tells them plainly: "Your note goes to the hiring team. It does not change the candidate's match score."
+
+Every note they leave is mirrored back into your own workspace too. It shows up on the candidate's **Notes** tab and **Activity** tab, tagged **Shared link**, under whatever name they typed or **Anonymous reviewer** if they left it blank.
+
+If **Your notes** is off but recipients can still add their own, each recipient's browser only shows the notes it posted itself, not anyone else's, since there's no login to tell reviewers apart.
+
+## When a link expires or is revoked
+
+A revoked or expired link doesn't fail quietly. The recipient sees a card that says so, without naming the job or any candidate:
+
+- Revoked: **"Link revoked"**, "The recruiter has revoked this share. Reach out to them for a new link."
+- Expired: **"This link has expired"**, "Share links are set to expire when they are created. Ask the recruiter to renew it — they can extend this same link from their share list."
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can I share a candidate who's still on the shortlist?">
+    No. Promote them to a candidate first. The candidate picker in Create share leaves shortlisted people out entirely.
+  </Accordion>
+  <Accordion title="Is the link different for each person I email it to?">
+    No. It's one link for everyone you send it to.
+  </Accordion>
+  <Accordion title="Can someone with a share link see our messages with the candidate?">
+    No, never, regardless of any setting. Messages, replies and the activity timeline are never part of what a share link can show.
+  </Accordion>
+  <Accordion title="Does a recipient's note change the candidate's match score?">
+    No. It's disclosed to them directly on the note form, and it's mirrored into your Notes tab, but it never feeds scoring.
+  </Accordion>
+  <Accordion title="Who can revoke a share?">
+    Anyone in your workspace, including viewers and reviewers, even though only members and above can create one.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Notes" icon="notebook" href="/companies/notes">
+    How notes work, and what counts as evidence for a score.
+  </Card>
+  <Card title="How match scores work" icon="target" href="/companies/match-scores">
+    What the two numbers mean and how each criterion is scored.
+  </Card>
+</CardGroup>

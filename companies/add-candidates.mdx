@@ -1,0 +1,61 @@
+---
+title: "Add candidates yourself"
+description: "Add one specific person to a job by name, LinkedIn URL, or a file import, instead of running a search."
+icon: "user-plus"
+---
+
+When you already know who you want, you don't need a search. The **Add candidate** button on a job's **Candidates** tab adds people directly, by name, LinkedIn URL or a file import. You need the member role or higher in the workspace.
+
+<Note>
+The same menu appears on the **Scouting** tab labeled **Add to shortlist**. There, it adds the person to the shortlist instead of promoting them straight in. See [Shortlist and promote candidates](/companies/shortlist-and-push).
+</Note>
+
+## Add someone by name or LinkedIn URL
+
+<Steps>
+  <Step title="Open the menu">
+    On the job's **Candidates** tab, click **Add candidate**, then **Search candidates**.
+  </Step>
+  <Step title="Search">
+    Type a name or paste a LinkedIn profile URL. Type at least 2 characters. Matches (up to 8) show as you type: avatar, name, title and company.
+  </Step>
+  <Step title="Add them">
+    Click **Add** on their row. It becomes **Added** once done. A profile already blocked in your workspace shows a red **Blocked** label instead of an Add button, and can't be added from here.
+  </Step>
+</Steps>
+
+If nothing matches, the dialog reads **No matches**. Emails in your file aren't used for matching. There's no fallback to fetch or create a profile from the LinkedIn URL itself.
+
+## Import a file
+
+Click **Add candidate**, then **Import from file**. Upload a **.csv**, **.tsv** or **.xlsx** file, up to 5 MB, one file at a time. Staffer matches each row against its candidate database using these columns, in order:
+
+1. An exact profile ID (this is how your own exported CSVs re-import cleanly).
+2. A LinkedIn URL.
+3. A name match, capped at 50 unique names per file. Rows past that cap are reported separately rather than shown as "no match": add a LinkedIn URL column, or split the file, to cover them.
+
+You then get a review screen: matched rows are pre-selected, unmatched rows show **No match**, and rows already on the job show **Already added** and can't be selected again. Uncheck anything you don't want, then click **Add N**.
+
+## Rows that don't match anyone
+
+Search and import only find people already in Staffer's candidate database. You can't create a new profile from here. A row in your file that matches nobody isn't added, and you can't add it by hand from the import screen.
+
+## What happens next
+
+Adding someone through **Add candidate** on the **Candidates** tab puts them straight at **In review**, the same as promoting them from the shortlist. Staffer saves a copy of their profile for this application, creates their private application link and sets up the job's process for them. It doesn't email them. See [Shortlist and promote candidates](/companies/shortlist-and-push) for what that involves.
+
+Searching and importing don't use credits.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can I add someone who isn't in Staffer's database at all?">
+    No. Search, LinkedIn URL and file import only match people already in the database. Someone new can get in by applying to one of your [published listings](/companies/inbound-applications) with their résumé.
+  </Accordion>
+  <Accordion title="Does adding someone this way email them?">
+    No. Nothing you do on the **Candidates** or **Scouting** tab sends a message. You send the first message yourself, usually from the **Send intro outreach** next action.
+  </Accordion>
+  <Accordion title="What happens to rows my file couldn't match?">
+    They're left out. Add a LinkedIn URL column and re-import, or add that person individually by name.
+  </Accordion>
+</AccordionGroup>

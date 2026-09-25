@@ -1,0 +1,52 @@
+---
+title: "Organization settings"
+description: "Your organization's name, domain, auto-join, and who has organization-wide access."
+icon: "building"
+---
+
+Organization settings cover what's shared across every workspace: the organization's name and domain, who can join automatically, and who has organization-level access. Only organization owners and admins can see this section. For everyone else, it doesn't show in **Settings**, and opening one of its pages sends them back to **Settings**.
+
+## General
+
+**Settings** → **Organization** → **General**.
+
+- **Organization name**: a plain text field, editable by any organization owner or admin.
+- **Primary domain**: fixed. It's set once, from the email domain of whoever created the organization, and there's no way to change it in the app. Contact Staffer support if it needs to change.
+- **Auto-join by email domain**: a toggle. When it's on, anyone signing up with an email address on your organization's domain joins automatically instead of needing an invite. Turning it on requires picking a **Default workspace** and a **Role in that workspace** for joiners to land in: **Viewer** (read-only), **Member** (can source and message), or **Admin** (can change workspace settings). You can't save it as on without choosing both.
+- When auto-join is off, a new signup on your domain is told to ask an admin for an invite instead. If they try to start their own workspace on that domain, they're refused: your domain already has a Staffer organisation, and they need to ask an admin there to invite them.
+- If your organization has no primary domain at all, the toggle doesn't even appear. The section explains that nobody can auto-join, and new signups create their own organization instead.
+
+A **Metadata** card below shows the organization ID, primary domain, how the organization was provisioned, and when it was created. None of it is editable.
+
+## Members
+
+**Settings** → **Organization** → **Members** lists everyone who holds an organization-level role, meaning **Owner**, **Admin**, or **Member** at the organization level, not everyone in every workspace. Each row shows the person, their org role, how many workspaces they're in (with a breakdown per workspace), and when they joined.
+
+**Invite people** opens a dialog that does more than a workspace's own invite: alongside a work email, you choose which workspace the person lands in, their role there, and their organization role (**Member**, or **Admin**, who can manage org settings, billing, and members) in the same step.
+
+Row actions, for anyone with permission to use them:
+
+- **Make org admin** promotes a member to admin. It can't target the owner.
+- **Make org member** demotes an admin back to member. This one is owner-only: even another org admin can't demote an admin.
+- **Remove from organization** removes every workspace membership that person holds anywhere in the organization. You can't remove yourself, the organization owner, or anyone who owns a workspace in the organization. A workspace owner has to delete their workspace first.
+
+The owner's row has no action menu. There's no way to transfer organization ownership from the app.
+
+## Workspaces
+
+**Settings** → **Organization** → **Workspaces** lists every workspace in the organization. See [Workspaces](/admin/workspaces) for the full list, creating one, and deleting one.
+
+## Organization members vs. workspace members
+
+An organization role controls access to organization-wide settings: this page, Billing, and Compliance. It doesn't control what someone can do inside any one workspace. A workspace role (owner, admin, member, reviewer, or viewer) controls that instead: seeing and editing jobs, running searches, and so on, inside that specific workspace.
+
+The two are independent. Someone can be a plain organization member with no special org-wide access, while still owning the workspace they personally created. Someone else can hold different roles in several workspaces across different organizations, with no org role at all in some of them, which is normal for an agency recruiter working inside a client's organization. See [Roles and permissions](/get-started/roles-and-permissions).
+
+<CardGroup cols={2}>
+  <Card title="Workspaces" icon="building-2" href="/admin/workspaces">
+    The workspace list, creating one, and deleting one.
+  </Card>
+  <Card title="Credits, top-ups and spend caps" icon="wallet" href="/admin/credits">
+    Your organization's shared credit pool.
+  </Card>
+</CardGroup>

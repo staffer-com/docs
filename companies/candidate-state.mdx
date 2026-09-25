@@ -1,21 +1,75 @@
 ---
-title: "Changing a candidate's state"
-description: "The stages a candidate moves through, and how moving someone backward is handled differently."
-icon: "route"
+title: "Change a candidate's stage"
+description: "The stages a candidate moves through, how to move them, and what happens to their process steps when they leave a stage."
+icon: "workflow"
 ---
 
-Every candidate on a job sits in exactly one stage: shortlist, in review, in progress, offer, hired, rejected, or withdrawn.
+A candidate's stage is where they are in the job. There are six: **In review**, **In progress**, **Offer**, **Hired**, **Rejected** and **Withdrawn**.
 
-## Setting it
+| Stage | Meaning |
+|---|---|
+| **In review** | New in the job, promoted or applied. Nobody has messaged them yet. |
+| **In progress** | Actively moving through your process. |
+| **Offer** | You've extended, or are about to extend, an offer. |
+| **Hired** | They accepted. |
+| **Rejected** | Turned down. |
+| **Withdrawn** | They pulled out. Only the candidate can set this stage. |
 
-There's no automatic pipeline that advances people on its own. A stage changes because a recruiter sets it, or because a candidate withdraws themselves. Every change is logged, so the history of a candidacy is always complete.
+## Move a candidate to a different stage
+
+You need the member role or higher in the workspace to change a stage.
+
+
+From the **Candidate actions** menu, click **Move to stage…**. Pick **In review**, **In progress**, **Offer**, **Hired** or **Rejected**. Their current stage is greyed out. **Withdrawn** isn't in the list.
 
 ## Moving backward
 
-Mistakes happen. Moving someone back, un-rejecting them, or returning a hired offer to review, is fully supported and treated as a correction rather than a fresh decision, so the record stays honest about what actually happened.
+You can move a candidate backward, for example from **Hired** back to **In review**, the same way you move them forward. On the [Activity tab](/companies/candidate-view), a backward move shows as a technical label, `state_corrected`, instead of a sentence.
 
-## Bulk changes
+## What happens to their process steps
 
-From the Candidates list, you can act on several people at once instead of opening each one individually.
+Moving a candidate to **Offer**, **Hired**, **Rejected** or **Withdrawn** skips every process step they haven't finished. If you later move them back, those steps stay skipped. Turn each one back on with **Un-skip step** in that step's **Step actions** (…) menu.
 
-**Next:** [Notes and messages](/companies/notes-and-messages)
+## A stage change never emails anyone
+
+Moving a candidate's stage never sends them a message. If you want them to hear about it, send a message yourself, or use the next action for that stage, such as **Send rejection note** or **Send the offer**. See [Next actions](/companies/recommended-actions).
+
+It works the other way too. Sending any message to a candidate who's still **In review** moves them to **In progress**, whether or not you meant to change their stage.
+
+## Move a candidate to a different job
+
+**Move to job…**, also in the **Candidate actions** menu, lets you search your workspace's other jobs and move the candidate there. They leave the original job, so they can apply to it again later. You can't move a blocked candidate. You'll see "[name] is on the block list — unblock them first."
+
+## Remove vs. Permanently remove
+
+**Remove** takes a candidate off this job without telling them. They aren't blocked. You can add them again from a search, or they can apply again, but their earlier progress doesn't come back.
+
+**Permanently remove** does the same and adds them to your workspace's block list. They can't be added to any job in your workspace, and future searches show them with a **Blocked** label.
+
+<Warning>
+The confirmation dialog says you can unblock them later, but there's no way to unblock someone in the app today. Use **Remove** if you might want this candidate back.
+</Warning>
+
+## Hiring doesn't close the job
+
+Moving a candidate to **Hired** doesn't close the job. The listing stays open and other candidates keep moving through your process until you close the job. See [Close, reopen or delete a job](/companies/close-reopen-delete).
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can I undo a stage move?">
+    Yes. Move them back with **Move to stage…**. Steps that were skipped stay skipped until you un-skip them.
+  </Accordion>
+  <Accordion title="Does moving someone to Rejected notify them?">
+    No. Use the **Send rejection note** next action, or message them yourself.
+  </Accordion>
+  <Accordion title="Can I mark a candidate as Withdrawn myself?">
+    No. Only the candidate can withdraw their own application.
+  </Accordion>
+  <Accordion title="What happens to a scheduled interview if I reject someone?">
+    Staffer skips the step, along with every other open step. If you move them back later, un-skip it from that step's **Step actions** menu.
+  </Accordion>
+  <Accordion title="Can I undo Permanently remove?">
+    No, not from the app today. Use Remove instead if you might want this candidate back.
+  </Accordion>
+</AccordionGroup>

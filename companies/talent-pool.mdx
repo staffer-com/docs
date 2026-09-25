@@ -1,21 +1,78 @@
 ---
-title: "Your talent pool"
-description: "Everyone your workspace has ever touched, across every job, in one place."
+title: "Talent pool"
+description: "Everyone your workspace has shortlisted, promoted, received an application from or saved, across all jobs."
 icon: "database"
 ---
 
-Search results and candidates don't disappear when you move on to a different job. Every profile your workspace has interacted with lives in your talent pool.
+Your talent pool is everyone your workspace has shortlisted, promoted or received an application from, on any job. It also includes anyone you saved with **Save to talent pool**, even if they've never been on a job. You can save someone from their **Candidate actions** menu or from a search result.
 
-## What's in it
+## Columns
 
-Anyone you've shortlisted, applied to a job, or saved as a favorite shows up here, along with how many jobs they've been part of and when you last interacted with them.
+| Column | What it shows |
+|---|---|
+| Name | Avatar, name, a small **Claimed** badge if they've claimed their own profile, and their title at company (or "Unknown role" if neither is on file). |
+| Applications | How many jobs they've been part of. |
+| Last activity | The most recent activity from either side, yours or theirs. Shows a dash if there's none. |
+| Active / Inactive | Whether they're currently in a live pipeline. See below. |
+| Engagement | **Warm**, **Lukewarm**, **Cold**, or **No activity**, based on the candidate's own recent activity. See below. |
 
-## Warmth
+Applications, Last activity, and Engagement hide when the window is narrow. Name and the Active/Inactive badge always show.
 
-Each profile carries a warmth signal, warm, lukewarm, cold, or never, based on how recently you've engaged with them. It's a quick read on who's worth reaching out to again versus who's gone quiet.
+**Active** means at least one of their applications is on an open job, at a stage other than **Rejected**, **Hired** or **Withdrawn**. Everyone else shows **Inactive**, including people you saved who aren't on any job. Hover the badge to see why.
 
-## Favorites
+**Engagement** only counts what the candidate did: replying to a message, updating their consent or completing a step such as a questionnaire. Nothing your team does changes it. **Warm** means within the last 7 days, **Lukewarm** within 30, **Cold** past that, and **No activity** means never.
 
-Save someone to your pool even before they're attached to a job. A favorite stays pinned and visible regardless of application activity.
+Active/Inactive and Engagement answer different questions. A candidate can be **Active** with no recent activity of their own (they're sitting **In review** on an open job), or **Inactive** but still **Warm** (they replied days ago on a job that's since closed).
 
-**Next:** [Analytics](/companies/analytics)
+## Search, filter, and sort
+
+**Search the pool…** matches by name. **Filter** has two options: **Status** (Active or Inactive) and **Engagement**. **Display options** only sets the sort order. You can't pick columns here. The sort options are **Most recent activity** (default), **Most engaged first**, **Most applications**, and **Name · A → Z**.
+
+## Add a candidate
+
+**Add candidate** searches people already in Staffer's candidate database. Type a name and pick a result. People already in your pool don't show up, and blocked profiles show a **Blocked** label instead of an add option. Only members, admins and owners see this button.
+
+## Row actions
+
+Each row's **⋯** menu offers **View profile**, **Copy ID**, and, for members and above, **Save to talent pool** (or **Remove from talent pool** if they're already saved).
+
+## Opening a profile
+
+Click a row to open the person's page. It has two tabs, **Applications** and **Activity**, and a profile panel you can hide.
+
+- **Applications** lists every job they've been part of. Click a row to open them in that job. Someone you saved who isn't on a job shows "hasn't applied to any of your jobs".
+- **Activity** is a timeline of what's happened with them.
+
+## Ask anything
+
+The **Ask anything** box on this page is a chat with the agent about your talent pool. Ask it to filter the table ("show only warm candidates") or open a profile. The conversation isn't saved: reload the page and it's gone.
+
+## No match scores here
+
+Scores belong to a job, so the talent pool doesn't show them. Open a job's **Candidates** or **Scouting** tab to see how someone matches that job. See [How match scores work](/companies/match-scores).
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Does shortlisting someone put them in my talent pool?">
+    Yes. Shortlisting, promoting and applying all add someone, as well as **Save to talent pool**.
+  </Accordion>
+  <Accordion title="Why can't I see the Engagement or Applications columns?">
+    They hide when your browser window is narrow. Widen the window to see them.
+  </Accordion>
+  <Accordion title="Who can add someone to the talent pool?">
+    Members, admins and owners. Viewers and reviewers can see the pool but can't add or remove anyone.
+  </Accordion>
+  <Accordion title="What's the difference between Active and Warm?">
+    **Active** means they're in a live pipeline now. **Warm** means they did something themselves in the last 7 days, like replying to a message. Someone can be one without the other.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="How match scores work" icon="target" href="/companies/match-scores">
+    Why the talent pool doesn't show a score, and where scores do live.
+  </Card>
+  <Card title="The candidate view" icon="user" href="/companies/candidate-view">
+    What you see once someone's on a job, beyond the pool.
+  </Card>
+</CardGroup>

@@ -1,24 +1,73 @@
 ---
 title: "Invite your team"
-description: "Bring your team into the workspace, choose their role, and what your teammates see when they accept."
+description: "Two ways to invite teammates, the four workspace roles, and how invites expire, resend, and get revoked."
 icon: "user-plus"
 ---
 
-Step 3 of 3, and the last step of setup. Add anyone who hires with you. You can skip this and do it later from Settings.
+You can invite teammates from onboarding, or any time afterward from Settings. Both send an email invite. Only Settings offers all four roles.
 
-## Sending invites
+## Invite during onboarding
 
-Add up to 20 people at once by email, and set each as a **member** or an **admin**. Each person gets an email with a link to join your workspace.
+The onboarding **Invite your team** screen starts with two empty rows. Add an email and a role for each, up to 20 at once, or click **Skip for now** and invite people later. This screen only offers **Member** or **Admin**. For **Reviewer** or **Viewer**, invite from Settings instead.
 
-## Accepting an invite
+## Invite from Settings
 
-The link is tied to the exact email address it was sent to:
+<Steps>
+  <Step title="Open Members">
+    Go to **Settings** → **Workspace** → **Members**.
+  </Step>
+  <Step title="Start an invite">
+    Click **Invite teammate**.
+  </Step>
+  <Step title="Enter their email and role">
+    Fill in **Work email** and choose a **Role**, then click **Send invite**.
+  </Step>
+</Steps>
 
-- Signing in with a different account shows a "wrong account" message and offers to sign out and retry.
-- Following a link that's already been used, or one that's expired, says so instead of silently failing.
+The four roles, exactly as the dialog labels them:
 
-Invites expire after 14 days. If one lapses, resend it from **Settings → Members** rather than sending a new one from scratch.
+| Role | Label in the dialog |
+|---|---|
+| Admin | Admin — manage workspace + members |
+| Member | Member — full app access (default) |
+| Reviewer | Reviewer — read-only + complete assigned steps |
+| Viewer | Viewer — read-only |
 
-<Tip>
-  Anyone can be invited at any time, not just during setup. This page works the same way from Settings after you've finished onboarding.
-</Tip>
+See [Roles and permissions](/get-started/roles-and-permissions) for what each role can do.
+
+## What happens next
+
+The invitee gets an email with an **Accept invite** button. Accepting signs them in (or has them sign in first) and adds them to the workspace with the role you chose. See [Join your company on Staffer](/companies/join-your-team) for what they see, including the wrong-account and expired-link screens.
+
+Invites expire 14 days after they're sent. Staffer refuses to send one to a personal email address or to someone already in the workspace. Inviting an address that already has a pending invite doesn't create a second one: it replaces it, with the 14-day clock restarting from the new invite.
+
+## Resend or revoke
+
+In **Settings** → **Workspace** → **Members**, the **Pending invitations** list shows everyone who hasn't accepted yet. Click **Resend** to send the same invite again and extend its expiry by 14 days. Click the **×** next to their name to revoke it before they accept.
+
+## Who can invite
+
+Only workspace owners and admins can send, resend or revoke invites, whether from onboarding or from Settings.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can I invite someone as a Viewer or Reviewer from onboarding?">
+    No. The onboarding invite screen only offers Member and Admin. Invite them from **Settings** → **Workspace** → **Members** instead, where all four roles are available.
+  </Accordion>
+  <Accordion title="I invited someone twice by mistake. Did they get two emails?">
+    They got two emails, but only the latest link works. A second invite to the same address replaces the pending one instead of adding another.
+  </Accordion>
+  <Accordion title="Does resending an invite create a new link?">
+    No. Resend sends the same link again and extends how long it's valid.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Join your company on Staffer" icon="users" href="/companies/join-your-team">
+    Accepting an invite, and what each failure screen means.
+  </Card>
+  <Card title="Members and roles" icon="shield-check" href="/companies/members-and-teams">
+    Change someone's role, remove them, or see who's still pending.
+  </Card>
+</CardGroup>

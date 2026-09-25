@@ -1,0 +1,101 @@
+---
+title: "What the agent can do"
+description: "Every action the agent can take, which ones ask for approval first, and what it can never do."
+icon: "workflow"
+---
+
+Inside a job, the agent can do more than answer questions: it can draft the brief, search, shortlist, promote and change the process. What it's allowed to do at any moment depends on whether the job has a brief yet, your **Mode** setting, and your role.
+
+## Before a brief exists
+
+Until a job has a brief, the agent can only draft one from what you tell it, read another job's brief to start from it, or copy another job's listing and process into this one. Searching, the listing, the process and candidates all need a brief first.
+
+## Once a job has a brief
+
+"Asks first" means the agent shows an approval card in **Ask permission** mode. In **Auto** mode it goes ahead without one.
+
+| Brief and notes | Asks first |
+|---|---|
+| Draft or update the brief from what you tell it | No |
+| Read another job's brief, to start a new one from it | No |
+| Update the job's notes | Yes |
+| Close the position | Yes |
+| Reopen a closed position | Yes |
+
+| Finding candidates | Asks first |
+|---|---|
+| Run a new search against the brief | No |
+| Revisit a past search, or list every search on the job | No |
+| Find candidates similar to one you point it at | No |
+| Look up someone from a LinkedIn URL you paste | No |
+| Find one named person and add them to the shortlist | Yes |
+| Add specific search results to the shortlist | Yes |
+| Promote shortlisted candidates into the job's pipeline | Yes |
+
+Promoting saves a copy of each person's profile as it is now, which can't be undone. The agent only mentions this when you promote the whole shortlist. See [Shortlist and promote candidates](/companies/shortlist-and-push).
+
+| Candidates | Asks first |
+|---|---|
+| Look up a candidate's details and score, or list everyone on the job | No |
+| Read a candidate's process history, including interview transcripts and questionnaire answers | No |
+| Move a candidate to a different stage | Yes |
+| Add a one-off step for a single candidate | Yes |
+
+| Process and listing | Asks first |
+|---|---|
+| Read the current process or listing | No |
+| Build a first process for a job that has none | Yes |
+| Add, remove or edit steps in the process | Yes |
+| Delete steps, or the whole process | Yes |
+| Regenerate the listing from the brief, in one language or all | Yes |
+| Rewrite listing text to your instructions | Yes |
+
+## The Mode dropdown
+
+Under every chat box there's a **Mode** dropdown: **Ask permission** or **Auto**. The setting is yours alone and is saved separately for each workspace, so a teammate can use a different mode, and your own mode can differ between workspaces.
+
+**Ask permission** is the default. **Auto** skips the approval card on every action marked "Asks first" above: the action runs as soon as the agent decides to do it. Auto doesn't skip policy checks. See below.
+
+## What approval looks like
+
+On "Asks first" actions in Ask permission mode, the agent describes exactly what it's about to do and waits. For example, closing a position shows: "I'd like to close this position: the listing stops taking applications and no new candidates can be added." Promoting an entire shortlist adds a specific warning: "Heads-up: this freezes an application snapshot for each, irreversible for the candidate."
+
+Two buttons sit below the card: **Reject** and **Approve**. Once you answer, the card updates to **Approved** or **Rejected**. If you don't answer within 10 minutes, it shows **Expired without an answer** and the action never runs. Each approval only ever covers that one exact request: approving one doesn't pre-approve a similar action later.
+
+## Policy checks happen either way
+
+If your organization has turned on **Live policy enforcement** (see [AI policies](/admin/ai-policies)), some actions are also checked against your organization's policies before they run: drafting or updating the brief, running a search, editing job notes, changing the process, adding a step to a candidate and rewriting the listing. This happens in both modes. A refusal looks different from an approval card: **Blocked by a workspace policy**, with the reason and a **View policies** link. The agent can then suggest a version that fits the policy.
+
+## What it can never do
+
+- Send or draft a message to a candidate. There's no such action, with or without approval. You always write and send messages yourself.
+- Delete a job. Deleting is a person clicking **Delete job** from the job menu, with its own confirmation.
+- Clear a whole list. It can replace or add criteria, locations, or languages one at a time, but it can't empty a list in one move. Do that by hand in the brief editor.
+- Reject and email everyone when closing a job. Asking the agent to close a job always does the plain, reversible close. The version that rejects the remaining pipeline and emails them only exists in the **Close position** dialog. See [Close, reopen or delete a job](/companies/close-reopen-delete).
+
+## Role limits
+
+Members, admins and owners get the full set of actions above. Viewers and reviewers can still chat with the agent and get answers, but their toolset is read-only: it can look things up for them, but it can't search, draft, edit, or move anything on their behalf.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="If I switch to Auto, does the agent stop checking company policy too?">
+    No. If your organization has policy enforcement turned on, the checks run in both modes. Auto only removes the approval click.
+  </Accordion>
+  <Accordion title="Can the agent message a candidate if I approve it?">
+    No. There's no action for sending a message at all, so there's nothing to approve. You always send outreach yourself from a composer.
+  </Accordion>
+  <Accordion title="I'm a viewer. Why won't the agent search or shortlist when I ask it to?">
+    Your role only grants the agent's read-only actions. It can answer questions using what's already there, but it can't run a search, edit the brief, or move a candidate on your behalf, regardless of Mode.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Work with the agent" icon="bot" href="/companies/the-agent">
+    Where each chat lives and what context it uses.
+  </Card>
+  <Card title="Close, reopen or delete a job" icon="archive" href="/companies/close-reopen-delete">
+    What actually happens when a position closes.
+  </Card>
+</CardGroup>

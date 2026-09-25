@@ -1,0 +1,89 @@
+---
+title: "Candidate lists"
+description: "A job's Candidates tab and the workspace-wide Applications page: the same table, with columns, filters, sorting and grouping to work through it."
+icon: "list-checks"
+---
+
+A job's **Candidates** tab lists that job's candidates. The **Applications** page in the sidebar lists candidates across every job, with an extra **Job** column. The toolbar, columns, filters and sorting work the same way in both.
+
+## Toolbar
+
+- **Search candidates…** filters the visible rows by name.
+- **Filter** opens the filter popover (see below).
+- **Display options** controls sort, grouping and which columns show.
+- **Add candidate** (Candidates tab only) adds one specific person. See [Add candidates yourself](/companies/add-candidates).
+- **Speed action** lets you act on many candidates' next actions at once. See [Next actions](/companies/recommended-actions).
+- **More actions** → **Download CSV** exports whatever rows are currently visible, given your filters and grouping.
+
+## Columns
+
+| Column | Shown by default | Notes |
+|---|---|---|
+| Candidate | Always | Avatar, name, title at company |
+| Job | Applications page only | Which job this candidacy belongs to |
+| Source | Yes | **Applied**, **Sourced**, or **Manual** |
+| Stage | Yes | Their current stage |
+| Next action | Yes | The recommended next step's label |
+| Match | Yes | Current and potential score |
+| Urgency | Always, can't be hidden | See below |
+| Messages | No | Message count, with a dot for unread |
+| Consent | No | Consent status icon |
+| Contacted | No | Contacted status icon |
+| Updated | No | When the candidacy last changed |
+
+## Sort and group
+
+**Sort by**: **Urgency · highest first** (default), Recently touched, Recently added, or Name · A → Z.
+
+**Group by**: **None** (default), **Next action**, or **Stage**. On the Applications page, you can also group by **Job**.
+
+## Filters
+
+| Filter | Values |
+|---|---|
+| Stage | In review, In progress, Offer, Hired, Rejected, Withdrawn |
+| Source | Applied, Sourced, Manual |
+| Job | Applications page only: every job |
+| Assigned to | Unassigned / open, or each workspace member |
+| Match | Good fit (70+), Maybe (40–69), Weak (under 40), Unscored |
+| Last activity | Warm (under 7 days), Lukewarm (7–30 days), Cold (over 30 days), No activity |
+| Consent | Given, Missing |
+| Has reply | Yes, No |
+| Has outreach | Yes, No |
+| Next action | Your turn, Awaiting candidate, Awaiting team, Reply to their message, Send intro, Acknowledge application, Send follow-up, Send offer, Send rejection note, Send welcome message, Send message, Add note, Move stage, Schedule onboarding, Waiting, No next step |
+| Questionnaire answer | If the job has one, one filter per question |
+
+Active filters show as removable pills under the toolbar.
+
+The **Match** filter buckets on potential score, falling back to current score when there's no potential yet. A candidate whose current score is 55 but whose potential is 75 shows up under **Good fit (70+)**. See [How match scores work](/companies/match-scores).
+
+## The urgency indicator
+
+Every row shows a signal-strength icon: 1 blue bar (low), 2 green bars (medium), 3 orange bars (high), or a red square with a white "!" (critical). Hover it to see the priority and the reason, such as a reply that's gone unanswered for several days.
+
+## Shortlisted candidates aren't listed here
+
+Neither list includes people who are only shortlisted. They appear once you promote them. Until then, they're on the job's **Scouting** tab. See [Shortlist and promote candidates](/companies/shortlist-and-push).
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Why don't I see a candidate I recently shortlisted?">
+    Shortlisting doesn't add them here. Promote them from the **Scouting** tab first.
+  </Accordion>
+  <Accordion title="Why is a 55-scored candidate showing under Good fit?">
+    The **Match** filter groups candidates by potential score when they have one. Their potential score is 70 or higher, even though their match score is 55.
+  </Accordion>
+  <Accordion title="Does Download CSV export everyone, or only what I can see?">
+    Whatever your current filters and search show. Clear your filters first if you want everyone.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="The candidate view" icon="user" href="/companies/candidate-view">
+    Open a row to see the full picture on one candidate.
+  </Card>
+  <Card title="Next actions" icon="zap" href="/companies/recommended-actions">
+    What the Next action column and Speed action do.
+  </Card>
+</CardGroup>

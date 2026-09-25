@@ -1,0 +1,60 @@
+---
+title: "Teams"
+description: "Split a workspace into teams so the agent applies team-specific knowledge to the jobs each one owns."
+icon: "layers"
+---
+
+A team is a group inside your workspace with its own knowledge. For jobs assigned to the team, the agent uses the team's knowledge on top of the workspace's. Teams don't control access: everyone in the workspace still sees every job.
+
+## Creating a team
+
+**Settings** → **Workspace** → **Teams** → **Create team**. Give it a name (required) and an optional description. You're added to the team automatically with the role **lead**. Only admins and owners can create, edit, or delete a team, but every workspace role can see the Teams list.
+
+## Team members
+
+Open a team and add people from its **Members** page. You can only add people who are already in the workspace. Removing someone from a team doesn't remove them from the workspace.
+
+Deleting a team (from its **Danger zone**, admins and owners only) removes it from any jobs that used it and deletes its facts. Nobody loses workspace access.
+
+## Sub-teams
+
+A team can have a **Parent team**. The child team uses its parent's knowledge as well as its own. Nesting is one level deep: a team with children can't have a parent, and a team with a parent can't have children.
+
+## Team knowledge
+
+Each team has its own facts and a summary, organized the same way as [Company knowledge](/companies/company-knowledge): Company, Product, Tech stack, Hiring, Culture, and Market. Unlike workspace knowledge, none of it comes from research. You add every team fact by hand with **Add fact** on the team's **Knowledge** page. Only admins and owners can add, edit or delete team facts.
+
+## Assigning a job to a team
+
+Open the job, click its **…** menu, then **Team**, and pick one (or **No team**). Anyone who can edit the job can do this, not only admins.
+
+## What changes for the agent
+
+When a job belongs to a team, the agent in that job's chat reads the workspace's knowledge, then the parent team's if there is one, then the team's own. If a child team's fact conflicts with its parent's, the child's wins.
+
+## What teams don't do
+
+Assigning a job to a team doesn't change who can see or work on it. Teams only change what the agent knows about that job.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Does a team change who can see a job?">
+    No. It only changes what the agent knows in that job's chat. Access depends on workspace role.
+  </Accordion>
+  <Accordion title="Can I nest a team under a team that's already nested?">
+    No. Nesting is one level deep. A team with children can't become a child itself.
+  </Accordion>
+  <Accordion title="Do team facts come from research, like workspace knowledge does?">
+    No. You add every team fact by hand.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Company knowledge" icon="brain" href="/companies/company-knowledge">
+    The workspace-wide knowledge every team builds on top of.
+  </Card>
+  <Card title="Members and roles" icon="users" href="/companies/members-and-teams">
+    Who's in your workspace, separate from which team they're on.
+  </Card>
+</CardGroup>

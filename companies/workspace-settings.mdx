@@ -1,25 +1,88 @@
 ---
 title: "Workspace settings"
-description: "Defaults for the whole workspace: job and sourcing behavior, message templates, and branding."
+description: "Your workspace's name and public URL, sourcing and listing defaults, and who can change each one."
 icon: "sliders-horizontal"
 ---
 
-Unlike your account settings, these apply to everyone in the workspace.
+**Settings** → **Workspace** holds settings for the whole workspace: its name and public details, search and listing defaults, and the option to delete it. Everyone in the workspace can see these pages. Most fields can only be changed by an admin or owner. If you can't change a field, it's greyed out with a note.
 
-## Job and sourcing defaults
+## General
 
-Set defaults like how many results a search pulls back, so every new job starts from the same baseline instead of everyone configuring it by hand.
+The basics: **Workspace name** (shown across Staffer and on your public listings), **Industry**, **Website**, **Employees**, **Headquarters**, and **Description** (a short pitch candidates read on the listing). Click **Save changes** to apply them.
 
-## Message templates
+### Public URL slug
 
-Save reusable outreach templates so recruiters aren't writing the same message from scratch every time.
+Your **Public url slug** sets the address of your career page and every public listing: `jobs.staffer.com/companies/your-slug`. Pick 3 to 60 characters: letters, numbers, and hyphens. Only the workspace **owner** can change it, not admins. Click **Save slug**.
 
-## Branding and career page
+<Warning>
+Changing the slug breaks every listing and career page link that's already out there, shared, bookmarked, or indexed by a search engine. There's no redirect from the old address to the new one.
+</Warning>
 
-Your logo, cover image, and primary color. See [Your career page](/companies/career-page) for where these show up.
+### Organization, owner, and metadata
 
-## Knowledge
+Read-only cards show your organization's name and domain, and who holds the workspace owner role. A Metadata card shows the workspace ID, organization ID, and when the workspace was created, each with a copy button.
 
-The facts Staffer knows about your company, from research plus anything you've added by hand. See [Add your company details](/companies/workspace-details).
+### Danger zone
 
-**Next:** [Members and teams](/companies/members-and-teams)
+Only the owner sees this section. **Delete this workspace** removes the workspace and everything in it from the app and from public listings: jobs, listings, candidates and members. Staffer keeps the data on its servers rather than erasing it straight away. To confirm, type the exact workspace name and the phrase `delete my workspace`.
+
+If your organization adds new sign-ups to this workspace automatically, you can't delete it until an organization admin points auto-join at another workspace or turns it off. See [Organization settings](/admin/organization).
+
+## Preferences
+
+**Settings** → **Workspace** → **Preferences** sets defaults the agent and your public listings use. Admins and owners can change them. Everyone else sees them read-only.
+
+**Sourcing**
+- **Maximum sourcing results**: 25, 50, 75 or 100 (25 unless you change it). It limits how many people one search returns. Higher numbers find more people and take longer.
+- **Default countries** doesn't currently narrow anything. It's saved, but no search reads it yet.
+
+**Job**
+- **Default currency**: the currency the agent uses for salaries on new jobs. You can change it on any job.
+- **Default language**: the language the agent writes new listings in. You can change it on any job.
+
+**Listings**
+- **Closed listing grace period**: how many days a closed job's listing stays visible, with applying turned off, before it comes off the job board. From 0 to 365 days, 30 by default. Set it to 0 to remove closed listings straight away.
+
+## Message templates and company knowledge
+
+Two more workspace-wide settings live on their own pages:
+
+- [Message templates](/companies/message-templates): reusable message text for the workspace. Only admins and owners can create or edit them.
+- [Company knowledge](/companies/company-knowledge): what the agent knows about your company.
+
+Branding (logo, cover photo, color) and your [career page](/companies/career-page) content are also workspace-wide. See [Branding](/companies/branding).
+
+## Who can see each Settings page
+
+| Section | Pages | Who sees it |
+|---|---|---|
+| Account | Profile, Preferences, Notifications, Signature, Calendar | Everyone |
+| Workspace | General, Branding, Career page, Preferences, Knowledge, Message templates, Members, Teams | Everyone in the workspace. Editing most of them needs an admin or owner. |
+| Organization | General, Members, Workspaces, Billing, Usage & credits, Plans, Compliance | Organization admins and owners only |
+
+<Note>
+If you open a link to an Organization settings page and land on a workspace settings page instead, with no error, you're not an organization admin or owner. The **Organization** section doesn't show in your settings menu either.
+</Note>
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Who can change workspace settings?">
+    Admins and owners can edit General and Preferences. Only the owner can change the public URL slug or delete the workspace. Everyone else can see these pages but not edit them.
+  </Accordion>
+  <Accordion title="What happens to jobs and candidates if I delete the workspace?">
+    They disappear from the app and from public listings straight away. Staffer keeps the data on its servers rather than erasing it immediately.
+  </Accordion>
+  <Accordion title="Does Maximum sourcing results actually change search behavior?">
+    Yes. It limits how many people one search returns. **Default countries**, on the same page, doesn't do anything yet.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Members and roles" icon="users" href="/companies/members-and-teams">
+    Who's in your workspace and what each role can do.
+  </Card>
+  <Card title="Company knowledge" icon="brain" href="/companies/company-knowledge">
+    What the agent knows about your company, and how to correct it.
+  </Card>
+</CardGroup>

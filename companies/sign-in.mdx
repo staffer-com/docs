@@ -1,27 +1,70 @@
 ---
-title: "Sign in"
-description: "How company sign-in works: Google or Microsoft SSO, work email required, and what happens if your company is already on Staffer."
+title: "Sign in and create an account"
+description: "Sign in with Google, Microsoft, or email and password, what the work-email rule rejects, and how to reset a password."
 icon: "log-in"
 ---
 
-Staffer signs you in with your existing Google or Microsoft account. There's no separate password to create or remember.
+Staffer signs you in with Google, Microsoft, or an email and password you create yourself. All three are on the same sign-in page at [app.staffer.com](https://app.staffer.com). There's no SAML single sign-on.
+
+## Sign in with Google or Microsoft
+
+Click **Continue with Google** or **Continue with Microsoft** and authenticate with that account. Staffer reads your email from the account to find or set up your workspace.
+
+## Sign in with email and password
+
+Enter your email and password below the two buttons and click **Sign in with email**. This works for any account that has a password, whether you set one when you created your account or added one later from **Forgot your password?**.
 
 ## You need a work email
 
-Sign-in only accepts a work email domain. Personal providers like Gmail or Outlook.com are rejected, with a prompt to sign in again using your company address instead.
+Staffer organizes workspaces by company, so it doesn't accept personal addresses such as Gmail, Outlook.com, iCloud or Yahoo (about 35 providers in all), whichever way you sign in. Trying one on sign-in shows "Use your work email": "Staffer sets up workspaces by company, so personal addresses (gmail, outlook, etc.) can't register. Sign in again with your work email."
 
-This isn't arbitrary: Staffer organizes everything around your company's workspace, and a personal address has no company to attach to.
+## Create an account with email
 
-## If your company is already on Staffer
+<Steps>
+  <Step title="Enter your work email">
+    Click **Create account** on the sign-in page, enter your email and click **Continue**.
+  </Step>
+  <Step title="Open the confirmation email">
+    Staffer emails a link titled "Confirm and choose a password." It expires in 24 hours. If it doesn't arrive, click **Resend email** on the check-your-inbox screen.
+  </Step>
+  <Step title="Choose a password">
+    The link opens a page confirming your email. Add your name (optional) and a password, then click **Create account**. Passwords need at least 10 characters and at most 72 (fewer if you use accented letters or emoji).
+  </Step>
+</Steps>
 
-<Note>
-  If an admin at your company has turned on auto-join for your email domain, signing in drops you straight into your company's existing workspace. You won't see any of the setup steps below: you land directly in the app.
-</Note>
+Your account doesn't exist until you finish step 3. If you enter an email that already has an account, Staffer doesn't send a second confirmation link: it sends a notice with a sign-in link instead. The check-your-inbox screen looks the same either way, so someone typing in your address can't tell whether you already have an account.
 
-If your company has a Staffer organization but auto-join isn't turned on, you can't create a second one on the same domain. You'll be asked to get an invite from an admin there instead. See [Invite your team](/companies/invite-team) for what that invite looks like from the other side.
+## Forgot or reset your password
 
-## Coming back later
+Click **Forgot your password?** on the sign-in page and enter your work email. If it matches an account, Staffer emails a reset link that expires in 60 minutes. This also works if you've only ever signed in with Google or Microsoft and want to add a password to your account.
 
-Once you're signed in, Staffer keeps track of where you were headed. If you followed a shared link while signed out, sign-in takes you there and then sends you straight back to it after.
+<Warning>
+  Setting a new password signs you into the device you're on and signs you out of every other active session on your account.
+</Warning>
 
-**Next:** [Create your workspace](/companies/create-workspace)
+## How long you stay signed in
+
+A session lasts 14 days from the moment you sign in, active or not. There's no "remember me" option and no idle timeout: you're either within the 14 days or you sign in again.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="I signed in with my Microsoft work account and still got 'Use your work email'. Why?">
+    Some Microsoft work accounts don't send Staffer an email address at all, usually accounts without a Microsoft 365 mailbox. Staffer falls back to your username, but if that isn't a real email either, such as a guest account, sign-in is refused with the same message personal addresses get, even though yours is a genuine work account. Sign in with email and password instead, or ask whoever manages your Microsoft tenant.
+  </Accordion>
+  <Accordion title="Do I need to set a password if I sign in with Google or Microsoft?">
+    No. A password is only needed for email sign-in. You can add one later from **Forgot your password?** if you want a fallback.
+  </Accordion>
+  <Accordion title="A confirmation or reset link says it's expired or invalid. What now?">
+    Confirmation links expire in 24 hours, reset links in 60 minutes, and each works once. Go back to the sign-up or forgot-password page and request a new one.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Set up your workspace" icon="rocket" href="/companies/set-up-your-workspace">
+    What happens the first time you sign in for your company.
+  </Card>
+  <Card title="Join your company on Staffer" icon="users" href="/companies/join-your-team">
+    Accepting an invite or joining through your email domain.
+  </Card>
+</CardGroup>

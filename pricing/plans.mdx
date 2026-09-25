@@ -1,35 +1,61 @@
 ---
-icon: "folders"
 title: "Plans"
-description: "Free, Growth, and Enterprise: the same price list on every plan, with extra credits the more you commit."
+description: "Starter, Growth, and Enterprise exactly as they appear on the Plans page, and how the top-up bonus works."
+icon: "layers"
 ---
 
-One price list, the same on every plan. Your money buys credits one to one, and committing to a monthly amount earns extra credits on top.
+Staffer has three plans: **Starter**, **Growth**, and **Enterprise**. All three draw from the same shared pool of credits. What changes between them is monthly commitment, bonus credits, and how many workspaces you can run.
 
 ## The three plans
 
-|  | Free | Growth | Enterprise |
-| --- | --- | --- | --- |
-| Committed usage / mo | $$0 ($$10 free usage) | \$3,000 | Custom |
-| Bonus credits on committed amount | None | \+5% | \+10% |
-| Unused credits | Roll over | Roll over | Roll over |
-
-**Free** includes AI candidate search, deep scoring, automated outreach, one workspace, and unlimited seats.
-
-**Growth** adds unlimited workspaces, dedicated support, ATS/HRIS sync, and team usage controls.
-
-**Enterprise** adds 10% more usage, priority support, and SSO with role-based access control.
+| Plan | Price | What you get |
+|---|---|---|
+| **Starter** | Free | $100 in signup credits, 1 workspace, no monthly commitment, top up any time |
+| **Growth** | $3,000 / month | 5% bonus credits on every top-up, $3,150 credited monthly, unlimited workspaces, cancel any time with coverage to period end |
+| **Enterprise** | Custom | Negotiated bonus (typically 10%+), bank-transfer invoicing, unlimited workspaces, priority support and activation by the Staffer team |
 
 ## How the bonus works
 
-A $$3,000 monthly commitment lands as $$3,150 of credits. The bonus sits on your committed amount only. Top up beyond it any time, one to one, with no minimum and no penalty. Bonus credits are usage only and can't be withdrawn.
+The bonus applies to every dollar you pay Staffer, not only your monthly commitment. A one-off top-up and your monthly subscription invoice both get your plan's bonus percentage.
 
-Credits never expire. Anything you don't spend in a quiet month carries forward to a busy one.
+On **Growth**, that bonus is 5%. Top up $1,000 and you get $1,050 in credits: $1,000 base plus $50 bonus. The same 5% is why the $3,000 monthly commitment lands as $3,150, the number shown on the Growth tile itself.
 
-## What that means in practice
+**Starter** carries no bonus. **Enterprise**'s bonus is set in your contract, typically 10% or more.
 
-**Growth**, at $$3,000 a month, is $$36,000 a year committed. That lands as $$37,800 in credits, covering roughly **29 full hires**. The same $$36,000 without a commitment covers 28.
+## Upgrading to Growth
 
-**Enterprise**, at \$250,000 a year, covers roughly **214 full hires**. The same spend on Free covers about 194.
+From **Settings** → **Organization** → **Billing**, click **Manage plan**. That opens the Plans page. Choosing **Growth** takes you to Stripe's hosted checkout to add a card and start the subscription. Once it's active, every future top-up gets the 5% bonus, and your first invoice credits $3,150 to the shared pool.
 
-**Next:** [What you pay](/pricing/what-you-pay)
+## Downgrading or cancelling
+
+Click **Downgrade to Starter**. This doesn't cut you off immediately: coverage runs to the end of your current billing period, then the plan lapses to **Starter**. Changed your mind before the period ends? Click **Resume plan** to stay on **Growth** without interruption.
+
+Downgrading doesn't touch workspaces you already have. On **Starter** you can't create another workspace beyond your first, but any extra workspaces you made while on **Growth** keep working. Nothing gets deleted or locked.
+
+## Starter's one-workspace limit
+
+**Starter** caps an organization at 1 workspace. Trying to add another from the workspace switcher (**+ New workspace**) is disabled, with a prompt to upgrade. See [Workspaces](/admin/workspaces) for how workspace creation works day to day.
+
+## Enterprise
+
+**Enterprise** isn't self-serve. Click **Contact sales** and Staffer sets up your plan, your bonus rate, and bank-transfer invoicing, and activates it for you.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Does the bonus work the same way on Enterprise?">
+    Yes. Enterprise's bonus percentage is set in your contract instead of fixed at 5%, but it applies to every top-up and every invoice the same way Growth's does.
+  </Accordion>
+  <Accordion title="What happens if I cancel Growth and want it back later?">
+    Before your period ends, click Resume plan to stay on Growth without a gap. If you've already lapsed to Starter, upgrading again works the same way it did the first time.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="What uses credits" icon="list-checks" href="/pricing/what-you-pay">
+    Which actions are metered, and the one fixed price.
+  </Card>
+  <Card title="Credits, top-ups and spend caps" icon="wallet" href="/admin/credits">
+    Add credits, cap a workspace's spend, and see what happens at zero.
+  </Card>
+</CardGroup>
