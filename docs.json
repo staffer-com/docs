@@ -337,6 +337,9 @@
     },
     "intercom": {
       "appId": "exarxpfj"
+    },
+    "gtm": {
+      "tagId": "GTM-TDM7B9DW"
     }
   },
   "redirects": [
@@ -424,5 +427,8 @@
       "source": "/companies/usage-and-invoices",
       "destination": "/admin/credits"
     }
-  ]
+  ],
+  "seo": {
+    "indexing": "navigable"
+  }
 }
