@@ -78,7 +78,8 @@ Candidate pages avoid internal words entirely: never "corpus", "overlay", "snaps
 
 ## Product update newsletter
 
+- For the weekly flow (release notes to docs, changelog, newsletter and Resend draft), use the `/product-update` skill in `.claude/skills/product-update/SKILL.md`.
 - Lives in `newsletter/` (excluded from Mintlify via `.mintignore`). See `newsletter/README.md`.
-- When a feature ships, update the docs page and add it to the newest `<Update>` block in `changelog.mdx` (newest block on top, `label` is the date, `description` is the week number). Then add a section to the next issue in `newsletter/issues/` that links to it.
+- When a feature ships, update the docs page, then add it to `changelog.mdx` (one `<Update>` block per ship date, newest on top). Newsletter issues in `newsletter/issues/` cover the highlights and link to the docs. The skill has the full rules.
 - Follow `newsletter/COPYWRITING.md` for all newsletter copy.
 - Email images go in `images/newsletter/` so Mintlify hosts them.

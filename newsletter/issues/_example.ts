@@ -1,6 +1,6 @@
-// Example issue. Drives the preview server and shows the format.
-// Copy this file to issues/YYYY-MM-DD.ts for a real send. Don't send this one:
-// it describes existing features, not this week's changes.
+// Starting point for a new issue, and the content the preview server shows.
+// Copy to issues/YYYY-MM-DD.ts and replace every field. The draft script
+// refuses files that start with "_", so this one can't be sent by mistake.
 
 import type { Issue } from "../emails/types";
 
@@ -9,6 +9,8 @@ const issue: Issue = {
   preview: "Tell Staffer what was missing. It searches again with your feedback in context.",
   title: "Sourcing in rounds, clearer screening, and more",
   hero: { src: "hero-default.jpg", alt: "Staffer product update" },
+  intro:
+    "Here's what shipped this week. The full list is in the [changelog](https://docs.staffer.com/changelog).",
   sections: [
     {
       heading: "Steer sourcing in rounds",
@@ -21,7 +23,7 @@ const issue: Issue = {
     {
       heading: "See the evidence behind every score",
       body: [
-        "Open a criterion and you get the specific thing in the candidate's history that met it, and the sentence explaining the call. Each criterion is **Met**, **Partial**, **Gap** or **Unknown**, so missing information never quietly counts as a miss.",
+        "Open a criterion and you get the specific thing in the candidate's history that met it, and the sentence explaining the call. Each criterion is Met, Partial, Gap or Unknown, so missing information never quietly counts as a miss.",
       ],
       link: { label: "Learn more here.", href: "https://docs.staffer.com/features/match-scoring" },
     },
