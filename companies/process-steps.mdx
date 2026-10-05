@@ -4,7 +4,7 @@ description: "Every process step kind, its Setup and Rules fields, and when it e
 icon: "list-checks"
 ---
 
-A process step is one of seven kinds: Review, Interview, AI interview, File upload, Questionnaire, Task or Message. This page covers Review, Questionnaire, File upload, Task and Message field by field. [AI interviews](/companies/ai-interviews) and [Interviews and scheduling](/companies/human-interviews) get their own pages.
+A process step is one of eight kinds: Review, Interview, AI interview, File upload, Questionnaire, Task, Message or Reference check. This page covers Review, Questionnaire, File upload, Task and Message field by field, and how a Reference check works. [AI interviews](/companies/ai-interviews) and [Interviews and scheduling](/companies/human-interviews) get their own pages.
 
 Every kind has an **Applies to** dropdown on its **Rules** tab: **All candidates**, **Applied only** or **Sourced only**. See [Build a hiring process](/companies/build-a-process). The **Rules** tab also shows one of four notices that tell you whether the candidate gets an email:
 
@@ -104,6 +104,14 @@ This kind shows as **Message** in the process builder, but as **Outreach** in th
 
 Applies to, and **Visible to candidate** (off by default). Notice: **Not shown to the candidate** by default, or **Shows in their portal, no email** once visible. A Task step never has a gate: it can only be completed or skipped, never used to auto-reject anyone.
 
+## Reference check
+
+A Reference check step collects references inside the process. The candidate sends you a list of their referees. Staffer then sends each referee a request, follows up with reminders, collects the answers and summarizes them for your team.
+
+Each referee answers the way that suits them: a short questionnaire, a conversation with Staffer's AI, or by phone. The summary sits with everything else you know about the candidate, not in someone's notes. Staffer collects and summarizes. Your team reads it and decides what it means.
+
+Once the candidate sends their referee list, it locks. **Reset step** in the [Step actions menu](/companies/run-the-process) starts the check over from the beginning.
+
 ## AI interview and Interview
 
 Two more kinds, each detailed on its own page:
@@ -128,6 +136,9 @@ Two more kinds, each detailed on its own page:
   </Accordion>
   <Accordion title="What happens after a candidate submits a Questionnaire?">
     Staffer evaluates the answers, shows a **Recommendation** badge on the step and rescores the candidate.
+  </Accordion>
+  <Accordion title="Can a candidate change their referees after sending the list?">
+    No. The list locks once they send it. To start again, use **Reset step**, which clears everything recorded on the step.
   </Accordion>
   <Accordion title="Do Review and Task notes count toward the match score?">
     Yes. A note on a step's completion form also appears on the **Notes** tab and counts as evidence at the next rescore, like any other note.

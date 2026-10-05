@@ -16,7 +16,7 @@ Go to **Settings** → **Account** → **Calendar**.
 
 **Share a calendar link** adds a read-only feed instead: paste an **iCal URL**, add an optional **Label** and click **Add feed**. Staffer checks each feed about every 15 minutes. Click **Sync now** on a feed to check it straight away. Use this for a calendar Staffer can't connect to, such as Outlook.
 
-**Available hours** sets one row per weekday, each either **Not available** or one or more start and end times, with **Add hours** for a second range on the same day.
+**Available hours** sets one row per weekday, each either **Not available** or one or more start and end times, with **Add hours** for a second range on the same day. A range that ends before it starts is flagged, so you can fix it before saving.
 
 <Note>
   If every day is set to **Not available**, the default, Staffer treats you as available at any hour, except when your calendar shows you're busy. Once you add hours to any day, Staffer only offers times inside the hours you've set.
@@ -24,7 +24,7 @@ Go to **Settings** → **Account** → **Calendar**.
 
 **Timezone** sets the time zone for your available hours. It starts as your browser's time zone, and daylight saving is handled for you.
 
-You can use Google Calendar and iCal feeds together. Conflict checks, the candidate slot picker and your **Calendar** page use all of them.
+You can use Google Calendar and as many iCal feeds as you need together. Conflict checks, the candidate slot picker and your **Calendar** page use all of them, recurring meetings included. A meeting you've declined doesn't count as busy, so it never blocks a slot.
 
 ## The Calendar page
 
@@ -37,7 +37,7 @@ In the sidebar, **Calendar** shows your schedule as a week or month grid.
 What you'll see:
 
 - **Interview**: a Staffer-scheduled interview step.
-- **External event**: a busy block from your Google Calendar or an iCal feed.
+- **External event**: a busy block from your Google Calendar or an iCal feed, including recurring meetings. Each calendar shows in its own color, so you can tell them apart.
 - **Outside hours**: stripes over time outside your available hours. If you haven't set any hours, there are no stripes.
 
 Click an **Interview** event to see the job and candidate, the time, the location for in-person interviews, a **Join** button, the attendees and the agenda. **Add to calendar** adds a personal copy to your Google Calendar. **View step** opens the candidate's **Process** tab.
@@ -48,13 +48,16 @@ The accepted and pending labels on attendees don't come from Google. The organiz
 
 <AccordionGroup>
   <Accordion title="Do I have to connect Google Calendar to schedule interviews?">
-    No. Without one, Staffer schedules from a shared account and still adds you as an attendee.
+    No. Without one, Staffer schedules from a shared account. Only the attendees on the scheduling form are invited, so add yourself if you're joining.
   </Accordion>
   <Accordion title="What happens if I never set Available hours?">
     Staffer treats you as available at any time, except when a connected calendar or iCal feed shows you're busy.
   </Accordion>
   <Accordion title="Can I use more than one calendar source at once?">
-    Yes. Staffer checks your Google Calendar and all your iCal feeds together.
+    Yes. Staffer checks your Google Calendar and all your iCal feeds together, and shows each one in its own color on the **Calendar** page.
+  </Accordion>
+  <Accordion title="Does a meeting I declined still block my time?">
+    No. Declined meetings don't count as busy, so candidates can book that slot.
   </Accordion>
   <Accordion title="Why does an attendee still show as pending on an interview I know they accepted?">
     The label doesn't come from Google. The organizer always shows accepted and everyone else shows pending, whatever they did.

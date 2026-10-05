@@ -20,7 +20,7 @@ Closing, reopening, and deleting are three separate actions in the **More job ac
   </Step>
 </Steps>
 
-If the job has candidates still active (any stage other than Rejected, Hired, or Withdrawn), the dialog shows how many and offers two checkboxes: **Reject the N remaining candidate(s)**, and, once that's checked, **Send them a rejection message**. Checking the second opens an editable message, pre-filled from your workspace's default rejection template, with placeholders you can leave in or replace:
+If the job has candidates still active (any stage other than Rejected, Hired, Withdrawn or Not interested), the dialog shows how many and offers two checkboxes: **Reject the N remaining candidate(s)**, and, once that's checked, **Send them a rejection message**. The dialog tells you up front how many people the message will go to. That can be fewer than the number you reject, because only candidates who applied, replied or completed a step get a rejection message. Checking the second box opens an editable message, pre-filled from your workspace's default rejection template, with placeholders you can leave in or replace:
 
 | Placeholder | Becomes |
 |---|---|
@@ -37,7 +37,7 @@ Leaving both boxes unchecked closes the job and leaves every candidate exactly w
 - Any attempt to add a new candidate, sourced or applied, is refused: "This position is closed and takes no new candidates."
 - The brief becomes read-only until you reopen the job. See [Write the brief](/companies/brief-criteria).
 - Only if you ticked the reject box: every candidate still In review, In progress, or with an Offer moves to Rejected. Shortlisted candidates aren't touched.
-- Only if you also ticked **Send them a rejection message**: that message is actually sent. Checking reject alone changes their stage without emailing anyone.
+- Only if you also ticked **Send them a rejection message**: that message is sent to the candidates who applied, replied or completed a step. Sourced candidates you never reached, or who never replied, don't get it. Checking reject alone changes their stage without emailing anyone.
 
 <Warning>
   Rejecting and emailing on close can't be undone from this dialog. Reopening the job afterwards doesn't un-reject anyone.

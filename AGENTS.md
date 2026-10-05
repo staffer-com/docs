@@ -35,7 +35,7 @@ Use exactly these words:
 | the agent (company side) | copilot, AI assistant |
 | copilot (candidate side only) | agent |
 | candidate, application (a candidate's record in one job) | applicant, talent, profile |
-| stage (**In review**, **In progress**, **Offer**, **Hired**, **Rejected**, **Withdrawn**) | status, state |
+| stage (**In review**, **In progress**, **Offer**, **Hired**, **Rejected**, **Withdrawn**, **Not interested**) | status, state |
 | shortlist, shortlisted | saved, bookmarked |
 | promote (UI: **Promote**, **Promote to candidate**) | push, freeze |
 | match score, potential score | fit score, rating |
