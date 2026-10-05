@@ -4,7 +4,7 @@ description: "The stages a candidate moves through, how to move them, and what h
 icon: "workflow"
 ---
 
-A candidate's stage is where they are in the job. There are six: **In review**, **In progress**, **Offer**, **Hired**, **Rejected** and **Withdrawn**.
+A candidate's stage is where they are in the job. There are seven: **In review**, **In progress**, **Offer**, **Hired**, **Rejected**, **Withdrawn** and **Not interested**.
 
 | Stage | Meaning |
 |---|---|
@@ -14,6 +14,7 @@ A candidate's stage is where they are in the job. There are six: **In review**, 
 | **Hired** | They accepted. |
 | **Rejected** | Turned down. |
 | **Withdrawn** | They pulled out. Only the candidate can set this stage. |
+| **Not interested** | They declined, for example a sourced candidate who said no to your outreach. |
 
 ## Move a candidate to a different stage
 
@@ -28,7 +29,7 @@ You can move a candidate backward, for example from **Hired** back to **In revie
 
 ## What happens to their process steps
 
-Moving a candidate to **Offer**, **Hired**, **Rejected** or **Withdrawn** skips every process step they haven't finished. If you later move them back, those steps stay skipped. Turn each one back on with **Un-skip step** in that step's **Step actions** (…) menu.
+Closing a candidate's application, for example by moving them to **Rejected**, pauses every process step they haven't finished. The steps aren't skipped. If you reopen the application later, they pick up where they left off. See [Move candidates through the process](/companies/run-the-process).
 
 ## A stage change never emails anyone
 
@@ -58,16 +59,16 @@ Moving a candidate to **Hired** doesn't close the job. The listing stays open an
 
 <AccordionGroup>
   <Accordion title="Can I undo a stage move?">
-    Yes. Move them back with **Move to stage…**. Steps that were skipped stay skipped until you un-skip them.
+    Yes. Move them back with **Move to stage…**. Steps that were paused when you closed the application pick up where they left off.
   </Accordion>
   <Accordion title="Does moving someone to Rejected notify them?">
-    No. Use the **Send rejection note** next action, or message them yourself.
+    No. Use the **Send rejection note** next action, or message them yourself. Staffer only suggests a rejection note for candidates who applied, replied or completed a step.
   </Accordion>
   <Accordion title="Can I mark a candidate as Withdrawn myself?">
     No. Only the candidate can withdraw their own application.
   </Accordion>
   <Accordion title="What happens to a scheduled interview if I reject someone?">
-    Staffer skips the step, along with every other open step. If you move them back later, un-skip it from that step's **Step actions** menu.
+    The step is paused, along with every other open step. If you move them back later, it picks up where it left off.
   </Accordion>
   <Accordion title="Can I undo Permanently remove?">
     No, not from the app today. Use Remove instead if you might want this candidate back.

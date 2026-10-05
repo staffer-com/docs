@@ -19,13 +19,13 @@ A job's **Process** tab holds the sequence of steps a candidate moves through: r
 
 The process runs top to bottom from **Start** to **End**, with your steps in between. By default every candidate follows the same line. When a step applies only to some candidates, the canvas splits into two lanes, **Applied** and **Sourced**. Steps for all candidates stay in the shared line.
 
-An empty process shows one button for each of the seven kinds: **Add Review**, **Add Interview**, **Add AI interview**, **Add File upload**, **Add Questionnaire**, **Add Task** and **Add Message**.
+An empty process shows one button for each step kind, such as **Add Review** and **Add Interview**.
 
 ## Add, arrange and save steps
 
 <Steps>
   <Step title="Open the add-step menu">
-    Hover over a step, or over the Start or End pill, to reveal **Add step above** and **Add step below**. Click one to see all seven kinds.
+    Hover over a step, or over the Start or End pill, to reveal **Add step above** and **Add step below**. Click one to see every step kind.
   </Step>
   <Step title="Pick a kind and configure it">
     Each kind opens its own editor with a **Setup** tab (what the step does) and a **Rules** tab (who it applies to, and what the candidate is told). See [Step types](/companies/process-steps) for every field.
@@ -34,13 +34,15 @@ An empty process shows one button for each of the seven kinds: **Add Review**, *
     A grip handle appears on the left of a step when you hover over it. Drag it to reorder, or drag a step straight into the **Applied** or **Sourced** lane.
   </Step>
   <Step title="Save">
-    The process doesn't save on its own, unlike the brief. When you change anything, **Discard** and **Save** appear in the toolbar. Click **Save** to keep your changes. **Discard** puts the canvas back to what you last saved.
+    The process doesn't save on its own. When you change anything, **Discard** and **Save** appear in the toolbar. Click **Save** to keep your changes. **Discard** puts the canvas back to what you last saved. If you close the page before saving, your edits are still there when you come back.
   </Step>
 </Steps>
 
 ## Applies to: split the process by where candidates come from
 
 Every step's Rules tab has an **Applies to** dropdown with three options: **All candidates** (the default), **Applied only** and **Sourced only**. A step set to **Applied only** or **Sourced only** applies only to that group. Use it to keep a step for sourced candidates but skip it for people who applied, or the other way round.
+
+When you copy a process from another job, its **Applied** and **Sourced** lanes come with it.
 
 ## Viewing as
 
@@ -66,6 +68,8 @@ You can delete a step nobody has reached yet. **Delete permanently** removes the
 ## Build or change it from chat
 
 You can describe the process to the agent instead of using the canvas. It reads the current process and proposes changes. In **Ask permission** mode, the default, it shows a confirmation card before adding, changing or removing anything. In **Auto** mode it applies straight away.
+
+If the agent saves a change while you have unsaved edits on the canvas, Staffer keeps your version on screen and shows that a newer version exists. It asks you once whether to keep your edits or see the update. Nothing you typed is replaced without you choosing.
 
 ## Step order and the candidate's "current step"
 

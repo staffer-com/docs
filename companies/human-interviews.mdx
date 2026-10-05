@@ -13,7 +13,7 @@ Open the step from the job's **Process** tab. Its **Setup** tab has:
 | Field | What it does |
 |---|---|
 | Step name | Shown on the canvas and in the candidate's step history. |
-| Attendees | The people who join the call. Their calendars are what gets checked for conflicts. |
+| Attendees | The people who join the call, and the only people invited. Their calendars are what gets checked for conflicts. Staffer doesn't add you automatically, so add yourself if you're joining. |
 | Provider | Read-only: **Google Meet**. There's no other option. |
 | Duration (minutes) | From 5 to 240, in steps of 5. Defaults to 30. |
 | Let the candidate pick a time | Off by default. When on, reveals a minimum notice, a maximum lead time, and optional specific date-and-time slots that replace the recurring windows for this step entirely. See the slot picker below. |
@@ -35,22 +35,29 @@ Before booking, Staffer checks the chosen time against your calendar and every a
 
 ## What gets sent
 
-When you schedule, Staffer creates a Google Calendar event with a Google Meet link. Google sends its invite to every attendee and to the candidate, if Staffer has their email. Staffer also emails the candidate the time, how to join and the agenda.
+When you schedule, Staffer creates a Google Calendar event with a Google Meet link. Google sends its invite to the attendees on the form and to the candidate, if Staffer has their email. Nobody else is added, including you. Staffer also emails the candidate the time, how to join and the agenda.
 
-You don't need to connect your own Google Calendar. Without it, Staffer schedules from a shared account and adds you as an attendee, so the invite still lands on your calendar. With it, you're the organizer. See [Calendar and availability](/companies/calendar).
+You don't need to connect your own Google Calendar. Without it, Staffer schedules from a shared account. With it, you're the organizer. Either way, the invite only reaches your calendar if you're on the attendee list. See [Calendar and availability](/companies/calendar).
+
+When **Let the candidate pick a time** is on, the candidate gets an email and a notification asking them to pick a time. They don't have to find the step on their own.
 
 ## Rescheduling and cancelling
 
-Use **Reschedule** or **Cancel meeting** in the step's **Step actions** menu. Both delete the calendar event and stop the notetaker from joining.
+Use **Reschedule** or **Cancel meeting** in the step's **Step actions** menu. Both delete the calendar event and stop the notetaker from joining. The duration, agenda, attendees and location are kept.
+
+For an interview you scheduled:
 
 - **Cancel meeting** tells attendees the meeting is cancelled.
-- **Reschedule** doesn't send a cancellation. The candidate gets a message from Staffer saying the interview is moving.
+- **Reschedule** doesn't send a cancellation. The candidate gets a message from Staffer saying the interview is moving. The step goes back to waiting for you to pick a new time.
 
-Either way, the step goes back to waiting, and the duration, agenda, attendees and location are kept.
+For an interview the candidate booked through the slot picker:
+
+- **Reschedule** cancels the booking and lets the candidate choose a new slot. They get an email asking them to.
+- **Cancel meeting** removes the event from everyone's calendar and hands the step back to you to set up again.
 
 ## The slot picker
 
-With **Let the candidate pick a time** on, the candidate picks from open slots instead of getting a fixed time. A slot only shows if every attendee is free. The picker only looks 14 days ahead. A longer **Maximum lead time** has no effect, but a shorter one narrows the window. If nothing is free, the candidate sees a notice that the hiring team will follow up.
+With **Let the candidate pick a time** on, the candidate picks from open slots instead of getting a fixed time. A slot only shows if every attendee is free, across every calendar they've connected or added as a feed. Meetings an attendee has declined don't block a slot. The picker only looks 14 days ahead. A longer **Maximum lead time** has no effect, but a shorter one narrows the window. If nothing is free, the candidate sees a notice that the hiring team will follow up.
 
 ## During the call
 
@@ -74,7 +81,10 @@ The transcript, recording and evaluation are deleted six months after the applic
 
 <AccordionGroup>
   <Accordion title="Do I need to connect my Google Calendar before scheduling interviews?">
-    No. Without one, Staffer schedules from a shared account and adds you as an attendee, so the invite still reaches your calendar. Connect one, or add an iCal feed, so Staffer can check when you're busy.
+    No. Without one, Staffer schedules from a shared account. Add yourself to the attendees if you're joining, since only the people on the form are invited. Connect a calendar, or add an iCal feed, so Staffer can check when you're busy.
+  </Accordion>
+  <Accordion title="Why didn't I get an invite to an interview I scheduled?">
+    Scheduling doesn't add you automatically. Only the attendees on the form are invited, so add yourself when you schedule.
   </Accordion>
   <Accordion title="Does turning off Record & transcribe stop the notetaker from joining?">
     Yes. You get the scheduled call, but no recording, transcript or evaluation.
