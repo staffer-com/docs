@@ -4,7 +4,10 @@ const issue: Issue = {
   subject: "Reference checks, interviews in your real free time, and more",
   preview: "Staffer sends the requests, follows up with referees and summarises what they said.",
   title: "Reference checks, interviews in your real free time, and more",
-  hero: { src: "hero-default.jpg", alt: "Staffer product update" },
+  hero: {
+    src: "2026-10-05-hero.png",
+    alt: "Setup screen for a Reference check step, with a choice of how referees answer: Questionnaire, AI chat or Phone call, and a list of questions for referees.",
+  },
   intro:
     "Here's what shipped since the last update. The full list is in the [changelog](https://docs.staffer.com/changelog).",
   sections: [
@@ -12,7 +15,7 @@ const issue: Issue = {
       heading: "Reference checks without the chasing",
       body: [
         "Add a reference check step to any hiring process. The candidate sends their referees. Staffer sends each one a request, follows up with reminders, collects the answers and summarises them for your team.",
-        "Referees answer the way that suits them: a short questionnaire, a conversation with Staffer's AI, or by phone. What they say sits next to everything else you know about the candidate, not in someone's notes. You read the summary and decide what it means.",
+        "Choose how referees answer: a short questionnaire, an AI chat or a phone call, with your own questions. What they say sits next to everything else you know about the candidate, not in someone's notes. You read the summary and decide what it means.",
       ],
       link: { label: "Learn more here.", href: "https://docs.staffer.com/companies/process-steps" },
     },
