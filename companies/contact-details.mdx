@@ -1,6 +1,6 @@
 ---
 title: "Get contact details"
-description: "Look up a candidate's email for $1.50, or add an email or phone number yourself."
+description: "Look up a candidate's email and pay only when one is found, or add an email or phone number yourself."
 icon: "id-card"
 ---
 
@@ -8,13 +8,27 @@ Profiles in Staffer's candidate database don't include emails or phone numbers. 
 
 ## Request contact info
 
-On a candidate's profile panel, click **Request contact info**. Staffer uses the LinkedIn URL on their profile to look for a work or personal email with an outside data provider. It looks up one candidate at a time.
+On a candidate's profile panel, click **Request contact info**. Staffer looks for a work or personal email with an outside data provider. It searches by the LinkedIn URL on their profile, or by their first name, last name and company when there's no URL. It looks up one candidate at a time.
 
-- If there's no LinkedIn URL on file at all, nothing happens and you're not charged.
-- Otherwise, it usually costs $1.50 in credits, whether or not an email comes back. If the data provider doesn't recognize the profile at all, you're not charged.
-- Any emails it finds are saved to that candidate and shared across every job they're on in your workspace, not only this one.
-- It only ever looks up email. Phone numbers are never looked up automatically.
-- Clicking it again runs the lookup again and charges again.
+While it runs, the button reads **Looking up…**. The lookup keeps going if you reload the page, and teammates who open the same candidate see it running too.
+
+What it costs:
+
+- You only pay for what it finds: $0.50 in credits for a work email and $1.50 for a personal email. If it finds both, you pay for both.
+- If it finds nothing, you pay nothing.
+- Your workspace needs credits left to start a lookup.
+
+What you see when it's done:
+
+- **Found:** the email shows in the **Email** row, and you get a "Contact details found." message. A **May bounce** badge means the address belongs to a domain that accepts any address, so the email might not arrive.
+- **Not found:** the button is replaced by "No contact details found" and the time of the lookup.
+- **Failed:** the button reads **Try again**. You can retry after 10 minutes, up to three times a day.
+
+After a lookup that finds an email or finds nothing, you can't run it again for that candidate for 30 days. Asking again sooner would return the same answer.
+
+If a profile has neither a LinkedIn URL nor a name and company, there's nothing to search by. You'll see "There is not enough on this profile to look up contact details." and you're not charged.
+
+Any emails it finds are saved to that candidate and shared across every job they're on in your workspace, not only this one. It only ever looks up email. Phone numbers are never looked up.
 
 ## Add an email or phone yourself
 
@@ -22,7 +36,9 @@ On the profile panel, click **+ Add** next to **Email** or **Phone** and type it
 
 ## The recipient picker when you message someone
 
-When you compose a message to a candidate, **Select channel** shows every email saved for them, grouped by type, with a **Primary** badge on the preferred one. If none are saved yet, it reads **No saved emails yet.**, with a **+ Add email** option to type one in on the spot.
+When you compose a message to a candidate, it starts with the preferred email on their Staffer profile. If they've claimed their profile, that's the address they sign in with. The email printed on their CV is only used when nothing else is on file. The same default applies when you invite them to an interview.
+
+**Select channel** shows every email saved for them, grouped by type, with a **Primary** badge on the preferred one. If none are saved yet, it reads **No saved emails yet.**, with a **+ Add email** option to type one in on the spot.
 
 ## Contacted and consent indicators
 
@@ -39,7 +55,7 @@ Requesting contact info and adding an email or phone by hand both need the membe
 
 <AccordionGroup>
   <Accordion title="Does Request contact info always find an email?">
-    No. It can find nothing and still cost $1.50. You're not charged when the profile has no LinkedIn URL, or when the data provider doesn't recognize the profile.
+    No. When it finds nothing, you pay nothing. You only pay for each email it finds: $0.50 for a work email, $1.50 for a personal email.
   </Accordion>
   <Accordion title="Can I look up a phone number the same way?">
     No. Phone numbers are always added by hand, using **+ Add** on the profile panel.
@@ -47,7 +63,7 @@ Requesting contact info and adding an email or phone by hand both need the membe
   <Accordion title="Why does a candidate show 'No consent' right after I promote them?">
     They haven't been through the consent step on their own apply or portal flow yet. It's normal for a newly sourced candidate and isn't something you need to fix.
   </Accordion>
-  <Accordion title="If I click Request contact info twice, do I pay twice?">
-    Yes. Each click runs the lookup again and charges again.
+  <Accordion title="Can I run the lookup again for the same candidate?">
+    Not for 30 days after a lookup that found an email or found nothing. If a lookup failed, you can try again after 10 minutes, up to three times a day.
   </Accordion>
 </AccordionGroup>
