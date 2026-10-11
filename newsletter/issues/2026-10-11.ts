@@ -27,7 +27,7 @@ const issue: Issue = {
     {
       heading: "Contact lookups only charged when an email is found",
       body: [
-        "Request contact info now charges only for what it finds: $0.50 for a work email, $1.50 for a personal email. A lookup that finds nothing costs nothing. Before, a lookup usually cost $1.50, found or not.",
+        "Request contact info now charges only for the emails it finds. A lookup that finds nothing costs nothing. Before, you paid for most lookups, found or not.",
         "It works on more profiles too. With no LinkedIn URL, it searches by name and company. A lookup in progress keeps going if you reload, and teammates see it running, so two people don't pay for the same person.",
         "It still only finds emails. Phone numbers you add yourself.",
       ],
