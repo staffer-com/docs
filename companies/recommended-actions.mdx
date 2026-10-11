@@ -69,18 +69,25 @@ Staffer only suggests a rejection message for someone who applied, replied or co
 | Title | Appears when | Acting on it |
 |---|---|---|
 | **Reply to their message** | They messaged you and you haven't replied | Opens a composer pre-filled with an AI-drafted reply. |
+| **Mark not interested** | Their latest reply reads as a no | Shows their message and the reason, with a composer pre-filled with an AI-drafted reply. Sending it moves them to Not interested. **Mark without replying**, in the **…** menu, moves them without a message. |
 | **Reject** | A completed interview or questionnaire recommends rejecting, or a completed step scored below its threshold | Opens a composer pre-filled with the rejection message. |
 | **Advance to In progress** / **Advance to Offer** | A completed interview or questionnaire recommends advancing | Opens a composer (if advancing to Offer) or a stage-change control. |
 | The step's own title, or **Send message** | The next open step is a message step assigned to you | Opens a composer seeded with the step's own message. Sending also completes the step. |
 | The step's own title or kind | The next open step is any other kind, assigned to you | Opens that step's editor. |
 | **Waiting on `<name>`** | The next open step is assigned to someone else | Nothing to act on. Disabled. |
 
+### When a reply reads as a no
+
+Staffer reads every reply a candidate sends. If it reads as a no, the message gets a purple **Sounds not interested** badge in the thread, and the next action becomes **Mark not interested**. The card shows the reason in one sentence, or "Their last message reads as a no."
+
+It's only a suggestion. Staffer never moves the candidate itself. You confirm the move by sending the reply or by choosing **Mark without replying**. If you think the AI read it wrong, reply as usual instead.
+
 ## Urgency
 
 Every next action has a priority: low, medium, high or critical. It shows with the same bars and colors as on [candidate lists](/companies/candidates-list). The most time-sensitive situations, such as an unanswered message after 3 or more days, or an unsent offer, show as critical.
 
 <Note>
-The badge says **AI recommendation**, but fixed rules pick the action, based on the stage, what has happened and how the candidate compares with others in the job. AI only writes the draft reply for **Reply to their message**.
+The badge says **AI recommendation**, but fixed rules pick the action, based on the stage, what has happened and how the candidate compares with others in the job. AI writes the draft replies for **Reply to their message** and **Mark not interested**, and reads each reply to decide whether it sounds like a no.
 </Note>
 
 ## Speed action: work through several at once
