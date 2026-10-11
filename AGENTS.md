@@ -66,6 +66,7 @@ Candidate pages avoid internal words entirely: never "corpus", "overlay", "snaps
 - State the role needed when a member can't do something
 - Use `<Steps>` for procedures of 3 or more steps, `<AccordionGroup>` for "Common questions", at most two callouts per page
 - Avoid a bare `<` before a number in prose (MDX breaks). Write "under 40", not `<40`. Avoid raw `{...}` in prose
+- Escape dollar signs before amounts: write `\$1.50`, not `$1.50`. Two unescaped amounts in one paragraph render as LaTeX math
 
 ## Content boundaries
 
