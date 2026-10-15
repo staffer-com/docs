@@ -18,7 +18,7 @@
 |---|---|---|
 | Get started | `index.mdx`, `get-started/` | What Staffer is, quickstart, key concepts, roles, general FAQ |
 | For companies | `companies/` | One page per feature or task for recruiters and hiring teams |
-| Admin | `pricing/`, `admin/` | Plans, credits and billing, organization settings, compliance and privacy |
+| Admin | `pricing/`, `admin/` | Plans and billing, organization settings, compliance and privacy |
 | For candidates | `candidates/` | The candidate portal, applying, steps, messages, privacy |
 | Academy | `academy/` | Opinionated how-to guides that combine features (writing criteria, designing a process) |
 | Changelog | `changelog.mdx` | Shipped changes, newest first |
@@ -42,7 +42,8 @@ Use exactly these words:
 | next action | recommendation, action item |
 | process, step | pipeline, workflow (a stage is not a step) |
 | workspace, organization | account, company, tenant |
-| credits | balance, tokens |
+| active job (**Qualifying** or **Open**, what a plan is priced on) | active role, seat, slot |
+| searches, AI interviews (the plan's shared monthly pool) | credits, balance, tokens |
 | share link | public link |
 | talent pool | CRM, database |
 
@@ -60,7 +61,7 @@ Candidate pages avoid internal words entirely: never "corpus", "overlay", "snaps
 - No em dashes or semicolons in our own prose. Exact UI strings that contain an em dash are quoted as they appear
 - No italics, exclamation marks or emoji
 - No marketing words: AI-powered, seamless, powerful, effortless, robust, comprehensive, leverage, unlock, empower, simply, just, easily
-- Say what happens after an action: emails sent, credits used, whether it can be undone
+- Say what happens after an action: emails sent, searches or AI interviews used, whether it can be undone
 - State at least one real limit or catch on most pages
 - Say who decides when AI is involved: what the AI does and what a person does
 - State the role needed when a member can't do something

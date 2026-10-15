@@ -93,9 +93,9 @@ In **Settings** → **Workspace** → **Preferences**, under Sourcing:
 - **Maximum sourcing results** (25, 50, 75 or 100) sets how many people one search returns. Higher numbers take longer.
 - **Default countries** is saved but currently has no effect on search results. Don't rely on it to narrow searches to specific countries: put the countries in your message instead.
 
-## Credits and running searches
+## Searches and your plan
 
-Running a search uses credits: every query, rerank and score the agent runs is billed individually, not as a flat price per search. Your balance is checked before the chat turn starts, not while the search runs, so a search that's already going always finishes, even if the balance runs out partway through.
+Every search the agent runs uses one of your organization's searches for the month. Your plan adds 50 a month for each job it includes, and you can buy more as an add-on. Scoring the people it finds doesn't cost anything extra. See [How pricing works](/pricing/how-it-works).
 
 <Warning>
 You can't cancel a running search. Clicking **Stop** stops the reply in your chat, not the search itself: it keeps running on the server and its results still land in Scouting. **Delete search** removes the group afterward but doesn't stop work already in progress.
@@ -112,9 +112,6 @@ Viewers and reviewers can open jobs and read chat, but the agent won't search, s
 <AccordionGroup>
   <Accordion title="Can I filter a search by department or seniority?">
     Seniority filtering mostly works. Department and function filtering doesn't do anything right now, even though you can ask for it. Describe the role in your message instead and let the scoring sort out fit.
-  </Accordion>
-  <Accordion title="Does a search cost a fixed number of credits?">
-    No. Cost scales with how many rounds ran and how many candidates got scored. There's no flat "credits per search" price.
   </Accordion>
   <Accordion title="Can I stop a search once it's running?">
     No. **Stop** ends the agent's reply in your chat, but the search carries on and its results still arrive on the **Scouting** tab. Delete the search afterwards if you don't want it.
