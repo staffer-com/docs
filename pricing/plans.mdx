@@ -1,61 +1,89 @@
 ---
 title: "Plans"
-description: "Starter, Growth, and Enterprise exactly as they appear on the Plans page, and how the top-up bonus works."
+description: "Starter, Team, Pro and Enterprise: prices, what each includes, add-ons, and how to change plan."
 icon: "layers"
 ---
 
-Staffer has three plans: **Starter**, **Growth**, and **Enterprise**. All three draw from the same shared pool of credits. What changes between them is monthly commitment, bonus credits, and how many workspaces you can run.
+Staffer has four plans: **Starter**, **Team**, **Pro** and **Enterprise**. They differ in how many active jobs they include and what you pay per job. Prices are in USD, per month.
 
-## The three plans
+## The four plans
 
-| Plan | Price | What you get |
+| Plan | Active jobs | Price per job | Monthly | Annual | Searches a month | AI interviews a month |
+|---|---|---|---|---|---|---|
+| **Starter** | 1 | \$399 | \$399 | \$4,788 | 50 | 100 |
+| **Team** | 3 | \$349 | \$1,047 | \$12,564 | 150 | 300 |
+| **Pro** | 10 | \$299 | \$2,990 | \$35,880 | 500 | 1,000 |
+| **Enterprise** | More than 10 | Custom | Custom | Custom | 50 per job | 100 per job |
+
+Annual is 12 times the monthly price, with no discount. Every plan includes as many members as you invite. A job counts as active while it's **Qualifying** or **Open**. See [How pricing works](/pricing/how-it-works).
+
+## Pick a plan
+
+Match the plan to how many jobs you run at the same time.
+
+| Active jobs | Plan | Monthly |
 |---|---|---|
-| **Starter** | Free | \$100 in signup credits, 1 workspace, no monthly commitment, top up any time |
-| **Growth** | \$3,000 / month | 5% bonus credits on every top-up, \$3,150 credited monthly, unlimited workspaces, cancel any time with coverage to period end |
-| **Enterprise** | Custom | Negotiated bonus (typically 10%+), bank-transfer invoicing, unlimited workspaces, priority support and activation by the Staffer team |
+| 1 | **Starter** | \$399 |
+| 2 | **Starter** plus 1 extra job | \$798 |
+| 3 to 8 | **Team**, plus an extra job from the 4th | \$1,047 to \$2,792 |
+| 9 or 10 | **Pro** | \$2,990 |
+| More than 10 | **Pro** plus extra jobs, or **Enterprise** | From \$3,289 on **Pro** |
 
-## How the bonus works
+Two jobs on **Starter** cost less than **Team**. From 9 jobs, **Pro** costs less than **Team** plus extras.
 
-The bonus applies to every dollar you pay Staffer, not only your monthly commitment. A one-off top-up and your monthly subscription invoice both get your plan's bonus percentage.
+## Add-ons
 
-On **Growth**, that bonus is 5%. Top up \$1,000 and you get \$1,050 in credits: \$1,000 base plus \$50 bonus. The same 5% is why the \$3,000 monthly commitment lands as \$3,150, the number shown on the Growth tile itself.
+| Add-on | Price | Per unit |
+|---|---|---|
+| 50 extra searches | \$100 | \$2.00 per search |
+| 100 extra AI interviews | \$150 | \$1.50 per interview |
+| Extra active job | Your plan's price per job, per month | \$399 on **Starter**, \$349 on **Team**, \$299 on **Pro** |
 
-**Starter** carries no bonus. **Enterprise**'s bonus is set in your contract, typically 10% or more.
+An extra active job also adds 50 searches and 100 AI interviews a month to your pool.
 
-## Upgrading to Growth
+## Examples
 
-From **Settings** → **Organization** → **Billing**, click **Manage plan**. That opens the Plans page. Choosing **Growth** takes you to Stripe's hosted checkout to add a card and start the subscription. Once it's active, every future top-up gets the 5% bonus, and your first invoice credits \$3,150 to the shared pool.
+| You run | Plan | Monthly | Annual |
+|---|---|---|---|
+| 4 active jobs | **Team** plus 1 extra job: 4 × \$349 | \$1,396 | \$16,752 |
+| 5 active jobs | **Team** plus 2 extra jobs: 5 × \$349 | \$1,745 | \$20,940 |
+| 9 active jobs | **Pro** | \$2,990 | \$35,880 |
 
-## Downgrading or cancelling
+With 4 active jobs on **Team**, your organization gets 200 searches and 400 AI interviews a month.
 
-Click **Downgrade to Starter**. This doesn't cut you off immediately: coverage runs to the end of your current billing period, then the plan lapses to **Starter**. Changed your mind before the period ends? Click **Resume plan** to stay on **Growth** without interruption.
+## Change your plan
 
-Downgrading doesn't touch workspaces you already have. On **Starter** you can't create another workspace beyond your first, but any extra workspaces you made while on **Growth** keep working. Nothing gets deleted or locked.
+From **Settings** → **Organization** → **Billing**, click **Manage plan**. That opens the Plans page. Pick a plan and Staffer takes you to Stripe's hosted checkout to add a card and start the subscription. You add extra jobs and buy add-ons from **Billing** too.
 
-## Starter's one-workspace limit
+Cancelling doesn't cut you off. Your plan runs to the end of the current billing period, and you can click **Resume plan** before then to keep it.
 
-**Starter** caps an organization at 1 workspace. Trying to add another from the workspace switcher (**+ New workspace**) is disabled, with a prompt to upgrade. See [Workspaces](/admin/workspaces) for how workspace creation works day to day.
+Only organization owners and admins can open **Billing** or change the plan.
 
 ## Enterprise
 
-**Enterprise** isn't self-serve. Click **Contact sales** and Staffer sets up your plan, your bonus rate, and bank-transfer invoicing, and activates it for you.
+**Enterprise** is for more than 10 active jobs. The price per job is set in your contract, and each job adds 50 searches and 100 AI interviews a month to your pool. Staffer invoices your organization directly and you pay by bank transfer.
+
+**Enterprise** isn't self-serve. Click **Contact sales** and Staffer sets up your plan and activates it for you. Staffer can also build a custom plan with its own number of jobs, searches and AI interviews.
 
 ## Common questions
 
 <AccordionGroup>
-  <Accordion title="Does the bonus work the same way on Enterprise?">
-    Yes. Enterprise's bonus percentage is set in your contract instead of fixed at 5%, but it applies to every top-up and every invoice the same way Growth's does.
+  <Accordion title="Do Draft or Planned jobs cost anything?">
+    No. Only **Qualifying** and **Open** jobs count toward your plan. **Draft**, **Planned** and **Closed** jobs are free.
   </Accordion>
-  <Accordion title="What happens if I cancel Growth and want it back later?">
-    Before your period ends, click Resume plan to stay on Growth without a gap. If you've already lapsed to Starter, upgrading again works the same way it did the first time.
+  <Accordion title="Is paying annually cheaper?">
+    No. Annual is 12 times the monthly price.
+  </Accordion>
+  <Accordion title="What happens if we close a job?">
+    It stops counting as active. You can open another job in its place without paying for an extra one.
   </Accordion>
 </AccordionGroup>
 
 <CardGroup cols={2}>
-  <Card title="What uses credits" icon="list-checks" href="/pricing/what-you-pay">
-    Which actions are metered, and the one fixed price.
+  <Card title="How pricing works" icon="credit-card" href="/pricing/how-it-works">
+    Active jobs, the shared pool, and what carries over.
   </Card>
-  <Card title="Credits, top-ups and spend caps" icon="wallet" href="/admin/credits">
-    Add credits, cap a workspace's spend, and see what happens at zero.
+  <Card title="Payment and invoices" icon="receipt" href="/pricing/billing">
+    Add a card, billing details, and where your invoices are.
   </Card>
 </CardGroup>

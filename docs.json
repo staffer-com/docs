@@ -178,8 +178,6 @@
             "pages": [
               "pricing/how-it-works",
               "pricing/plans",
-              "pricing/what-you-pay",
-              "admin/credits",
               "pricing/billing",
               "pricing/faq"
             ]
@@ -353,7 +351,7 @@
     },
     {
       "source": "/untitled-page-3",
-      "destination": "/admin/credits"
+      "destination": "/pricing/how-it-works"
     },
     {
       "source": "/untitled-page-4",
@@ -425,7 +423,15 @@
     },
     {
       "source": "/companies/usage-and-invoices",
-      "destination": "/admin/credits"
+      "destination": "/pricing/how-it-works"
+    },
+    {
+      "source": "/admin/credits",
+      "destination": "/pricing/how-it-works"
+    },
+    {
+      "source": "/pricing/what-you-pay",
+      "destination": "/pricing/how-it-works"
     }
   ],
   "seo": {

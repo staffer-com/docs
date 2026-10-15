@@ -8,13 +8,13 @@ icon: "receipt"
 
 ## Current plan
 
-Shows your plan's name, price, and highlights, plus a badge: **Current plan**, or **Ending** with a date if you've cancelled and coverage is running out its period. Click **Manage plan** to upgrade, downgrade, or contact sales for Enterprise. See [Plans](/pricing/plans).
+Shows your plan's name, price, and highlights, plus a badge: **Current plan**, or **Ending** with a date if you've cancelled and coverage is running out its period. Click **Manage plan** to change plan, add extra jobs, buy add-ons, or contact sales for Enterprise. See [Plans](/pricing/plans).
 
 ## Payment method
 
-Until you add one, this reads "No card on file." Click **Add payment method** and Staffer takes you to Stripe's hosted checkout to save a card. You need a card on file before you can add credits. See [Credits, top-ups and spend caps](/admin/credits).
+Until you add one, this reads "No card on file." Click **Add payment method** and Staffer takes you to Stripe's hosted checkout to save a card.
 
-Once a card is saved, this section shows its brand, last 4 digits, and expiry, with **Replace card** and **Remove card** actions. Removing a card doesn't touch your existing credits: it only detaches the payment method from Stripe.
+Once a card is saved, this section shows its brand, last 4 digits, and expiry, with **Replace card** and **Remove card** actions. Removing a card only detaches the payment method from Stripe. Your plan and past invoices stay as they are.
 
 ## Bank transfer
 
@@ -26,7 +26,7 @@ Legal company name, country, address, and a tax ID (Staffer supports EU VAT, UK 
 
 ## Billing manager email
 
-One address on file. It's shown to your team when a workspace runs out of credits, as the place to ask for a top-up, and it separately receives billing notifications like low-balance alerts. Only organization owners and admins can change it.
+One address on file. It receives billing notifications. Only organization owners and admins can change it.
 
 ## Invoices
 
@@ -34,7 +34,7 @@ One address on file. It's shown to your team when a workspace runs out of credit
 
 ## Currency
 
-Your credits, spend caps, and top-ups are always priced in USD. An individual Stripe invoice can show a different currency if that's how it was billed, but the credit pool itself is USD only.
+Plans and add-ons are priced in USD. An individual Stripe invoice can show a different currency if that's how it was billed.
 
 ## Common questions
 
@@ -42,16 +42,16 @@ Your credits, spend caps, and top-ups are always priced in USD. An individual St
   <Accordion title="Why is Billing details greyed out?">
     It needs a card on file first, because it saves onto the same Stripe customer record as your payment method. Add a card, and the fields open up.
   </Accordion>
-  <Accordion title="Does removing my card affect my credits?">
-    No. Removing a card only detaches it from Stripe. Your credits and past invoices are untouched, and you can add a new card any time.
+  <Accordion title="Does removing my card cancel my plan?">
+    No. Removing a card only detaches it from Stripe. Your plan and past invoices are untouched, and you can add a new card any time.
   </Accordion>
 </AccordionGroup>
 
 <CardGroup cols={2}>
   <Card title="Plans" icon="layers" href="/pricing/plans">
-    Starter, Growth, and Enterprise, and how the bonus works.
+    Starter, Team, Pro and Enterprise, and add-ons.
   </Card>
   <Card title="Billing FAQ" icon="circle-help" href="/pricing/faq">
-    Refunds, invoices, per-seat fees, and more.
+    Active jobs, carry-over, invoices, and more.
   </Card>
 </CardGroup>
