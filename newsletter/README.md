@@ -13,16 +13,16 @@ This folder is in `.mintignore`, so none of it shows up on the docs site.
 
 ## Weekly flow
 
-1. Ship the feature docs first (the MDX pages in the repo root). Newsletter sections link to them.
-   Add a new `<Update>` block to the top of `changelog.mdx` with every item from the week, including small fixes. The newsletter covers the highlights, the changelog covers everything.
-2. Copy `issues/_example.ts` to `issues/2026-09-29.ts` and write the issue.
-3. Put images in `images/newsletter/` (hero 1200x675, screenshots 1200 wide, PNG or JPG, never SVG).
-4. Preview: `npm run dev`, open http://localhost:3030.
-5. Push to `main` so Mintlify deploys the images. Emails point at the hosted copies.
-6. `npm run draft -- issues/2026-09-29.ts` creates a broadcast **draft** in Resend. It doesn't send.
-7. In Resend, send a test to yourself, check it in Gmail, then send.
+In Claude Code, run `/product-update` and paste the release notes. It follows the steps below.
 
-`npm run render -- issues/<file>.ts` writes the final HTML to `out/` if you want to inspect it.
+1. Ship the feature docs first (the MDX pages in the repo root). Newsletter sections link to them.
+   Add an `<Update>` block to the top of `changelog.mdx` with every item, small fixes included. Use one block per ship date. The newsletter covers the highlights, the changelog covers everything.
+2. Copy `issues/_example.ts` to `issues/<date>.ts` and write the issue.
+3. Put images in `images/newsletter/` (hero 1200x675, screenshots 1200 wide, PNG or JPG, never SVG).
+4. Preview: `npm run render -- issues/<date>.ts`, then open `out/<date>.html` in a browser. (`npm run dev` shows `_example.ts`, not your issue.)
+5. Merge to `main` so Mintlify deploys the pages and images. Emails point at the hosted copies.
+6. `npm run draft -- issues/<date>.ts` creates a broadcast **draft** in Resend. It doesn't send.
+7. In Resend, send a test to yourself, check it in Gmail, then send.
 
 ## Writing an issue
 

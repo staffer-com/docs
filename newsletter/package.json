@@ -6,7 +6,8 @@
     "dev": "email dev --dir emails --port 3030",
     "render": "NODE_ENV=production tsx scripts/render.tsx",
     "draft": "NODE_ENV=production tsx scripts/draft.tsx",
-    "push-template": "NODE_ENV=production tsx scripts/push-template.tsx"
+    "push-template": "NODE_ENV=production tsx scripts/push-template.tsx",
+    "typecheck": "tsc -p ."
   },
   "dependencies": {
     "@react-email/components": "^1.0.12",
