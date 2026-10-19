@@ -1,0 +1,100 @@
+---
+title: "Connect Claude, ChatGPT or Cursor"
+description: "Work with your Staffer workspace from your own AI assistant: what it can do, what still needs your approval, and how to disconnect. In beta."
+icon: "plug"
+---
+
+You can connect your own AI assistant to a Staffer workspace and review jobs, candidates and your process without leaving it. This is in beta.
+
+This is separate from [the agent](/companies/the-agent), which lives inside Staffer. A connected assistant is the Claude, ChatGPT or Cursor you already use, reading from and working in Staffer for you.
+
+## Which assistants work
+
+- Claude
+- ChatGPT
+- Cursor
+- VS Code with GitHub Copilot
+- Gemini CLI
+
+**Settings** → **Connected apps** has a **Connect an assistant** guide for each one. Staffer connects through MCP (Model Context Protocol), the standard these assistants use for connectors.
+
+Staffer isn't listed in the Claude or ChatGPT directories yet, so you add it by hand with the guide.
+
+## Connect an assistant
+
+<Steps>
+  <Step title="Open the guide">
+    Go to **Settings** → **Connected apps** and follow the **Connect an assistant** guide for your assistant.
+  </Step>
+  <Step title="Pick a workspace and an access level">
+    When you connect, you pick one workspace and choose read-only or read-and-write access. The assistant only works in the workspace you picked.
+  </Step>
+  <Step title="Ask it something">
+    Ask about your jobs and candidates the way you'd ask a colleague. Every answer links straight back to the right page in Staffer, so you can check it there.
+  </Step>
+</Steps>
+
+## What it can do
+
+What the assistant can do follows your role in Staffer, and Staffer checks it on every request. A viewer who connects with read-and-write access still can't change anything a viewer can't change in the app. See [Roles and permissions](/get-started/roles-and-permissions).
+
+Staffer also gives the assistant ready-made prompts for common jobs:
+
+- A weekly review of your jobs and candidates
+- Reviewing a job
+- Preparing for an interview
+- Shortlisting
+- Drafting outreach
+
+Drafted outreach stays a draft. The assistant never sends it.
+
+## What still needs your approval
+
+The assistant can't do these on its own:
+
+- Move a candidate to a different stage
+- Send a message
+- Close a job
+- Send a share link
+- Publish a listing
+
+For each one, it asks you to approve it on a Staffer page first. One approval covers exactly one action. The assistant suggests the action, and you decide whether it happens.
+
+## Disconnect an assistant
+
+Go to **Settings** → **Connected apps** and click **Disconnect** next to the assistant. You can disconnect at any time.
+
+## The Staffer API
+
+The actions the agent and connected assistants use are also available as a public API, so your own integrations and scripts can build on Staffer directly.
+
+- It covers jobs, process steps, listings, searches, share links, applications, candidate profiles, the talent pool, segments, workspace settings, your own profile and calendar, analytics, billing and compliance.
+- Sign-in uses OAuth 2.1. What an integration can do follows the signed-in person's role, the same as in the app.
+- A full OpenAPI 3.1 description lets you generate client code automatically.
+- Retries are safe. Repeating a create or a send with the same key never creates a second record or sends a second email.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can the assistant do more than my role allows?">
+    No. Staffer checks your role on every request, whatever access level you picked when you connected.
+  </Accordion>
+  <Accordion title="Will the assistant message candidates on its own?">
+    No. Sending a message needs your approval on a Staffer page, one message at a time. Outreach it drafts is never sent from the assistant.
+  </Accordion>
+  <Accordion title="Can it see every workspace I'm in?">
+    No. It only works in the one workspace you picked when you connected.
+  </Accordion>
+  <Accordion title="Why can't I find Staffer in Claude's or ChatGPT's directory?">
+    It isn't listed there yet. Follow the **Connect an assistant** guide in **Settings** → **Connected apps** to add it by hand.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Work with the agent" icon="bot" href="/companies/the-agent">
+    The chat inside Staffer, and what it can see.
+  </Card>
+  <Card title="Roles and permissions" icon="key-round" href="/get-started/roles-and-permissions">
+    What each role can do, which also limits a connected assistant.
+  </Card>
+</CardGroup>

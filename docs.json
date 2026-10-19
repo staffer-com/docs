@@ -64,7 +64,8 @@
             "icon": "sparkles",
             "pages": [
               "companies/the-agent",
-              "companies/agent-actions"
+              "companies/agent-actions",
+              "companies/connect-an-assistant"
             ]
           },
           {
@@ -151,6 +152,7 @@
             "icon": "chart-spline",
             "pages": [
               "companies/talent-pool",
+              "companies/segments",
               "companies/analytics",
               "companies/notifications"
             ]
