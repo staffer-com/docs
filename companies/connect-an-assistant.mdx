@@ -12,22 +12,23 @@ This is separate from [the agent](/companies/the-agent), which lives inside Staf
 
 - Claude
 - ChatGPT
+- Claude Code
 - Cursor
 - VS Code with GitHub Copilot
 - Gemini CLI
 
-**Settings** → **Connected apps** has a **Connect an assistant** guide for each one. Staffer connects through MCP (Model Context Protocol), the standard these assistants use for connectors.
+Click **MCP** at the bottom of the sidebar, or go to **Settings** → **Account** → **Connected apps**, then click **Connect an assistant**. It shows the server URL to paste, `https://app.staffer.com/api/mcp`, and the steps for each assistant. Staffer connects through MCP (Model Context Protocol), the standard these assistants use for connectors.
 
-Staffer isn't listed in the Claude or ChatGPT directories yet, so you add it by hand with the guide.
+Staffer isn't listed in the Claude or ChatGPT directories yet, so you add it as a custom connector. On a Claude Team or Enterprise plan, an owner may need to add the connector first. In ChatGPT, you may need to turn on developer mode, depending on your plan.
 
 ## Connect an assistant
 
 <Steps>
   <Step title="Open the guide">
-    Go to **Settings** → **Connected apps** and follow the **Connect an assistant** guide for your assistant.
+    Click **Connect an assistant**, pick your assistant and follow its steps. Each one ends on a Staffer page that opens in your browser.
   </Step>
   <Step title="Pick a workspace and an access level">
-    When you connect, you pick one workspace and choose read-only or read-and-write access. The assistant only works in the workspace you picked.
+    On that page, choose the **Workspace** the assistant can use. It can always read jobs, candidates and searches. Turn on **Also make changes** to let it shortlist and move candidates and edit jobs. Then click **Connect**. The assistant only works in the workspace you picked.
   </Step>
   <Step title="Ask it something">
     Ask about your jobs and candidates the way you'd ask a colleague. Every answer links straight back to the right page in Staffer, so you can check it there.
@@ -50,19 +51,20 @@ Drafted outreach stays a draft. The assistant never sends it.
 
 ## What still needs your approval
 
-The assistant can't do these on its own:
+The assistant can't do these on its own, even with **Also make changes** on:
 
 - Move a candidate to a different stage
 - Send a message
 - Close a job
-- Send a share link
+- Create or send a share link
 - Publish a listing
+- Delete anything, such as a note, a step or a job
 
-For each one, it asks you to approve it on a Staffer page first. One approval covers exactly one action. The assistant suggests the action, and you decide whether it happens.
+For each one, it sends you to a Staffer page titled with the assistant's name and "wants to do this". The page says exactly what will happen, in which workspace. Click **Approve** or **Decline**. An approval covers that one action, once, and runs out after 10 minutes. The assistant suggests the action, and you decide whether it happens.
 
 ## Disconnect an assistant
 
-Go to **Settings** → **Connected apps** and click **Disconnect** next to the assistant. You can disconnect at any time.
+Go to **Settings** → **Account** → **Connected apps**. Each assistant shows its workspace, whether it can make changes, and when it was connected and last used. Click **Disconnect** next to it. The assistant loses access from its next request.
 
 ## The Staffer API
 
@@ -86,7 +88,7 @@ The actions the agent and connected assistants use are also available as a publi
     No. It only works in the one workspace you picked when you connected.
   </Accordion>
   <Accordion title="Why can't I find Staffer in Claude's or ChatGPT's directory?">
-    It isn't listed there yet. Follow the **Connect an assistant** guide in **Settings** → **Connected apps** to add it by hand.
+    It isn't listed there yet. Add it as a custom connector, following the **Connect an assistant** steps in **Settings** → **Account** → **Connected apps**.
   </Accordion>
 </AccordionGroup>
 

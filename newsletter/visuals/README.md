@@ -14,3 +14,6 @@ newsletter/visuals/shoot.sh references newsletter/visuals/out/references.png 120
 - One component per image, on warm white (`#F8F6F5`), cropped with a fade where it runs off the edge.
 - Copy finished PNGs to `images/newsletter/<date>-<name>.png`.
 - `icons-extra.jsx` adds Hugeicons the kit doesn't have (generated from `@hugeicons/core-free-icons` 4.3.5).
+- `logos/` holds assistant logos and the Staffer mark, copied from the app (`apps/web/public/assets/oauth-clients/`, `StafferMark.tsx`). `build.sh` copies them into `img/`, so a scene reads them as `assets['claude']`.
+- Draw from the production branch: `git -C ~/staffer grep -n -F "<UI string>" origin/production -- apps packages`, then `git -C ~/staffer show "origin/production:<path>"`.
+- A blank PNG means the scene threw. Open `http://127.0.0.1:8781/stills.html?g=<scene>` in a browser and read the console. Redeclaring a kit name (`count`, `badge`, `card`) is the usual cause.
