@@ -29,7 +29,7 @@ Use exactly these words:
 
 | Use | Not |
 |---|---|
-| job | role, position, req, vacancy (except the menu item **Close position**) |
+| job | role, position, req, vacancy (except exact UI labels: since 7 October 2026 the app says **Roles**, **New role**, **Delete role**, **Move to role…** and so on, and keeps **Close position**) |
 | brief | job description |
 | criteria, criterion (**Required** or **Preferred**) | requirements, skills |
 | the agent (company side) | copilot, AI assistant |
