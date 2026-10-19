@@ -1,17 +1,18 @@
 ---
 name: product-update
-description: Turn this week's Staffer release notes into shipped docs and a product update email. Updates the Mintlify docs pages, adds the changelog entry, writes the newsletter issue, opens the PR, and creates the Resend broadcast draft. Use this whenever someone pastes release notes, a list of shipped features or fixes, "this week's updates", or asks to update the docs, the changelog, the product update email or the newsletter for new features, even if they only mention one of those.
+description: Turn this week's Staffer release notes into shipped docs and a product update email. Updates the Mintlify docs pages, adds the changelog entry, writes the newsletter issue, draws its product images from the app's production code, opens the PR, and creates the Resend broadcast draft. Use this whenever someone pastes release notes, a list of shipped features or fixes, "this week's updates", or asks to update the docs, the changelog, the product update email or the newsletter for new features, even if they only mention one of those.
 argument-hint: "[paste this week's release notes]"
 ---
 
 # Weekly product update
 
-One set of release notes becomes four things, in this order:
+One set of release notes becomes five things, in this order:
 
 1. Updated docs pages (the source of truth)
 2. A changelog entry on `changelog.mdx` (everything that shipped)
 3. A newsletter issue in `newsletter/issues/` (the highlights, linking to the docs)
-4. A Resend broadcast draft, created only after the docs are live
+4. Product images for that issue: a hero and one per section, drawn from the app's production code
+5. A Resend broadcast draft, created only after the docs and images are live
 
 The order matters. The email links to docs pages and loads images from `docs.staffer.com`, so the docs have to be merged and deployed before anyone sends the email.
 
@@ -69,7 +70,9 @@ A change candidates notice often needs both a company page and a candidate page.
 
 **Don't invent details.** Release notes are terse. Don't fill the gaps with guesses: no UI labels, keyboard shortcuts, setting locations, default values, limits, or scope (which interview modes, which plans) that the notes don't state. Write the detail generally and add it to your open questions. A vague sentence is fixable. A wrong shortcut in the docs misleads every reader until someone notices.
 
-**Ask for screenshots, but don't wait for them.** A screenshot of new UI gives exact labels and defaults the notes never mention. (One screenshot of the AI interview settings gave the tab name, every field and the 0.85x default speed.) Keep going with general wording and the default hero, and list the screenshots you need under open questions.
+**Read the production code for exact labels.** The app's code is in `~/staffer`. Run `git -C ~/staffer fetch -q`, then find each feature's UI string on the production branch: `git -C ~/staffer grep -n -F "<UI string>" origin/production -- apps packages`. Read the component with `git -C ~/staffer show "origin/production:<path>"`. It gives the exact labels, defaults, limits and empty-state wording the notes never mention. (One read of the connected apps code gave the sidebar item, the settings path, the server URL, the access toggle and the 10-minute approval window.) Read only, never switch branches there.
+
+**Check the notes against production.** Release notes often say "shipped to staging". If a feature's strings aren't on `origin/production`, it isn't live: leave it out of the docs and the email, and say so in your report.
 
 ## Step 2: Update the docs pages
 
@@ -112,7 +115,7 @@ Copy `newsletter/issues/_example.ts` to `newsletter/issues/<today>.ts` and repla
 - **Each section:** the heading says what got easier, the body says what Staffer now does, and it ends with a `Learn more here.` link to the docs page. `COPYWRITING.md` lists "Learn more" as a CTA to avoid. This link is a deliberate exception: it's the house format, and the button carries the concrete action.
 - **Which page to link:** the company-side page, even for a change candidates see, because the email goes to company users.
 - **Button:** `{ label: "View Update", href: "https://docs.staffer.com/changelog" }`. The label has to say where the button goes. A "View Update" button that opened the app went out once already.
-- **Hero:** if the user gives you a product screenshot, save it as `images/newsletter/<today>-hero.png` (about 1200 wide, PNG or JPG, never SVG, since Gmail drops SVG). Otherwise use `hero-default.jpg`.
+- **Images:** every issue has a product hero and one product image per section. Step 5 makes them. Never ship `hero-default.jpg` unless the user asks for it.
 - **Copy rules:** no em dashes, no semicolons, no bold or italics in prose, contractions throughout. No invented numbers, quotes or roadmap items. Where it fits, add an honest limit ("voice and video interviews only"), because a limit makes the rest believable.
 
 A section at the right level:
@@ -120,7 +123,20 @@ A section at the right level:
 > **AI interviews that leave room to think**
 > A candidate pauses to think. The agent now waits. Voice interviews leave more room between responses, and the agent ignores thinking sounds and filler words instead of treating them as an answer. Learn more here.
 
-## Step 5: Check it
+## Step 5: Draw the product images
+
+Every issue ships a hero and one image per section, drawn as code in `newsletter/visuals/` with the `staffer-motion-kit` and shot to PNG with headless Chrome. Don't wait for screenshots. Read `newsletter/visuals/README.md` first, and load the `staffer-motion-kit` skill.
+
+1. Pick one screen per section: the component that shows the change best (a dialog, a table, a menu opened on the new item). The hero is the headline section's screen.
+2. Find that component on `origin/production` in `~/staffer` (see Step 1). Every label, string, color, size and icon comes from that code, never from memory or the release notes.
+3. Write one scene per image in `newsletter/visuals/scenes/<name>.tsx`. Copy the closest existing scene. Open it with a comment naming the source component and the classes you matched.
+4. One component per image, on warm white, at 2x app scale. Drop to 1.5x or 1.6x only when a wide table or a page needs it to fit. Fade the crop into the page. Use the kit's persona photos and made-up names and companies (like Nordlys Retail), never real customers or candidates.
+5. Icons come from `icon(name, …)`, the app's Hugeicons. If the kit lacks one, map the app's name through `packages/ui/src/icons.ts`, generate it from `@hugeicons/core-free-icons@4.3.5` the way `staffer-role-film/scripts/hugeicons-kit.mjs` does, and add it to `icons-extra.jsx`. Logos and marks go in `newsletter/visuals/logos/`, copied from the app.
+6. Run `newsletter/visuals/build.sh`, serve the folder, and shoot each scene with `shoot.sh` (commands in the README). Look at every PNG before you use it. Overlapping columns, cut-off tabs and blank images all happen.
+7. Copy the finished PNGs to `images/newsletter/<today>-<name>.png`. The hero is `<today>-hero.png` at 1200x675. Section images are 1200 wide and up to about 900 tall.
+8. In the issue, set `hero` and an `image` on every section. Alt text says what the picture shows, in plain words, with no em dash even when the UI string has one.
+
+## Step 6: Check it
 
 Run these from the repo root.
 
@@ -156,15 +172,15 @@ npx -y -p node@22 -p mint@latest -c "mint broken-links"
 
 The Mintlify CLI refuses to run on Node 25, which is why this goes through `node@22`.
 
-For a visual check, open `newsletter/out/<today>.html` in a browser. Don't use `npm --prefix newsletter run dev` for this. It previews `_example.ts`, not your issue.
+For a visual check, open `newsletter/out/<today>.html` in a browser. Its images load from `docs.staffer.com`, so they're broken until the deploy. To see them before that, copy the HTML with the image URLs pointed at your local `images/` folder. Don't use `npm --prefix newsletter run dev` for this. It previews `_example.ts`, not your issue.
 
-## Step 6: Commit and open the PR
+## Step 7: Commit and open the PR
 
-- Commit the docs pages, `docs.json`, `changelog.mdx`, the issue file and any hero image together. Use the session's commit attribution.
+- Commit the docs pages, `docs.json`, `changelog.mdx`, the issue file, the images in `images/newsletter/` and the scene sources in `newsletter/visuals/` together. Use the session's commit attribution.
 - Push with `git push -u origin update-<today>` and open the PR with `gh pr create`.
 - Leave the merge to the user unless they ask you to merge. Auto mode blocks merging without review. Give them the command: `gh pr merge <number> --merge`.
 
-## Step 7: After the merge, create the draft
+## Step 8: After the merge, create the draft
 
 Skip this if the user chose to hold the email.
 
@@ -189,7 +205,9 @@ This creates a Resend broadcast draft for the **Company users** segment and the 
 - **Template sync.** After changing `newsletter/emails/product-update.tsx`, run `npm --prefix newsletter run push-template` to update the "Product update" template in Resend.
 - **`.mintignore` uses gitignore rules.** Anchor root folders (`/newsletter/`). An unanchored `newsletter/` also hides `images/newsletter/`, and the email images 404.
 - **Email clients.** PNG or JPG only. Desktop Outlook ignores rounded corners. Keep `mso-padding-alt` at `0px`.
-- **Secrets.** `.env` in the repo root holds `RESEND_API_KEY`. Load it with `set -a; . ./.env; set +a` and never print it. It's gitignored, so keep it out of commits.
+- **Secrets.** `.env` in the repo root holds `RESEND_API_KEY`. Load it with `set -a; . ./.env; set +a` and never print it. It's gitignored, so keep it out of commits. A worktree has no `.env`: load the main checkout's with `set -a; . "$(git rev-parse --path-format=absolute --git-common-dir)/../.env"; set +a`.
+- **zsh and `git show`.** In zsh, `"$P:apps/..."` breaks because `:a` is a path modifier. Write `"${P}:apps/..."`.
+- **Blank still.** A scene that redeclares a kit name (`count`, `badge`, `card`, `photo`) renders blank. Open `http://127.0.0.1:8781/stills.html?g=<scene>` in a browser and read the console.
 - **Audience.** The segment and topic IDs live in `newsletter/scripts/draft.tsx`. Change them there if the user wants a different audience.
 
 ## Report back
@@ -199,5 +217,5 @@ Keep it short:
 - The PR link, and one line per docs page you changed or added
 - The newsletter subject and its section headings, or "held for next week"
 - Open questions: every detail you had to write generally because the notes didn't say
-- Screenshots that would help, and what each would pin down
+- The images, one line each: what screen it shows and which component it was drawn from
 - Next steps, with the exact merge and draft commands
