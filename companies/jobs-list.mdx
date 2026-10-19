@@ -17,7 +17,7 @@ A chat panel sits on the left (the **Ask anything** page chat described in [Work
 - **Display options** covers **Sort by** (16 options, including Updated, Name, Deadline, Function, Version, Created, and Candidates, each ascending or descending) and **Columns**. Name always shows. Function, Candidates, Deadline, Updated, Listing and Status show by default. Engagement, Location, Version and Created are available but off by default.
 
 <Note>
-  The **Status** filter and the **Status** column aren't the same thing. The filter works on the listing: **Published**, **Draft**, **Closed** or **Not listed**. The column shows the position: **Open** or **Closed**, meaning whether the job still takes candidates. A job can be open with no listing at all. To group open and closed positions, sort by **Status** instead.
+  The **Status** filter and the **Status** column aren't the same thing. The filter works on the listing: **Published**, **Draft**, **Closed** or **Not listed**. The column shows the job's own status: **Draft**, **Planned**, **Qualifying**, **Open** or **Closed**. Only **Qualifying** and **Open** jobs take candidates, and a job can be open with no listing at all. To group jobs by status, sort by **Status** instead. See [Job statuses](/companies/projects#job-statuses).
 </Note>
 
 **Candidates** shows a live count of everyone on the job. The table paginates at 50 rows by default. Your search text resets each visit, but filters, sort, and column choices are remembered, per browser, not per account: they won't follow you to a different computer or show up for a teammate.
@@ -44,7 +44,7 @@ Inside a job, the header shows the job's name, its status and the same **More ro
 
 <AccordionGroup>
   <Accordion title="Why can't I filter for open jobs?">
-    The **Status** filter works on the listing (**Published**, **Draft**, **Closed**, **Not listed**), not on whether the position is open. Sort by **Status** to put open positions first, or look at the **Status** column. "Not listed" only means the job has no published listing: the position itself can still be open.
+    The **Status** filter works on the listing (**Published**, **Draft**, **Closed**, **Not listed**), not on the job's own status. Sort by **Status** to group jobs by status, or look at the **Status** column. "Not listed" only means the job has no published listing: the position itself can still be open.
   </Accordion>
   <Accordion title="Does adding someone as a Member change what they can do on the job?">
     No. Members is a roster, not a permission list. What someone can see and do is controlled by their workspace role, the same on every job.
