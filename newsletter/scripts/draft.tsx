@@ -1,6 +1,7 @@
 // Create a Resend broadcast DRAFT for an issue. It does not send.
 // Review it in Resend (Broadcasts), send a test to yourself, then hit Send there.
 // Usage: npm run draft -- issues/2026-09-29.ts
+//        npm run draft -- issues/2026-09-29.ts --update <broadcast id>   (refresh a draft you made earlier)
 
 import { Resend } from "resend";
 import { loadEnv, loadIssue, renderIssue } from "./load";
@@ -18,6 +19,26 @@ if (slug.startsWith("_")) throw new Error(`${slug} is an example file, not an is
 
 const { html, text } = await renderIssue(issue);
 const resend = new Resend(process.env.RESEND_API_KEY);
+
+// --update <id> refreshes an existing draft instead of creating a second one. Resend refuses (422) once
+// someone has edited the draft in its editor; fix it there instead.
+const updateAt = process.argv.indexOf("--update");
+if (updateAt !== -1) {
+  const id = process.argv[updateAt + 1];
+  if (!id) throw new Error("--update needs the broadcast id");
+  const { error } = await resend.broadcasts.update(id, {
+    subject: issue.subject,
+    previewText: issue.preview,
+    html,
+    text,
+  });
+  if (error) {
+    console.error(error);
+    process.exit(1);
+  }
+  console.log(`Draft updated: https://resend.com/broadcasts/${id}`);
+  process.exit(0);
+}
 
 const { data, error } = await resend.broadcasts.create({
   name: `Product update ${slug}`,
