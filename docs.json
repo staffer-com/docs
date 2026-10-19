@@ -75,7 +75,8 @@
               "companies/create-a-job",
               "companies/brief-criteria",
               "companies/jobs-list",
-              "companies/close-reopen-delete"
+              "companies/close-reopen-delete",
+              "companies/projects"
             ]
           },
           {

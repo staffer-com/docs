@@ -1,10 +1,10 @@
 ---
 title: "Write the brief"
-description: "Every Details field, how Required and Preferred criteria are weighted, and how saving and Notes work."
+description: "Every Details field, including status, project and openings, how Required and Preferred criteria are weighted, and how saving and Notes work."
 icon: "list-checks"
 ---
 
-A job's **Brief** tab has four parts: **Details** (structured fields), **Role** (free text), **Required** and **Preferred** criteria (what Staffer actually scores candidates against), and **Notes** (private context for the agent).
+A job's **Brief** tab has four parts: **Details** (structured fields), **Description** (free text), **Required** and **Preferred** criteria (what Staffer actually scores candidates against), and **Notes** (private context for the agent). On a wide screen, **Details** sits in a column on the right.
 
 <iframe
   className="w-full aspect-video rounded-xl"
@@ -17,6 +17,18 @@ A job's **Brief** tab has four parts: **Details** (structured fields), **Role** 
 
 ## Details
 
+The first rows organize the job. They appear once the job has been saved:
+
+| Field | What you set |
+|---|---|
+| **Status** | **Draft**, **Planned**, **Qualifying**, **Open** or **Closed**. Picking **Closed** opens the **Close position** dialog. See [Job statuses](/companies/projects#job-statuses). |
+| **Project** | The [project](/companies/projects) this job belongs to, or **No project**. The arrow next to it opens the project. |
+| **Team** | One of your workspace's [teams](/companies/teams), or **No team**. The agent then also uses that team's knowledge on this job. |
+| **Members** | A roster of people on the job. It's informational only: it doesn't grant or restrict access. |
+| **Openings** | How many people you're hiring, shown as "N to hire". 1 by default. Turn on **Close when filled** to close the job once every opening is hired. See [Close, reopen or delete a job](/companies/close-reopen-delete#when-every-opening-is-hired). |
+
+The rest describe the job itself:
+
 | Field | What you set |
 |---|---|
 | **Function** | One of Engineering, Design, Product, Data, Security, Marketing, Sales, Operations, Other. |
@@ -24,14 +36,13 @@ A job's **Brief** tab has four parts: **Details** (structured fields), **Role** 
 | **Work mode** | On-site, Hybrid, Remote, or Unspecified. |
 | **Location** | One place. The field only ever holds a single location. |
 | **Languages** | Any number, each with a star to mark one **primary**. The primary language is the one your listing is written in first. |
-| **Salary** | A range, or for a project engagement, one fixed amount, plus a currency: EUR, GBP, USD, CAD, CHF, SEK, NOK, DKK, PLN, CZK, HUF, RON, BGN, ISK or MXN. Freelance jobs also ask whether the rate is hourly or monthly. A **Hide on public listing** toggle keeps the number visible to your team while hiding it from candidates. |
+| **Salary** | A range, or for a project engagement, one fixed amount (the row is then called **Fixed price**), plus a currency: EUR, GBP, USD, CAD, CHF, SEK, NOK, DKK, PLN, CZK, HUF, RON, BGN, ISK or MXN. Freelance jobs also ask whether the rate is hourly or monthly, and the row is called **Hourly rate** or **Monthly rate**. A **Hide on public listing** toggle keeps the number visible to your team while hiding it from candidates. |
 | **Timezone overlap** | Minimum hours of overlap you need, shown as "≥ Nh". |
 | **Relocation** | Unspecified, Yes, No, or Considered. |
 | **Start target** | Free text, not a date picker, for example "Q3", "ASAP", or "2026-09". |
-| **Vacancy** | **Always on** (no deadline) or **Fixed deadline**. This is the only thing Vacancy controls: there's no separate field for how many people you're hiring. |
-| **Deadline** | Only appears when Vacancy is Fixed deadline. A date picker. You can't pick a day before today. |
+| **Deadline** | A date picker. You can't pick a day before today. Leave it empty if the job has no deadline. |
 
-## Role
+## Description
 
 A free-text field for the role, team, and what success looks like. This is prose, separate from your criteria, and it's what a reader sees before the bullet points.
 
@@ -51,11 +62,9 @@ Anyone in your workspace who opens the job can read Notes. They're never shown t
 
 ## Saving
 
-Edits to Details, Role, or criteria save when you click **Save**, at the top right of the tab. It shows **Saving** while it's in flight, and **Saved** once it lands. If you close the page before saving, your edits are still there when you come back.
+Edits to Details, Description, or criteria save when you click **Save**, at the top right of the tab. It shows **Saving** while it's in flight, and **Saved** once it lands. If you close the page before saving, your edits are still there when you come back.
 
-<Note>
-  If the job is closed, the whole brief is read-only: the toolbar shows "Position closed — brief is locked. Reopen to edit." instead of **Save**. Reopen the position to edit it again. See [Close, reopen or delete a job](/companies/close-reopen-delete).
-</Note>
+Closing a job doesn't lock its brief. You can still correct it, for example before you reopen the job. **Status**, **Project**, **Team** and **Members** save as soon as you change them, without **Save**. **Openings** and **Close when filled** save with the rest of the brief.
 
 ## When the agent edits while you work
 

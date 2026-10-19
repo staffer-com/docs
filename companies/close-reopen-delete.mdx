@@ -16,7 +16,7 @@ Closing, reopening, and deleting are three separate actions in the **More role a
     A dialog explains what happens: the public listing stops taking applications, no new candidates can be added, and you can reopen it later.
   </Step>
   <Step title="Confirm">
-    Click **Close position**. There's no typing required to confirm a plain close.
+    Click **Close position**, or **Close & notify** if you chose to send a rejection message. There's no typing required to confirm.
   </Step>
 </Steps>
 
@@ -35,7 +35,7 @@ Leaving both boxes unchecked closes the job and leaves every candidate exactly w
 
 - The public listing immediately stops accepting applications, but doesn't disappear. It stays visible for a grace period, 30 days by default, set in **Settings** → **Workspace** → **Preferences** → **Closed listing grace period**. After that window, it drops off the public board entirely.
 - Any attempt to add a new candidate, sourced or applied, is refused: "This position is closed and takes no new candidates."
-- The brief becomes read-only until you reopen the job. See [Write the brief](/companies/brief-criteria).
+- The listing is frozen until you reopen the job. The brief stays editable. See [Write the brief](/companies/brief-criteria).
 - Only if you ticked the reject box: every candidate still In review, In progress, or with an Offer moves to Rejected. Shortlisted candidates aren't touched.
 - Only if you also ticked **Send them a rejection message**: that message is sent to the candidates who applied, replied or completed a step. Sourced candidates you never reached, or who never replied, don't get it. Checking reject alone changes their stage without emailing anyone.
 
@@ -45,7 +45,7 @@ Leaving both boxes unchecked closes the job and leaves every candidate exactly w
 
 ## Reopen a position
 
-Click **Reopen position**. There's no confirmation: one click reopens it. The listing goes back to an unpublished draft (its title, body, and link are untouched, but it's off the public board until you publish it again). Candidates who were rejected when you closed it stay rejected. Move them back to a stage by hand if you need to.
+Click **Reopen position**. There's no confirmation: one click reopens it as **Open**. To reopen it with another status, such as **Planned**, pick that status from **Status** in the brief's **Details** instead. The listing goes back to an unpublished draft (its title, body, and link are untouched, but it's off the public board until you publish it again). Candidates who were rejected when you closed it stay rejected. Move them back to a stage by hand if you need to.
 
 ## Delete a job
 
@@ -63,9 +63,14 @@ Admins and owners can always delete a job. Members can delete a job only while n
 
 If the job still has any active candidates (not Rejected, Hired, or Withdrawn) when you open the dialog, you have to type the job's exact name before **Delete role** enables, and a banner warns that those candidates lose access too. With no active candidates, one click deletes it.
 
-## Hiring someone doesn't close the job
+## When every opening is hired
 
-Marking a candidate as Hired has no effect on the job's own status. If you don't want more candidates once the role is filled, close the position yourself.
+A job is filled when its hires reach its **Openings**, set in the brief's **Details**. When you move the candidate who fills it to **Hired**, a **Role filled** dialog opens. What it offers depends on **Close when filled**, next to **Openings**:
+
+- **Off** (the default): the job stays open. The dialog offers **Close position**, with the same reject and message options as above. Close it there or later.
+- **On**: an **Open** job closes by itself the moment it fills. Nobody is rejected or emailed. The dialog asks whether to reject the remaining candidates, with an optional message. Click **Done** to leave them where they are.
+
+Filling a job never rejects or emails anyone unless you choose to in the dialog.
 
 ## Can the agent do this for me?
 
