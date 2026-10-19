@@ -196,7 +196,7 @@ Then create the draft:
 npm --prefix newsletter run draft -- issues/<today>.ts
 ```
 
-This creates a Resend broadcast draft for the **Company users** segment and the **Product news** topic. It never sends. Give the user the draft link. They send a test to themselves, check it in Gmail, then send.
+This creates a Resend broadcast draft for the **Company users** segment and the **Product news** topic. It never sends. To refresh a draft you already made (new images, a copy fix), run the same command with `--update <broadcast id>` instead of making a second draft. That works until someone edits the draft in the Resend editor. Give the user the draft link. They send a test to themselves, check it in Gmail, then send.
 
 ## Gotchas
 
