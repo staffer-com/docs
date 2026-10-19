@@ -22,7 +22,7 @@ There's no search form. You describe who you want in the job's chat, and the age
     Write who you're looking for, the way you'd brief a recruiter: "senior backend engineers in Norway with Kotlin experience." If the brief already looks right, you can say "ready to scout" and the agent builds a search from the brief's criteria itself.
   </Step>
   <Step title="Let it run">
-    The chat shows a "Searching · `<query>`" line while it works, and the **Send** button turns into a **Stop** button. On the **Scouting** tab, a new group appears titled with the search's query, with a live **Searching · Ns** timer that ticks up as results come in.
+    The chat shows a "Searching · `<query>`" line while it works, and the **Send** button turns into a **Stop** button. On the **Scouting** tab, a new group appears titled with the search's query, with a live **Searching · Ns** timer that ticks up as results come in. You can leave the page, reload or close the tab: the search keeps running and saves its results. When you come back, you'll see "Search continued in the background", with a link to the results on the **Scouting** tab.
   </Step>
   <Step title="Read the summary">
     When it finishes, the agent posts a short summary: who scored well, who stands out on a specific criterion, and any gaps in the pool. It usually suggests a next step: drill into the top profiles, run a tighter search, or tell it who to shortlist.
@@ -67,6 +67,8 @@ Each search group's **…** menu:
 
 | Action | What it does |
 |---|---|
+| **Stop search** | Stops a search that's still running. |
+| **Rerun search** | Runs the search again. |
 | **Re-score** | Re-runs scoring for that round's results against the current brief. Doesn't search again. |
 | **Download as CSV** | Exports that round's results. |
 | **Delete search** | Removes the group from the tab. |
@@ -97,9 +99,7 @@ In **Settings** → **Workspace** → **Preferences**, under Sourcing:
 
 Running a search uses credits: every query, rerank and score the agent runs is billed individually, not as a flat price per search. Your balance is checked before the chat turn starts, not while the search runs, so a search that's already going always finishes, even if the balance runs out partway through.
 
-<Warning>
-You can't cancel a running search. Clicking **Stop** stops the reply in your chat, not the search itself: it keeps running on the server and its results still land in Scouting. **Delete search** removes the group afterward but doesn't stop work already in progress.
-</Warning>
+To stop a running search, use **Stop search** in its group's menu on the **Scouting** tab. Clicking **Stop** in the chat only stops the agent's reply. The search itself keeps running and its results still land in Scouting.
 
 If a search runs out of time, you get whatever results it had already scored. There's no error message. The tab stops adding new rounds.
 
@@ -117,7 +117,10 @@ Viewers and reviewers can open jobs and read chat, but the agent won't search, s
     No. Cost scales with how many rounds ran and how many candidates got scored. There's no flat "credits per search" price.
   </Accordion>
   <Accordion title="Can I stop a search once it's running?">
-    No. **Stop** ends the agent's reply in your chat, but the search carries on and its results still arrive on the **Scouting** tab. Delete the search afterwards if you don't want it.
+    Yes. Use **Stop search** in the search's menu on the **Scouting** tab. **Stop** in the chat only ends the agent's reply, not the search.
+  </Accordion>
+  <Accordion title="What happens if I close the tab while a search runs?">
+    The search keeps going and saves its results. When you come back, you'll see "Search continued in the background", with a link to the results on the **Scouting** tab.
   </Accordion>
   <Accordion title="Why does a result show 'Unknown role'?">
     The candidate's profile has no current title or company on file. It's still scored against your brief like any other result.
