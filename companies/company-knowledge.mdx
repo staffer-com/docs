@@ -1,57 +1,105 @@
 ---
 title: "Company knowledge"
-description: "What the agent knows about your company: a researched summary plus facts you can add or correct."
+description: "The knowledge base: facts about your company, two summaries written from them, and what the agent and candidates get to see."
 icon: "brain"
 ---
 
-**Settings** → **Workspace** → **Knowledge** holds what the agent knows about your company: a summary and a list of facts. Staffer first collects them from your company's website when you set up the workspace. Everyone in the workspace can read this page. Only admins and owners can rerun research or add and edit facts.
+**Settings** → **Workspace** → **Knowledge base** holds what Staffer knows about your company: a list of facts, plus two summaries written from them. The agent reads the **Internal summary**. Candidates only ever see the **Applicant summary** and the facts you choose to share. Everyone in the workspace can read this page. Only admins and owners can change it.
 
-## Summary and Rerun research
+Staffer collects the first facts from your company's website when you set up the workspace. After that, nothing runs on its own. New facts only arrive when you add them.
 
-The summary is a short paragraph about your company. **Rerun research** writes it again: Staffer reads pages on your company's website, not the wider internet, and pulls out facts. A rerun replaces the summary and updates facts that aren't locked. It uses credits, usually around half a dollar.
+## Add information
 
-<Note>
-The page shows a "next refresh" date after research runs. Nothing happens on that date. Research only runs again when an admin clicks **Rerun research**.
-</Note>
+The box at the top of the page is the main way to add knowledge. Only admins and owners see it.
 
-## Facts, grouped by category
+<Steps>
+  <Step title="Write a note">
+    State facts in plain language, paste up to 5 links for Staffer to read, or both. To have Staffer read a whole site rather than one page, paste its address and say so, for example "go through our site".
+  </Step>
+  <Step title="Discover facts">
+    Click **Discover facts**, or press **⌘Enter** (**Ctrl+Enter** on Windows). Staffer reads the note and any links and proposes facts. Nothing is saved yet.
+  </Step>
+  <Step title="Review them">
+    The **Review** dialog lists each proposed fact with where it came from: a link, or **From your note**. Untick anything wrong, fix the wording, change the category, and turn on **Share with applicants** for facts candidates may see. A fact that replaces one you already have shows the old value under **Replaces**.
+  </Step>
+  <Step title="Save">
+    Click **Save** (the button shows how many facts you kept). The facts are saved as approved, and both summaries are rewritten from them.
+  </Step>
+</Steps>
 
-Facts sit under six categories: Company, Product, Tech stack, Hiring, Culture, and Market. Each fact is either:
+Reading links and writing summaries uses credits. Reading a whole site costs more than reading one page, because Staffer pays for each page it reads. Click **Discard** in the review and nothing is saved, though the credits for reading are already spent.
 
-- **Auto**: written by research. It can be overwritten the next time research runs, unless you accept it.
-- **Manual**: typed by hand, or an Auto fact you've accepted or edited. A rerun never overwrites a Manual fact.
+Staffer skips a link that isn't about your company and tells you which links it couldn't read. If everything in your note is already in the knowledge base, it says so and proposes nothing.
 
-A fact research is unsure about starts in a **Pending review** group at the top of the page and isn't used by the agent until you accept it.
+## Summaries
 
-## Accept, add, edit, and remove
+| Summary | Who reads it | Written from |
+|---|---|---|
+| **Internal summary** | The agent, and Staffer when it drafts listings and messages | Every approved fact |
+| **Applicant summary** | The assistant on a candidate's application page, and the AI interviewer | Only approved facts shared with applicants |
 
-**Accept** on an Auto fact locks it (and, if it was pending, approves it for the agent to use). If a later research run finds a different value for a fact you've already locked, it doesn't overwrite it: it shows up as a suggested update next to the fact, which you can accept or dismiss.
+Click a summary to read it in full. From there, admins and owners can:
 
-**Add fact** creates a new Manual fact: pick a category, then write a key and a value. Editing an Auto fact's value locks it the same way Accept does. Deleting a fact removes it outright.
+- **Edit** it by hand. It's then marked **Edited by you** and stays as you wrote it, even when facts change.
+- **Regenerate** it from the current facts. On an edited summary, the button reads **Discard edits and regenerate**. Regenerating uses credits.
 
-Research-derived facts carry a **Source** link back to the page they came from. Facts you've written by hand don't have one.
+Summaries only rewrite themselves after you save facts from the box at the top. When you add, edit or delete a fact in the table, the summary tile shows **Facts have changed** until you regenerate it.
 
-## What the agent uses this for
+With no shared facts, the **Applicant summary** stays empty, and the assistant on the application page tells candidates it has no company details beyond the listing.
 
-The agent reads your company's summary and up to 20 of its most confident facts in every job chat: when it drafts a brief, writes a listing or answers questions. It may also cite facts when it explains search results. Company knowledge never affects a candidate's [match score](/companies/match-scores).
+## Facts
+
+The fact table shows each fact's **Category** (Company, Product, Tech stack, Hiring, Culture or Market), **Source**, **Visibility**, **Status** and when it was **Updated**. Search, filter and group it from the toolbar. **Display** controls sorting and which columns show.
+
+| Status | What it means |
+|---|---|
+| **Pending review** | Research wasn't sure about it. Nothing uses it until an admin approves it. |
+| **Update suggested** | Research found a different value for a fact you'd already approved or edited. Your value stays until you choose. |
+| **Approved** | In use. |
+
+**Source** is **Research**, with a link to the page the fact came from, or **Added by you**. **Visibility** is **Internal only** (the default) or **Shared with applicants**.
+
+Admins and owners manage a fact from its **…** menu:
+
+| Item | What it does |
+|---|---|
+| **Approve** | Approves a research fact and locks it. Only on facts from research. |
+| **Edit** | Changes the value or category. Editing a research fact locks it the same way. |
+| **Review suggested update** | Shows research's new value next to yours. Pick **Use new value** or **Keep current**. |
+| **Share with applicants** / **Make internal only** | Changes who can see the fact, and locks it. On a pending fact, it reads **Approve and share with applicants**. |
+| **Open source** | Opens the page a research fact came from. |
+| **Delete** | Deletes the fact after a confirmation. |
+
+A locked fact is never overwritten by research. If research later finds something different, you get a suggested update instead.
+
+**Add fact** adds one by hand: pick a **Category**, give it a **Name**, write the **Fact**, and choose whether to **Share with applicants**. It's approved straight away and uses no credits.
+
+## What the agent and candidates see
+
+- **The agent** reads the **Internal summary** and up to 20 of the most confident approved facts in every conversation: when it drafts a brief, searches, or answers your questions. Listing and message drafts use the same knowledge. On a job that belongs to a [team](/companies/teams), it also reads that team's facts.
+- **Candidates** only get the **Applicant summary** and facts shared with applicants, through the assistant on their application page and the AI interviewer. Internal facts, pending facts and team facts never reach them.
+- **Match scores** don't use company knowledge at all. See [How match scores work](/companies/match-scores).
 
 ## Common questions
 
 <AccordionGroup>
-  <Accordion title="Does the summary update itself over time?">
-    No. The summary only changes when an admin clicks **Rerun research**, even though the page shows a "next refresh" date.
+  <Accordion title="Does the knowledge base update itself over time?">
+    No. Research runs once, when you set up the workspace. After that, facts only change when someone adds or edits them. To refresh from your website, paste its address in the box at the top and ask Staffer to go through it.
   </Accordion>
-  <Accordion title="If I hand-edit a fact, will a rerun overwrite it?">
-    No. Editing or accepting a fact locks it. A rerun that finds something different offers it as a suggested update instead of overwriting your edit.
+  <Accordion title="If I hand-edit a fact, can research overwrite it?">
+    No. Editing or approving a fact locks it. Research that finds something different offers it as a suggested update instead.
   </Accordion>
-  <Accordion title="Does company knowledge affect match scores?">
-    No. Scores are based on the candidate's own profile, messages, process steps, and your team's notes, not on what the agent knows about your company.
+  <Accordion title="Why doesn't the agent mention a fact I can see in the table?">
+    It's probably **Pending review**. Pending facts aren't used until an admin approves them. The agent also only reads the 20 most confident approved facts directly, so a long list won't all fit.
+  </Accordion>
+  <Accordion title="Can candidates see everything here?">
+    No. Candidates only see facts marked **Shared with applicants** and the **Applicant summary** written from them.
   </Accordion>
 </AccordionGroup>
 
 <CardGroup cols={2}>
   <Card title="Teams" icon="layers" href="/companies/teams">
-    Team-specific knowledge that layers on top of this.
+    Team-specific facts that layer on top of this.
   </Card>
   <Card title="Create a job" icon="file-plus" href="/companies/create-a-job">
     Where the agent puts this knowledge to work.
