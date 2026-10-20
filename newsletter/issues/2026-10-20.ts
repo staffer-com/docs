@@ -1,9 +1,9 @@
 import type { Issue } from "../emails/types";
 
 const issue: Issue = {
-  subject: "One agent on every page, saved private chats, and more",
+  subject: "Global agent chat, saved private chats, and more",
   preview: "Click Agent at the bottom right of any page. It knows which job you're on, and it keeps your chats.",
-  title: "One agent on every page, saved private chats, and more",
+  title: "Global agent chat, saved private chats, and more",
   hero: {
     src: "2026-10-20-hero.png",
     alt: "The agent's corner panel on a new chat, with three suggestions: Help me write a brief for a role I'm hiring for, Which of my roles need attention this week, and Summarise my pipeline across open roles. Above the message box, Context: Talent pool.",
