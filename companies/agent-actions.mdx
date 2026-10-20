@@ -1,14 +1,14 @@
 ---
 title: "What the agent can do"
-description: "Every action the agent can take, which ones ask for approval first, and what it can never do."
+description: "Every action the agent can take, on a job and across your workspace, and which ones ask for approval first."
 icon: "workflow"
 ---
 
-Inside a job, the agent can do more than answer questions: it can draft the brief, search, shortlist, promote and change the process. What it's allowed to do at any moment depends on whether the job has a brief yet, your **Mode** setting, and your role.
+The agent can do more than answer questions. On a job, it drafts the brief, searches, shortlists, promotes and changes the process. From any page, it can also run most other things your role allows in Staffer. What it's allowed to do at any moment depends on where you are, whether the job has a brief yet, your **Mode** setting, and your role.
 
 ## Before a brief exists
 
-Until a job has a brief, the agent can only draft one from what you tell it, read another job's brief to start from it, or copy another job's listing and process into this one. Searching, the listing, the process and candidates all need a brief first.
+Until a job has a brief, the agent's job tools are for drafting one: from what you tell it, from another job's brief, or by copying another job's listing and process into this one. Its tools for searching, the listing, the process and the job's candidates switch on once the brief exists.
 
 ## Once a job has a brief
 
@@ -50,9 +50,27 @@ Promoting saves a copy of each person's profile as it is now, which can't be und
 | Regenerate the listing from the brief, in one language or all | Yes |
 | Rewrite listing text to your instructions | Yes |
 
+## Anywhere in your workspace
+
+From any page, the agent can also look up and change things outside the job you're on: jobs, candidates and applications, projects, segments, messages, notes, process steps, references, teams and workspace settings. You ask in plain words and it finds the right action. It can also open a page for you, and the chat follows you there.
+
+It only gets the actions your role allows. In **Ask permission** mode, these ask first:
+
+- Sending a candidate a message, by email or on their application page
+- Changing a candidate's stage
+- Closing, deleting or moving a job
+- Publishing a listing or creating a share link
+- Deleting anything else, such as a note or a segment, or removing a candidate from a job
+
+Other changes run without an approval card, even in **Ask permission** mode. Adding a note, shortlisting candidates, moving a candidate to another job and reopening a job are examples.
+
+<Warning>
+  An approval card names the action, for example "Send the candidate a message", not the message itself. Ask the agent to show you the draft before you approve. In **Auto** mode there's no card at all, so the message goes out as soon as the agent decides to send it.
+</Warning>
+
 ## The Mode dropdown
 
-Under every chat box there's a **Mode** dropdown: **Ask permission** or **Auto**. The setting is yours alone and is saved separately for each workspace, so a teammate can use a different mode, and your own mode can differ between workspaces.
+In every chat box there's a **Mode** dropdown, next to **+**: **Ask permission** or **Auto**. The setting is yours alone and is saved separately for each workspace, so a teammate can use a different mode, and your own mode can differ between workspaces.
 
 **Ask permission** is the default. **Auto** skips the approval card on every action marked "Asks first" above: the action runs as soon as the agent decides to do it. Auto doesn't skip policy checks. See below.
 
@@ -66,16 +84,15 @@ Two buttons sit below the card: **Reject** and **Approve**. Once you answer, the
 
 If your organization has turned on **Live policy enforcement** (see [AI policies](/admin/ai-policies)), some actions are also checked against your organization's policies before they run: drafting or updating the brief, running a search, editing job notes, changing the process, adding a step to a candidate and rewriting the listing. This happens in both modes. A refusal looks different from an approval card: **Blocked by a workspace policy**, with the reason and a **View policies** link. The agent can then suggest a version that fits the policy.
 
-## What it can never do
+## What it can't do
 
-- Send or draft a message to a candidate. There's no such action, with or without approval. You always write and send messages yourself.
-- Delete a job. Deleting is a person clicking **Delete role** from the job menu, with its own confirmation.
-- Clear a whole list. It can replace or add criteria, locations, or languages one at a time, but it can't empty a list in one move. Do that by hand in the brief editor.
-- Reject and email everyone when closing a job. Asking the agent to close a job always does the plain, reversible close. The version that rejects the remaining pipeline and emails them only exists in the **Close position** dialog. See [Close, reopen or delete a job](/companies/close-reopen-delete).
+- Anything your role doesn't allow. It acts as you, with your permissions, never more.
+- Manage your chats. Renaming and deleting chats is up to you.
+- See your email, Slack or calendar. It only works with what's in Staffer.
 
 ## Role limits
 
-Members, admins and owners get the full set of actions above. Viewers and reviewers can still chat with the agent and get answers, but their toolset is read-only: it can look things up for them, but it can't search, draft, edit, or move anything on their behalf.
+Members, admins and owners get the full set of actions above, within what their role allows. Some actions need more: moving a job to another workspace needs you to be an admin in both. Viewers and reviewers can still chat with the agent and get answers, but their toolset is read-only: it can look things up for them, but it can't search, draft, edit, send or move anything on their behalf.
 
 ## Common questions
 
@@ -83,8 +100,8 @@ Members, admins and owners get the full set of actions above. Viewers and review
   <Accordion title="If I switch to Auto, does the agent stop checking company policy too?">
     No. If your organization has policy enforcement turned on, the checks run in both modes. Auto only removes the approval click.
   </Accordion>
-  <Accordion title="Can the agent message a candidate if I approve it?">
-    No. There's no action for sending a message at all, so there's nothing to approve. You always send outreach yourself from a composer.
+  <Accordion title="Can the agent message a candidate?">
+    Yes, if your role lets you message candidates and you ask it to. In **Ask permission** mode it shows an approval card first. In **Auto** mode it sends right away. If you'd rather write every message yourself, keep **Ask permission** on and reject the card.
   </Accordion>
   <Accordion title="I'm a viewer. Why won't the agent search or shortlist when I ask it to?">
     Your role only grants the agent's read-only actions. It can answer questions using what's already there, but it can't run a search, edit the brief, or move a candidate on your behalf, regardless of Mode.
@@ -93,7 +110,7 @@ Members, admins and owners get the full set of actions above. Viewers and review
 
 <CardGroup cols={2}>
   <Card title="Work with the agent" icon="bot" href="/companies/the-agent">
-    Where each chat lives and what context it uses.
+    Where to open the chat and what it can see.
   </Card>
   <Card title="Close, reopen or delete a job" icon="archive" href="/companies/close-reopen-delete">
     What actually happens when a position closes.

@@ -1,16 +1,66 @@
 ---
 title: "Work with the agent"
-description: "Where each chat lives, what the agent can see, voice input, Reset chat, and why some conversations aren't saved."
+description: "One chat that follows you through Staffer: where to open it, what it can see, your chat history, attachments and voice input."
 icon: "bot"
 ---
 
-Staffer doesn't have one global assistant. It has several chats, each scoped to what you're looking at, and each with different rules for what's saved.
+The agent is one chat that follows you through Staffer. Open it from any page and it knows where you are: on a job, it works on that job. Anywhere else, it can look across your whole workspace.
 
-## Where you can chat with it
+## Open the agent
 
-- A job's chat, on the left of every job. This is one shared transcript per job: every workspace member who opens that job sees the same conversation, with each message tagged by who sent it. It's still there next time anyone opens the job.
-- The **Ask anything** chat on the **Roles**, **Talent pool** and **Applications** pages. This one only lasts for your current visit: reload the page and it's gone. It can filter the list you're looking at, open a specific item, and, on the Roles page, create a bare job for you to build out.
-- The home page. Before a job exists, typing here is how you start one. See [Create a job](/companies/create-a-job).
+- Click **Agent** in the bar at the bottom right of any page. The chat opens in a panel in the corner, over the page you're on. Click **Agent** again to put it away.
+- Click **Agent** in the sidebar to start a new chat full screen. The workspace home page is the same full-screen chat.
+
+The corner panel has four buttons at the top:
+
+| Button | What it does |
+|---|---|
+| **Chat actions** (…) | **New chat**, **Rename** and **Delete chat** |
+| **Minimize chat** | Hides the panel. The conversation stays as it is. |
+| **Open full screen** | Opens the same chat as a full page |
+| **Close chat** | Ends the conversation in the corner. It stays in your history, and the next time you open the panel you start a new chat. |
+
+In full screen, click **Exit full screen** at the top right to go back to the page you came from, with the chat docked in the corner.
+
+## What it can see from here
+
+A **Context** line sits above the message box and says what the agent can see. On a job it shows the job's name and the tab you're on, for example "Context: Senior Backend Engineer · Brief". On other pages it shows the page, such as **Talent pool** or **Segments**. In full screen it says **Whole workspace**.
+
+On a job, the agent drafts the brief, searches, shortlists and changes the process for that job. Open a different job and ask again in the same chat, and it works on that one instead.
+
+With no job open, it looks things up across your workspace. Ask which jobs need attention this week or for a summary of your pipeline across open jobs. It can also open a page for you: the chat follows you there, in the corner. See [What the agent can do](/companies/agent-actions) for what it's allowed to change.
+
+## Start a job from any chat
+
+With no job open, describe the job you're hiring for. The agent asks a few questions first, then drafts the brief, creates the job and opens it. See [Create a job](/companies/create-a-job).
+
+## Conversation starters
+
+A new chat in the corner panel suggests a few things to ask. Click one to send it.
+
+- On a job: "Summarise where this role stands", "Find more candidates for this role", "Who in the pipeline needs a follow-up?" and "Draft an outreach message for this role".
+- Everywhere else: "Help me write a brief for a role I'm hiring for", "Which of my roles need attention this week?" and "Summarise my pipeline across open roles".
+
+## Your chats
+
+Your chats are private. Nobody else in the workspace can open them, admins included. Every chat is saved as you go, and the agent gives it a name once it's clear what it's about. Click the name at the top of the chat to rename it. Once you've renamed a chat, the agent stops renaming it.
+
+- **Recent chats.** Your latest chats show as tabs in the bottom bar, just left of **Agent**, up to four. Click a tab to reopen that chat. Hover over a tab and click the × to take it off the bar. That doesn't delete it: it stays in your history and comes back to the bar when it gets a new message.
+- **Chat history.** Click the clock icon next to **Agent** to search your chats by name, start a **New chat** or reopen an older one. Chats are grouped into **Today**, **This week** and **Older**, and the list holds your 50 most recent chats.
+
+<Warning>
+  **Delete chat** removes the chat and any files you attached to it, instantly, with no confirmation and no undo.
+</Warning>
+
+Because chats are private, your team doesn't see what you asked the agent or what it told you. Put anything the team needs in the job's notes.
+
+## Attach files
+
+Click **+** (**Add to message**), then **Attach a document or image**. You can attach up to 5 files to a message, up to 3 MB each.
+
+The agent reads PDF, Word, Excel, PowerPoint, OpenDocument, RTF, CSV, text, Markdown, JSON and HTML files, and PNG, JPEG, WebP and GIF images. Large images are scaled down for you. A scanned PDF with no text in it is sent as an image, so the agent can still look at it.
+
+A document's text counts toward the message's 8,000-character limit, so the agent only reads the start of a long document. Older `.doc`, `.xls` and `.ppt` files can't be read: save them as `.docx`, `.xlsx` or `.pptx` first.
 
 ## Voice input
 
@@ -18,17 +68,9 @@ Click the microphone (**Record voice message**) to dictate instead of typing. It
 
 If dictation can't carry on, for example because the microphone is blocked, you're out of credits or the connection drops, it tells you why and keeps what it already transcribed.
 
-## Hide or show the chat
+## Ask permission or Auto
 
-Click the chat icon at the top of a job to toggle **Hide chat** and **Show chat**. Hiding it just gives the tabs more room. It doesn't stop or lose anything.
-
-## Reset chat
-
-The "More chat actions" menu (…) above the chat has one item: **Reset chat**.
-
-<Warning>
-  On a job that already exists, this deletes the shared chat instantly, for the whole team, with no confirmation and no undo. On the home page, before a job exists, it starts a new draft instead. Your old draft's chat isn't deleted, just left behind.
-</Warning>
+The switch next to **+** shows your mode: **Ask permission** or **Auto**. In **Ask permission**, the agent shows an approval card before actions that change things. In **Auto**, it goes ahead. See [What the agent can do](/companies/agent-actions).
 
 ## Message length and stopping a reply
 
@@ -36,7 +78,7 @@ A message can be up to 8,000 characters. A counter appears once you're close to 
 
 ## What it uses to answer
 
-Every reply is grounded in your company knowledge, the job's brief and notes, your own **Communication tone** and **Notes for the agent** (set in **Settings** → **Account** → **Preferences**), and, if the job belongs to a team, that team's knowledge too.
+Every reply draws on your company knowledge and your own **Communication tone** and **Notes for the agent** (set in **Settings** → **Account** → **Preferences**). On a job, it also reads the job's brief and notes and, if the job belongs to a team, that team's knowledge.
 
 ## What it can't see
 
@@ -44,15 +86,11 @@ The agent can't see your email, Slack or calendar. It only knows what's in Staff
 
 ## "Tell me more" on a candidate
 
-The shared job chat doesn't automatically know which candidate you're looking at. Click **Tell me more** on a candidate's profile panel to send a message naming that candidate, which is what lets the agent read their full record and answer questions about them specifically.
-
-## Whose messages get saved
-
-Chats by members, admins and owners are saved to the job. Viewers and reviewers can chat and get answers, but their messages aren't saved: a notice says so the first time, and reloading the page clears them.
+Click **Tell me more** on a candidate's profile panel to ask the agent about that candidate. It sends a message naming them to your current chat and opens the panel, which is what lets the agent read their full record and answer questions about them specifically.
 
 ## Credits
 
-Every message you send the agent uses credits, in every chat, including **Ask anything** and the home page.
+Every message you send the agent uses credits, in the corner panel and full screen alike.
 
 ## Use Staffer from your own assistant
 
@@ -61,20 +99,23 @@ You can also connect Claude, ChatGPT, Cursor and other assistants to a workspace
 ## Common questions
 
 <AccordionGroup>
-  <Accordion title="Is a job's chat private to me?">
-    No. It's one conversation per job, visible to everyone in the workspace who can open that job, not a personal thread.
+  <Accordion title="Can my teammates see my chats?">
+    No. Every chat belongs to the person who started it. Teammates see what the agent changed, such as a new brief or a shortlisted candidate, but not the conversation.
   </Accordion>
-  <Accordion title="Can I get a reset chat back?">
-    Not for an existing job. Resetting it deletes the transcript immediately for everyone, with no undo. On the home page, before a job exists, resetting starts a new draft rather than deleting the old one.
+  <Accordion title="Where did the job's chat go?">
+    Each job used to have one shared chat on the left, and the **Roles**, **Talent pool** and **Applications** pages had their own **Ask anything** chat. Both are replaced by this one chat, which works on whichever job you have open. The old shared job chats don't appear in your chat history.
   </Accordion>
-  <Accordion title="Does 'Ask anything' remember what I asked yesterday?">
-    No. It only lasts for your current visit to that page. Reloading, or coming back later, starts it empty.
+  <Accordion title="Is there a limit to how long a chat can get?">
+    A chat keeps its latest 500 messages. Past that, the oldest drop off. Start a **New chat** when you change topic, which also keeps the agent focused.
+  </Accordion>
+  <Accordion title="Can I get a deleted chat back?">
+    No. **Delete chat** is immediate and permanent. To only clear it off the bottom bar, use the × on its tab instead.
   </Accordion>
 </AccordionGroup>
 
 <CardGroup cols={2}>
   <Card title="What the agent can do" icon="workflow" href="/companies/agent-actions">
-    Which actions it takes immediately, which ask first, and what it can't do at all.
+    Which actions it takes immediately and which ask first.
   </Card>
   <Card title="Search for candidates" icon="search" href="/companies/running-a-search">
     Turn the brief into a search the agent runs for you.
