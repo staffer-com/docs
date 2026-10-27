@@ -4,14 +4,14 @@ description: "Search, filter, and sort the Roles page, and every item in a job's
 icon: "list"
 ---
 
-The **Roles** page lists every job in your workspace. Every job also carries the same **More role actions** menu, whether you open it from a list row or from inside the job itself.
+The **Roles** page lists every job in your workspace that you can see. Admins and owners see them all. Everyone else sees the jobs they created or are on the team for. See [Who can see a job](/get-started/roles-and-permissions#who-can-see-a-job). Every job also carries the same **More role actions** menu, whether you open it from a list row or from inside the job itself.
 
 ## The Roles page
 
 The job table takes the whole page. To ask the agent about your jobs, click **Agent** at the bottom right. See [Work with the agent](/companies/the-agent).
 
 - **New role**, at the top right, adds a job by title without the agent and opens its brief. See [Create a job](/companies/create-a-job).
-- **All roles** shows every job. **My roles** shows only jobs you created or are a member of.
+- **All roles** shows every job you can see. **My roles** shows only jobs you created or are a member of.
 - The search icon opens **Search roles…**, which matches job names only.
 - **Filter** adds conditions on **Status**, **Function**, **Engagement**, and **Location**. Values within one filter combine as "or", and different filters combine as "and".
 - **Display options** covers **Sort by** (16 options, including Updated, Name, Deadline, Function, Version, Created, and Candidates, each ascending or descending) and **Columns**. Name always shows. Function, Candidates, Deadline, Updated, Listing and Status show by default. Engagement, Location, Version and Created are available but off by default.
@@ -26,7 +26,7 @@ The job table takes the whole page. To ask the agent about your jobs, click **Ag
 
 Inside a job, the header shows the job's name, its status and the same **More role actions** (**…**) menu as the list. Click the job's name to open **Switch to role…** and jump to another job.
 
-**Members** and **Team** aren't in this menu. They're rows in the **Details** section of the job's **Brief** tab. **Members** is a roster on the job. It's informational only: it doesn't grant or restrict access. **Team** assigns the job to one of your workspace's teams, and the agent then also uses that team's knowledge on this job.
+**Members** and **Team** aren't in this menu. They're rows in the **Details** section of the job's **Brief** tab. **Members** is the job's team: apart from admins and owners, only the people listed there and whoever created the job can see it. **Team** assigns the job to one of your workspace's teams, and the agent then also uses that team's knowledge on this job. **Team** doesn't give anyone access.
 
 | Item | What it does |
 |---|---|
@@ -45,8 +45,8 @@ Inside a job, the header shows the job's name, its status and the same **More ro
   <Accordion title="Why can't I filter for open jobs?">
     The **Status** filter works on the listing (**Published**, **Draft**, **Closed**, **Not listed**), not on the job's own status. Sort by **Status** to group jobs by status, or look at the **Status** column. "Not listed" only means the job has no published listing: the position itself can still be open.
   </Accordion>
-  <Accordion title="Does adding someone as a Member change what they can do on the job?">
-    No. Members is a roster, not a permission list. What someone can see and do is controlled by their workspace role, the same on every job.
+  <Accordion title="Does adding someone as a Member change whether they can see the job?">
+    Yes. Members, reviewers and viewers only see a job if they're in its **Members** row, created it, or were assigned a step on it. What they can do on it still depends on their workspace role. Admins and owners see every job either way.
   </Accordion>
   <Accordion title="I changed my columns and sort order. Why don't they show up on my other laptop?">
     View preferences are saved to your browser, not your account. Set them again on any other device.

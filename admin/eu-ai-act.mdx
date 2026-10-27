@@ -6,6 +6,23 @@ icon: "gavel"
 
 Staffer's platform is a high-risk AI system under the EU AI Act (Regulation (EU) 2024/1689), Annex III §4: employment, workers' management and access to self-employment. Staffer is the AI system's provider. Your organization is the deployer, with its own obligations under Article 26.
 
+## Status of each control
+
+**Settings** → **Organization** → **Compliance** → **EU AI Act compliance** goes through the Act article by article. For each one it says what Staffer does today and marks it **In place**, **Partly in place** or **Not built yet**.
+
+| Article | Control | Status |
+|---|---|---|
+| Article 9 | Risk management | **Partly in place** |
+| Article 10 | Data governance | **In place** |
+| Article 12 | Record-keeping | **Partly in place** |
+| Article 13 | Transparency to users | **Partly in place** |
+| Article 14 | Human oversight | **Partly in place** |
+| Article 15 | Accuracy, robustness, cybersecurity | **Partly in place** |
+| Article 16 | Quality management system | **Partly in place** |
+| Article 22 (GDPR) | Automated individual decisions | **Partly in place** |
+| Article 72 | Post-market monitoring | **Not built yet** |
+| Article 86 | Right to explanation | **Partly in place** |
+
 ## What's built to support your obligations
 
 - Per-criterion scores with evidence: every match score is broken into individual criteria, each with a reason, a confidence level, and the sources it's based on, not only a number. See [How match scores work](/companies/match-scores).
@@ -15,7 +32,7 @@ Staffer's platform is a high-risk AI system under the EU AI Act (Regulation (EU)
   - A review step with **Rejection disqualifies** moves a candidate to **Rejected** as soon as the reviewer rejects them or scores them below the passing score.
 - Disclosures to candidates at the moments that matter: an AI interview requires an explicit, versioned acknowledgement before it can start, covering what's recorded, that an AI assesses it, that it affects the match score, and when it's deleted. See [AI interviews](/companies/ai-interviews).
 - Logged state changes and scoring history: every stage change lands on the candidate's activity history, and every match score is stored with its reasoning and evidence, not overwritten silently.
-- A retention limit on interview media: recordings, transcripts and their AI evaluation are deleted six months after the application closes, regardless of your retention settings. See [Retention rules](/admin/retention).
+- Interview media follows the application: recordings, transcripts and assessments are deleted when a retention rule removes the application or someone removes the candidate from the job, including the copies our interview and notetaker providers hold. See [Retention rules](/admin/retention).
 
 ## What isn't built yet
 
@@ -23,6 +40,9 @@ Staffer's platform is a high-risk AI system under the EU AI Act (Regulation (EU)
 - Replaying an old evaluation. The scoring trail records what was computed at the time, not enough to re-run it under today's model.
 - Drift or bias-monitoring dashboards for you to view yourself.
 - A candidate-facing "how was I evaluated" page. Today, if a candidate asks, a person answers.
+- A record of the model and prompt behind each evaluation. Every score is stored with its per-criterion reasons, but not with the model and prompt that produced it.
+- AI disclosure everywhere a candidate meets AI. The AI interviewer says it's an AI, but the candidate copilot in the portal, the reference chat and recorded human interviews don't disclose AI use yet.
+- A way for admins to lock the agent's **Auto** mode. Each user can switch their own chat to **Auto**.
 
 ## Your duties as deployer
 
@@ -45,7 +65,7 @@ The EU AI Act's rules for high-risk systems apply 24 months after the regulation
     Not through a dedicated feature today. A person already makes every real decision by default, since the AI doesn't advance, reject or hire anyone on its own, but there's no formal review-request mechanism for a candidate to invoke.
   </Accordion>
   <Accordion title="Does Auto mode change any of this?">
-    Yes, for approvals specifically. Auto mode skips the approval click for agent actions, so there's no approval record for whatever it does while it's on. It doesn't change the disclosures candidates see or the fixed interview-media retention.
+    Yes, for approvals specifically. Auto mode skips the approval click for agent actions, so there's no approval record for whatever it does while it's on. It doesn't change the disclosures candidates see or when interview recordings are deleted.
   </Accordion>
   <Accordion title="Does Staffer's scoring ever decide by itself?">
     No. A score never changes a candidate's stage. Stages change automatically only if you set up a questionnaire with **Automatically reject**, or a review step with **Rejection disqualifies**. See [Assignees, holds and automatic rejection](/companies/reviewer-holds-and-gates).

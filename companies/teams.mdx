@@ -4,7 +4,7 @@ description: "Split a workspace into teams so the agent applies team-specific kn
 icon: "layers"
 ---
 
-A team is a group inside your workspace with its own knowledge. For jobs assigned to the team, the agent uses the team's knowledge on top of the workspace's. Teams don't control access: everyone in the workspace still sees every job.
+A team is a group inside your workspace with its own knowledge. For jobs assigned to the team, the agent uses the team's knowledge on top of the workspace's. Teams don't control access. Who sees a job depends on its **Members** row, not its team. See [Who can see a job](/get-started/roles-and-permissions#who-can-see-a-job).
 
 ## Creating a team
 
@@ -42,7 +42,7 @@ Assigning a job to a team doesn't change who can see or work on it. Teams only c
 
 <AccordionGroup>
   <Accordion title="Does a team change who can see a job?">
-    No. It only changes what the agent knows when you chat with it on that job. Access depends on workspace role.
+    No. It only changes what the agent knows when you chat with it on that job. Access depends on the job's **Members** row and your workspace role.
   </Accordion>
   <Accordion title="Can I nest a team under a team that's already nested?">
     No. Nesting is one level deep. A team with children can't become a child itself.

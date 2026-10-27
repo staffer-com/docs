@@ -21,9 +21,13 @@ A candidate can ask one specific workspace to stop processing them, ask to erase
 
 This queue is read-only for you. Only the candidate, or in narrow cases Staffer support, can withdraw a request. The deletion runs automatically once the [grace window](/admin/retention) passes, with nothing for you to approve or refuse. Two kinds of request land here: a candidate asking one workspace to stop processing them, and a candidate asking to be erased from Staffer entirely (shown here if they have an application in one of your workspaces). Rows show a status: requested, scheduled, processing, done, cancelled, or rejected.
 
+When a candidate asks one workspace to stop processing them, that workspace can't email them from the moment they file it, before the request is reviewed.
+
 ### What gets deleted
 
-The candidate's profile, uploaded files such as résumés and interview recordings, and their sign-in.
+For a full erasure: the candidate's profile, uploaded files such as résumés and interview recordings, and their sign-in. They're also removed from saved search results, talent pools, segments and notifications in every workspace.
+
+For a request against one workspace: they're removed from that workspace's saved search results, talent pool and segments.
 
 ### What's anonymized instead
 
@@ -31,7 +35,9 @@ Each application survives as a stripped-down record of the hiring decision: stat
 
 ## Application data requests
 
-This is the queue that needs your action. Open a pending request and you'll see the candidate's own reason, if they gave one, and a **Prepare export** dialog with six sections to include, all checked by default except résumé, which follows whatever's on file:
+This is the queue that needs your action. Expect requests about scores here. When candidates download their own data from Staffer, the download leaves out scores and assessments and tells them to ask each company for a copy.
+
+Open a pending request and you'll see the candidate's own reason, if they gave one, and a **Prepare export** dialog with six sections to include, all checked by default except résumé, which follows whatever's on file:
 
 - **Application details**: the record, its state history, and consent events
 - **Resume**: the file on record, if there is one

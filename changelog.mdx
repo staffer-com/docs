@@ -7,6 +7,96 @@ rss: true
 
 Everything that ships in Staffer, week by week. Subscribe with the RSS button, or get the highlights by email in the weekly product update.
 
+<Update label="October 27, 2026" description="Week 44" tags={["Workspace", "Connected apps", "Chat agent", "Candidates", "Scheduling", "AI interviews", "Candidate experience", "Privacy and compliance", "Jobs", "Sourcing", "Process"]}>
+  ## Workspace
+
+  - **Jobs are private to their team.** A job, with its candidates, messages and numbers, is now visible only to the people working on it. Workspace admins and owners see every job. Members, reviewers and viewers see the jobs they created or are on the team for. [Roles and permissions](/get-started/roles-and-permissions#who-can-see-a-job)
+  - **The team is the Members row.** Add people to a job's team in **Members** on its **Brief** tab. Assigning someone a process step adds them too. The **Team** row doesn't give anyone access. [Write the brief](/companies/brief-criteria)
+  - **Hidden everywhere.** A job you can't see is left out of **Roles**, **Messages**, **My applications**, analytics, notifications and search, and the agent and connected assistants can't reach it. Projects and segments only count the jobs you can see.
+  - **Application links stay with the team.** Only admins, owners and people on the job's team can copy a candidate's application link. [The candidate view](/companies/candidate-view)
+  - **Back to your invite.** Someone who creates an account with an email and password goes back to their invite, and an open invite comes before auto-join. [Join your company on Staffer](/companies/join-your-team)
+  - **Support chat.** Support chat moved to a new provider. It still opens from **Support** in the sidebar.
+  - **Maps that always show.** Listings and the career page show a static map when the browser can't draw the interactive one.
+  - **Softer edges.** Rounder page corners, and a softer page border in dark mode.
+
+  ## Connected apps
+
+  - **An admin decision.** Connected AI assistants are off until an organization owner or admin switches on **Allow connected AI assistants** in **Settings** → **Organization** → **AI assistants**. The switch started off for every organization, so assistants connected before 24 October stopped working until it's turned on. [Organization settings](/admin/organization#ai-assistants)
+  - **Every connection in one list.** The same page lists every assistant anyone in the organization has connected, with a **Disconnect** button for each. [Connect Claude, ChatGPT or Cursor](/companies/connect-an-assistant)
+  - **Logged and time-limited.** Every assistant call is recorded in your audit log. A connection lasts at most 90 days before it has to be approved again, and resetting your password disconnects all your assistants.
+
+  ## Chat agent
+
+  - **Dock the chat.** **Dock chat to the right** pins the chat as a column beside the page, which narrows to make room. **Float chat** puts it back in the corner. [Work with the agent](/companies/the-agent)
+  - **Agent starts a new chat.** **Agent** in the bottom bar always starts a new chat, unless the open one is still empty. **Minimize chat** is gone.
+  - **Context on segments and projects.** The **Context** line names the segment you're on, or says **Project** on a project, so the agent knows which one you mean.
+  - **Start a job from a link.** Paste a link to an existing job post and the agent reads it, drafts the brief and creates the job. [Create a job](/companies/create-a-job)
+  - **Interview dates from chat.** The agent can set specific dates and times for candidates to pick from on an Interview step, plus the break between meetings and whether to reserve the times. [What the agent can do](/companies/agent-actions)
+  - **Bigger shortlists.** The agent shortlists up to 50 people at a time and works through larger requests in batches, instead of failing above 20.
+
+  ## Candidates
+
+  - **AI writes the message.** On an empty composer, **AI assist** → **Write for me** or **Write message** now writes the whole message. It reads the thread and where the candidate is in your process, writes in the candidate's language and copies your style. [Message candidates](/companies/message-candidates)
+  - **Message on LinkedIn.** The button beside **Send** now opens a LinkedIn message to the candidate with your text filled in, instead of copying it. Nothing is logged in Staffer.
+  - **Fresh suggested replies.** A drafted reply is written again when the candidate's stage or steps change. [Replies and the inbox](/companies/replies-and-inbox)
+  - **Unsubscribed candidates.** A candidate who stopped your emails shows an **Unsubscribed** badge, and you can't email them. In-app messages still reach them. [Message candidates](/companies/message-candidates#when-a-candidate-has-unsubscribed)
+  - **First contact for applicants.** Applicants opened from **Applications** or **Messages** get **Acknowledge application** until their process starts. [Next actions](/companies/recommended-actions)
+  - **Rejection notes.** **Send rejection note** now also shows for someone who applied after you shortlisted them. A different message sent just before the rejection no longer counts as the note.
+  - **Clearer Activity.** The **Activity** tab says Staffer "sent the candidate" a step when they have something to do. An AI interview with no answers says whether the candidate ended it before replying. [The candidate view](/companies/candidate-view#the-activity-feed)
+
+  ## Scheduling
+
+  - **Reserve the times you offer.** Switch on **Reserve these times in the calendar** on an Interview step with specific dates. Each interviewer with Google Calendar connected gets the slots as busy events, so colleagues can't book over them. [Interviews and scheduling](/companies/human-interviews#reserved-times)
+  - **Moves in Google follow.** Move a booked interview in your Google Calendar and Staffer moves the booking, the notetaker and the activity log with it.
+  - **Break between meetings.** A new Interview step setting keeps free time around every busy event when candidates pick a time. **Start times every** sets how far apart the offered times are.
+  - **Busy times you control.** **Block busy times for candidates**, in your calendar settings, decides whether a connected Google Calendar limits the times candidates can pick. Events marked free never block. [Calendar and availability](/companies/calendar)
+  - **Faster sync.** Google calendars sync every 5 minutes.
+
+  ## AI interviews
+
+  - **Straight to the interview.** Invitation emails open the interview directly, instead of a sign-in page. [AI interviews](/companies/ai-interviews)
+  - **Nothing lost when the call ends.** Voice transcripts and recordings are saved however the call ends. A recording that isn't ready yet is fetched again later.
+  - **CVs read properly.** A CV with one unusual field is no longer read as empty, so the applicant is scored properly.
+  - **Microphone help.** A blocked, missing or busy microphone is explained to the candidate, with how to fix it. [AI interviews for candidates](/candidates/ai-interview)
+  - **Sharper evaluations.** Questionnaire evaluations use a stronger model and judge answers against the job's criteria. Interview and questionnaire evaluations read the full answer, and their summaries are always in English.
+  - **Protected topics are off limits.** The AI interviewer, the reference chat and the evaluations never ask about or weigh pregnancy, family plans, religion, ethnicity, disability, sexual orientation, gender identity, political opinion or union membership. [AI policies](/admin/ai-policies)
+  - **Voice minutes use credits.** Voice interviews are charged per second to your credits, like other AI use. Calls under 15 seconds are free. A voice or video interview won't start while your organization is out of credits. [Credits, top-ups and spend caps](/admin/credits)
+
+  ## Candidate experience
+
+  - **Stop emails from one company.** Candidates can stop all email from one company at once, from their application or their privacy settings, and allow it again later. [Your data and privacy](/candidates/data-and-privacy)
+  - **Searchable only by choice.** Applying with a CV or setting up a profile manually no longer makes it searchable by every employer. Candidates opt in with **Let employers on Staffer find my profile**. [Your profile](/candidates/profile-and-resume)
+  - **One consent for future roles.** The future-roles consent reads the same everywhere: the company may keep your details for 12 months to consider you for future roles, and you can withdraw at any time.
+  - **Who holds your data.** **Download my data** lists every company holding your data, how they got it and how long they keep it.
+  - **Dialogs that fit.** Dialogs fit the window and scroll, so **Submit** in the apply dialog is always reachable.
+  - **Job search holds up.** The copilot's job search keeps what it found when part of the search is slow.
+
+  ## Privacy and compliance
+
+  - **Deleted everywhere.** Deleting a person now also removes them from saved search results, talent pools, segments and notifications in every workspace. [Candidate data requests](/admin/data-requests)
+  - **Interview data follows your retention rules.** Recordings, transcripts and assessments, including our providers' copies, are deleted with the application under your retention rules. The fixed six-month rule is gone. [Retention rules](/admin/retention)
+  - **Data lifetimes.** Saved searches are deleted 30 days after they ran, and copilot chats 180 days after the last message. You can change both.
+  - **Closed applications covered.** Retention rules now reach rejected, hired and withdrawn applications, which they skipped before.
+  - **Support sessions on the record.** Each support session records who approved it and why, emails the user by default, and appears in your compliance export. [Data location and security](/admin/security)
+  - **Compliance pages say what's built.** The EU AI Act page in **Settings** → **Organization** → **Compliance** marks each control **In place**, **Partly in place** or **Not built yet**. [EU AI Act](/admin/eu-ai-act)
+  - **Less data in transit.** Emails, IP addresses and application links are hashed before rate limiting, and sign-in tokens are kept out of error logs.
+  - **Security updates.** Next.js 16.4.2, which fixes two remote code execution vulnerabilities, plus fixes for 11 high-severity advisories in other libraries and 62 routine dependency updates.
+
+  ## Jobs
+
+  - **Brief details on the side.** On a wide screen, the brief's details sit in a column that stays in view, so the description and criteria start right under the title. [Write the brief](/companies/brief-criteria)
+
+  ## Sourcing
+
+  - **No repeats.** New searches skip people already on the job's shortlist or in its pipeline, and people you removed from the shortlist. [Search for candidates](/companies/running-a-search)
+  - **No half-finished rounds.** A long search no longer starts a round it doesn't have time to finish, so results are more reliable.
+
+  ## Process
+
+  - **Step order kept.** Candidates' upcoming steps stay in the canvas order after you edit the process. [Build a hiring process](/companies/build-a-process)
+  - **Score holds use the match score.** A step held on a score now checks the candidate's match score, the same number AI approval uses.
+</Update>
+
 <Update label="October 20, 2026" description="Week 43" tags={["Chat agent"]}>
   ## Chat agent
 

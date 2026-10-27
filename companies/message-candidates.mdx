@@ -4,7 +4,7 @@ description: "Where you write to a candidate, what the composer can do, and what
 icon: "message-square"
 ---
 
-You write to a candidate from two places: their **Messages** tab, or the composer inside a recommended action on their **Process** tab, for example **Send intro outreach**. Both use the same composer and the same **Send** button. The agent can help you think through what to say in chat, but it can't send, or even draft, a message on its own: someone has to put the words in the composer and click **Send**.
+You write to a candidate from two places: their **Messages** tab, or the composer inside a recommended action on their **Process** tab, for example **Send intro outreach**. Both use the same composer and the same **Send** button. You can also ask [the agent](/companies/agent-actions) to message a candidate from chat. In **Ask permission** mode, it asks you first.
 
 ## No subject field
 
@@ -30,13 +30,24 @@ A detail Staffer doesn't have for this candidate is left out of the menu. In tem
 
 **Insert template** replaces the whole body with a saved message, either your workspace's own or one of Staffer's built-in ones. See [Message templates](/companies/message-templates).
 
-**AI assist** rewrites the draft that's already in the editor. Write something first, or start from a template, then choose **Personalize** for a one-click pass, or **Request change** to type an instruction, for example "shorter, warmer, mention their AI post". It costs credits, and the result still has to pass the same compliance check as anything else you send.
+**AI assist**, the sparkle button, writes a message for you or reworks the one you have. What it offers depends on the editor:
+
+- **Empty editor** (your signature alone counts as empty): **Write for me** drafts a message in one click. **Write message** lets you say what you want first, for example "Ask about their notice period, keep it short".
+- **A draft in the editor**: **Personalize** gives it a one-click pass. **Request change** takes an instruction, for example "shorter, warmer, mention their AI post".
+
+It reads the last 10 messages in the thread, where the candidate is in your process, and your company knowledge. With no instruction, it replies if the candidate wrote last, follows up if you did, and writes a first outreach if you haven't been in touch. It writes in the language the candidate last wrote in, and it copies your style from your three most recent messages in this workspace that you wrote yourself.
+
+The draft lands in the editor. Nothing is sent until you click **Send**. It costs credits, and the result still has to pass the same compliance check as anything else you send. In a message step template, and when you close a job, AI assist still needs a draft to work from.
 
 ## Who it goes to
 
 Click **Select channel** to pick where the message goes. It lists every email Staffer has on file for the candidate, each tagged with where it came from, with a **Primary** badge on the main one. If there's nothing on file yet, it reads "No saved emails yet." Add one with **+ Add email**.
 
 Email is the default. If the candidate can already be reached in their Staffer account, you'll also see **Send in-app**. The message then lands on their application in Staffer, and they also get an email with a link straight back to the conversation. Nothing waits unread in a portal they haven't opened.
+
+### When a candidate has unsubscribed
+
+A candidate can stop all email from your company. Their profile then shows an **Unsubscribed** badge, and you can't email them from the composer. If they can be reached in their Staffer account, the composer says "This candidate unsubscribed from your emails. In-app messages still reach them." Staffer also skips the emails it would send them on its own, such as rejection, interview and application confirmation emails. Only the candidate can turn emails back on.
 
 ## Your signature
 
@@ -48,9 +59,11 @@ Including the **Application link** placeholder does more than insert text. If th
 
 If the link ends up missing from the visible message, or the candidate has no application to link to at all, Staffer shows a warning above the composer instead of sending a broken link.
 
-## Copy vs Send
+## Message on LinkedIn vs Send
 
-**Copy** puts the message on your clipboard as plain text, links included, so you can paste it somewhere else, for example a LinkedIn message. It doesn't touch Staffer's record of the candidate at all: nothing is logged. If you reach them this way, log it yourself afterward with **Mark as contacted**, from **Candidate actions**.
+The LinkedIn button beside **Send**, **Message on LinkedIn**, opens a new LinkedIn message to the candidate in a new tab, with your text already filled in. Your signature is left off, and links show as text with the address in brackets. You send it from LinkedIn. The button is greyed out when the message is empty or there's no LinkedIn profile on file for the candidate.
+
+It doesn't touch Staffer's record of the candidate: nothing is logged. If you reach them this way, log it yourself afterward with **Mark as contacted**, from **Candidate actions**.
 
 **Send** emails the candidate from Staffer and logs the message on their thread. If they're still **In review**, sending moves them to **In progress**, even a plain message with no template. Every send, including an AI-assisted one, is checked against your organization's compliance policy first. A refusal shows as a toast, "Could not send:" followed by the reason, not a dialog. See [AI policies](/admin/ai-policies) for what can trigger one.
 
@@ -62,11 +75,14 @@ Sending, and AI assist, are limited to members, admins and owners. Viewers and r
   <Accordion title="Can I change the subject after the first message?">
     No. The first message in a thread sets the subject for good. There's no subject field to edit it later.
   </Accordion>
-  <Accordion title="Does Copy send anything to the candidate?">
-    No. It only puts the message on your clipboard. Nothing is logged in Staffer until you either send from the composer or mark them as contacted yourself.
+  <Accordion title="Does Message on LinkedIn send anything to the candidate?">
+    No. It opens LinkedIn with your message filled in, and you send it there. Nothing is logged in Staffer until you either send from the composer or mark them as contacted yourself.
+  </Accordion>
+  <Accordion title="Do I have to write a draft before AI assist can help?">
+    No. On an empty editor, **Write for me** and **Write message** write the whole message. The exceptions are message step templates and the message you send when closing a job, where AI assist still works from your draft.
   </Accordion>
   <Accordion title="Can I ask the agent to send a message for me?">
-    No. The agent can discuss what to say, but there's no tool that lets it send or draft a message on a candidate's thread. A person has to use the composer.
+    Yes. Ask it from any page. In **Ask permission** mode it shows an approval card first. The card names the action, not the message, so ask to see the draft before you approve. In **Auto** mode it sends without asking. See [What the agent can do](/companies/agent-actions).
   </Accordion>
   <Accordion title="Why was my message refused?">
     It didn't pass your organization's compliance check. The toast names the reason. See [AI policies](/admin/ai-policies).
