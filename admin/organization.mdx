@@ -1,6 +1,6 @@
 ---
 title: "Organization settings"
-description: "Your organization's name, domain, auto-join, and who has organization-wide access."
+description: "Your organization's name, domain, auto-join, connected AI assistants, and who has organization-wide access."
 icon: "building"
 ---
 
@@ -31,6 +31,15 @@ Row actions, for anyone with permission to use them:
 - **Remove from organization** removes every workspace membership that person holds anywhere in the organization. You can't remove yourself, the organization owner, or anyone who owns a workspace in the organization. A workspace owner has to delete their workspace first.
 
 The owner's row has no action menu. There's no way to transfer organization ownership from the app.
+
+## AI assistants
+
+**Settings** → **Organization** → **AI assistants** decides whether members can [connect Claude, ChatGPT and other assistants](/companies/connect-an-assistant) to Staffer.
+
+- **Allow connected AI assistants** is off by default. Members can't connect an assistant until you turn it on. Turning it off disconnects every assistant on its next call.
+- **Connected apps** lists every assistant anyone in the organization has connected: the assistant and the person, the workspace, **Read only** or **Read and write**, when it was connected and last used, and when it ends. Click **Disconnect** to end one. With none connected, it reads "No one in your organisation has connected an app."
+
+An assistant reads candidate data with its member's access, never more. Every call is recorded in your audit log. A connection lasts at most 90 days before the member has to approve it again.
 
 ## Workspaces
 

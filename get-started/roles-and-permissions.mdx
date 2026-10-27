@@ -13,18 +13,32 @@ The two are independent. An organization admin who is only a viewer in a workspa
 | Role | In short |
 |---|---|
 | Owner | Everything an admin can do, plus changing the workspace's public URL and deleting the workspace. The person who creates a workspace is its owner. |
-| Admin | Runs the workspace: settings, branding, the career page, message templates, teams and members. |
-| Member | Does the hiring work: jobs, searches, candidates, messages, processes and listings. |
-| Reviewer | Read-only access to the whole workspace. Can complete process steps they're named on. |
-| Viewer | Read-only access to the whole workspace. Can complete process steps they're named on. |
+| Admin | Runs the workspace: settings, branding, the career page, message templates, teams and members. Sees every job. |
+| Member | Does the hiring work on the jobs they created or are on the team for: searches, candidates, messages, processes and listings. |
+| Reviewer | Read-only access to the jobs they created or are on the team for. Can complete process steps they're named on. |
+| Viewer | Read-only access to the jobs they created or are on the team for. Can complete process steps they're named on. |
 
-Reviewer and viewer currently have exactly the same access. Anyone named on a process step, as a reviewer or an attendee, can complete that step whatever their role.
+Reviewer and viewer currently have exactly the same access. Anyone assigned a process step can complete that step whatever their role.
+
+## Who can see a job
+
+A job, with its candidates, messages and numbers, is visible only to the people working on it. Workspace admins and owners see every job. Members, reviewers and viewers see the jobs they created and the jobs they're on the team for.
+
+A job's team is the **Members** row in the **Details** section of its **Brief** tab. Members, admins and owners can add or remove people there. Assigning someone a process step on the job adds them to the team too, so they can always see the work they were given. Unassigning them doesn't take them off.
+
+<Warning>
+  The **Team** row on the same tab is different. It picks one of your workspace's [teams](/companies/teams) for the agent's knowledge, and gives nobody access.
+</Warning>
+
+A job you can't see doesn't exist for you. It's left out of **Roles**, **Messages**, **My applications**, analytics, notifications and search, and the agent and connected assistants can't reach it either. Projects and segments stay visible to everyone, but their counts only include the jobs you can see. In the talent pool you still see the person, without their applications to jobs you can't see.
+
+Being an organization admin doesn't change this. You see every job in a workspace only if you're an admin or owner of that workspace.
 
 ### What each workspace role can do
 
 | Action | Owner | Admin | Member | Reviewer, Viewer |
 |---|---|---|---|---|
-| See jobs, candidates, messages and analytics | Yes | Yes | Yes | Yes |
+| See jobs, candidates, messages and analytics | Every job | Every job | Jobs they created or are on the team for | Jobs they created or are on the team for |
 | Chat with the agent | Yes | Yes | Yes | Yes, read-only answers |
 | Create and edit jobs, briefs and processes | Yes | Yes | Yes | No |
 | Search, shortlist and promote candidates | Yes | Yes | Yes | No |
@@ -63,7 +77,10 @@ Change someone's organization role in **Settings** → **Organization** → **Me
     Billing belongs to the organization, not the workspace. If you created your workspace inside an organization that already existed, you're a member of that organization, not an admin. Ask an organization admin to promote you, or to handle billing.
   </Accordion>
   <Accordion title="Can I restrict a job to certain people?">
-    No. Everyone in a workspace can see every job in it. A job's **Members** list and its team don't limit access. To keep hiring separate, use separate workspaces.
+    Yes, for everyone except workspace admins and owners. Members, reviewers and viewers only see a job if they created it, are in its **Members** row, or were assigned a step on it. To keep hiring separate from admins too, use separate workspaces.
+  </Accordion>
+  <Accordion title="A job disappeared from my Roles page. Why?">
+    You're no longer on its team, or you never were. Since 24 October 2026, members, reviewers and viewers only see the jobs they created or are on the team for. Ask whoever runs the job, or a workspace admin, to add you to its **Members** row.
   </Accordion>
   <Accordion title="Can a hiring manager review candidates without a Staffer account?">
     Yes. Send them a [share link](/companies/share-candidates). They can read the candidates you picked and leave notes, without signing in.

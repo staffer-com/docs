@@ -1,10 +1,10 @@
 ---
 title: "Retention rules"
-description: "The rules that flag candidacies with no lawful basis to keep, how auto-execute differs from review, and what deletion actually does."
+description: "The rules that flag candidacies with no lawful basis to keep, the always-on lifetimes for saved searches and chats, and what deletion actually does."
 icon: "trash-2"
 ---
 
-**Settings** → **Organization** → **Compliance** → **Retention** flags candidacies that no longer have a lawful basis to keep, and can delete them. Every match lands in a review queue first, unless you turn on auto-execute for that rule. Only organization owners and admins can change it. The flagging itself runs once a day across every workspace in the organization.
+**Settings** → **Organization** → **Compliance** → **Retention** flags candidacies that no longer have a lawful basis to keep, and can delete them. Every match lands in a review queue first, unless you turn on auto-execute for that rule. The same page sets how long saved searches and agent chats are kept. Only organization owners and admins can change it. The flagging itself runs once a day across every workspace in the organization.
 
 ## The four rules
 
@@ -13,9 +13,11 @@ Each rule has its own **Enabled** toggle and a period in days (1 to 3,650). All 
 | Rule | Flags | Default period |
 |---|---|---|
 | **Inactive candidacies** | Candidacies with no messages, notes, stage changes or ratings for the chosen period. | 180 days |
-| **Rejected applications** | Applications closed as rejected, once the closure is older than the chosen period. | 365 days |
+| **Rejected applications** | Rejected applications, once the rejection is older than the chosen period. | 365 days |
 | **No active purpose** | Closed candidacies (rejected, withdrawn or not interested) that aren't kept for future roles, old enough that keeping them has no lawful basis. | 365 days |
 | **Lapsed future-roles consent** | Closed candidacies kept for future roles whose consent has lapsed and wasn't renewed. | 30 days |
+
+The rules can flag rejected, withdrawn and hired applications. Hired and offer-stage candidates are still skipped while **Never flag hired or offer-stage candidates** is on.
 
 ## Enabled vs auto-execute
 
@@ -45,13 +47,24 @@ Two toggles, both on by default, protecting the candidate rather than requiring 
 
 Separate from the four rules above, and always active: when a candidate lodges a right-to-erasure request, Staffer holds it for this many days before running the deletion. Default 30 days, and you can only shorten it, never extend it beyond 30. See [Candidate data requests](/admin/data-requests) for what happens to a request while it waits, and afterward.
 
+## Data lifetimes
+
+Saved searches and agent chats have a lifetime that's always on. Once something is older than its period, a daily check deletes it, with no review queue. You can change each period, from 1 to 3,650 days, but you can't turn the deletion off.
+
+| Setting | What's deleted | Default |
+|---|---|---|
+| **Saved searches** | A job's search results on the **Scouting** tab, with the AI's assessment of each person found. Counted from when the search ran. | 30 days |
+| **Copilot chats** | Conversations with the agent, and their attachments. Counted from the last message. | 180 days |
+
+Deleted searches and chats can't be restored. Deleting a search doesn't remove anyone you shortlisted or promoted from it. Only organization owners and admins can change these periods.
+
 ## What deletion does
 
 Deleting a candidacy, whether by auto-execute or by clicking **Delete now…**, runs Staffer's erasure cascade: the application is removed, and if it was the person's only remaining application anywhere in your organization, their whole profile is anonymized rather than deleted outright, so the historical record survives without identifying them. See [Candidate data requests](/admin/data-requests) for exactly what's deleted and what's kept.
 
-## Interview media: a fixed six-month rule
+## Interview recordings and transcripts
 
-Interview recordings, transcripts and their AI evaluation are deleted six months after the application closes, for both AI and human interviews. This runs regardless of the rules above and isn't configurable from this page. See [AI interviews](/companies/ai-interviews) and [Interviews and scheduling](/companies/human-interviews).
+Interview recordings, transcripts and assessments are deleted together with the application, for both AI and human interviews. That happens when a retention rule removes the application, or when someone removes the candidate from the job. Our interview and notetaker providers delete their copies within a day. Moving a candidate to another job keeps their interview until the application they moved into is removed. See [AI interviews](/companies/ai-interviews) and [Interviews and scheduling](/companies/human-interviews).
 
 ## Common questions
 
@@ -63,7 +76,7 @@ Interview recordings, transcripts and their AI evaluation are deleted six months
     Yes, before it's deleted. **Cancel deletion…** in the review queue extends its retention. Once the deletion has actually run, it's final.
   </Accordion>
   <Accordion title="Does this affect interview recordings and transcripts?">
-    No. Those follow the fixed six-month rule above, independent of whatever retention rules you set here.
+    Yes. When a rule removes an application, its interview recordings, transcripts and assessments go with it, including the copies our interview and notetaker providers hold. There's no separate timer for interviews.
   </Accordion>
   <Accordion title="Who can turn these rules on?">
     Organization owners and admins. The rules apply to every workspace in the organization, not only one.

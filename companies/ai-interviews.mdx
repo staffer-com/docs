@@ -33,6 +33,8 @@ The AI interviewer reads the candidate's résumé before it starts, in chat, voi
 
 It always says it's an AI. It doesn't give itself a name or a human identity, even if your instructions describe a persona.
 
+It also follows Staffer's own rules, which come before your instructions. It never asks about pregnancy, adoption or family planning, religion or belief, ethnicity, disability, sexual orientation, gender identity, political opinion or trade-union membership. If a candidate brings one of these up, it doesn't follow up or record it, and the evaluation ignores it. The same rules apply to the reference chat and to every evaluation.
+
 ## Try as candidate
 
 Click **Try as candidate** in the **Preview as a candidate** box to take the interview yourself with your current settings, including unsaved changes. The preview uses a sample résumé, so you can see how the interviewer uses one before candidates do. Nothing is kept when you close it.
@@ -47,11 +49,11 @@ Before they start, the candidate must check a box confirming they understand the
 
 - Chat saves what they type. Voice also records audio. Video records audio and picture.
 - An AI reads the transcript and writes an assessment for your team, with a suggested next step. The candidate doesn't see it.
-- The recording, transcript and assessment are deleted six months after the application closes.
+- The recording, transcript and assessment are deleted together with the application, under your retention rules.
 
-For Voice and Video, they also check their microphone and camera, and can choose to hold a key to talk instead of leaving the mic on.
+For Voice and Video, they also check their microphone and camera, and can choose to hold a key to talk instead of leaving the mic on. If the microphone is blocked, missing or in use by another app, the candidate is told which, and how to fix it.
 
-If their connection drops, their answers are already saved. A **Send again** button appears for the message that failed. Reloading the page takes them back into the same interview.
+If their connection drops, their answers are already saved. In a voice or video interview, the transcript and recording are saved however the call ends: the candidate hangs up, time runs out, or the connection drops. A **Send again** button appears for the message that failed. Reloading the page takes them back into the same interview.
 
 Once it's complete, the candidate can't retake it on their own. To let them try again, use **Reset step** in the [Step actions menu](/companies/run-the-process). It deletes the previous attempt.
 
@@ -60,19 +62,21 @@ Once it's complete, the candidate can't retake it on their own. To let them try 
 When the candidate finishes, their step on the **Process** tab shows:
 
 - The transcript.
-- An evaluation: a short summary, strengths, concerns and a suggested next step of **Advance**, **Uncertain** or **Reject**.
-- A recording, for Voice and Video.
+- An evaluation: a short summary, strengths, concerns and a suggested next step of **Advance**, **Uncertain** or **Reject**. The summary, strengths and concerns are always in English, whatever language the interview was in.
+- A recording, for Voice and Video. It can show up a little after the transcript.
 - The candidate's rating of the experience, if they left one.
 
 Staffer then rescores the candidate. The rescore reads what the candidate said. The AI's evaluation doesn't count toward the score. See [How match scores work](/companies/match-scores).
 
-If a candidate leaves without answering anything, the step still completes, with no transcript and no evaluation.
+If a candidate leaves without answering anything, the step still completes, with no transcript and no evaluation. The step says why: "No answers recorded — the candidate ended the interview before replying." If they did answer but the interview was closed before its transcript was built, it says how many answers they gave.
 
 ## Retention and cost
 
-The recording, transcript and evaluation are deleted six months after the application closes, not six months after the interview. The record that the candidate confirmed the notice is kept.
+The recording, transcript and evaluation are deleted together with the application: when one of your [retention rules](/admin/retention) removes it, or someone removes the candidate from the pipeline. That includes the copies our interview provider holds. The record that the candidate confirmed the notice is kept.
 
-AI interviews use your organization's credits, and so do voice previews and **Try as candidate**. See [Credits, top-ups and spend caps](/admin/credits).
+AI interviews use your organization's credits, and so do voice previews and **Try as candidate**. Voice calls are charged per second, and a call under 15 seconds is free.
+
+A voice or video interview won't start while your organization is out of credits or the workspace has reached its monthly cap. The candidate is asked to let you know, without being told why. Chat interviews still run. See [Credits, top-ups and spend caps](/admin/credits).
 
 ## Common questions
 

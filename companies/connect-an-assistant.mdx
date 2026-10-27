@@ -21,6 +21,14 @@ Click **MCP** at the bottom of the sidebar, or go to **Settings** → **Account*
 
 Staffer isn't listed in the Claude or ChatGPT directories yet, so you add it as a custom connector. On a Claude Team or Enterprise plan, an owner may need to add the connector first. In ChatGPT, you may need to turn on developer mode, depending on your plan.
 
+## Turn it on for your organization
+
+Connected assistants are off until an organization owner or admin turns them on. Go to **Settings** → **Organization** → **AI assistants** and switch on **Allow connected AI assistants**. While it's off, **Connect an assistant** is hidden, and **Connected apps** reads "Connected AI assistants are turned off for your organisation."
+
+<Note>
+  The switch started off for every organization on 24 October 2026. Assistants connected before then stopped working until an admin turns it on.
+</Note>
+
 ## Connect an assistant
 
 <Steps>
@@ -37,7 +45,7 @@ Staffer isn't listed in the Claude or ChatGPT directories yet, so you add it as 
 
 ## What it can do
 
-What the assistant can do follows your role in Staffer, and Staffer checks it on every request. A viewer who connects with read-and-write access still can't change anything a viewer can't change in the app. See [Roles and permissions](/get-started/roles-and-permissions).
+What the assistant can do follows your role in Staffer, and Staffer checks it on every request. A viewer who connects with read-and-write access still can't change anything a viewer can't change in the app, and an assistant only sees the jobs you can see. See [Roles and permissions](/get-started/roles-and-permissions).
 
 Staffer also gives the assistant ready-made prompts for common jobs:
 
@@ -48,6 +56,8 @@ Staffer also gives the assistant ready-made prompts for common jobs:
 - Drafting outreach
 
 Drafted outreach stays a draft. The assistant never sends it.
+
+Every call an assistant makes is recorded in your organization's audit log: which assistant, what it did and how many records came back, but not the content.
 
 ## What still needs your approval
 
@@ -66,6 +76,12 @@ For each one, it sends you to a Staffer page titled with the assistant's name an
 
 Go to **Settings** → **Account** → **Connected apps**. Each assistant shows its workspace, whether it can make changes, and when it was connected and last used. Click **Disconnect** next to it. The assistant loses access from its next request.
 
+A connection also ends on its own:
+
+- After 90 days at most, however often you use it. Connect again to keep going.
+- When you reset your Staffer password. That disconnects all your assistants.
+- When an organization admin disconnects it, or turns **Allow connected AI assistants** off.
+
 ## The Staffer API
 
 The actions the agent and connected assistants use are also available as a public API, so your own integrations and scripts can build on Staffer directly.
@@ -78,6 +94,9 @@ The actions the agent and connected assistants use are also available as a publi
 ## Common questions
 
 <AccordionGroup>
+  <Accordion title="Why can't I find Connect an assistant?">
+    Your organization hasn't turned connected assistants on. An organization owner or admin can switch on **Allow connected AI assistants** in **Settings** → **Organization** → **AI assistants**.
+  </Accordion>
   <Accordion title="Can the assistant do more than my role allows?">
     No. Staffer checks your role on every request, whatever access level you picked when you connected.
   </Accordion>

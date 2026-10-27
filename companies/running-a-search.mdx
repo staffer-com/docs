@@ -39,7 +39,9 @@ The agent doesn't ask permission before running a search, even if your chat mode
 - Double-checks the strongest matches against the brief.
 - Scores every result against your brief's criteria. See [How match scores work](/companies/match-scores).
 
-It stops early if it reaches your workspace's result limit, if two rounds in a row find nothing new, or if it runs out of time.
+It stops early if it reaches your workspace's result limit, if two rounds in a row find nothing new, or if it runs out of time. It doesn't start a round it doesn't have time to finish, so a long search ends with the results it already has.
+
+A new search skips people already on this job's shortlist or in its pipeline, and people you removed from the shortlist.
 
 ## How long it takes
 

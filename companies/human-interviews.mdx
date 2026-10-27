@@ -16,7 +16,10 @@ Open the step from the job's **Process** tab. Its **Setup** tab has:
 | Attendees | The people who join the call, and the only people invited. Their calendars are what gets checked for conflicts. Staffer doesn't add you automatically, so add yourself if you're joining. |
 | Provider | Read-only: **Google Meet**. There's no other option. |
 | Duration (minutes) | From 5 to 240, in steps of 5. Defaults to 30. |
-| Let the candidate pick a time | Off by default. When on, reveals a minimum notice, a maximum lead time, and optional specific date-and-time slots that replace the recurring windows for this step entirely. See the slot picker below. |
+| Let the candidate pick a time | Off by default. When on, reveals the booking settings below, plus a minimum notice, a maximum lead time, and optional specific date-and-time slots that replace the recurring windows for this step entirely. See the slot picker below. |
+| Start times every | Shown when the candidate picks a time. How far apart the offered start times are: 5, 10, 15, 20 or 30 minutes, or 1 hour. Defaults to 30 minutes. |
+| Break between meetings (minutes) | Shown when the candidate picks a time. Keeps free time before and after every busy event, from 0 to 120 minutes. Empty by default, which means no break. |
+| Reserve these times in the calendar | Shown once you add specific dates. Off by default. See [Reserved times](#reserved-times) below. |
 | On location | Off by default. When on, adds a location field. Left blank, it falls back to the job's first listed location. |
 | Agenda | Free text, shown to the candidate. |
 | Record & transcribe | On by default. Turn it off and no notetaker ever joins for that step. |
@@ -55,9 +58,24 @@ For an interview the candidate booked through the slot picker:
 - **Reschedule** cancels the booking and lets the candidate choose a new slot. They get an email asking them to.
 - **Cancel meeting** removes the event from everyone's calendar and hands the step back to you to set up again.
 
+### Moving it in Google Calendar
+
+If you're the organizer, through your own connected Google Calendar, you can also drag a booked interview to a new time in Google. Staffer follows: the booking takes the new time and length, the notetaker is sent to the new time, and the candidate's **Activity** tab says the interview was moved in Google Calendar. Staffer doesn't email the candidate about it, so any notice comes from Google. An interview booked from Staffer's shared account isn't followed, so use **Reschedule** for those.
+
 ## The slot picker
 
-With **Let the candidate pick a time** on, the candidate picks from open slots instead of getting a fixed time. A slot only shows if every attendee is free, across every calendar they've connected or added as a feed. Meetings an attendee has declined don't block a slot. The picker only looks 14 days ahead. A longer **Maximum lead time** has no effect, but a shorter one narrows the window. If nothing is free, the candidate sees a notice that the hiring team will follow up.
+With **Let the candidate pick a time** on, the candidate picks from open slots instead of getting a fixed time. A slot only shows if every attendee is free, across every calendar they've connected or added as a feed. Meetings an attendee has declined, and events marked free, don't block a slot. **Break between meetings** adds the free time you set around each busy event. The picker only looks 14 days ahead. A longer **Maximum lead time** has no effect, but a shorter one narrows the window. If nothing is free, the candidate sees a notice that the hiring team will follow up.
+
+When you add specific dates, each slot warns you if it can't be offered, for example because it's in the past, inside the minimum notice, or blocked by an event in an interviewer's calendar.
+
+### Reserved times
+
+Specific dates are only open until someone else books over them. Switch on **Reserve these times in the calendar** to hold them. Each interviewer with Google Calendar connected gets every slot as a private, busy event called "Reserved:" followed by the step and job name, so colleagues can't book over it. No invites go out.
+
+- When a candidate books, only the part of the slot they booked is released to the interview. The rest stays reserved.
+- The reserved events follow the step. They update when you change the slots, and they're removed when you switch it off, remove an interviewer, delete the step, or close the job.
+- Interviewers are the step's attendees, or its assignees if there are no attendees. An interviewer without Google Calendar connected is skipped.
+- Changes you make to a reserved event in Google are overwritten. Change the slots in Staffer instead.
 
 ## During the call
 
@@ -75,7 +93,7 @@ If **Record & transcribe** was on but nothing was captured, for example because 
 
 ## Retention
 
-The transcript, recording and evaluation are deleted six months after the application closes, not six months after the interview. Scheduling details (time, duration, location, agenda, attendees) are kept.
+The transcript, recording and evaluation are deleted together with the application: when one of your [retention rules](/admin/retention) removes it, or someone removes the candidate from the pipeline. That includes the copies our notetaker provider holds. Scheduling details (time, duration, location, agenda, attendees) are kept.
 
 ## Common questions
 
@@ -94,6 +112,9 @@ The transcript, recording and evaluation are deleted six months after the applic
   </Accordion>
   <Accordion title="How far ahead can a candidate book a slot?">
     At most 14 days, regardless of what the step's maximum lead time is set to.
+  </Accordion>
+  <Accordion title="Can colleagues book over the dates I offered a candidate?">
+    Not if you switch on **Reserve these times in the calendar**. Every interviewer with Google Calendar connected gets the slots as busy events until a candidate books or you remove them.
   </Accordion>
 </AccordionGroup>
 
